@@ -23,7 +23,6 @@ class hands:
                     continue
 
                 image = cv2.cvtColor(image, cv2.COLOR_RGB2BGR)
-                before_image = image.copy()
 
                 results = hands.process(image)
                 
@@ -36,7 +35,7 @@ class hands:
                             self.mp_drawing_styles.get_default_hand_landmarks_style(),
                             self.mp_drawing_styles.get_default_hand_connections_style())
 
-                self.after_img = cv2.flip(image - before_image, 1)
+                self.after_img = cv2.cvtColor(image, cv2.COLOR_BGR2RGB)
 
                 if __name__ == '__main__':
                     cv2.imshow('MediaPipe Hands', self.after_img)
