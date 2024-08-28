@@ -1,0 +1,17 @@
+/home/hosodalab9/Sensor-Glove/install/ros2serial_arduino/lib/ros2serial_arduino/serial_receive_node
+/home/hosodalab9/Sensor-Glove/install/ros2serial_arduino/lib/ros2serial_arduino/serial_send_node
+/home/hosodalab9/Sensor-Glove/install/ros2serial_arduino/share/ament_index/resource_index/package_run_dependencies/ros2serial_arduino
+/home/hosodalab9/Sensor-Glove/install/ros2serial_arduino/share/ament_index/resource_index/parent_prefix_path/ros2serial_arduino
+/home/hosodalab9/Sensor-Glove/install/ros2serial_arduino/share/ros2serial_arduino/environment/ament_prefix_path.sh
+/home/hosodalab9/Sensor-Glove/install/ros2serial_arduino/share/ros2serial_arduino/environment/ament_prefix_path.dsv
+/home/hosodalab9/Sensor-Glove/install/ros2serial_arduino/share/ros2serial_arduino/environment/path.sh
+/home/hosodalab9/Sensor-Glove/install/ros2serial_arduino/share/ros2serial_arduino/environment/path.dsv
+/home/hosodalab9/Sensor-Glove/install/ros2serial_arduino/share/ros2serial_arduino/local_setup.bash
+/home/hosodalab9/Sensor-Glove/install/ros2serial_arduino/share/ros2serial_arduino/local_setup.sh
+/home/hosodalab9/Sensor-Glove/install/ros2serial_arduino/share/ros2serial_arduino/local_setup.zsh
+/home/hosodalab9/Sensor-Glove/install/ros2serial_arduino/share/ros2serial_arduino/local_setup.dsv
+/home/hosodalab9/Sensor-Glove/install/ros2serial_arduino/share/ros2serial_arduino/package.dsv
+/home/hosodalab9/Sensor-Glove/install/ros2serial_arduino/share/ament_index/resource_index/packages/ros2serial_arduino
+/home/hosodalab9/Sensor-Glove/install/ros2serial_arduino/share/ros2serial_arduino/cmake/ros2serial_arduinoConfig.cmake
+/home/hosodalab9/Sensor-Glove/install/ros2serial_arduino/share/ros2serial_arduino/cmake/ros2serial_arduinoConfig-version.cmake
+/home/hosodalab9/Sensor-Glove/install/ros2serial_arduino/share/ros2serial_arduino/package.xml

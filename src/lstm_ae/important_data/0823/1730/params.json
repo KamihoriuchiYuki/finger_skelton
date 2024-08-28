@@ -1,0 +1,19 @@
+{
+    "input_dim": 1,
+    "latent_dim": 20,
+    "timesteps": 20,
+    "train_size": 4404,
+    "epochs": 150,
+    "batch_size": 64,
+    "x_missing_rate": 0.4,
+    "y_missing_rate": 0.0,
+    "train_data_paths": [
+        "~/Sensor-Glove/src/data_handler/data/divided/sg_350_440_1.csv",
+        "~/Sensor-Glove/src/data_handler/data/divided/sg_350_440_4.csv",
+        "~/Sensor-Glove/src/data_handler/data/divided/sg_350_440_6.csv",
+        "~/Sensor-Glove/src/data_handler/data/divided/sg_350_440_7.csv",
+        "~/Sensor-Glove/src/data_handler/data/divided/sg_350_440_9.csv"
+    ],
+    "model_path": "/home/hlab11/Sensor-Glove/src/lstm_ae/results/0823/1721/lstm_ae_2i2o.keras",
+    "eval_data_path": "/home/hlab11/Sensor-Glove/src/data_handler/data/divided/sg_350_440_5.csv"
+}

@@ -1,0 +1,27 @@
+[ 25%] [32mBuilding CXX object CMakeFiles/topics_subscriber.dir/src/topics_subscriber.cpp.o[0m
+[ 50%] [32mBuilding CXX object CMakeFiles/topics_combined_sub.dir/src/topics_combined_sub.cpp.o[0m
+[ 75%] [32m[1mLinking CXX executable topics_combined_sub[0m
+[100%] [32m[1mLinking CXX executable topics_subscriber[0m
+[100%] Built target topics_combined_sub
+[100%] Built target topics_subscriber
+-- Install configuration: ""
+-- Execute custom install script
+-- Symlinking: /home/hosodalab9/Sensor-Glove/install/data_handler/lib/data_handler/topics_subscriber
+-- Symlinking: /home/hosodalab9/Sensor-Glove/install/data_handler/lib/data_handler/topics_combined_sub
+-- Up-to-date symlink: /home/hosodalab9/Sensor-Glove/install/data_handler/lib/data_handler/topics_subscriber
+-- Up-to-date symlink: /home/hosodalab9/Sensor-Glove/install/data_handler/lib/data_handler/topics_combined_sub
+-- Symlinking: /home/hosodalab9/Sensor-Glove/install/data_handler/share/ament_index/resource_index/package_run_dependencies/data_handler
+-- Symlinking: /home/hosodalab9/Sensor-Glove/install/data_handler/share/ament_index/resource_index/parent_prefix_path/data_handler
+-- Symlinking: /home/hosodalab9/Sensor-Glove/install/data_handler/share/data_handler/environment/ament_prefix_path.sh
+-- Symlinking: /home/hosodalab9/Sensor-Glove/install/data_handler/share/data_handler/environment/ament_prefix_path.dsv
+-- Symlinking: /home/hosodalab9/Sensor-Glove/install/data_handler/share/data_handler/environment/path.sh
+-- Symlinking: /home/hosodalab9/Sensor-Glove/install/data_handler/share/data_handler/environment/path.dsv
+-- Symlinking: /home/hosodalab9/Sensor-Glove/install/data_handler/share/data_handler/local_setup.bash
+-- Symlinking: /home/hosodalab9/Sensor-Glove/install/data_handler/share/data_handler/local_setup.sh
+-- Symlinking: /home/hosodalab9/Sensor-Glove/install/data_handler/share/data_handler/local_setup.zsh
+-- Symlinking: /home/hosodalab9/Sensor-Glove/install/data_handler/share/data_handler/local_setup.dsv
+-- Symlinking: /home/hosodalab9/Sensor-Glove/install/data_handler/share/data_handler/package.dsv
+-- Symlinking: /home/hosodalab9/Sensor-Glove/install/data_handler/share/ament_index/resource_index/packages/data_handler
+-- Symlinking: /home/hosodalab9/Sensor-Glove/install/data_handler/share/data_handler/cmake/data_handlerConfig.cmake
+-- Symlinking: /home/hosodalab9/Sensor-Glove/install/data_handler/share/data_handler/cmake/data_handlerConfig-version.cmake
+-- Symlinking: /home/hosodalab9/Sensor-Glove/install/data_handler/share/data_handler/package.xml

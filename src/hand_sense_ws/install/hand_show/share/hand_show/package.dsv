@@ -1,0 +1,3 @@
+source;share/hand_show/hook/pythonpath.ps1
+source;share/hand_show/hook/pythonpath.dsv
+source;share/hand_show/hook/pythonpath.sh

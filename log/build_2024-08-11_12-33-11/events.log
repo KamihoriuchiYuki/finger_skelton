@@ -1,0 +1,888 @@
+[0.000000] (-) TimerEvent: {}
+[0.001207] (data_handler) JobQueued: {'identifier': 'data_handler', 'dependencies': OrderedDict()}
+[0.001635] (realsense2_camera_msgs) JobQueued: {'identifier': 'realsense2_camera_msgs', 'dependencies': OrderedDict()}
+[0.001709] (ros2serial_arduino) JobQueued: {'identifier': 'ros2serial_arduino', 'dependencies': OrderedDict()}
+[0.001756] (subscriber) JobQueued: {'identifier': 'subscriber', 'dependencies': OrderedDict()}
+[0.001816] (realsense2_camera) JobQueued: {'identifier': 'realsense2_camera', 'dependencies': OrderedDict([('realsense2_camera_msgs', '/home/hosodalab9/Sensor-Glove/install/realsense2_camera_msgs')])}
+[0.002153] (realsense2_description) JobQueued: {'identifier': 'realsense2_description', 'dependencies': OrderedDict([('realsense2_camera_msgs', '/home/hosodalab9/Sensor-Glove/install/realsense2_camera_msgs')])}
+[0.002236] (realsense2_camera_msgs) JobStarted: {'identifier': 'realsense2_camera_msgs'}
+[0.007601] (data_handler) JobStarted: {'identifier': 'data_handler'}
+[0.011239] (ros2serial_arduino) JobStarted: {'identifier': 'ros2serial_arduino'}
+[0.014697] (subscriber) JobStarted: {'identifier': 'subscriber'}
+[0.021588] (realsense2_camera_msgs) JobProgress: {'identifier': 'realsense2_camera_msgs', 'progress': 'cmake'}
+[0.022282] (realsense2_camera_msgs) JobProgress: {'identifier': 'realsense2_camera_msgs', 'progress': 'build'}
+[0.022896] (realsense2_camera_msgs) Command: {'cmd': ['/usr/bin/cmake', '--build', '/home/hosodalab9/Sensor-Glove/build/realsense2_camera_msgs', '--', '-j16', '-l16'], 'cwd': '/home/hosodalab9/Sensor-Glove/build/realsense2_camera_msgs', 'env': OrderedDict([('LESSOPEN', '| /usr/bin/lesspipe %s'), ('USER', 'hosodalab9'), ('XDG_SESSION_TYPE', 'x11'), ('SHLVL', '1'), ('LD_LIBRARY_PATH', '/usr/lib/x86_64-linux-gnu/gazebo-11/plugins:/opt/ros/humble/opt/rviz_ogre_vendor/lib:/opt/ros/humble/lib/x86_64-linux-gnu:/opt/ros/humble/lib:/usr/local/cuda/lib64:/usr/local/cuda/extras/CUPTI/lib64'), ('HOME', '/home/hosodalab9'), ('CONDA_SHLVL', '0'), ('OLDPWD', '/home/hosodalab9/Sensor-Glove'), ('CMAKE_CUDA_COMPILER', '/usr/local/cuda-10.2/bin/nvcc'), ('DESKTOP_SESSION', 'ubuntu-xorg'), ('ros2_ws', '/home/hosodalab9/Sensor-Glove'), ('ROS_PYTHON_VERSION', '3'), ('GNOME_SHELL_SESSION_MODE', 'ubuntu'), ('GTK_MODULES', 'gail:atk-bridge'), ('SYSTEMD_EXEC_PID', '1444'), ('DBUS_SESSION_BUS_ADDRESS', 'unix:path=/run/user/1000/bus'), ('COLORTERM', 'truecolor'), ('_CE_M', ''), ('ROS_DISTRO', 'humble'), ('GTK_IM_MODULE', 'ibus'), ('LOGNAME', 'hosodalab9'), ('_', '/usr/bin/colcon'), ('ROS_VERSION', '2'), ('XDG_SESSION_CLASS', 'user'), ('USERNAME', 'hosodalab9'), ('TERM', 'xterm-256color'), ('GNOME_DESKTOP_SESSION_ID', 'this-is-deprecated'), ('_CE_CONDA', ''), ('ROS_LOCALHOST_ONLY', '1'), ('WINDOWPATH', '2'), ('PATH', '/home/hosodalab9/anaconda3/condabin:/opt/ros/humble/bin:/home/hosodalab9/.local/bin:/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin:/usr/games:/usr/local/games:/snap/bin:/snap/bin:CUDA_HOME/bin'), ('SESSION_MANAGER', 'local/hosodalab9-Venus-series:@/tmp/.ICE-unix/1423,unix/hosodalab9-Venus-series:/tmp/.ICE-unix/1423'), ('XDG_MENU_PREFIX', 'gnome-'), ('GNOME_TERMINAL_SCREEN', '/org/gnome/Terminal/screen/e46c7774_dfd7_4ba5_9462_d93fe0fccc36'), ('XDG_RUNTIME_DIR', '/run/user/1000'), ('DISPLAY', ':0'), ('LANG', 'en_US.UTF-8'), ('XDG_CURRENT_DESKTOP', 'ubuntu:GNOME'), ('XMODIFIERS', '@im=ibus'), ('XDG_SESSION_DESKTOP', 'ubuntu-xorg'), ('XAUTHORITY', '/run/user/1000/gdm/Xauthority'), ('LS_COLORS', 'rs=0:di=01;34:ln=01;36:mh=00:pi=40;33:so=01;35:do=01;35:bd=40;33;01:cd=40;33;01:or=40;31;01:mi=00:su=37;41:sg=30;43:ca=30;41:tw=30;42:ow=34;42:st=37;44:ex=01;32:*.tar=01;31:*.tgz=01;31:*.arc=01;31:*.arj=01;31:*.taz=01;31:*.lha=01;31:*.lz4=01;31:*.lzh=01;31:*.lzma=01;31:*.tlz=01;31:*.txz=01;31:*.tzo=01;31:*.t7z=01;31:*.zip=01;31:*.z=01;31:*.dz=01;31:*.gz=01;31:*.lrz=01;31:*.lz=01;31:*.lzo=01;31:*.xz=01;31:*.zst=01;31:*.tzst=01;31:*.bz2=01;31:*.bz=01;31:*.tbz=01;31:*.tbz2=01;31:*.tz=01;31:*.deb=01;31:*.rpm=01;31:*.jar=01;31:*.war=01;31:*.ear=01;31:*.sar=01;31:*.rar=01;31:*.alz=01;31:*.ace=01;31:*.zoo=01;31:*.cpio=01;31:*.7z=01;31:*.rz=01;31:*.cab=01;31:*.wim=01;31:*.swm=01;31:*.dwm=01;31:*.esd=01;31:*.jpg=01;35:*.jpeg=01;35:*.mjpg=01;35:*.mjpeg=01;35:*.gif=01;35:*.bmp=01;35:*.pbm=01;35:*.pgm=01;35:*.ppm=01;35:*.tga=01;35:*.xbm=01;35:*.xpm=01;35:*.tif=01;35:*.tiff=01;35:*.png=01;35:*.svg=01;35:*.svgz=01;35:*.mng=01;35:*.pcx=01;35:*.mov=01;35:*.mpg=01;35:*.mpeg=01;35:*.m2v=01;35:*.mkv=01;35:*.webm=01;35:*.webp=01;35:*.ogm=01;35:*.mp4=01;35:*.m4v=01;35:*.mp4v=01;35:*.vob=01;35:*.qt=01;35:*.nuv=01;35:*.wmv=01;35:*.asf=01;35:*.rm=01;35:*.rmvb=01;35:*.flc=01;35:*.avi=01;35:*.fli=01;35:*.flv=01;35:*.gl=01;35:*.dl=01;35:*.xcf=01;35:*.xwd=01;35:*.yuv=01;35:*.cgm=01;35:*.emf=01;35:*.ogv=01;35:*.ogx=01;35:*.aac=00;36:*.au=00;36:*.flac=00;36:*.m4a=00;36:*.mid=00;36:*.midi=00;36:*.mka=00;36:*.mp3=00;36:*.mpc=00;36:*.ogg=00;36:*.ra=00;36:*.wav=00;36:*.oga=00;36:*.opus=00;36:*.spx=00;36:*.xspf=00;36:'), ('GNOME_TERMINAL_SERVICE', ':1.735'), ('SSH_AGENT_LAUNCHER', 'gnome-keyring'), ('SSH_AUTH_SOCK', '/run/user/1000/keyring/ssh'), ('ROS_DOMAIN_ID', '1'), ('AMENT_PREFIX_PATH', '/opt/ros/humble'), ('CONDA_PYTHON_EXE', '/home/hosodalab9/anaconda3/bin/python'), ('SHELL', '/bin/bash'), ('QT_ACCESSIBILITY', '1'), ('GDMSESSION', 'ubuntu-xorg'), ('LESSCLOSE', '/usr/bin/lesspipe %s %s'), ('GPG_AGENT_INFO', '/run/user/1000/gnupg/S.gpg-agent:0:1'), ('QT_IM_MODULE', 'ibus'), ('PWD', '/home/hosodalab9/Sensor-Glove/build/realsense2_camera_msgs'), ('LC_ALL', 'en_US.UTF-8'), ('CUDA_HOME', '/usr/local/cuda'), ('XDG_CONFIG_DIRS', '/etc/xdg/xdg-ubuntu-xorg:/etc/xdg'), ('CONDA_EXE', '/home/hosodalab9/anaconda3/bin/conda'), ('XDG_DATA_DIRS', '/usr/share/ubuntu-xorg:/usr/share/gnome:/usr/local/share/:/usr/share/:/var/lib/snapd/desktop'), ('PYTHONPATH', '/opt/ros/humble/lib/python3.10/site-packages:/opt/ros/humble/local/lib/python3.10/dist-packages:/usr/local/lib'), ('COLCON', '1'), ('VTE_VERSION', '6800'), ('CMAKE_PREFIX_PATH', '/opt/ros/humble')]), 'shell': False}
+[0.027655] (data_handler) JobProgress: {'identifier': 'data_handler', 'progress': 'cmake'}
+[0.028329] (data_handler) JobProgress: {'identifier': 'data_handler', 'progress': 'build'}
+[0.029321] (data_handler) Command: {'cmd': ['/usr/bin/cmake', '--build', '/home/hosodalab9/Sensor-Glove/build/data_handler', '--', '-j16', '-l16'], 'cwd': '/home/hosodalab9/Sensor-Glove/build/data_handler', 'env': OrderedDict([('LESSOPEN', '| /usr/bin/lesspipe %s'), ('USER', 'hosodalab9'), ('XDG_SESSION_TYPE', 'x11'), ('SHLVL', '1'), ('LD_LIBRARY_PATH', '/usr/lib/x86_64-linux-gnu/gazebo-11/plugins:/opt/ros/humble/opt/rviz_ogre_vendor/lib:/opt/ros/humble/lib/x86_64-linux-gnu:/opt/ros/humble/lib:/usr/local/cuda/lib64:/usr/local/cuda/extras/CUPTI/lib64'), ('HOME', '/home/hosodalab9'), ('CONDA_SHLVL', '0'), ('OLDPWD', '/home/hosodalab9/Sensor-Glove'), ('CMAKE_CUDA_COMPILER', '/usr/local/cuda-10.2/bin/nvcc'), ('DESKTOP_SESSION', 'ubuntu-xorg'), ('ros2_ws', '/home/hosodalab9/Sensor-Glove'), ('ROS_PYTHON_VERSION', '3'), ('GNOME_SHELL_SESSION_MODE', 'ubuntu'), ('GTK_MODULES', 'gail:atk-bridge'), ('SYSTEMD_EXEC_PID', '1444'), ('DBUS_SESSION_BUS_ADDRESS', 'unix:path=/run/user/1000/bus'), ('COLORTERM', 'truecolor'), ('_CE_M', ''), ('ROS_DISTRO', 'humble'), ('GTK_IM_MODULE', 'ibus'), ('LOGNAME', 'hosodalab9'), ('_', '/usr/bin/colcon'), ('ROS_VERSION', '2'), ('XDG_SESSION_CLASS', 'user'), ('USERNAME', 'hosodalab9'), ('TERM', 'xterm-256color'), ('GNOME_DESKTOP_SESSION_ID', 'this-is-deprecated'), ('_CE_CONDA', ''), ('ROS_LOCALHOST_ONLY', '1'), ('WINDOWPATH', '2'), ('PATH', '/home/hosodalab9/anaconda3/condabin:/opt/ros/humble/bin:/home/hosodalab9/.local/bin:/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin:/usr/games:/usr/local/games:/snap/bin:/snap/bin:CUDA_HOME/bin'), ('SESSION_MANAGER', 'local/hosodalab9-Venus-series:@/tmp/.ICE-unix/1423,unix/hosodalab9-Venus-series:/tmp/.ICE-unix/1423'), ('XDG_MENU_PREFIX', 'gnome-'), ('GNOME_TERMINAL_SCREEN', '/org/gnome/Terminal/screen/e46c7774_dfd7_4ba5_9462_d93fe0fccc36'), ('XDG_RUNTIME_DIR', '/run/user/1000'), ('DISPLAY', ':0'), ('LANG', 'en_US.UTF-8'), ('XDG_CURRENT_DESKTOP', 'ubuntu:GNOME'), ('XMODIFIERS', '@im=ibus'), ('XDG_SESSION_DESKTOP', 'ubuntu-xorg'), ('XAUTHORITY', '/run/user/1000/gdm/Xauthority'), ('LS_COLORS', 'rs=0:di=01;34:ln=01;36:mh=00:pi=40;33:so=01;35:do=01;35:bd=40;33;01:cd=40;33;01:or=40;31;01:mi=00:su=37;41:sg=30;43:ca=30;41:tw=30;42:ow=34;42:st=37;44:ex=01;32:*.tar=01;31:*.tgz=01;31:*.arc=01;31:*.arj=01;31:*.taz=01;31:*.lha=01;31:*.lz4=01;31:*.lzh=01;31:*.lzma=01;31:*.tlz=01;31:*.txz=01;31:*.tzo=01;31:*.t7z=01;31:*.zip=01;31:*.z=01;31:*.dz=01;31:*.gz=01;31:*.lrz=01;31:*.lz=01;31:*.lzo=01;31:*.xz=01;31:*.zst=01;31:*.tzst=01;31:*.bz2=01;31:*.bz=01;31:*.tbz=01;31:*.tbz2=01;31:*.tz=01;31:*.deb=01;31:*.rpm=01;31:*.jar=01;31:*.war=01;31:*.ear=01;31:*.sar=01;31:*.rar=01;31:*.alz=01;31:*.ace=01;31:*.zoo=01;31:*.cpio=01;31:*.7z=01;31:*.rz=01;31:*.cab=01;31:*.wim=01;31:*.swm=01;31:*.dwm=01;31:*.esd=01;31:*.jpg=01;35:*.jpeg=01;35:*.mjpg=01;35:*.mjpeg=01;35:*.gif=01;35:*.bmp=01;35:*.pbm=01;35:*.pgm=01;35:*.ppm=01;35:*.tga=01;35:*.xbm=01;35:*.xpm=01;35:*.tif=01;35:*.tiff=01;35:*.png=01;35:*.svg=01;35:*.svgz=01;35:*.mng=01;35:*.pcx=01;35:*.mov=01;35:*.mpg=01;35:*.mpeg=01;35:*.m2v=01;35:*.mkv=01;35:*.webm=01;35:*.webp=01;35:*.ogm=01;35:*.mp4=01;35:*.m4v=01;35:*.mp4v=01;35:*.vob=01;35:*.qt=01;35:*.nuv=01;35:*.wmv=01;35:*.asf=01;35:*.rm=01;35:*.rmvb=01;35:*.flc=01;35:*.avi=01;35:*.fli=01;35:*.flv=01;35:*.gl=01;35:*.dl=01;35:*.xcf=01;35:*.xwd=01;35:*.yuv=01;35:*.cgm=01;35:*.emf=01;35:*.ogv=01;35:*.ogx=01;35:*.aac=00;36:*.au=00;36:*.flac=00;36:*.m4a=00;36:*.mid=00;36:*.midi=00;36:*.mka=00;36:*.mp3=00;36:*.mpc=00;36:*.ogg=00;36:*.ra=00;36:*.wav=00;36:*.oga=00;36:*.opus=00;36:*.spx=00;36:*.xspf=00;36:'), ('GNOME_TERMINAL_SERVICE', ':1.735'), ('SSH_AGENT_LAUNCHER', 'gnome-keyring'), ('SSH_AUTH_SOCK', '/run/user/1000/keyring/ssh'), ('ROS_DOMAIN_ID', '1'), ('AMENT_PREFIX_PATH', '/opt/ros/humble'), ('CONDA_PYTHON_EXE', '/home/hosodalab9/anaconda3/bin/python'), ('SHELL', '/bin/bash'), ('QT_ACCESSIBILITY', '1'), ('GDMSESSION', 'ubuntu-xorg'), ('LESSCLOSE', '/usr/bin/lesspipe %s %s'), ('GPG_AGENT_INFO', '/run/user/1000/gnupg/S.gpg-agent:0:1'), ('QT_IM_MODULE', 'ibus'), ('PWD', '/home/hosodalab9/Sensor-Glove/build/data_handler'), ('LC_ALL', 'en_US.UTF-8'), ('CUDA_HOME', '/usr/local/cuda'), ('XDG_CONFIG_DIRS', '/etc/xdg/xdg-ubuntu-xorg:/etc/xdg'), ('CONDA_EXE', '/home/hosodalab9/anaconda3/bin/conda'), ('XDG_DATA_DIRS', '/usr/share/ubuntu-xorg:/usr/share/gnome:/usr/local/share/:/usr/share/:/var/lib/snapd/desktop'), ('PYTHONPATH', '/opt/ros/humble/lib/python3.10/site-packages:/opt/ros/humble/local/lib/python3.10/dist-packages:/usr/local/lib'), ('COLCON', '1'), ('VTE_VERSION', '6800'), ('CMAKE_PREFIX_PATH', '/opt/ros/humble')]), 'shell': False}
+[0.030872] (ros2serial_arduino) JobProgress: {'identifier': 'ros2serial_arduino', 'progress': 'cmake'}
+[0.031225] (ros2serial_arduino) JobProgress: {'identifier': 'ros2serial_arduino', 'progress': 'build'}
+[0.032035] (ros2serial_arduino) Command: {'cmd': ['/usr/bin/cmake', '--build', '/home/hosodalab9/Sensor-Glove/build/ros2serial_arduino', '--', '-j16', '-l16'], 'cwd': '/home/hosodalab9/Sensor-Glove/build/ros2serial_arduino', 'env': OrderedDict([('LESSOPEN', '| /usr/bin/lesspipe %s'), ('USER', 'hosodalab9'), ('XDG_SESSION_TYPE', 'x11'), ('SHLVL', '1'), ('LD_LIBRARY_PATH', '/usr/lib/x86_64-linux-gnu/gazebo-11/plugins:/opt/ros/humble/opt/rviz_ogre_vendor/lib:/opt/ros/humble/lib/x86_64-linux-gnu:/opt/ros/humble/lib:/usr/local/cuda/lib64:/usr/local/cuda/extras/CUPTI/lib64'), ('HOME', '/home/hosodalab9'), ('CONDA_SHLVL', '0'), ('OLDPWD', '/home/hosodalab9/Sensor-Glove'), ('CMAKE_CUDA_COMPILER', '/usr/local/cuda-10.2/bin/nvcc'), ('DESKTOP_SESSION', 'ubuntu-xorg'), ('ros2_ws', '/home/hosodalab9/Sensor-Glove'), ('ROS_PYTHON_VERSION', '3'), ('GNOME_SHELL_SESSION_MODE', 'ubuntu'), ('GTK_MODULES', 'gail:atk-bridge'), ('SYSTEMD_EXEC_PID', '1444'), ('DBUS_SESSION_BUS_ADDRESS', 'unix:path=/run/user/1000/bus'), ('COLORTERM', 'truecolor'), ('_CE_M', ''), ('ROS_DISTRO', 'humble'), ('GTK_IM_MODULE', 'ibus'), ('LOGNAME', 'hosodalab9'), ('_', '/usr/bin/colcon'), ('ROS_VERSION', '2'), ('XDG_SESSION_CLASS', 'user'), ('USERNAME', 'hosodalab9'), ('TERM', 'xterm-256color'), ('GNOME_DESKTOP_SESSION_ID', 'this-is-deprecated'), ('_CE_CONDA', ''), ('ROS_LOCALHOST_ONLY', '1'), ('WINDOWPATH', '2'), ('PATH', '/home/hosodalab9/anaconda3/condabin:/opt/ros/humble/bin:/home/hosodalab9/.local/bin:/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin:/usr/games:/usr/local/games:/snap/bin:/snap/bin:CUDA_HOME/bin'), ('SESSION_MANAGER', 'local/hosodalab9-Venus-series:@/tmp/.ICE-unix/1423,unix/hosodalab9-Venus-series:/tmp/.ICE-unix/1423'), ('XDG_MENU_PREFIX', 'gnome-'), ('GNOME_TERMINAL_SCREEN', '/org/gnome/Terminal/screen/e46c7774_dfd7_4ba5_9462_d93fe0fccc36'), ('XDG_RUNTIME_DIR', '/run/user/1000'), ('DISPLAY', ':0'), ('LANG', 'en_US.UTF-8'), ('XDG_CURRENT_DESKTOP', 'ubuntu:GNOME'), ('XMODIFIERS', '@im=ibus'), ('XDG_SESSION_DESKTOP', 'ubuntu-xorg'), ('XAUTHORITY', '/run/user/1000/gdm/Xauthority'), ('LS_COLORS', 'rs=0:di=01;34:ln=01;36:mh=00:pi=40;33:so=01;35:do=01;35:bd=40;33;01:cd=40;33;01:or=40;31;01:mi=00:su=37;41:sg=30;43:ca=30;41:tw=30;42:ow=34;42:st=37;44:ex=01;32:*.tar=01;31:*.tgz=01;31:*.arc=01;31:*.arj=01;31:*.taz=01;31:*.lha=01;31:*.lz4=01;31:*.lzh=01;31:*.lzma=01;31:*.tlz=01;31:*.txz=01;31:*.tzo=01;31:*.t7z=01;31:*.zip=01;31:*.z=01;31:*.dz=01;31:*.gz=01;31:*.lrz=01;31:*.lz=01;31:*.lzo=01;31:*.xz=01;31:*.zst=01;31:*.tzst=01;31:*.bz2=01;31:*.bz=01;31:*.tbz=01;31:*.tbz2=01;31:*.tz=01;31:*.deb=01;31:*.rpm=01;31:*.jar=01;31:*.war=01;31:*.ear=01;31:*.sar=01;31:*.rar=01;31:*.alz=01;31:*.ace=01;31:*.zoo=01;31:*.cpio=01;31:*.7z=01;31:*.rz=01;31:*.cab=01;31:*.wim=01;31:*.swm=01;31:*.dwm=01;31:*.esd=01;31:*.jpg=01;35:*.jpeg=01;35:*.mjpg=01;35:*.mjpeg=01;35:*.gif=01;35:*.bmp=01;35:*.pbm=01;35:*.pgm=01;35:*.ppm=01;35:*.tga=01;35:*.xbm=01;35:*.xpm=01;35:*.tif=01;35:*.tiff=01;35:*.png=01;35:*.svg=01;35:*.svgz=01;35:*.mng=01;35:*.pcx=01;35:*.mov=01;35:*.mpg=01;35:*.mpeg=01;35:*.m2v=01;35:*.mkv=01;35:*.webm=01;35:*.webp=01;35:*.ogm=01;35:*.mp4=01;35:*.m4v=01;35:*.mp4v=01;35:*.vob=01;35:*.qt=01;35:*.nuv=01;35:*.wmv=01;35:*.asf=01;35:*.rm=01;35:*.rmvb=01;35:*.flc=01;35:*.avi=01;35:*.fli=01;35:*.flv=01;35:*.gl=01;35:*.dl=01;35:*.xcf=01;35:*.xwd=01;35:*.yuv=01;35:*.cgm=01;35:*.emf=01;35:*.ogv=01;35:*.ogx=01;35:*.aac=00;36:*.au=00;36:*.flac=00;36:*.m4a=00;36:*.mid=00;36:*.midi=00;36:*.mka=00;36:*.mp3=00;36:*.mpc=00;36:*.ogg=00;36:*.ra=00;36:*.wav=00;36:*.oga=00;36:*.opus=00;36:*.spx=00;36:*.xspf=00;36:'), ('GNOME_TERMINAL_SERVICE', ':1.735'), ('SSH_AGENT_LAUNCHER', 'gnome-keyring'), ('SSH_AUTH_SOCK', '/run/user/1000/keyring/ssh'), ('ROS_DOMAIN_ID', '1'), ('AMENT_PREFIX_PATH', '/opt/ros/humble'), ('CONDA_PYTHON_EXE', '/home/hosodalab9/anaconda3/bin/python'), ('SHELL', '/bin/bash'), ('QT_ACCESSIBILITY', '1'), ('GDMSESSION', 'ubuntu-xorg'), ('LESSCLOSE', '/usr/bin/lesspipe %s %s'), ('GPG_AGENT_INFO', '/run/user/1000/gnupg/S.gpg-agent:0:1'), ('QT_IM_MODULE', 'ibus'), ('PWD', '/home/hosodalab9/Sensor-Glove/build/ros2serial_arduino'), ('LC_ALL', 'en_US.UTF-8'), ('CUDA_HOME', '/usr/local/cuda'), ('XDG_CONFIG_DIRS', '/etc/xdg/xdg-ubuntu-xorg:/etc/xdg'), ('CONDA_EXE', '/home/hosodalab9/anaconda3/bin/conda'), ('XDG_DATA_DIRS', '/usr/share/ubuntu-xorg:/usr/share/gnome:/usr/local/share/:/usr/share/:/var/lib/snapd/desktop'), ('PYTHONPATH', '/opt/ros/humble/lib/python3.10/site-packages:/opt/ros/humble/local/lib/python3.10/dist-packages:/usr/local/lib'), ('COLCON', '1'), ('VTE_VERSION', '6800'), ('CMAKE_PREFIX_PATH', '/opt/ros/humble')]), 'shell': False}
+[0.090985] (realsense2_camera_msgs) StdoutLine: {'line': b'[  1%] \x1b[34m\x1b[1mGenerating C code for ROS interfaces\x1b[0m\n'}
+[0.099917] (-) TimerEvent: {}
+[0.103545] (data_handler) StdoutLine: {'line': b'[ 25%] \x1b[32mBuilding CXX object CMakeFiles/topics_subscriber.dir/src/topics_subscriber.cpp.o\x1b[0m\n'}
+[0.104176] (ros2serial_arduino) StdoutLine: {'line': b'[ 50%] \x1b[32mBuilding CXX object CMakeFiles/serial_send_node.dir/src/serial_send_node.cpp.o\x1b[0m\n'}
+[0.104355] (ros2serial_arduino) StdoutLine: {'line': b'[ 50%] \x1b[32mBuilding CXX object CMakeFiles/serial_receive_node.dir/src/serial_receive_node.cpp.o\x1b[0m\n'}
+[0.104480] (realsense2_camera_msgs) StdoutLine: {'line': b'[  3%] \x1b[34m\x1b[1mGenerating C++ code for ROS interfaces\x1b[0m\n'}
+[0.104960] (data_handler) StdoutLine: {'line': b'[ 50%] \x1b[32mBuilding CXX object CMakeFiles/topics_combined_sub.dir/src/topics_combined_sub.cpp.o\x1b[0m\n'}
+[0.115638] (realsense2_camera_msgs) StdoutLine: {'line': b'[  3%] Built target ament_cmake_python_symlink_realsense2_camera_msgs\n'}
+[0.200008] (-) TimerEvent: {}
+[0.300341] (-) TimerEvent: {}
+[0.400652] (-) TimerEvent: {}
+[0.401978] (realsense2_camera_msgs) StdoutLine: {'line': b'running egg_info\n'}
+[0.402848] (realsense2_camera_msgs) StdoutLine: {'line': b'creating realsense2_camera_msgs.egg-info\n'}
+[0.403283] (realsense2_camera_msgs) StdoutLine: {'line': b'writing realsense2_camera_msgs.egg-info/PKG-INFO\n'}
+[0.403452] (realsense2_camera_msgs) StdoutLine: {'line': b'writing dependency_links to realsense2_camera_msgs.egg-info/dependency_links.txt\n'}
+[0.403589] (realsense2_camera_msgs) StdoutLine: {'line': b'writing top-level names to realsense2_camera_msgs.egg-info/top_level.txt\n'}
+[0.403735] (realsense2_camera_msgs) StdoutLine: {'line': b"writing manifest file 'realsense2_camera_msgs.egg-info/SOURCES.txt'\n"}
+[0.406568] (realsense2_camera_msgs) StdoutLine: {'line': b"reading manifest file 'realsense2_camera_msgs.egg-info/SOURCES.txt'\n"}
+[0.406919] (realsense2_camera_msgs) StdoutLine: {'line': b"writing manifest file 'realsense2_camera_msgs.egg-info/SOURCES.txt'\n"}
+[0.433346] (realsense2_camera_msgs) StdoutLine: {'line': b'[  3%] Built target ament_cmake_python_build_realsense2_camera_msgs_egg\n'}
+[0.500736] (-) TimerEvent: {}
+[0.564330] (realsense2_camera_msgs) StdoutLine: {'line': b'[  3%] Built target realsense2_camera_msgs__cpp\n'}
+[0.573832] (realsense2_camera_msgs) StdoutLine: {'line': b'[  4%] \x1b[34m\x1b[1mGenerating C++ type support for eProsima Fast-RTPS\x1b[0m\n'}
+[0.574017] (realsense2_camera_msgs) StdoutLine: {'line': b'[  7%] \x1b[34m\x1b[1mGenerating C++ introspection for ROS interfaces\x1b[0m\n'}
+[0.574098] (realsense2_camera_msgs) StdoutLine: {'line': b'[  7%] \x1b[34m\x1b[1mGenerating C++ type support dispatch for ROS interfaces\x1b[0m\n'}
+[0.579847] (realsense2_camera_msgs) StdoutLine: {'line': b'[ 15%] \x1b[32mBuilding C object CMakeFiles/realsense2_camera_msgs__rosidl_generator_c.dir/rosidl_generator_c/realsense2_camera_msgs/msg/detail/rgbd__functions.c.o\x1b[0m\n'}
+[0.580045] (realsense2_camera_msgs) StdoutLine: {'line': b'[ 15%] \x1b[32mBuilding C object CMakeFiles/realsense2_camera_msgs__rosidl_generator_c.dir/rosidl_generator_c/realsense2_camera_msgs/msg/detail/extrinsics__functions.c.o\x1b[0m\n'}
+[0.580136] (realsense2_camera_msgs) StdoutLine: {'line': b'[ 15%] \x1b[32mBuilding C object CMakeFiles/realsense2_camera_msgs__rosidl_generator_c.dir/rosidl_generator_c/realsense2_camera_msgs/msg/detail/metadata__functions.c.o\x1b[0m\n'}
+[0.580233] (realsense2_camera_msgs) StdoutLine: {'line': b'[ 15%] \x1b[32mBuilding C object CMakeFiles/realsense2_camera_msgs__rosidl_generator_c.dir/rosidl_generator_c/realsense2_camera_msgs/srv/detail/device_info__functions.c.o\x1b[0m\n'}
+[0.580308] (realsense2_camera_msgs) StdoutLine: {'line': b'[ 15%] \x1b[32mBuilding C object CMakeFiles/realsense2_camera_msgs__rosidl_generator_c.dir/rosidl_generator_c/realsense2_camera_msgs/msg/detail/imu_info__functions.c.o\x1b[0m\n'}
+[0.600835] (-) TimerEvent: {}
+[0.632056] (realsense2_camera_msgs) StdoutLine: {'line': b'[ 17%] \x1b[32m\x1b[1mLinking C shared library librealsense2_camera_msgs__rosidl_generator_c.so\x1b[0m\n'}
+[0.674978] (realsense2_camera_msgs) StdoutLine: {'line': b'[ 17%] Built target realsense2_camera_msgs__rosidl_generator_c\n'}
+[0.684950] (realsense2_camera_msgs) StdoutLine: {'line': b'[ 22%] \x1b[34m\x1b[1mGenerating C type support dispatch for ROS interfaces\x1b[0m\n'}
+[0.685128] (realsense2_camera_msgs) StdoutLine: {'line': b'[ 22%] \x1b[34m\x1b[1mGenerating C introspection for ROS interfaces\x1b[0m\n'}
+[0.685199] (realsense2_camera_msgs) StdoutLine: {'line': b'[ 22%] \x1b[34m\x1b[1mGenerating C type support for eProsima Fast-RTPS\x1b[0m\n'}
+[0.700927] (-) TimerEvent: {}
+[0.759793] (subscriber) Command: {'cmd': ['/usr/bin/python3', '-W', 'ignore:setup.py install is deprecated', 'setup.py', 'develop', '--editable', '--build-directory', '/home/hosodalab9/Sensor-Glove/build/subscriber/build', '--no-deps', 'symlink_data'], 'cwd': '/home/hosodalab9/Sensor-Glove/build/subscriber', 'env': {'LESSOPEN': '| /usr/bin/lesspipe %s', 'USER': 'hosodalab9', 'XDG_SESSION_TYPE': 'x11', 'SHLVL': '1', 'LD_LIBRARY_PATH': '/usr/lib/x86_64-linux-gnu/gazebo-11/plugins:/opt/ros/humble/opt/rviz_ogre_vendor/lib:/opt/ros/humble/lib/x86_64-linux-gnu:/opt/ros/humble/lib:/usr/local/cuda/lib64:/usr/local/cuda/extras/CUPTI/lib64', 'HOME': '/home/hosodalab9', 'CONDA_SHLVL': '0', 'OLDPWD': '/home/hosodalab9/Sensor-Glove', 'CMAKE_CUDA_COMPILER': '/usr/local/cuda-10.2/bin/nvcc', 'DESKTOP_SESSION': 'ubuntu-xorg', 'ros2_ws': '/home/hosodalab9/Sensor-Glove', 'ROS_PYTHON_VERSION': '3', 'GNOME_SHELL_SESSION_MODE': 'ubuntu', 'GTK_MODULES': 'gail:atk-bridge', 'SYSTEMD_EXEC_PID': '1444', 'DBUS_SESSION_BUS_ADDRESS': 'unix:path=/run/user/1000/bus', 'COLORTERM': 'truecolor', '_CE_M': '', 'ROS_DISTRO': 'humble', 'GTK_IM_MODULE': 'ibus', 'LOGNAME': 'hosodalab9', '_': '/usr/bin/colcon', 'ROS_VERSION': '2', 'XDG_SESSION_CLASS': 'user', 'USERNAME': 'hosodalab9', 'TERM': 'xterm-256color', 'GNOME_DESKTOP_SESSION_ID': 'this-is-deprecated', '_CE_CONDA': '', 'ROS_LOCALHOST_ONLY': '1', 'WINDOWPATH': '2', 'PATH': '/home/hosodalab9/anaconda3/condabin:/opt/ros/humble/bin:/home/hosodalab9/.local/bin:/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin:/usr/games:/usr/local/games:/snap/bin:/snap/bin:CUDA_HOME/bin', 'SESSION_MANAGER': 'local/hosodalab9-Venus-series:@/tmp/.ICE-unix/1423,unix/hosodalab9-Venus-series:/tmp/.ICE-unix/1423', 'XDG_MENU_PREFIX': 'gnome-', 'GNOME_TERMINAL_SCREEN': '/org/gnome/Terminal/screen/e46c7774_dfd7_4ba5_9462_d93fe0fccc36', 'XDG_RUNTIME_DIR': '/run/user/1000', 'DISPLAY': ':0', 'LANG': 'en_US.UTF-8', 'XDG_CURRENT_DESKTOP': 'ubuntu:GNOME', 'XMODIFIERS': '@im=ibus', 'XDG_SESSION_DESKTOP': 'ubuntu-xorg', 'XAUTHORITY': '/run/user/1000/gdm/Xauthority', 'LS_COLORS': 'rs=0:di=01;34:ln=01;36:mh=00:pi=40;33:so=01;35:do=01;35:bd=40;33;01:cd=40;33;01:or=40;31;01:mi=00:su=37;41:sg=30;43:ca=30;41:tw=30;42:ow=34;42:st=37;44:ex=01;32:*.tar=01;31:*.tgz=01;31:*.arc=01;31:*.arj=01;31:*.taz=01;31:*.lha=01;31:*.lz4=01;31:*.lzh=01;31:*.lzma=01;31:*.tlz=01;31:*.txz=01;31:*.tzo=01;31:*.t7z=01;31:*.zip=01;31:*.z=01;31:*.dz=01;31:*.gz=01;31:*.lrz=01;31:*.lz=01;31:*.lzo=01;31:*.xz=01;31:*.zst=01;31:*.tzst=01;31:*.bz2=01;31:*.bz=01;31:*.tbz=01;31:*.tbz2=01;31:*.tz=01;31:*.deb=01;31:*.rpm=01;31:*.jar=01;31:*.war=01;31:*.ear=01;31:*.sar=01;31:*.rar=01;31:*.alz=01;31:*.ace=01;31:*.zoo=01;31:*.cpio=01;31:*.7z=01;31:*.rz=01;31:*.cab=01;31:*.wim=01;31:*.swm=01;31:*.dwm=01;31:*.esd=01;31:*.jpg=01;35:*.jpeg=01;35:*.mjpg=01;35:*.mjpeg=01;35:*.gif=01;35:*.bmp=01;35:*.pbm=01;35:*.pgm=01;35:*.ppm=01;35:*.tga=01;35:*.xbm=01;35:*.xpm=01;35:*.tif=01;35:*.tiff=01;35:*.png=01;35:*.svg=01;35:*.svgz=01;35:*.mng=01;35:*.pcx=01;35:*.mov=01;35:*.mpg=01;35:*.mpeg=01;35:*.m2v=01;35:*.mkv=01;35:*.webm=01;35:*.webp=01;35:*.ogm=01;35:*.mp4=01;35:*.m4v=01;35:*.mp4v=01;35:*.vob=01;35:*.qt=01;35:*.nuv=01;35:*.wmv=01;35:*.asf=01;35:*.rm=01;35:*.rmvb=01;35:*.flc=01;35:*.avi=01;35:*.fli=01;35:*.flv=01;35:*.gl=01;35:*.dl=01;35:*.xcf=01;35:*.xwd=01;35:*.yuv=01;35:*.cgm=01;35:*.emf=01;35:*.ogv=01;35:*.ogx=01;35:*.aac=00;36:*.au=00;36:*.flac=00;36:*.m4a=00;36:*.mid=00;36:*.midi=00;36:*.mka=00;36:*.mp3=00;36:*.mpc=00;36:*.ogg=00;36:*.ra=00;36:*.wav=00;36:*.oga=00;36:*.opus=00;36:*.spx=00;36:*.xspf=00;36:', 'GNOME_TERMINAL_SERVICE': ':1.735', 'SSH_AGENT_LAUNCHER': 'gnome-keyring', 'SSH_AUTH_SOCK': '/run/user/1000/keyring/ssh', 'ROS_DOMAIN_ID': '1', 'AMENT_PREFIX_PATH': '/opt/ros/humble', 'CONDA_PYTHON_EXE': '/home/hosodalab9/anaconda3/bin/python', 'SHELL': '/bin/bash', 'QT_ACCESSIBILITY': '1', 'GDMSESSION': 'ubuntu-xorg', 'LESSCLOSE': '/usr/bin/lesspipe %s %s', 'GPG_AGENT_INFO': '/run/user/1000/gnupg/S.gpg-agent:0:1', 'QT_IM_MODULE': 'ibus', 'PWD': '/home/hosodalab9/Sensor-Glove/build/subscriber', 'LC_ALL': 'en_US.UTF-8', 'CUDA_HOME': '/usr/local/cuda', 'XDG_CONFIG_DIRS': '/etc/xdg/xdg-ubuntu-xorg:/etc/xdg', 'CONDA_EXE': '/home/hosodalab9/anaconda3/bin/conda', 'XDG_DATA_DIRS': '/usr/share/ubuntu-xorg:/usr/share/gnome:/usr/local/share/:/usr/share/:/var/lib/snapd/desktop', 'PYTHONPATH': '/home/hosodalab9/Sensor-Glove/build/subscriber/prefix_override:/usr/lib/python3/dist-packages/colcon_core/task/python/colcon_distutils_commands:/home/hosodalab9/Sensor-Glove/install/subscriber/lib/python3.10/site-packages:/opt/ros/humble/lib/python3.10/site-packages:/opt/ros/humble/local/lib/python3.10/dist-packages:/usr/local/lib', 'COLCON': '1', 'VTE_VERSION': '6800'}, 'shell': False}
+[0.801051] (-) TimerEvent: {}
+[0.901465] (-) TimerEvent: {}
+[1.001811] (-) TimerEvent: {}
+[1.009407] (realsense2_camera_msgs) StdoutLine: {'line': b'[ 25%] \x1b[32mBuilding CXX object CMakeFiles/realsense2_camera_msgs__rosidl_typesupport_c.dir/rosidl_typesupport_c/realsense2_camera_msgs/msg/extrinsics__type_support.cpp.o\x1b[0m\n'}
+[1.010174] (realsense2_camera_msgs) StdoutLine: {'line': b'[ 25%] \x1b[32mBuilding CXX object CMakeFiles/realsense2_camera_msgs__rosidl_typesupport_c.dir/rosidl_typesupport_c/realsense2_camera_msgs/msg/rgbd__type_support.cpp.o\x1b[0m\n'}
+[1.012626] (realsense2_camera_msgs) StdoutLine: {'line': b'[ 28%] \x1b[32mBuilding CXX object CMakeFiles/realsense2_camera_msgs__rosidl_typesupport_c.dir/rosidl_typesupport_c/realsense2_camera_msgs/srv/device_info__type_support.cpp.o\x1b[0m\n'}
+[1.013247] (realsense2_camera_msgs) StdoutLine: {'line': b'[ 28%] \x1b[32mBuilding CXX object CMakeFiles/realsense2_camera_msgs__rosidl_typesupport_c.dir/rosidl_typesupport_c/realsense2_camera_msgs/msg/imu_info__type_support.cpp.o\x1b[0m\n'}
+[1.013944] (realsense2_camera_msgs) StdoutLine: {'line': b'[ 30%] \x1b[32mBuilding CXX object CMakeFiles/realsense2_camera_msgs__rosidl_typesupport_c.dir/rosidl_typesupport_c/realsense2_camera_msgs/msg/metadata__type_support.cpp.o\x1b[0m\n'}
+[1.045477] (realsense2_camera_msgs) StdoutLine: {'line': b'[ 31%] \x1b[32mBuilding CXX object CMakeFiles/realsense2_camera_msgs__rosidl_typesupport_cpp.dir/rosidl_typesupport_cpp/realsense2_camera_msgs/msg/imu_info__type_support.cpp.o\x1b[0m\n'}
+[1.054428] (realsense2_camera_msgs) StdoutLine: {'line': b'[ 33%] \x1b[32mBuilding CXX object CMakeFiles/realsense2_camera_msgs__rosidl_typesupport_cpp.dir/rosidl_typesupport_cpp/realsense2_camera_msgs/msg/extrinsics__type_support.cpp.o\x1b[0m\n'}
+[1.055715] (realsense2_camera_msgs) StdoutLine: {'line': b'[ 34%] \x1b[32m\x1b[1mLinking CXX shared library librealsense2_camera_msgs__rosidl_typesupport_c.so\x1b[0m\n'}
+[1.057323] (realsense2_camera_msgs) StdoutLine: {'line': b'[ 36%] \x1b[32mBuilding CXX object CMakeFiles/realsense2_camera_msgs__rosidl_typesupport_cpp.dir/rosidl_typesupport_cpp/realsense2_camera_msgs/msg/metadata__type_support.cpp.o\x1b[0m\n'}
+[1.071122] (realsense2_camera_msgs) StdoutLine: {'line': b'[ 38%] \x1b[32mBuilding CXX object CMakeFiles/realsense2_camera_msgs__rosidl_typesupport_cpp.dir/rosidl_typesupport_cpp/realsense2_camera_msgs/srv/device_info__type_support.cpp.o\x1b[0m\n'}
+[1.072064] (realsense2_camera_msgs) StdoutLine: {'line': b'[ 39%] \x1b[32mBuilding CXX object CMakeFiles/realsense2_camera_msgs__rosidl_typesupport_cpp.dir/rosidl_typesupport_cpp/realsense2_camera_msgs/msg/rgbd__type_support.cpp.o\x1b[0m\n'}
+[1.101921] (-) TimerEvent: {}
+[1.112785] (realsense2_camera_msgs) StdoutLine: {'line': b'[ 41%] \x1b[32mBuilding C object CMakeFiles/realsense2_camera_msgs__rosidl_typesupport_introspection_c.dir/rosidl_typesupport_introspection_c/realsense2_camera_msgs/msg/detail/imu_info__type_support.c.o\x1b[0m\n'}
+[1.119940] (realsense2_camera_msgs) StdoutLine: {'line': b'[ 44%] \x1b[32mBuilding C object CMakeFiles/realsense2_camera_msgs__rosidl_typesupport_introspection_c.dir/rosidl_typesupport_introspection_c/realsense2_camera_msgs/msg/detail/extrinsics__type_support.c.o\x1b[0m\n'}
+[1.121904] (realsense2_camera_msgs) StdoutLine: {'line': b'[ 44%] \x1b[32mBuilding CXX object CMakeFiles/realsense2_camera_msgs__rosidl_typesupport_fastrtps_c.dir/rosidl_typesupport_fastrtps_c/realsense2_camera_msgs/msg/detail/imu_info__type_support_c.cpp.o\x1b[0m\n'}
+[1.122774] (realsense2_camera_msgs) StdoutLine: {'line': b'[ 46%] \x1b[32mBuilding CXX object CMakeFiles/realsense2_camera_msgs__rosidl_typesupport_fastrtps_c.dir/rosidl_typesupport_fastrtps_c/realsense2_camera_msgs/msg/detail/metadata__type_support_c.cpp.o\x1b[0m\n'}
+[1.125807] (realsense2_camera_msgs) StdoutLine: {'line': b'[ 47%] \x1b[32mBuilding CXX object CMakeFiles/realsense2_camera_msgs__rosidl_typesupport_fastrtps_c.dir/rosidl_typesupport_fastrtps_c/realsense2_camera_msgs/msg/detail/extrinsics__type_support_c.cpp.o\x1b[0m\n'}
+[1.133629] (realsense2_camera_msgs) StdoutLine: {'line': b'[ 49%] \x1b[32mBuilding CXX object CMakeFiles/realsense2_camera_msgs__rosidl_typesupport_fastrtps_c.dir/rosidl_typesupport_fastrtps_c/realsense2_camera_msgs/msg/detail/rgbd__type_support_c.cpp.o\x1b[0m\n'}
+[1.135482] (realsense2_camera_msgs) StdoutLine: {'line': b'[ 50%] \x1b[32mBuilding C object CMakeFiles/realsense2_camera_msgs__rosidl_typesupport_introspection_c.dir/rosidl_typesupport_introspection_c/realsense2_camera_msgs/msg/detail/rgbd__type_support.c.o\x1b[0m\n'}
+[1.141415] (realsense2_camera_msgs) StdoutLine: {'line': b'[ 52%] \x1b[32mBuilding C object CMakeFiles/realsense2_camera_msgs__rosidl_typesupport_introspection_c.dir/rosidl_typesupport_introspection_c/realsense2_camera_msgs/msg/detail/metadata__type_support.c.o\x1b[0m\n'}
+[1.148687] (realsense2_camera_msgs) StdoutLine: {'line': b'[ 52%] Built target realsense2_camera_msgs__rosidl_typesupport_c\n'}
+[1.157415] (realsense2_camera_msgs) StdoutLine: {'line': b'[ 53%] \x1b[32mBuilding CXX object CMakeFiles/realsense2_camera_msgs__rosidl_typesupport_introspection_cpp.dir/rosidl_typesupport_introspection_cpp/realsense2_camera_msgs/msg/detail/imu_info__type_support.cpp.o\x1b[0m\n'}
+[1.165969] (realsense2_camera_msgs) StdoutLine: {'line': b'[ 55%] \x1b[32mBuilding CXX object CMakeFiles/realsense2_camera_msgs__rosidl_typesupport_introspection_cpp.dir/rosidl_typesupport_introspection_cpp/realsense2_camera_msgs/msg/detail/extrinsics__type_support.cpp.o\x1b[0m\n'}
+[1.167469] (subscriber) StdoutLine: {'line': b'running develop\n'}
+[1.179204] (subscriber) StderrLine: {'line': b'/usr/lib/python3/dist-packages/setuptools/command/easy_install.py:158: EasyInstallDeprecationWarning: easy_install command is deprecated. Use build and pip and other standards-based tools.\n'}
+[1.179440] (subscriber) StderrLine: {'line': b'  warnings.warn(\n'}
+[1.202058] (-) TimerEvent: {}
+[1.224340] (realsense2_camera_msgs) StdoutLine: {'line': b'[ 57%] \x1b[32mBuilding CXX object CMakeFiles/realsense2_camera_msgs__rosidl_typesupport_fastrtps_c.dir/rosidl_typesupport_fastrtps_c/realsense2_camera_msgs/srv/detail/device_info__type_support_c.cpp.o\x1b[0m\n'}
+[1.224620] (realsense2_camera_msgs) StdoutLine: {'line': b'[ 58%] \x1b[32mBuilding CXX object CMakeFiles/realsense2_camera_msgs__rosidl_typesupport_introspection_cpp.dir/rosidl_typesupport_introspection_cpp/realsense2_camera_msgs/msg/detail/metadata__type_support.cpp.o\x1b[0m\n'}
+[1.239058] (realsense2_camera_msgs) StdoutLine: {'line': b'[ 60%] \x1b[32mBuilding CXX object CMakeFiles/realsense2_camera_msgs__rosidl_typesupport_introspection_cpp.dir/rosidl_typesupport_introspection_cpp/realsense2_camera_msgs/msg/detail/rgbd__type_support.cpp.o\x1b[0m\n'}
+[1.242736] (realsense2_camera_msgs) StdoutLine: {'line': b'[ 61%] \x1b[32mBuilding C object CMakeFiles/realsense2_camera_msgs__rosidl_typesupport_introspection_c.dir/rosidl_typesupport_introspection_c/realsense2_camera_msgs/srv/detail/device_info__type_support.c.o\x1b[0m\n'}
+[1.302180] (-) TimerEvent: {}
+[1.402729] (-) TimerEvent: {}
+[1.427204] (realsense2_camera_msgs) StdoutLine: {'line': b'[ 63%] \x1b[32m\x1b[1mLinking C shared library librealsense2_camera_msgs__rosidl_typesupport_introspection_c.so\x1b[0m\n'}
+[1.462570] (realsense2_camera_msgs) StdoutLine: {'line': b'[ 65%] \x1b[32mBuilding CXX object CMakeFiles/realsense2_camera_msgs__rosidl_typesupport_introspection_cpp.dir/rosidl_typesupport_introspection_cpp/realsense2_camera_msgs/srv/detail/device_info__type_support.cpp.o\x1b[0m\n'}
+[1.471814] (realsense2_camera_msgs) StdoutLine: {'line': b'[ 66%] \x1b[32mBuilding CXX object CMakeFiles/realsense2_camera_msgs__rosidl_typesupport_fastrtps_cpp.dir/rosidl_typesupport_fastrtps_cpp/realsense2_camera_msgs/msg/detail/dds_fastrtps/imu_info__type_support.cpp.o\x1b[0m\n'}
+[1.488835] (realsense2_camera_msgs) StdoutLine: {'line': b'[ 68%] \x1b[32mBuilding CXX object CMakeFiles/realsense2_camera_msgs__rosidl_typesupport_fastrtps_cpp.dir/rosidl_typesupport_fastrtps_cpp/realsense2_camera_msgs/msg/detail/dds_fastrtps/extrinsics__type_support.cpp.o\x1b[0m\n'}
+[1.502847] (-) TimerEvent: {}
+[1.514390] (realsense2_camera_msgs) StdoutLine: {'line': b'[ 69%] \x1b[32mBuilding CXX object CMakeFiles/realsense2_camera_msgs__rosidl_typesupport_fastrtps_cpp.dir/rosidl_typesupport_fastrtps_cpp/realsense2_camera_msgs/msg/detail/dds_fastrtps/metadata__type_support.cpp.o\x1b[0m\n'}
+[1.528373] (realsense2_camera_msgs) StdoutLine: {'line': b'[ 71%] \x1b[32mBuilding CXX object CMakeFiles/realsense2_camera_msgs__rosidl_typesupport_fastrtps_cpp.dir/rosidl_typesupport_fastrtps_cpp/realsense2_camera_msgs/msg/detail/dds_fastrtps/rgbd__type_support.cpp.o\x1b[0m\n'}
+[1.542277] (realsense2_camera_msgs) StdoutLine: {'line': b'[ 73%] \x1b[32m\x1b[1mLinking CXX shared library librealsense2_camera_msgs__rosidl_typesupport_cpp.so\x1b[0m\n'}
+[1.563163] (realsense2_camera_msgs) StdoutLine: {'line': b'[ 73%] Built target realsense2_camera_msgs__rosidl_typesupport_introspection_c\n'}
+[1.602964] (-) TimerEvent: {}
+[1.613854] (realsense2_camera_msgs) StdoutLine: {'line': b'[ 74%] \x1b[32mBuilding CXX object CMakeFiles/realsense2_camera_msgs__rosidl_typesupport_fastrtps_cpp.dir/rosidl_typesupport_fastrtps_cpp/realsense2_camera_msgs/srv/detail/dds_fastrtps/device_info__type_support.cpp.o\x1b[0m\n'}
+[1.703075] (-) TimerEvent: {}
+[1.711579] (realsense2_camera_msgs) StdoutLine: {'line': b'[ 74%] Built target realsense2_camera_msgs__rosidl_typesupport_cpp\n'}
+[1.722466] (subscriber) StdoutLine: {'line': b'running egg_info\n'}
+[1.722882] (subscriber) StdoutLine: {'line': b'creating subscriber.egg-info\n'}
+[1.724056] (subscriber) StdoutLine: {'line': b'writing subscriber.egg-info/PKG-INFO\n'}
+[1.725268] (subscriber) StdoutLine: {'line': b'writing dependency_links to subscriber.egg-info/dependency_links.txt\n'}
+[1.726070] (subscriber) StdoutLine: {'line': b'writing entry points to subscriber.egg-info/entry_points.txt\n'}
+[1.726786] (subscriber) StdoutLine: {'line': b'writing requirements to subscriber.egg-info/requires.txt\n'}
+[1.727465] (subscriber) StdoutLine: {'line': b'writing top-level names to subscriber.egg-info/top_level.txt\n'}
+[1.728458] (subscriber) StdoutLine: {'line': b"writing manifest file 'subscriber.egg-info/SOURCES.txt'\n"}
+[1.732530] (subscriber) StdoutLine: {'line': b"reading manifest file 'subscriber.egg-info/SOURCES.txt'\n"}
+[1.734289] (subscriber) StdoutLine: {'line': b"writing manifest file 'subscriber.egg-info/SOURCES.txt'\n"}
+[1.737341] (subscriber) StdoutLine: {'line': b'running build_ext\n'}
+[1.737978] (subscriber) StdoutLine: {'line': b'Creating /home/hosodalab9/Sensor-Glove/install/subscriber/lib/python3.10/site-packages/subscriber.egg-link (link to .)\n'}
+[1.739561] (subscriber) StdoutLine: {'line': b'Installing angle_finger script to /home/hosodalab9/Sensor-Glove/install/subscriber/lib/subscriber\n'}
+[1.740616] (subscriber) StdoutLine: {'line': b'Installing subscriber script to /home/hosodalab9/Sensor-Glove/install/subscriber/lib/subscriber\n'}
+[1.741583] (subscriber) StdoutLine: {'line': b'\n'}
+[1.741782] (subscriber) StdoutLine: {'line': b'Installed /home/hosodalab9/Sensor-Glove/build/subscriber\n'}
+[1.741907] (subscriber) StdoutLine: {'line': b'running symlink_data\n'}
+[1.742818] (subscriber) StdoutLine: {'line': b'creating /home/hosodalab9/Sensor-Glove/install/subscriber/share/ament_index\n'}
+[1.743214] (subscriber) StdoutLine: {'line': b'creating /home/hosodalab9/Sensor-Glove/install/subscriber/share/ament_index/resource_index\n'}
+[1.743605] (subscriber) StdoutLine: {'line': b'creating /home/hosodalab9/Sensor-Glove/install/subscriber/share/ament_index/resource_index/packages\n'}
+[1.744142] (subscriber) StdoutLine: {'line': b'symbolically linking /home/hosodalab9/Sensor-Glove/build/subscriber/resource/subscriber -> /home/hosodalab9/Sensor-Glove/install/subscriber/share/ament_index/resource_index/packages\n'}
+[1.744679] (subscriber) StdoutLine: {'line': b'symbolically linking /home/hosodalab9/Sensor-Glove/build/subscriber/package.xml -> /home/hosodalab9/Sensor-Glove/install/subscriber/share/subscriber\n'}
+[1.803207] (-) TimerEvent: {}
+[1.832601] (subscriber) CommandEnded: {'returncode': 0}
+[1.835157] (realsense2_camera_msgs) StdoutLine: {'line': b'[ 76%] \x1b[32m\x1b[1mLinking CXX shared library librealsense2_camera_msgs__rosidl_typesupport_fastrtps_c.so\x1b[0m\n'}
+[1.872322] (subscriber) JobEnded: {'identifier': 'subscriber', 'rc': 0}
+[1.903347] (-) TimerEvent: {}
+[1.979918] (realsense2_camera_msgs) StdoutLine: {'line': b'[ 76%] Built target realsense2_camera_msgs__rosidl_typesupport_fastrtps_c\n'}
+[1.980221] (realsense2_camera_msgs) StdoutLine: {'line': b'[ 77%] \x1b[32m\x1b[1mLinking CXX shared library librealsense2_camera_msgs__rosidl_typesupport_introspection_cpp.so\x1b[0m\n'}
+[2.003447] (-) TimerEvent: {}
+[2.060854] (realsense2_camera_msgs) StdoutLine: {'line': b'[ 77%] Built target realsense2_camera_msgs__rosidl_typesupport_introspection_cpp\n'}
+[2.103584] (-) TimerEvent: {}
+[2.125567] (realsense2_camera_msgs) StdoutLine: {'line': b'[ 79%] \x1b[32m\x1b[1mLinking CXX shared library librealsense2_camera_msgs__rosidl_typesupport_fastrtps_cpp.so\x1b[0m\n'}
+[2.203726] (-) TimerEvent: {}
+[2.215095] (realsense2_camera_msgs) StdoutLine: {'line': b'[ 79%] Built target realsense2_camera_msgs__rosidl_typesupport_fastrtps_cpp\n'}
+[2.237422] (realsense2_camera_msgs) StdoutLine: {'line': b'[ 79%] Built target realsense2_camera_msgs\n'}
+[2.261002] (realsense2_camera_msgs) StdoutLine: {'line': b'[ 80%] \x1b[34m\x1b[1mGenerating Python code for ROS interfaces\x1b[0m\n'}
+[2.303847] (-) TimerEvent: {}
+[2.404181] (-) TimerEvent: {}
+[2.504511] (-) TimerEvent: {}
+[2.604840] (-) TimerEvent: {}
+[2.705127] (-) TimerEvent: {}
+[2.805451] (-) TimerEvent: {}
+[2.828021] (realsense2_camera_msgs) StdoutLine: {'line': b'[ 80%] Built target realsense2_camera_msgs__py\n'}
+[2.848612] (realsense2_camera_msgs) StdoutLine: {'line': b'[ 85%] \x1b[32mBuilding C object CMakeFiles/realsense2_camera_msgs__rosidl_generator_py.dir/rosidl_generator_py/realsense2_camera_msgs/msg/_extrinsics_s.c.o\x1b[0m\n'}
+[2.848843] (realsense2_camera_msgs) StdoutLine: {'line': b'[ 85%] \x1b[32mBuilding C object CMakeFiles/realsense2_camera_msgs__rosidl_generator_py.dir/rosidl_generator_py/realsense2_camera_msgs/msg/_imu_info_s.c.o\x1b[0m\n'}
+[2.848981] (realsense2_camera_msgs) StdoutLine: {'line': b'[ 85%] \x1b[32mBuilding C object CMakeFiles/realsense2_camera_msgs__rosidl_generator_py.dir/rosidl_generator_py/realsense2_camera_msgs/srv/_device_info_s.c.o\x1b[0m\n'}
+[2.849167] (realsense2_camera_msgs) StdoutLine: {'line': b'[ 87%] \x1b[32mBuilding C object CMakeFiles/realsense2_camera_msgs__rosidl_generator_py.dir/rosidl_generator_py/realsense2_camera_msgs/msg/_rgbd_s.c.o\x1b[0m\n'}
+[2.850953] (realsense2_camera_msgs) StdoutLine: {'line': b'[ 88%] \x1b[32mBuilding C object CMakeFiles/realsense2_camera_msgs__rosidl_generator_py.dir/rosidl_generator_py/realsense2_camera_msgs/msg/_metadata_s.c.o\x1b[0m\n'}
+[2.905565] (-) TimerEvent: {}
+[3.005883] (-) TimerEvent: {}
+[3.007105] (realsense2_camera_msgs) StdoutLine: {'line': b'[ 90%] \x1b[32m\x1b[1mLinking C shared library rosidl_generator_py/realsense2_camera_msgs/librealsense2_camera_msgs__rosidl_generator_py.so\x1b[0m\n'}
+[3.065354] (realsense2_camera_msgs) StdoutLine: {'line': b'[ 90%] Built target realsense2_camera_msgs__rosidl_generator_py\n'}
+[3.085669] (realsense2_camera_msgs) StdoutLine: {'line': b'[ 93%] \x1b[32mBuilding C object CMakeFiles/realsense2_camera_msgs__rosidl_typesupport_introspection_c__pyext.dir/rosidl_generator_py/realsense2_camera_msgs/_realsense2_camera_msgs_s.ep.rosidl_typesupport_introspection_c.c.o\x1b[0m\n'}
+[3.085946] (realsense2_camera_msgs) StdoutLine: {'line': b'[ 93%] \x1b[32mBuilding C object CMakeFiles/realsense2_camera_msgs__rosidl_typesupport_c__pyext.dir/rosidl_generator_py/realsense2_camera_msgs/_realsense2_camera_msgs_s.ep.rosidl_typesupport_c.c.o\x1b[0m\n'}
+[3.086084] (realsense2_camera_msgs) StdoutLine: {'line': b'[ 95%] \x1b[32mBuilding C object CMakeFiles/realsense2_camera_msgs__rosidl_typesupport_fastrtps_c__pyext.dir/rosidl_generator_py/realsense2_camera_msgs/_realsense2_camera_msgs_s.ep.rosidl_typesupport_fastrtps_c.c.o\x1b[0m\n'}
+[3.105999] (-) TimerEvent: {}
+[3.178686] (realsense2_camera_msgs) StdoutLine: {'line': b'[ 98%] \x1b[32m\x1b[1mLinking C shared library rosidl_generator_py/realsense2_camera_msgs/realsense2_camera_msgs_s__rosidl_typesupport_c.cpython-310-x86_64-linux-gnu.so\x1b[0m\n'}
+[3.178877] (realsense2_camera_msgs) StdoutLine: {'line': b'[ 98%] \x1b[32m\x1b[1mLinking C shared library rosidl_generator_py/realsense2_camera_msgs/realsense2_camera_msgs_s__rosidl_typesupport_introspection_c.cpython-310-x86_64-linux-gnu.so\x1b[0m\n'}
+[3.204990] (realsense2_camera_msgs) StdoutLine: {'line': b'[100%] \x1b[32m\x1b[1mLinking C shared library rosidl_generator_py/realsense2_camera_msgs/realsense2_camera_msgs_s__rosidl_typesupport_fastrtps_c.cpython-310-x86_64-linux-gnu.so\x1b[0m\n'}
+[3.206078] (-) TimerEvent: {}
+[3.222678] (realsense2_camera_msgs) StdoutLine: {'line': b'[100%] Built target realsense2_camera_msgs__rosidl_typesupport_c__pyext\n'}
+[3.222908] (realsense2_camera_msgs) StdoutLine: {'line': b'[100%] Built target realsense2_camera_msgs__rosidl_typesupport_introspection_c__pyext\n'}
+[3.245452] (realsense2_camera_msgs) StdoutLine: {'line': b'[100%] Built target realsense2_camera_msgs__rosidl_typesupport_fastrtps_c__pyext\n'}
+[3.259405] (realsense2_camera_msgs) CommandEnded: {'returncode': 0}
+[3.306175] (-) TimerEvent: {}
+[3.406479] (-) TimerEvent: {}
+[3.420395] (realsense2_camera_msgs) JobProgress: {'identifier': 'realsense2_camera_msgs', 'progress': 'install'}
+[3.429433] (realsense2_camera_msgs) Command: {'cmd': ['/usr/bin/cmake', '--install', '/home/hosodalab9/Sensor-Glove/build/realsense2_camera_msgs'], 'cwd': '/home/hosodalab9/Sensor-Glove/build/realsense2_camera_msgs', 'env': OrderedDict([('LESSOPEN', '| /usr/bin/lesspipe %s'), ('USER', 'hosodalab9'), ('XDG_SESSION_TYPE', 'x11'), ('SHLVL', '1'), ('LD_LIBRARY_PATH', '/usr/lib/x86_64-linux-gnu/gazebo-11/plugins:/opt/ros/humble/opt/rviz_ogre_vendor/lib:/opt/ros/humble/lib/x86_64-linux-gnu:/opt/ros/humble/lib:/usr/local/cuda/lib64:/usr/local/cuda/extras/CUPTI/lib64'), ('HOME', '/home/hosodalab9'), ('CONDA_SHLVL', '0'), ('OLDPWD', '/home/hosodalab9/Sensor-Glove'), ('CMAKE_CUDA_COMPILER', '/usr/local/cuda-10.2/bin/nvcc'), ('DESKTOP_SESSION', 'ubuntu-xorg'), ('ros2_ws', '/home/hosodalab9/Sensor-Glove'), ('ROS_PYTHON_VERSION', '3'), ('GNOME_SHELL_SESSION_MODE', 'ubuntu'), ('GTK_MODULES', 'gail:atk-bridge'), ('SYSTEMD_EXEC_PID', '1444'), ('DBUS_SESSION_BUS_ADDRESS', 'unix:path=/run/user/1000/bus'), ('COLORTERM', 'truecolor'), ('_CE_M', ''), ('ROS_DISTRO', 'humble'), ('GTK_IM_MODULE', 'ibus'), ('LOGNAME', 'hosodalab9'), ('_', '/usr/bin/colcon'), ('ROS_VERSION', '2'), ('XDG_SESSION_CLASS', 'user'), ('USERNAME', 'hosodalab9'), ('TERM', 'xterm-256color'), ('GNOME_DESKTOP_SESSION_ID', 'this-is-deprecated'), ('_CE_CONDA', ''), ('ROS_LOCALHOST_ONLY', '1'), ('WINDOWPATH', '2'), ('PATH', '/home/hosodalab9/anaconda3/condabin:/opt/ros/humble/bin:/home/hosodalab9/.local/bin:/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin:/usr/games:/usr/local/games:/snap/bin:/snap/bin:CUDA_HOME/bin'), ('SESSION_MANAGER', 'local/hosodalab9-Venus-series:@/tmp/.ICE-unix/1423,unix/hosodalab9-Venus-series:/tmp/.ICE-unix/1423'), ('XDG_MENU_PREFIX', 'gnome-'), ('GNOME_TERMINAL_SCREEN', '/org/gnome/Terminal/screen/e46c7774_dfd7_4ba5_9462_d93fe0fccc36'), ('XDG_RUNTIME_DIR', '/run/user/1000'), ('DISPLAY', ':0'), ('LANG', 'en_US.UTF-8'), ('XDG_CURRENT_DESKTOP', 'ubuntu:GNOME'), ('XMODIFIERS', '@im=ibus'), ('XDG_SESSION_DESKTOP', 'ubuntu-xorg'), ('XAUTHORITY', '/run/user/1000/gdm/Xauthority'), ('LS_COLORS', 'rs=0:di=01;34:ln=01;36:mh=00:pi=40;33:so=01;35:do=01;35:bd=40;33;01:cd=40;33;01:or=40;31;01:mi=00:su=37;41:sg=30;43:ca=30;41:tw=30;42:ow=34;42:st=37;44:ex=01;32:*.tar=01;31:*.tgz=01;31:*.arc=01;31:*.arj=01;31:*.taz=01;31:*.lha=01;31:*.lz4=01;31:*.lzh=01;31:*.lzma=01;31:*.tlz=01;31:*.txz=01;31:*.tzo=01;31:*.t7z=01;31:*.zip=01;31:*.z=01;31:*.dz=01;31:*.gz=01;31:*.lrz=01;31:*.lz=01;31:*.lzo=01;31:*.xz=01;31:*.zst=01;31:*.tzst=01;31:*.bz2=01;31:*.bz=01;31:*.tbz=01;31:*.tbz2=01;31:*.tz=01;31:*.deb=01;31:*.rpm=01;31:*.jar=01;31:*.war=01;31:*.ear=01;31:*.sar=01;31:*.rar=01;31:*.alz=01;31:*.ace=01;31:*.zoo=01;31:*.cpio=01;31:*.7z=01;31:*.rz=01;31:*.cab=01;31:*.wim=01;31:*.swm=01;31:*.dwm=01;31:*.esd=01;31:*.jpg=01;35:*.jpeg=01;35:*.mjpg=01;35:*.mjpeg=01;35:*.gif=01;35:*.bmp=01;35:*.pbm=01;35:*.pgm=01;35:*.ppm=01;35:*.tga=01;35:*.xbm=01;35:*.xpm=01;35:*.tif=01;35:*.tiff=01;35:*.png=01;35:*.svg=01;35:*.svgz=01;35:*.mng=01;35:*.pcx=01;35:*.mov=01;35:*.mpg=01;35:*.mpeg=01;35:*.m2v=01;35:*.mkv=01;35:*.webm=01;35:*.webp=01;35:*.ogm=01;35:*.mp4=01;35:*.m4v=01;35:*.mp4v=01;35:*.vob=01;35:*.qt=01;35:*.nuv=01;35:*.wmv=01;35:*.asf=01;35:*.rm=01;35:*.rmvb=01;35:*.flc=01;35:*.avi=01;35:*.fli=01;35:*.flv=01;35:*.gl=01;35:*.dl=01;35:*.xcf=01;35:*.xwd=01;35:*.yuv=01;35:*.cgm=01;35:*.emf=01;35:*.ogv=01;35:*.ogx=01;35:*.aac=00;36:*.au=00;36:*.flac=00;36:*.m4a=00;36:*.mid=00;36:*.midi=00;36:*.mka=00;36:*.mp3=00;36:*.mpc=00;36:*.ogg=00;36:*.ra=00;36:*.wav=00;36:*.oga=00;36:*.opus=00;36:*.spx=00;36:*.xspf=00;36:'), ('GNOME_TERMINAL_SERVICE', ':1.735'), ('SSH_AGENT_LAUNCHER', 'gnome-keyring'), ('SSH_AUTH_SOCK', '/run/user/1000/keyring/ssh'), ('ROS_DOMAIN_ID', '1'), ('AMENT_PREFIX_PATH', '/opt/ros/humble'), ('CONDA_PYTHON_EXE', '/home/hosodalab9/anaconda3/bin/python'), ('SHELL', '/bin/bash'), ('QT_ACCESSIBILITY', '1'), ('GDMSESSION', 'ubuntu-xorg'), ('LESSCLOSE', '/usr/bin/lesspipe %s %s'), ('GPG_AGENT_INFO', '/run/user/1000/gnupg/S.gpg-agent:0:1'), ('QT_IM_MODULE', 'ibus'), ('PWD', '/home/hosodalab9/Sensor-Glove/build/realsense2_camera_msgs'), ('LC_ALL', 'en_US.UTF-8'), ('CUDA_HOME', '/usr/local/cuda'), ('XDG_CONFIG_DIRS', '/etc/xdg/xdg-ubuntu-xorg:/etc/xdg'), ('CONDA_EXE', '/home/hosodalab9/anaconda3/bin/conda'), ('XDG_DATA_DIRS', '/usr/share/ubuntu-xorg:/usr/share/gnome:/usr/local/share/:/usr/share/:/var/lib/snapd/desktop'), ('PYTHONPATH', '/opt/ros/humble/lib/python3.10/site-packages:/opt/ros/humble/local/lib/python3.10/dist-packages:/usr/local/lib'), ('COLCON', '1'), ('VTE_VERSION', '6800'), ('CMAKE_PREFIX_PATH', '/opt/ros/humble')]), 'shell': False}
+[3.437047] (realsense2_camera_msgs) StdoutLine: {'line': b'-- Install configuration: ""\n'}
+[3.437479] (realsense2_camera_msgs) StdoutLine: {'line': b'-- Execute custom install script\n'}
+[3.437798] (realsense2_camera_msgs) StdoutLine: {'line': b'-- Symlinking: /home/hosodalab9/Sensor-Glove/install/realsense2_camera_msgs/share/ament_index/resource_index/rosidl_interfaces/realsense2_camera_msgs\n'}
+[3.447024] (realsense2_camera_msgs) StdoutLine: {'line': b'-- Symlinking: /home/hosodalab9/Sensor-Glove/install/realsense2_camera_msgs/include/realsense2_camera_msgs/realsense2_camera_msgs/msg/detail/extrinsics__functions.h\n'}
+[3.456954] (realsense2_camera_msgs) StdoutLine: {'line': b'-- Symlinking: /home/hosodalab9/Sensor-Glove/install/realsense2_camera_msgs/include/realsense2_camera_msgs/realsense2_camera_msgs/msg/detail/extrinsics__struct.h\n'}
+[3.467236] (realsense2_camera_msgs) StdoutLine: {'line': b'-- Symlinking: /home/hosodalab9/Sensor-Glove/install/realsense2_camera_msgs/include/realsense2_camera_msgs/realsense2_camera_msgs/msg/detail/extrinsics__type_support.h\n'}
+[3.477438] (realsense2_camera_msgs) StdoutLine: {'line': b'-- Symlinking: /home/hosodalab9/Sensor-Glove/install/realsense2_camera_msgs/include/realsense2_camera_msgs/realsense2_camera_msgs/msg/detail/imu_info__functions.h\n'}
+[3.487051] (realsense2_camera_msgs) StdoutLine: {'line': b'-- Symlinking: /home/hosodalab9/Sensor-Glove/install/realsense2_camera_msgs/include/realsense2_camera_msgs/realsense2_camera_msgs/msg/detail/imu_info__struct.h\n'}
+[3.496690] (realsense2_camera_msgs) StdoutLine: {'line': b'-- Symlinking: /home/hosodalab9/Sensor-Glove/install/realsense2_camera_msgs/include/realsense2_camera_msgs/realsense2_camera_msgs/msg/detail/imu_info__type_support.h\n'}
+[3.506185] (realsense2_camera_msgs) StdoutLine: {'line': b'-- Symlinking: /home/hosodalab9/Sensor-Glove/install/realsense2_camera_msgs/include/realsense2_camera_msgs/realsense2_camera_msgs/msg/detail/metadata__functions.h\n'}
+[3.506555] (-) TimerEvent: {}
+[3.514883] (realsense2_camera_msgs) StdoutLine: {'line': b'-- Symlinking: /home/hosodalab9/Sensor-Glove/install/realsense2_camera_msgs/include/realsense2_camera_msgs/realsense2_camera_msgs/msg/detail/metadata__struct.h\n'}
+[3.524273] (realsense2_camera_msgs) StdoutLine: {'line': b'-- Symlinking: /home/hosodalab9/Sensor-Glove/install/realsense2_camera_msgs/include/realsense2_camera_msgs/realsense2_camera_msgs/msg/detail/metadata__type_support.h\n'}
+[3.534502] (realsense2_camera_msgs) StdoutLine: {'line': b'-- Symlinking: /home/hosodalab9/Sensor-Glove/install/realsense2_camera_msgs/include/realsense2_camera_msgs/realsense2_camera_msgs/msg/detail/rgbd__functions.h\n'}
+[3.543422] (realsense2_camera_msgs) StdoutLine: {'line': b'-- Symlinking: /home/hosodalab9/Sensor-Glove/install/realsense2_camera_msgs/include/realsense2_camera_msgs/realsense2_camera_msgs/msg/detail/rgbd__struct.h\n'}
+[3.552398] (realsense2_camera_msgs) StdoutLine: {'line': b'-- Symlinking: /home/hosodalab9/Sensor-Glove/install/realsense2_camera_msgs/include/realsense2_camera_msgs/realsense2_camera_msgs/msg/detail/rgbd__type_support.h\n'}
+[3.561697] (realsense2_camera_msgs) StdoutLine: {'line': b'-- Symlinking: /home/hosodalab9/Sensor-Glove/install/realsense2_camera_msgs/include/realsense2_camera_msgs/realsense2_camera_msgs/msg/extrinsics.h\n'}
+[3.572902] (realsense2_camera_msgs) StdoutLine: {'line': b'-- Symlinking: /home/hosodalab9/Sensor-Glove/install/realsense2_camera_msgs/include/realsense2_camera_msgs/realsense2_camera_msgs/msg/imu_info.h\n'}
+[3.582703] (realsense2_camera_msgs) StdoutLine: {'line': b'-- Symlinking: /home/hosodalab9/Sensor-Glove/install/realsense2_camera_msgs/include/realsense2_camera_msgs/realsense2_camera_msgs/msg/metadata.h\n'}
+[3.592458] (realsense2_camera_msgs) StdoutLine: {'line': b'-- Symlinking: /home/hosodalab9/Sensor-Glove/install/realsense2_camera_msgs/include/realsense2_camera_msgs/realsense2_camera_msgs/msg/rgbd.h\n'}
+[3.602092] (realsense2_camera_msgs) StdoutLine: {'line': b'-- Symlinking: /home/hosodalab9/Sensor-Glove/install/realsense2_camera_msgs/include/realsense2_camera_msgs/realsense2_camera_msgs/msg/rosidl_generator_c__visibility_control.h\n'}
+[3.606692] (-) TimerEvent: {}
+[3.611921] (realsense2_camera_msgs) StdoutLine: {'line': b'-- Symlinking: /home/hosodalab9/Sensor-Glove/install/realsense2_camera_msgs/include/realsense2_camera_msgs/realsense2_camera_msgs/srv/detail/device_info__functions.h\n'}
+[3.620923] (realsense2_camera_msgs) StdoutLine: {'line': b'-- Symlinking: /home/hosodalab9/Sensor-Glove/install/realsense2_camera_msgs/include/realsense2_camera_msgs/realsense2_camera_msgs/srv/detail/device_info__struct.h\n'}
+[3.631358] (realsense2_camera_msgs) StdoutLine: {'line': b'-- Symlinking: /home/hosodalab9/Sensor-Glove/install/realsense2_camera_msgs/include/realsense2_camera_msgs/realsense2_camera_msgs/srv/detail/device_info__type_support.h\n'}
+[3.640545] (realsense2_camera_msgs) StdoutLine: {'line': b'-- Symlinking: /home/hosodalab9/Sensor-Glove/install/realsense2_camera_msgs/include/realsense2_camera_msgs/realsense2_camera_msgs/srv/device_info.h\n'}
+[3.649853] (realsense2_camera_msgs) StdoutLine: {'line': b'-- Symlinking: /home/hosodalab9/Sensor-Glove/install/realsense2_camera_msgs/share/realsense2_camera_msgs/environment/library_path.sh\n'}
+[3.661900] (realsense2_camera_msgs) StdoutLine: {'line': b'-- Symlinking: /home/hosodalab9/Sensor-Glove/install/realsense2_camera_msgs/share/realsense2_camera_msgs/environment/library_path.dsv\n'}
+[3.672678] (realsense2_camera_msgs) StdoutLine: {'line': b'-- Symlinking: /home/hosodalab9/Sensor-Glove/install/realsense2_camera_msgs/include/realsense2_camera_msgs/realsense2_camera_msgs/msg/detail/extrinsics__rosidl_typesupport_fastrtps_c.h\n'}
+[3.681551] (realsense2_camera_msgs) StdoutLine: {'line': b'-- Symlinking: /home/hosodalab9/Sensor-Glove/install/realsense2_camera_msgs/include/realsense2_camera_msgs/realsense2_camera_msgs/msg/detail/imu_info__rosidl_typesupport_fastrtps_c.h\n'}
+[3.694351] (realsense2_camera_msgs) StdoutLine: {'line': b'-- Symlinking: /home/hosodalab9/Sensor-Glove/install/realsense2_camera_msgs/include/realsense2_camera_msgs/realsense2_camera_msgs/msg/detail/metadata__rosidl_typesupport_fastrtps_c.h\n'}
+[3.703974] (realsense2_camera_msgs) StdoutLine: {'line': b'-- Symlinking: /home/hosodalab9/Sensor-Glove/install/realsense2_camera_msgs/include/realsense2_camera_msgs/realsense2_camera_msgs/msg/detail/rgbd__rosidl_typesupport_fastrtps_c.h\n'}
+[3.706807] (-) TimerEvent: {}
+[3.713188] (realsense2_camera_msgs) StdoutLine: {'line': b'-- Symlinking: /home/hosodalab9/Sensor-Glove/install/realsense2_camera_msgs/include/realsense2_camera_msgs/realsense2_camera_msgs/msg/rosidl_typesupport_fastrtps_c__visibility_control.h\n'}
+[3.722342] (realsense2_camera_msgs) StdoutLine: {'line': b'-- Symlinking: /home/hosodalab9/Sensor-Glove/install/realsense2_camera_msgs/include/realsense2_camera_msgs/realsense2_camera_msgs/srv/detail/device_info__rosidl_typesupport_fastrtps_c.h\n'}
+[3.732320] (realsense2_camera_msgs) StdoutLine: {'line': b'-- Symlinking: /home/hosodalab9/Sensor-Glove/install/realsense2_camera_msgs/include/realsense2_camera_msgs/realsense2_camera_msgs/msg/detail/extrinsics__rosidl_typesupport_introspection_c.h\n'}
+[3.742032] (realsense2_camera_msgs) StdoutLine: {'line': b'-- Symlinking: /home/hosodalab9/Sensor-Glove/install/realsense2_camera_msgs/include/realsense2_camera_msgs/realsense2_camera_msgs/msg/detail/imu_info__rosidl_typesupport_introspection_c.h\n'}
+[3.751054] (realsense2_camera_msgs) StdoutLine: {'line': b'-- Symlinking: /home/hosodalab9/Sensor-Glove/install/realsense2_camera_msgs/include/realsense2_camera_msgs/realsense2_camera_msgs/msg/detail/metadata__rosidl_typesupport_introspection_c.h\n'}
+[3.762311] (realsense2_camera_msgs) StdoutLine: {'line': b'-- Symlinking: /home/hosodalab9/Sensor-Glove/install/realsense2_camera_msgs/include/realsense2_camera_msgs/realsense2_camera_msgs/msg/detail/rgbd__rosidl_typesupport_introspection_c.h\n'}
+[3.771897] (realsense2_camera_msgs) StdoutLine: {'line': b'-- Symlinking: /home/hosodalab9/Sensor-Glove/install/realsense2_camera_msgs/include/realsense2_camera_msgs/realsense2_camera_msgs/msg/rosidl_typesupport_introspection_c__visibility_control.h\n'}
+[3.780279] (realsense2_camera_msgs) StdoutLine: {'line': b'-- Symlinking: /home/hosodalab9/Sensor-Glove/install/realsense2_camera_msgs/include/realsense2_camera_msgs/realsense2_camera_msgs/srv/detail/device_info__rosidl_typesupport_introspection_c.h\n'}
+[3.790895] (realsense2_camera_msgs) StdoutLine: {'line': b'-- Symlinking: /home/hosodalab9/Sensor-Glove/install/realsense2_camera_msgs/include/realsense2_camera_msgs/realsense2_camera_msgs/msg/detail/extrinsics__builder.hpp\n'}
+[3.800384] (realsense2_camera_msgs) StdoutLine: {'line': b'-- Symlinking: /home/hosodalab9/Sensor-Glove/install/realsense2_camera_msgs/include/realsense2_camera_msgs/realsense2_camera_msgs/msg/detail/extrinsics__struct.hpp\n'}
+[3.806939] (-) TimerEvent: {}
+[3.809675] (realsense2_camera_msgs) StdoutLine: {'line': b'-- Symlinking: /home/hosodalab9/Sensor-Glove/install/realsense2_camera_msgs/include/realsense2_camera_msgs/realsense2_camera_msgs/msg/detail/extrinsics__traits.hpp\n'}
+[3.819505] (realsense2_camera_msgs) StdoutLine: {'line': b'-- Symlinking: /home/hosodalab9/Sensor-Glove/install/realsense2_camera_msgs/include/realsense2_camera_msgs/realsense2_camera_msgs/msg/detail/imu_info__builder.hpp\n'}
+[3.828589] (realsense2_camera_msgs) StdoutLine: {'line': b'-- Symlinking: /home/hosodalab9/Sensor-Glove/install/realsense2_camera_msgs/include/realsense2_camera_msgs/realsense2_camera_msgs/msg/detail/imu_info__struct.hpp\n'}
+[3.838378] (realsense2_camera_msgs) StdoutLine: {'line': b'-- Symlinking: /home/hosodalab9/Sensor-Glove/install/realsense2_camera_msgs/include/realsense2_camera_msgs/realsense2_camera_msgs/msg/detail/imu_info__traits.hpp\n'}
+[3.847029] (realsense2_camera_msgs) StdoutLine: {'line': b'-- Symlinking: /home/hosodalab9/Sensor-Glove/install/realsense2_camera_msgs/include/realsense2_camera_msgs/realsense2_camera_msgs/msg/detail/metadata__builder.hpp\n'}
+[3.858154] (realsense2_camera_msgs) StdoutLine: {'line': b'-- Symlinking: /home/hosodalab9/Sensor-Glove/install/realsense2_camera_msgs/include/realsense2_camera_msgs/realsense2_camera_msgs/msg/detail/metadata__struct.hpp\n'}
+[3.867907] (realsense2_camera_msgs) StdoutLine: {'line': b'-- Symlinking: /home/hosodalab9/Sensor-Glove/install/realsense2_camera_msgs/include/realsense2_camera_msgs/realsense2_camera_msgs/msg/detail/metadata__traits.hpp\n'}
+[3.876807] (realsense2_camera_msgs) StdoutLine: {'line': b'-- Symlinking: /home/hosodalab9/Sensor-Glove/install/realsense2_camera_msgs/include/realsense2_camera_msgs/realsense2_camera_msgs/msg/detail/rgbd__builder.hpp\n'}
+[3.886083] (realsense2_camera_msgs) StdoutLine: {'line': b'-- Symlinking: /home/hosodalab9/Sensor-Glove/install/realsense2_camera_msgs/include/realsense2_camera_msgs/realsense2_camera_msgs/msg/detail/rgbd__struct.hpp\n'}
+[3.895102] (realsense2_camera_msgs) StdoutLine: {'line': b'-- Symlinking: /home/hosodalab9/Sensor-Glove/install/realsense2_camera_msgs/include/realsense2_camera_msgs/realsense2_camera_msgs/msg/detail/rgbd__traits.hpp\n'}
+[3.903785] (realsense2_camera_msgs) StdoutLine: {'line': b'-- Symlinking: /home/hosodalab9/Sensor-Glove/install/realsense2_camera_msgs/include/realsense2_camera_msgs/realsense2_camera_msgs/msg/extrinsics.hpp\n'}
+[3.907025] (-) TimerEvent: {}
+[3.912695] (realsense2_camera_msgs) StdoutLine: {'line': b'-- Symlinking: /home/hosodalab9/Sensor-Glove/install/realsense2_camera_msgs/include/realsense2_camera_msgs/realsense2_camera_msgs/msg/imu_info.hpp\n'}
+[3.921717] (realsense2_camera_msgs) StdoutLine: {'line': b'-- Symlinking: /home/hosodalab9/Sensor-Glove/install/realsense2_camera_msgs/include/realsense2_camera_msgs/realsense2_camera_msgs/msg/metadata.hpp\n'}
+[3.930305] (realsense2_camera_msgs) StdoutLine: {'line': b'-- Symlinking: /home/hosodalab9/Sensor-Glove/install/realsense2_camera_msgs/include/realsense2_camera_msgs/realsense2_camera_msgs/msg/rgbd.hpp\n'}
+[3.939801] (realsense2_camera_msgs) StdoutLine: {'line': b'-- Symlinking: /home/hosodalab9/Sensor-Glove/install/realsense2_camera_msgs/include/realsense2_camera_msgs/realsense2_camera_msgs/srv/detail/device_info__builder.hpp\n'}
+[3.950515] (realsense2_camera_msgs) StdoutLine: {'line': b'-- Symlinking: /home/hosodalab9/Sensor-Glove/install/realsense2_camera_msgs/include/realsense2_camera_msgs/realsense2_camera_msgs/srv/detail/device_info__struct.hpp\n'}
+[3.960155] (realsense2_camera_msgs) StdoutLine: {'line': b'-- Symlinking: /home/hosodalab9/Sensor-Glove/install/realsense2_camera_msgs/include/realsense2_camera_msgs/realsense2_camera_msgs/srv/detail/device_info__traits.hpp\n'}
+[3.969726] (realsense2_camera_msgs) StdoutLine: {'line': b'-- Symlinking: /home/hosodalab9/Sensor-Glove/install/realsense2_camera_msgs/include/realsense2_camera_msgs/realsense2_camera_msgs/srv/device_info.hpp\n'}
+[3.980147] (realsense2_camera_msgs) StdoutLine: {'line': b'-- Symlinking: /home/hosodalab9/Sensor-Glove/install/realsense2_camera_msgs/include/realsense2_camera_msgs/realsense2_camera_msgs/msg/detail/extrinsics__rosidl_typesupport_fastrtps_cpp.hpp\n'}
+[3.989457] (realsense2_camera_msgs) StdoutLine: {'line': b'-- Symlinking: /home/hosodalab9/Sensor-Glove/install/realsense2_camera_msgs/include/realsense2_camera_msgs/realsense2_camera_msgs/msg/detail/imu_info__rosidl_typesupport_fastrtps_cpp.hpp\n'}
+[3.997879] (realsense2_camera_msgs) StdoutLine: {'line': b'-- Symlinking: /home/hosodalab9/Sensor-Glove/install/realsense2_camera_msgs/include/realsense2_camera_msgs/realsense2_camera_msgs/msg/detail/metadata__rosidl_typesupport_fastrtps_cpp.hpp\n'}
+[4.006426] (realsense2_camera_msgs) StdoutLine: {'line': b'-- Symlinking: /home/hosodalab9/Sensor-Glove/install/realsense2_camera_msgs/include/realsense2_camera_msgs/realsense2_camera_msgs/msg/detail/rgbd__rosidl_typesupport_fastrtps_cpp.hpp\n'}
+[4.007125] (-) TimerEvent: {}
+[4.015024] (realsense2_camera_msgs) StdoutLine: {'line': b'-- Symlinking: /home/hosodalab9/Sensor-Glove/install/realsense2_camera_msgs/include/realsense2_camera_msgs/realsense2_camera_msgs/msg/rosidl_typesupport_fastrtps_cpp__visibility_control.h\n'}
+[4.023815] (realsense2_camera_msgs) StdoutLine: {'line': b'-- Symlinking: /home/hosodalab9/Sensor-Glove/install/realsense2_camera_msgs/include/realsense2_camera_msgs/realsense2_camera_msgs/srv/detail/device_info__rosidl_typesupport_fastrtps_cpp.hpp\n'}
+[4.033314] (realsense2_camera_msgs) StdoutLine: {'line': b'-- Symlinking: /home/hosodalab9/Sensor-Glove/install/realsense2_camera_msgs/include/realsense2_camera_msgs/realsense2_camera_msgs/msg/detail/extrinsics__rosidl_typesupport_introspection_cpp.hpp\n'}
+[4.043665] (realsense2_camera_msgs) StdoutLine: {'line': b'-- Symlinking: /home/hosodalab9/Sensor-Glove/install/realsense2_camera_msgs/include/realsense2_camera_msgs/realsense2_camera_msgs/msg/detail/imu_info__rosidl_typesupport_introspection_cpp.hpp\n'}
+[4.053581] (realsense2_camera_msgs) StdoutLine: {'line': b'-- Symlinking: /home/hosodalab9/Sensor-Glove/install/realsense2_camera_msgs/include/realsense2_camera_msgs/realsense2_camera_msgs/msg/detail/metadata__rosidl_typesupport_introspection_cpp.hpp\n'}
+[4.063259] (realsense2_camera_msgs) StdoutLine: {'line': b'-- Symlinking: /home/hosodalab9/Sensor-Glove/install/realsense2_camera_msgs/include/realsense2_camera_msgs/realsense2_camera_msgs/msg/detail/rgbd__rosidl_typesupport_introspection_cpp.hpp\n'}
+[4.073417] (realsense2_camera_msgs) StdoutLine: {'line': b'-- Symlinking: /home/hosodalab9/Sensor-Glove/install/realsense2_camera_msgs/include/realsense2_camera_msgs/realsense2_camera_msgs/srv/detail/device_info__rosidl_typesupport_introspection_cpp.hpp\n'}
+[4.082618] (realsense2_camera_msgs) StdoutLine: {'line': b'-- Symlinking: /home/hosodalab9/Sensor-Glove/install/realsense2_camera_msgs/share/realsense2_camera_msgs/environment/pythonpath.sh\n'}
+[4.091563] (realsense2_camera_msgs) StdoutLine: {'line': b'-- Symlinking: /home/hosodalab9/Sensor-Glove/install/realsense2_camera_msgs/share/realsense2_camera_msgs/environment/pythonpath.dsv\n'}
+[4.100612] (realsense2_camera_msgs) StdoutLine: {'line': b'-- Symlinking: /home/hosodalab9/Sensor-Glove/install/realsense2_camera_msgs/local/lib/python3.10/dist-packages/realsense2_camera_msgs-4.54.1-py3.10.egg-info/PKG-INFO\n'}
+[4.107269] (-) TimerEvent: {}
+[4.109664] (realsense2_camera_msgs) StdoutLine: {'line': b'-- Symlinking: /home/hosodalab9/Sensor-Glove/install/realsense2_camera_msgs/local/lib/python3.10/dist-packages/realsense2_camera_msgs-4.54.1-py3.10.egg-info/SOURCES.txt\n'}
+[4.118235] (realsense2_camera_msgs) StdoutLine: {'line': b'-- Symlinking: /home/hosodalab9/Sensor-Glove/install/realsense2_camera_msgs/local/lib/python3.10/dist-packages/realsense2_camera_msgs-4.54.1-py3.10.egg-info/dependency_links.txt\n'}
+[4.127097] (realsense2_camera_msgs) StdoutLine: {'line': b'-- Symlinking: /home/hosodalab9/Sensor-Glove/install/realsense2_camera_msgs/local/lib/python3.10/dist-packages/realsense2_camera_msgs-4.54.1-py3.10.egg-info/top_level.txt\n'}
+[4.137259] (realsense2_camera_msgs) StdoutLine: {'line': b'-- Symlinking: /home/hosodalab9/Sensor-Glove/install/realsense2_camera_msgs/local/lib/python3.10/dist-packages/realsense2_camera_msgs/__init__.py\n'}
+[4.146511] (realsense2_camera_msgs) StdoutLine: {'line': b'-- Symlinking: /home/hosodalab9/Sensor-Glove/install/realsense2_camera_msgs/local/lib/python3.10/dist-packages/realsense2_camera_msgs/_realsense2_camera_msgs_s.ep.rosidl_typesupport_c.c\n'}
+[4.155323] (realsense2_camera_msgs) StdoutLine: {'line': b'-- Symlinking: /home/hosodalab9/Sensor-Glove/install/realsense2_camera_msgs/local/lib/python3.10/dist-packages/realsense2_camera_msgs/_realsense2_camera_msgs_s.ep.rosidl_typesupport_fastrtps_c.c\n'}
+[4.163904] (realsense2_camera_msgs) StdoutLine: {'line': b'-- Symlinking: /home/hosodalab9/Sensor-Glove/install/realsense2_camera_msgs/local/lib/python3.10/dist-packages/realsense2_camera_msgs/_realsense2_camera_msgs_s.ep.rosidl_typesupport_introspection_c.c\n'}
+[4.174587] (realsense2_camera_msgs) StdoutLine: {'line': b'-- Symlinking: /home/hosodalab9/Sensor-Glove/install/realsense2_camera_msgs/local/lib/python3.10/dist-packages/realsense2_camera_msgs/librealsense2_camera_msgs__rosidl_generator_py.so\n'}
+[4.184680] (realsense2_camera_msgs) StdoutLine: {'line': b'-- Symlinking: /home/hosodalab9/Sensor-Glove/install/realsense2_camera_msgs/local/lib/python3.10/dist-packages/realsense2_camera_msgs/msg/__init__.py\n'}
+[4.193776] (realsense2_camera_msgs) StdoutLine: {'line': b'-- Symlinking: /home/hosodalab9/Sensor-Glove/install/realsense2_camera_msgs/local/lib/python3.10/dist-packages/realsense2_camera_msgs/msg/_extrinsics.py\n'}
+[4.203412] (realsense2_camera_msgs) StdoutLine: {'line': b'-- Symlinking: /home/hosodalab9/Sensor-Glove/install/realsense2_camera_msgs/local/lib/python3.10/dist-packages/realsense2_camera_msgs/msg/_extrinsics_s.c\n'}
+[4.207384] (-) TimerEvent: {}
+[4.212207] (realsense2_camera_msgs) StdoutLine: {'line': b'-- Symlinking: /home/hosodalab9/Sensor-Glove/install/realsense2_camera_msgs/local/lib/python3.10/dist-packages/realsense2_camera_msgs/msg/_imu_info.py\n'}
+[4.220955] (realsense2_camera_msgs) StdoutLine: {'line': b'-- Symlinking: /home/hosodalab9/Sensor-Glove/install/realsense2_camera_msgs/local/lib/python3.10/dist-packages/realsense2_camera_msgs/msg/_imu_info_s.c\n'}
+[4.230168] (realsense2_camera_msgs) StdoutLine: {'line': b'-- Symlinking: /home/hosodalab9/Sensor-Glove/install/realsense2_camera_msgs/local/lib/python3.10/dist-packages/realsense2_camera_msgs/msg/_metadata.py\n'}
+[4.239855] (realsense2_camera_msgs) StdoutLine: {'line': b'-- Symlinking: /home/hosodalab9/Sensor-Glove/install/realsense2_camera_msgs/local/lib/python3.10/dist-packages/realsense2_camera_msgs/msg/_metadata_s.c\n'}
+[4.248591] (realsense2_camera_msgs) StdoutLine: {'line': b'-- Symlinking: /home/hosodalab9/Sensor-Glove/install/realsense2_camera_msgs/local/lib/python3.10/dist-packages/realsense2_camera_msgs/msg/_rgbd.py\n'}
+[4.257653] (realsense2_camera_msgs) StdoutLine: {'line': b'-- Symlinking: /home/hosodalab9/Sensor-Glove/install/realsense2_camera_msgs/local/lib/python3.10/dist-packages/realsense2_camera_msgs/msg/_rgbd_s.c\n'}
+[4.267268] (realsense2_camera_msgs) StdoutLine: {'line': b'-- Symlinking: /home/hosodalab9/Sensor-Glove/install/realsense2_camera_msgs/local/lib/python3.10/dist-packages/realsense2_camera_msgs/realsense2_camera_msgs_s__rosidl_typesupport_c.cpython-310-x86_64-linux-gnu.so\n'}
+[4.277974] (realsense2_camera_msgs) StdoutLine: {'line': b'-- Symlinking: /home/hosodalab9/Sensor-Glove/install/realsense2_camera_msgs/local/lib/python3.10/dist-packages/realsense2_camera_msgs/realsense2_camera_msgs_s__rosidl_typesupport_fastrtps_c.cpython-310-x86_64-linux-gnu.so\n'}
+[4.287409] (realsense2_camera_msgs) StdoutLine: {'line': b'-- Symlinking: /home/hosodalab9/Sensor-Glove/install/realsense2_camera_msgs/local/lib/python3.10/dist-packages/realsense2_camera_msgs/realsense2_camera_msgs_s__rosidl_typesupport_introspection_c.cpython-310-x86_64-linux-gnu.so\n'}
+[4.296941] (realsense2_camera_msgs) StdoutLine: {'line': b'-- Symlinking: /home/hosodalab9/Sensor-Glove/install/realsense2_camera_msgs/local/lib/python3.10/dist-packages/realsense2_camera_msgs/srv/__init__.py\n'}
+[4.305982] (realsense2_camera_msgs) StdoutLine: {'line': b'-- Symlinking: /home/hosodalab9/Sensor-Glove/install/realsense2_camera_msgs/local/lib/python3.10/dist-packages/realsense2_camera_msgs/srv/_device_info.py\n'}
+[4.307463] (-) TimerEvent: {}
+[4.314350] (realsense2_camera_msgs) StdoutLine: {'line': b'-- Symlinking: /home/hosodalab9/Sensor-Glove/install/realsense2_camera_msgs/local/lib/python3.10/dist-packages/realsense2_camera_msgs/srv/_device_info_s.c\n'}
+[4.323179] (realsense2_camera_msgs) StdoutLine: {'line': b'-- Up-to-date symlink: /home/hosodalab9/Sensor-Glove/install/realsense2_camera_msgs/local/lib/python3.10/dist-packages/realsense2_camera_msgs/realsense2_camera_msgs_s__rosidl_typesupport_fastrtps_c.cpython-310-x86_64-linux-gnu.so\n'}
+[4.323514] (realsense2_camera_msgs) StdoutLine: {'line': b'-- Up-to-date symlink: /home/hosodalab9/Sensor-Glove/install/realsense2_camera_msgs/local/lib/python3.10/dist-packages/realsense2_camera_msgs/realsense2_camera_msgs_s__rosidl_typesupport_introspection_c.cpython-310-x86_64-linux-gnu.so\n'}
+[4.323792] (realsense2_camera_msgs) StdoutLine: {'line': b'-- Up-to-date symlink: /home/hosodalab9/Sensor-Glove/install/realsense2_camera_msgs/local/lib/python3.10/dist-packages/realsense2_camera_msgs/realsense2_camera_msgs_s__rosidl_typesupport_c.cpython-310-x86_64-linux-gnu.so\n'}
+[4.324061] (realsense2_camera_msgs) StdoutLine: {'line': b'-- Symlinking: /home/hosodalab9/Sensor-Glove/install/realsense2_camera_msgs/share/realsense2_camera_msgs/msg/IMUInfo.idl\n'}
+[4.333739] (realsense2_camera_msgs) StdoutLine: {'line': b'-- Symlinking: /home/hosodalab9/Sensor-Glove/install/realsense2_camera_msgs/share/realsense2_camera_msgs/msg/Extrinsics.idl\n'}
+[4.342396] (realsense2_camera_msgs) StdoutLine: {'line': b'-- Symlinking: /home/hosodalab9/Sensor-Glove/install/realsense2_camera_msgs/share/realsense2_camera_msgs/msg/Metadata.idl\n'}
+[4.351080] (realsense2_camera_msgs) StdoutLine: {'line': b'-- Symlinking: /home/hosodalab9/Sensor-Glove/install/realsense2_camera_msgs/share/realsense2_camera_msgs/msg/RGBD.idl\n'}
+[4.359513] (realsense2_camera_msgs) StdoutLine: {'line': b'-- Symlinking: /home/hosodalab9/Sensor-Glove/install/realsense2_camera_msgs/share/realsense2_camera_msgs/srv/DeviceInfo.idl\n'}
+[4.370205] (realsense2_camera_msgs) StdoutLine: {'line': b'-- Symlinking: /home/hosodalab9/Sensor-Glove/install/realsense2_camera_msgs/share/realsense2_camera_msgs/msg/IMUInfo.msg\n'}
+[4.379790] (realsense2_camera_msgs) StdoutLine: {'line': b'-- Symlinking: /home/hosodalab9/Sensor-Glove/install/realsense2_camera_msgs/share/realsense2_camera_msgs/msg/Extrinsics.msg\n'}
+[4.387982] (realsense2_camera_msgs) StdoutLine: {'line': b'-- Symlinking: /home/hosodalab9/Sensor-Glove/install/realsense2_camera_msgs/share/realsense2_camera_msgs/msg/Metadata.msg\n'}
+[4.397786] (realsense2_camera_msgs) StdoutLine: {'line': b'-- Symlinking: /home/hosodalab9/Sensor-Glove/install/realsense2_camera_msgs/share/realsense2_camera_msgs/msg/RGBD.msg\n'}
+[4.406583] (realsense2_camera_msgs) StdoutLine: {'line': b'-- Symlinking: /home/hosodalab9/Sensor-Glove/install/realsense2_camera_msgs/share/realsense2_camera_msgs/srv/DeviceInfo.srv\n'}
+[4.407533] (-) TimerEvent: {}
+[4.415124] (realsense2_camera_msgs) StdoutLine: {'line': b'-- Symlinking: /home/hosodalab9/Sensor-Glove/install/realsense2_camera_msgs/share/realsense2_camera_msgs/srv/DeviceInfo_Request.msg\n'}
+[4.423572] (realsense2_camera_msgs) StdoutLine: {'line': b'-- Symlinking: /home/hosodalab9/Sensor-Glove/install/realsense2_camera_msgs/share/realsense2_camera_msgs/srv/DeviceInfo_Response.msg\n'}
+[4.432036] (realsense2_camera_msgs) StdoutLine: {'line': b'-- Symlinking: /home/hosodalab9/Sensor-Glove/install/realsense2_camera_msgs/share/ament_index/resource_index/package_run_dependencies/realsense2_camera_msgs\n'}
+[4.441053] (realsense2_camera_msgs) StdoutLine: {'line': b'-- Symlinking: /home/hosodalab9/Sensor-Glove/install/realsense2_camera_msgs/share/ament_index/resource_index/parent_prefix_path/realsense2_camera_msgs\n'}
+[4.450354] (realsense2_camera_msgs) StdoutLine: {'line': b'-- Symlinking: /home/hosodalab9/Sensor-Glove/install/realsense2_camera_msgs/share/realsense2_camera_msgs/environment/ament_prefix_path.sh\n'}
+[4.460811] (realsense2_camera_msgs) StdoutLine: {'line': b'-- Symlinking: /home/hosodalab9/Sensor-Glove/install/realsense2_camera_msgs/share/realsense2_camera_msgs/environment/ament_prefix_path.dsv\n'}
+[4.470875] (realsense2_camera_msgs) StdoutLine: {'line': b'-- Symlinking: /home/hosodalab9/Sensor-Glove/install/realsense2_camera_msgs/share/realsense2_camera_msgs/environment/path.sh\n'}
+[4.480352] (realsense2_camera_msgs) StdoutLine: {'line': b'-- Symlinking: /home/hosodalab9/Sensor-Glove/install/realsense2_camera_msgs/share/realsense2_camera_msgs/environment/path.dsv\n'}
+[4.488990] (realsense2_camera_msgs) StdoutLine: {'line': b'-- Symlinking: /home/hosodalab9/Sensor-Glove/install/realsense2_camera_msgs/share/realsense2_camera_msgs/local_setup.bash\n'}
+[4.498186] (realsense2_camera_msgs) StdoutLine: {'line': b'-- Symlinking: /home/hosodalab9/Sensor-Glove/install/realsense2_camera_msgs/share/realsense2_camera_msgs/local_setup.sh\n'}
+[4.502166] (ros2serial_arduino) StdoutLine: {'line': b'[ 75%] \x1b[32m\x1b[1mLinking CXX executable serial_receive_node\x1b[0m\n'}
+[4.505845] (realsense2_camera_msgs) StdoutLine: {'line': b'-- Symlinking: /home/hosodalab9/Sensor-Glove/install/realsense2_camera_msgs/share/realsense2_camera_msgs/local_setup.zsh\n'}
+[4.507645] (-) TimerEvent: {}
+[4.514377] (realsense2_camera_msgs) StdoutLine: {'line': b'-- Symlinking: /home/hosodalab9/Sensor-Glove/install/realsense2_camera_msgs/share/realsense2_camera_msgs/local_setup.dsv\n'}
+[4.522880] (realsense2_camera_msgs) StdoutLine: {'line': b'-- Symlinking: /home/hosodalab9/Sensor-Glove/install/realsense2_camera_msgs/share/realsense2_camera_msgs/package.dsv\n'}
+[4.531548] (realsense2_camera_msgs) StdoutLine: {'line': b'-- Symlinking: /home/hosodalab9/Sensor-Glove/install/realsense2_camera_msgs/share/ament_index/resource_index/packages/realsense2_camera_msgs\n'}
+[4.540617] (realsense2_camera_msgs) StdoutLine: {'line': b'-- Symlinking: /home/hosodalab9/Sensor-Glove/install/realsense2_camera_msgs/share/realsense2_camera_msgs/cmake/rosidl_cmake-extras.cmake\n'}
+[4.549084] (realsense2_camera_msgs) StdoutLine: {'line': b'-- Symlinking: /home/hosodalab9/Sensor-Glove/install/realsense2_camera_msgs/share/realsense2_camera_msgs/cmake/ament_cmake_export_dependencies-extras.cmake\n'}
+[4.560183] (realsense2_camera_msgs) StdoutLine: {'line': b'-- Symlinking: /home/hosodalab9/Sensor-Glove/install/realsense2_camera_msgs/share/realsense2_camera_msgs/cmake/ament_cmake_export_include_directories-extras.cmake\n'}
+[4.570411] (realsense2_camera_msgs) StdoutLine: {'line': b'-- Symlinking: /home/hosodalab9/Sensor-Glove/install/realsense2_camera_msgs/share/realsense2_camera_msgs/cmake/ament_cmake_export_libraries-extras.cmake\n'}
+[4.579459] (realsense2_camera_msgs) StdoutLine: {'line': b'-- Symlinking: /home/hosodalab9/Sensor-Glove/install/realsense2_camera_msgs/share/realsense2_camera_msgs/cmake/ament_cmake_export_targets-extras.cmake\n'}
+[4.589141] (realsense2_camera_msgs) StdoutLine: {'line': b'-- Symlinking: /home/hosodalab9/Sensor-Glove/install/realsense2_camera_msgs/share/realsense2_camera_msgs/cmake/rosidl_cmake_export_typesupport_targets-extras.cmake\n'}
+[4.598347] (realsense2_camera_msgs) StdoutLine: {'line': b'-- Symlinking: /home/hosodalab9/Sensor-Glove/install/realsense2_camera_msgs/share/realsense2_camera_msgs/cmake/rosidl_cmake_export_typesupport_libraries-extras.cmake\n'}
+[4.607800] (realsense2_camera_msgs) StdoutLine: {'line': b'-- Symlinking: /home/hosodalab9/Sensor-Glove/install/realsense2_camera_msgs/share/realsense2_camera_msgs/cmake/realsense2_camera_msgsConfig.cmake\n'}
+[4.608044] (-) TimerEvent: {}
+[4.617165] (realsense2_camera_msgs) StdoutLine: {'line': b'-- Symlinking: /home/hosodalab9/Sensor-Glove/install/realsense2_camera_msgs/share/realsense2_camera_msgs/cmake/realsense2_camera_msgsConfig-version.cmake\n'}
+[4.626871] (realsense2_camera_msgs) StdoutLine: {'line': b'-- Symlinking: /home/hosodalab9/Sensor-Glove/install/realsense2_camera_msgs/share/realsense2_camera_msgs/package.xml\n'}
+[4.635840] (realsense2_camera_msgs) StdoutLine: {'line': b'-- Installing: /home/hosodalab9/Sensor-Glove/install/realsense2_camera_msgs/lib/librealsense2_camera_msgs__rosidl_generator_c.so\n'}
+[4.636558] (realsense2_camera_msgs) StdoutLine: {'line': b'-- Set runtime path of "/home/hosodalab9/Sensor-Glove/install/realsense2_camera_msgs/lib/librealsense2_camera_msgs__rosidl_generator_c.so" to ""\n'}
+[4.636653] (realsense2_camera_msgs) StdoutLine: {'line': b'-- Installing: /home/hosodalab9/Sensor-Glove/install/realsense2_camera_msgs/lib/librealsense2_camera_msgs__rosidl_typesupport_fastrtps_c.so\n'}
+[4.636854] (realsense2_camera_msgs) StdoutLine: {'line': b'-- Set runtime path of "/home/hosodalab9/Sensor-Glove/install/realsense2_camera_msgs/lib/librealsense2_camera_msgs__rosidl_typesupport_fastrtps_c.so" to ""\n'}
+[4.636954] (realsense2_camera_msgs) StdoutLine: {'line': b'-- Installing: /home/hosodalab9/Sensor-Glove/install/realsense2_camera_msgs/lib/librealsense2_camera_msgs__rosidl_typesupport_introspection_c.so\n'}
+[4.637328] (realsense2_camera_msgs) StdoutLine: {'line': b'-- Set runtime path of "/home/hosodalab9/Sensor-Glove/install/realsense2_camera_msgs/lib/librealsense2_camera_msgs__rosidl_typesupport_introspection_c.so" to ""\n'}
+[4.637476] (realsense2_camera_msgs) StdoutLine: {'line': b'-- Installing: /home/hosodalab9/Sensor-Glove/install/realsense2_camera_msgs/lib/librealsense2_camera_msgs__rosidl_typesupport_c.so\n'}
+[4.637764] (realsense2_camera_msgs) StdoutLine: {'line': b'-- Set runtime path of "/home/hosodalab9/Sensor-Glove/install/realsense2_camera_msgs/lib/librealsense2_camera_msgs__rosidl_typesupport_c.so" to ""\n'}
+[4.637912] (realsense2_camera_msgs) StdoutLine: {'line': b'-- Installing: /home/hosodalab9/Sensor-Glove/install/realsense2_camera_msgs/lib/librealsense2_camera_msgs__rosidl_typesupport_fastrtps_cpp.so\n'}
+[4.638348] (realsense2_camera_msgs) StdoutLine: {'line': b'-- Set runtime path of "/home/hosodalab9/Sensor-Glove/install/realsense2_camera_msgs/lib/librealsense2_camera_msgs__rosidl_typesupport_fastrtps_cpp.so" to ""\n'}
+[4.638502] (realsense2_camera_msgs) StdoutLine: {'line': b'-- Installing: /home/hosodalab9/Sensor-Glove/install/realsense2_camera_msgs/lib/librealsense2_camera_msgs__rosidl_typesupport_introspection_cpp.so\n'}
+[4.638930] (realsense2_camera_msgs) StdoutLine: {'line': b'-- Set runtime path of "/home/hosodalab9/Sensor-Glove/install/realsense2_camera_msgs/lib/librealsense2_camera_msgs__rosidl_typesupport_introspection_cpp.so" to ""\n'}
+[4.639013] (realsense2_camera_msgs) StdoutLine: {'line': b'-- Installing: /home/hosodalab9/Sensor-Glove/install/realsense2_camera_msgs/lib/librealsense2_camera_msgs__rosidl_typesupport_cpp.so\n'}
+[4.639377] (realsense2_camera_msgs) StdoutLine: {'line': b'-- Set runtime path of "/home/hosodalab9/Sensor-Glove/install/realsense2_camera_msgs/lib/librealsense2_camera_msgs__rosidl_typesupport_cpp.so" to ""\n'}
+[4.675657] (realsense2_camera_msgs) StdoutLine: {'line': b"Listing '/home/hosodalab9/Sensor-Glove/install/realsense2_camera_msgs/local/lib/python3.10/dist-packages/realsense2_camera_msgs'...\n"}
+[4.675882] (realsense2_camera_msgs) StdoutLine: {'line': b"Compiling '/home/hosodalab9/Sensor-Glove/install/realsense2_camera_msgs/local/lib/python3.10/dist-packages/realsense2_camera_msgs/__init__.py'...\n"}
+[4.675995] (realsense2_camera_msgs) StdoutLine: {'line': b"Listing '/home/hosodalab9/Sensor-Glove/install/realsense2_camera_msgs/local/lib/python3.10/dist-packages/realsense2_camera_msgs/msg'...\n"}
+[4.676093] (realsense2_camera_msgs) StdoutLine: {'line': b"Compiling '/home/hosodalab9/Sensor-Glove/install/realsense2_camera_msgs/local/lib/python3.10/dist-packages/realsense2_camera_msgs/msg/__init__.py'...\n"}
+[4.676213] (realsense2_camera_msgs) StdoutLine: {'line': b"Compiling '/home/hosodalab9/Sensor-Glove/install/realsense2_camera_msgs/local/lib/python3.10/dist-packages/realsense2_camera_msgs/msg/_extrinsics.py'...\n"}
+[4.676338] (realsense2_camera_msgs) StdoutLine: {'line': b"Compiling '/home/hosodalab9/Sensor-Glove/install/realsense2_camera_msgs/local/lib/python3.10/dist-packages/realsense2_camera_msgs/msg/_imu_info.py'...\n"}
+[4.676428] (realsense2_camera_msgs) StdoutLine: {'line': b"Compiling '/home/hosodalab9/Sensor-Glove/install/realsense2_camera_msgs/local/lib/python3.10/dist-packages/realsense2_camera_msgs/msg/_metadata.py'...\n"}
+[4.676534] (realsense2_camera_msgs) StdoutLine: {'line': b"Compiling '/home/hosodalab9/Sensor-Glove/install/realsense2_camera_msgs/local/lib/python3.10/dist-packages/realsense2_camera_msgs/msg/_rgbd.py'...\n"}
+[4.676619] (realsense2_camera_msgs) StdoutLine: {'line': b"Listing '/home/hosodalab9/Sensor-Glove/install/realsense2_camera_msgs/local/lib/python3.10/dist-packages/realsense2_camera_msgs/srv'...\n"}
+[4.676701] (realsense2_camera_msgs) StdoutLine: {'line': b"Compiling '/home/hosodalab9/Sensor-Glove/install/realsense2_camera_msgs/local/lib/python3.10/dist-packages/realsense2_camera_msgs/srv/__init__.py'...\n"}
+[4.676784] (realsense2_camera_msgs) StdoutLine: {'line': b"Compiling '/home/hosodalab9/Sensor-Glove/install/realsense2_camera_msgs/local/lib/python3.10/dist-packages/realsense2_camera_msgs/srv/_device_info.py'...\n"}
+[4.679515] (realsense2_camera_msgs) StdoutLine: {'line': b'-- Installing: /home/hosodalab9/Sensor-Glove/install/realsense2_camera_msgs/lib/librealsense2_camera_msgs__rosidl_generator_py.so\n'}
+[4.680036] (realsense2_camera_msgs) StdoutLine: {'line': b'-- Set runtime path of "/home/hosodalab9/Sensor-Glove/install/realsense2_camera_msgs/lib/librealsense2_camera_msgs__rosidl_generator_py.so" to ""\n'}
+[4.680255] (realsense2_camera_msgs) StdoutLine: {'line': b'-- Installing: /home/hosodalab9/Sensor-Glove/install/realsense2_camera_msgs/share/realsense2_camera_msgs/cmake/export_realsense2_camera_msgs__rosidl_generator_cExport.cmake\n'}
+[4.680429] (realsense2_camera_msgs) StdoutLine: {'line': b'-- Installing: /home/hosodalab9/Sensor-Glove/install/realsense2_camera_msgs/share/realsense2_camera_msgs/cmake/export_realsense2_camera_msgs__rosidl_generator_cExport-noconfig.cmake\n'}
+[4.680587] (realsense2_camera_msgs) StdoutLine: {'line': b'-- Installing: /home/hosodalab9/Sensor-Glove/install/realsense2_camera_msgs/share/realsense2_camera_msgs/cmake/export_realsense2_camera_msgs__rosidl_typesupport_fastrtps_cExport.cmake\n'}
+[4.680634] (realsense2_camera_msgs) StdoutLine: {'line': b'-- Installing: /home/hosodalab9/Sensor-Glove/install/realsense2_camera_msgs/share/realsense2_camera_msgs/cmake/export_realsense2_camera_msgs__rosidl_typesupport_fastrtps_cExport-noconfig.cmake\n'}
+[4.680709] (realsense2_camera_msgs) StdoutLine: {'line': b'-- Installing: /home/hosodalab9/Sensor-Glove/install/realsense2_camera_msgs/share/realsense2_camera_msgs/cmake/realsense2_camera_msgs__rosidl_typesupport_introspection_cExport.cmake\n'}
+[4.680867] (realsense2_camera_msgs) StdoutLine: {'line': b'-- Installing: /home/hosodalab9/Sensor-Glove/install/realsense2_camera_msgs/share/realsense2_camera_msgs/cmake/realsense2_camera_msgs__rosidl_typesupport_introspection_cExport-noconfig.cmake\n'}
+[4.681025] (realsense2_camera_msgs) StdoutLine: {'line': b'-- Installing: /home/hosodalab9/Sensor-Glove/install/realsense2_camera_msgs/share/realsense2_camera_msgs/cmake/realsense2_camera_msgs__rosidl_typesupport_cExport.cmake\n'}
+[4.681246] (realsense2_camera_msgs) StdoutLine: {'line': b'-- Installing: /home/hosodalab9/Sensor-Glove/install/realsense2_camera_msgs/share/realsense2_camera_msgs/cmake/realsense2_camera_msgs__rosidl_typesupport_cExport-noconfig.cmake\n'}
+[4.681407] (realsense2_camera_msgs) StdoutLine: {'line': b'-- Installing: /home/hosodalab9/Sensor-Glove/install/realsense2_camera_msgs/share/realsense2_camera_msgs/cmake/export_realsense2_camera_msgs__rosidl_generator_cppExport.cmake\n'}
+[4.681591] (realsense2_camera_msgs) StdoutLine: {'line': b'-- Installing: /home/hosodalab9/Sensor-Glove/install/realsense2_camera_msgs/share/realsense2_camera_msgs/cmake/export_realsense2_camera_msgs__rosidl_typesupport_fastrtps_cppExport.cmake\n'}
+[4.681721] (realsense2_camera_msgs) StdoutLine: {'line': b'-- Installing: /home/hosodalab9/Sensor-Glove/install/realsense2_camera_msgs/share/realsense2_camera_msgs/cmake/export_realsense2_camera_msgs__rosidl_typesupport_fastrtps_cppExport-noconfig.cmake\n'}
+[4.681872] (realsense2_camera_msgs) StdoutLine: {'line': b'-- Installing: /home/hosodalab9/Sensor-Glove/install/realsense2_camera_msgs/share/realsense2_camera_msgs/cmake/realsense2_camera_msgs__rosidl_typesupport_introspection_cppExport.cmake\n'}
+[4.682035] (realsense2_camera_msgs) StdoutLine: {'line': b'-- Installing: /home/hosodalab9/Sensor-Glove/install/realsense2_camera_msgs/share/realsense2_camera_msgs/cmake/realsense2_camera_msgs__rosidl_typesupport_introspection_cppExport-noconfig.cmake\n'}
+[4.682196] (realsense2_camera_msgs) StdoutLine: {'line': b'-- Installing: /home/hosodalab9/Sensor-Glove/install/realsense2_camera_msgs/share/realsense2_camera_msgs/cmake/realsense2_camera_msgs__rosidl_typesupport_cppExport.cmake\n'}
+[4.682356] (realsense2_camera_msgs) StdoutLine: {'line': b'-- Installing: /home/hosodalab9/Sensor-Glove/install/realsense2_camera_msgs/share/realsense2_camera_msgs/cmake/realsense2_camera_msgs__rosidl_typesupport_cppExport-noconfig.cmake\n'}
+[4.682518] (realsense2_camera_msgs) StdoutLine: {'line': b'-- Installing: /home/hosodalab9/Sensor-Glove/install/realsense2_camera_msgs/share/realsense2_camera_msgs/cmake/export_realsense2_camera_msgs__rosidl_generator_pyExport.cmake\n'}
+[4.682678] (realsense2_camera_msgs) StdoutLine: {'line': b'-- Installing: /home/hosodalab9/Sensor-Glove/install/realsense2_camera_msgs/share/realsense2_camera_msgs/cmake/export_realsense2_camera_msgs__rosidl_generator_pyExport-noconfig.cmake\n'}
+[4.685748] (realsense2_camera_msgs) CommandEnded: {'returncode': 0}
+[4.702964] (ros2serial_arduino) StdoutLine: {'line': b'[ 75%] Built target serial_receive_node\n'}
+[4.708147] (-) TimerEvent: {}
+[4.808577] (-) TimerEvent: {}
+[4.881515] (realsense2_camera_msgs) JobEnded: {'identifier': 'realsense2_camera_msgs', 'rc': 0}
+[4.882547] (realsense2_camera) JobStarted: {'identifier': 'realsense2_camera'}
+[4.884971] (realsense2_description) JobStarted: {'identifier': 'realsense2_description'}
+[4.890058] (realsense2_camera) JobProgress: {'identifier': 'realsense2_camera', 'progress': 'cmake'}
+[4.890227] (realsense2_camera) Command: {'cmd': ['/usr/bin/cmake', '/home/hosodalab9/Sensor-Glove/src/hand_sense_ws/src/realsense-ros/realsense2_camera', '-DAMENT_CMAKE_SYMLINK_INSTALL=1', '-DCMAKE_INSTALL_PREFIX=/home/hosodalab9/Sensor-Glove/install/realsense2_camera'], 'cwd': '/home/hosodalab9/Sensor-Glove/build/realsense2_camera', 'env': OrderedDict([('LESSOPEN', '| /usr/bin/lesspipe %s'), ('USER', 'hosodalab9'), ('XDG_SESSION_TYPE', 'x11'), ('SHLVL', '1'), ('LD_LIBRARY_PATH', '/home/hosodalab9/Sensor-Glove/install/realsense2_camera_msgs/lib:/usr/lib/x86_64-linux-gnu/gazebo-11/plugins:/opt/ros/humble/opt/rviz_ogre_vendor/lib:/opt/ros/humble/lib/x86_64-linux-gnu:/opt/ros/humble/lib:/usr/local/cuda/lib64:/usr/local/cuda/extras/CUPTI/lib64'), ('HOME', '/home/hosodalab9'), ('CONDA_SHLVL', '0'), ('OLDPWD', '/home/hosodalab9/Sensor-Glove'), ('CMAKE_CUDA_COMPILER', '/usr/local/cuda-10.2/bin/nvcc'), ('DESKTOP_SESSION', 'ubuntu-xorg'), ('ros2_ws', '/home/hosodalab9/Sensor-Glove'), ('ROS_PYTHON_VERSION', '3'), ('GNOME_SHELL_SESSION_MODE', 'ubuntu'), ('GTK_MODULES', 'gail:atk-bridge'), ('SYSTEMD_EXEC_PID', '1444'), ('DBUS_SESSION_BUS_ADDRESS', 'unix:path=/run/user/1000/bus'), ('COLORTERM', 'truecolor'), ('_CE_M', ''), ('ROS_DISTRO', 'humble'), ('GTK_IM_MODULE', 'ibus'), ('LOGNAME', 'hosodalab9'), ('_', '/usr/bin/colcon'), ('ROS_VERSION', '2'), ('XDG_SESSION_CLASS', 'user'), ('USERNAME', 'hosodalab9'), ('TERM', 'xterm-256color'), ('GNOME_DESKTOP_SESSION_ID', 'this-is-deprecated'), ('_CE_CONDA', ''), ('ROS_LOCALHOST_ONLY', '1'), ('WINDOWPATH', '2'), ('PATH', '/home/hosodalab9/anaconda3/condabin:/opt/ros/humble/bin:/home/hosodalab9/.local/bin:/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin:/usr/games:/usr/local/games:/snap/bin:/snap/bin:CUDA_HOME/bin'), ('SESSION_MANAGER', 'local/hosodalab9-Venus-series:@/tmp/.ICE-unix/1423,unix/hosodalab9-Venus-series:/tmp/.ICE-unix/1423'), ('XDG_MENU_PREFIX', 'gnome-'), ('GNOME_TERMINAL_SCREEN', '/org/gnome/Terminal/screen/e46c7774_dfd7_4ba5_9462_d93fe0fccc36'), ('XDG_RUNTIME_DIR', '/run/user/1000'), ('DISPLAY', ':0'), ('LANG', 'en_US.UTF-8'), ('XDG_CURRENT_DESKTOP', 'ubuntu:GNOME'), ('XMODIFIERS', '@im=ibus'), ('XDG_SESSION_DESKTOP', 'ubuntu-xorg'), ('XAUTHORITY', '/run/user/1000/gdm/Xauthority'), ('LS_COLORS', 'rs=0:di=01;34:ln=01;36:mh=00:pi=40;33:so=01;35:do=01;35:bd=40;33;01:cd=40;33;01:or=40;31;01:mi=00:su=37;41:sg=30;43:ca=30;41:tw=30;42:ow=34;42:st=37;44:ex=01;32:*.tar=01;31:*.tgz=01;31:*.arc=01;31:*.arj=01;31:*.taz=01;31:*.lha=01;31:*.lz4=01;31:*.lzh=01;31:*.lzma=01;31:*.tlz=01;31:*.txz=01;31:*.tzo=01;31:*.t7z=01;31:*.zip=01;31:*.z=01;31:*.dz=01;31:*.gz=01;31:*.lrz=01;31:*.lz=01;31:*.lzo=01;31:*.xz=01;31:*.zst=01;31:*.tzst=01;31:*.bz2=01;31:*.bz=01;31:*.tbz=01;31:*.tbz2=01;31:*.tz=01;31:*.deb=01;31:*.rpm=01;31:*.jar=01;31:*.war=01;31:*.ear=01;31:*.sar=01;31:*.rar=01;31:*.alz=01;31:*.ace=01;31:*.zoo=01;31:*.cpio=01;31:*.7z=01;31:*.rz=01;31:*.cab=01;31:*.wim=01;31:*.swm=01;31:*.dwm=01;31:*.esd=01;31:*.jpg=01;35:*.jpeg=01;35:*.mjpg=01;35:*.mjpeg=01;35:*.gif=01;35:*.bmp=01;35:*.pbm=01;35:*.pgm=01;35:*.ppm=01;35:*.tga=01;35:*.xbm=01;35:*.xpm=01;35:*.tif=01;35:*.tiff=01;35:*.png=01;35:*.svg=01;35:*.svgz=01;35:*.mng=01;35:*.pcx=01;35:*.mov=01;35:*.mpg=01;35:*.mpeg=01;35:*.m2v=01;35:*.mkv=01;35:*.webm=01;35:*.webp=01;35:*.ogm=01;35:*.mp4=01;35:*.m4v=01;35:*.mp4v=01;35:*.vob=01;35:*.qt=01;35:*.nuv=01;35:*.wmv=01;35:*.asf=01;35:*.rm=01;35:*.rmvb=01;35:*.flc=01;35:*.avi=01;35:*.fli=01;35:*.flv=01;35:*.gl=01;35:*.dl=01;35:*.xcf=01;35:*.xwd=01;35:*.yuv=01;35:*.cgm=01;35:*.emf=01;35:*.ogv=01;35:*.ogx=01;35:*.aac=00;36:*.au=00;36:*.flac=00;36:*.m4a=00;36:*.mid=00;36:*.midi=00;36:*.mka=00;36:*.mp3=00;36:*.mpc=00;36:*.ogg=00;36:*.ra=00;36:*.wav=00;36:*.oga=00;36:*.opus=00;36:*.spx=00;36:*.xspf=00;36:'), ('GNOME_TERMINAL_SERVICE', ':1.735'), ('SSH_AGENT_LAUNCHER', 'gnome-keyring'), ('SSH_AUTH_SOCK', '/run/user/1000/keyring/ssh'), ('ROS_DOMAIN_ID', '1'), ('AMENT_PREFIX_PATH', '/home/hosodalab9/Sensor-Glove/install/realsense2_camera_msgs:/opt/ros/humble'), ('CONDA_PYTHON_EXE', '/home/hosodalab9/anaconda3/bin/python'), ('SHELL', '/bin/bash'), ('QT_ACCESSIBILITY', '1'), ('GDMSESSION', 'ubuntu-xorg'), ('LESSCLOSE', '/usr/bin/lesspipe %s %s'), ('GPG_AGENT_INFO', '/run/user/1000/gnupg/S.gpg-agent:0:1'), ('QT_IM_MODULE', 'ibus'), ('PWD', '/home/hosodalab9/Sensor-Glove/build/realsense2_camera'), ('LC_ALL', 'en_US.UTF-8'), ('CUDA_HOME', '/usr/local/cuda'), ('XDG_CONFIG_DIRS', '/etc/xdg/xdg-ubuntu-xorg:/etc/xdg'), ('CONDA_EXE', '/home/hosodalab9/anaconda3/bin/conda'), ('XDG_DATA_DIRS', '/usr/share/ubuntu-xorg:/usr/share/gnome:/usr/local/share/:/usr/share/:/var/lib/snapd/desktop'), ('PYTHONPATH', '/home/hosodalab9/Sensor-Glove/install/realsense2_camera_msgs/local/lib/python3.10/dist-packages:/opt/ros/humble/lib/python3.10/site-packages:/opt/ros/humble/local/lib/python3.10/dist-packages:/usr/local/lib'), ('COLCON', '1'), ('VTE_VERSION', '6800'), ('CMAKE_PREFIX_PATH', '/home/hosodalab9/Sensor-Glove/install/realsense2_camera_msgs:/opt/ros/humble')]), 'shell': False}
+[4.892368] (realsense2_description) JobProgress: {'identifier': 'realsense2_description', 'progress': 'cmake'}
+[4.892698] (realsense2_description) Command: {'cmd': ['/usr/bin/cmake', '/home/hosodalab9/Sensor-Glove/src/hand_sense_ws/src/realsense-ros/realsense2_description', '-DAMENT_CMAKE_SYMLINK_INSTALL=1', '-DCMAKE_INSTALL_PREFIX=/home/hosodalab9/Sensor-Glove/install/realsense2_description'], 'cwd': '/home/hosodalab9/Sensor-Glove/build/realsense2_description', 'env': OrderedDict([('LESSOPEN', '| /usr/bin/lesspipe %s'), ('USER', 'hosodalab9'), ('XDG_SESSION_TYPE', 'x11'), ('SHLVL', '1'), ('LD_LIBRARY_PATH', '/home/hosodalab9/Sensor-Glove/install/realsense2_camera_msgs/lib:/usr/lib/x86_64-linux-gnu/gazebo-11/plugins:/opt/ros/humble/opt/rviz_ogre_vendor/lib:/opt/ros/humble/lib/x86_64-linux-gnu:/opt/ros/humble/lib:/usr/local/cuda/lib64:/usr/local/cuda/extras/CUPTI/lib64'), ('HOME', '/home/hosodalab9'), ('CONDA_SHLVL', '0'), ('OLDPWD', '/home/hosodalab9/Sensor-Glove'), ('CMAKE_CUDA_COMPILER', '/usr/local/cuda-10.2/bin/nvcc'), ('DESKTOP_SESSION', 'ubuntu-xorg'), ('ros2_ws', '/home/hosodalab9/Sensor-Glove'), ('ROS_PYTHON_VERSION', '3'), ('GNOME_SHELL_SESSION_MODE', 'ubuntu'), ('GTK_MODULES', 'gail:atk-bridge'), ('SYSTEMD_EXEC_PID', '1444'), ('DBUS_SESSION_BUS_ADDRESS', 'unix:path=/run/user/1000/bus'), ('COLORTERM', 'truecolor'), ('_CE_M', ''), ('ROS_DISTRO', 'humble'), ('GTK_IM_MODULE', 'ibus'), ('LOGNAME', 'hosodalab9'), ('_', '/usr/bin/colcon'), ('ROS_VERSION', '2'), ('XDG_SESSION_CLASS', 'user'), ('USERNAME', 'hosodalab9'), ('TERM', 'xterm-256color'), ('GNOME_DESKTOP_SESSION_ID', 'this-is-deprecated'), ('_CE_CONDA', ''), ('ROS_LOCALHOST_ONLY', '1'), ('WINDOWPATH', '2'), ('PATH', '/home/hosodalab9/anaconda3/condabin:/opt/ros/humble/bin:/home/hosodalab9/.local/bin:/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin:/usr/games:/usr/local/games:/snap/bin:/snap/bin:CUDA_HOME/bin'), ('SESSION_MANAGER', 'local/hosodalab9-Venus-series:@/tmp/.ICE-unix/1423,unix/hosodalab9-Venus-series:/tmp/.ICE-unix/1423'), ('XDG_MENU_PREFIX', 'gnome-'), ('GNOME_TERMINAL_SCREEN', '/org/gnome/Terminal/screen/e46c7774_dfd7_4ba5_9462_d93fe0fccc36'), ('XDG_RUNTIME_DIR', '/run/user/1000'), ('DISPLAY', ':0'), ('LANG', 'en_US.UTF-8'), ('XDG_CURRENT_DESKTOP', 'ubuntu:GNOME'), ('XMODIFIERS', '@im=ibus'), ('XDG_SESSION_DESKTOP', 'ubuntu-xorg'), ('XAUTHORITY', '/run/user/1000/gdm/Xauthority'), ('LS_COLORS', 'rs=0:di=01;34:ln=01;36:mh=00:pi=40;33:so=01;35:do=01;35:bd=40;33;01:cd=40;33;01:or=40;31;01:mi=00:su=37;41:sg=30;43:ca=30;41:tw=30;42:ow=34;42:st=37;44:ex=01;32:*.tar=01;31:*.tgz=01;31:*.arc=01;31:*.arj=01;31:*.taz=01;31:*.lha=01;31:*.lz4=01;31:*.lzh=01;31:*.lzma=01;31:*.tlz=01;31:*.txz=01;31:*.tzo=01;31:*.t7z=01;31:*.zip=01;31:*.z=01;31:*.dz=01;31:*.gz=01;31:*.lrz=01;31:*.lz=01;31:*.lzo=01;31:*.xz=01;31:*.zst=01;31:*.tzst=01;31:*.bz2=01;31:*.bz=01;31:*.tbz=01;31:*.tbz2=01;31:*.tz=01;31:*.deb=01;31:*.rpm=01;31:*.jar=01;31:*.war=01;31:*.ear=01;31:*.sar=01;31:*.rar=01;31:*.alz=01;31:*.ace=01;31:*.zoo=01;31:*.cpio=01;31:*.7z=01;31:*.rz=01;31:*.cab=01;31:*.wim=01;31:*.swm=01;31:*.dwm=01;31:*.esd=01;31:*.jpg=01;35:*.jpeg=01;35:*.mjpg=01;35:*.mjpeg=01;35:*.gif=01;35:*.bmp=01;35:*.pbm=01;35:*.pgm=01;35:*.ppm=01;35:*.tga=01;35:*.xbm=01;35:*.xpm=01;35:*.tif=01;35:*.tiff=01;35:*.png=01;35:*.svg=01;35:*.svgz=01;35:*.mng=01;35:*.pcx=01;35:*.mov=01;35:*.mpg=01;35:*.mpeg=01;35:*.m2v=01;35:*.mkv=01;35:*.webm=01;35:*.webp=01;35:*.ogm=01;35:*.mp4=01;35:*.m4v=01;35:*.mp4v=01;35:*.vob=01;35:*.qt=01;35:*.nuv=01;35:*.wmv=01;35:*.asf=01;35:*.rm=01;35:*.rmvb=01;35:*.flc=01;35:*.avi=01;35:*.fli=01;35:*.flv=01;35:*.gl=01;35:*.dl=01;35:*.xcf=01;35:*.xwd=01;35:*.yuv=01;35:*.cgm=01;35:*.emf=01;35:*.ogv=01;35:*.ogx=01;35:*.aac=00;36:*.au=00;36:*.flac=00;36:*.m4a=00;36:*.mid=00;36:*.midi=00;36:*.mka=00;36:*.mp3=00;36:*.mpc=00;36:*.ogg=00;36:*.ra=00;36:*.wav=00;36:*.oga=00;36:*.opus=00;36:*.spx=00;36:*.xspf=00;36:'), ('GNOME_TERMINAL_SERVICE', ':1.735'), ('SSH_AGENT_LAUNCHER', 'gnome-keyring'), ('SSH_AUTH_SOCK', '/run/user/1000/keyring/ssh'), ('ROS_DOMAIN_ID', '1'), ('AMENT_PREFIX_PATH', '/home/hosodalab9/Sensor-Glove/install/realsense2_camera_msgs:/opt/ros/humble'), ('CONDA_PYTHON_EXE', '/home/hosodalab9/anaconda3/bin/python'), ('SHELL', '/bin/bash'), ('QT_ACCESSIBILITY', '1'), ('GDMSESSION', 'ubuntu-xorg'), ('LESSCLOSE', '/usr/bin/lesspipe %s %s'), ('GPG_AGENT_INFO', '/run/user/1000/gnupg/S.gpg-agent:0:1'), ('QT_IM_MODULE', 'ibus'), ('PWD', '/home/hosodalab9/Sensor-Glove/build/realsense2_description'), ('LC_ALL', 'en_US.UTF-8'), ('CUDA_HOME', '/usr/local/cuda'), ('XDG_CONFIG_DIRS', '/etc/xdg/xdg-ubuntu-xorg:/etc/xdg'), ('CONDA_EXE', '/home/hosodalab9/anaconda3/bin/conda'), ('XDG_DATA_DIRS', '/usr/share/ubuntu-xorg:/usr/share/gnome:/usr/local/share/:/usr/share/:/var/lib/snapd/desktop'), ('PYTHONPATH', '/home/hosodalab9/Sensor-Glove/install/realsense2_camera_msgs/local/lib/python3.10/dist-packages:/opt/ros/humble/lib/python3.10/site-packages:/opt/ros/humble/local/lib/python3.10/dist-packages:/usr/local/lib'), ('COLCON', '1'), ('VTE_VERSION', '6800'), ('CMAKE_PREFIX_PATH', '/home/hosodalab9/Sensor-Glove/install/realsense2_camera_msgs:/opt/ros/humble')]), 'shell': False}
+[4.908685] (-) TimerEvent: {}
+[4.948885] (realsense2_description) StdoutLine: {'line': b'-- The C compiler identification is GNU 11.4.0\n'}
+[4.949203] (realsense2_camera) StdoutLine: {'line': b'-- The C compiler identification is GNU 11.4.0\n'}
+[5.000703] (realsense2_description) StdoutLine: {'line': b'-- The CXX compiler identification is GNU 11.4.0\n'}
+[5.001969] (realsense2_camera) StdoutLine: {'line': b'-- The CXX compiler identification is GNU 11.4.0\n'}
+[5.008827] (-) TimerEvent: {}
+[5.011128] (realsense2_camera) StdoutLine: {'line': b'-- Detecting C compiler ABI info\n'}
+[5.011361] (realsense2_description) StdoutLine: {'line': b'-- Detecting C compiler ABI info\n'}
+[5.078964] (realsense2_camera) StdoutLine: {'line': b'-- Detecting C compiler ABI info - done\n'}
+[5.079171] (realsense2_description) StdoutLine: {'line': b'-- Detecting C compiler ABI info - done\n'}
+[5.083794] (realsense2_description) StdoutLine: {'line': b'-- Check for working C compiler: /usr/bin/cc - skipped\n'}
+[5.084027] (realsense2_description) StdoutLine: {'line': b'-- Detecting C compile features\n'}
+[5.084105] (realsense2_camera) StdoutLine: {'line': b'-- Check for working C compiler: /usr/bin/cc - skipped\n'}
+[5.084278] (realsense2_camera) StdoutLine: {'line': b'-- Detecting C compile features\n'}
+[5.084360] (realsense2_description) StdoutLine: {'line': b'-- Detecting C compile features - done\n'}
+[5.084544] (realsense2_camera) StdoutLine: {'line': b'-- Detecting C compile features - done\n'}
+[5.088799] (realsense2_camera) StdoutLine: {'line': b'-- Detecting CXX compiler ABI info\n'}
+[5.089212] (realsense2_description) StdoutLine: {'line': b'-- Detecting CXX compiler ABI info\n'}
+[5.108943] (-) TimerEvent: {}
+[5.158939] (realsense2_camera) StdoutLine: {'line': b'-- Detecting CXX compiler ABI info - done\n'}
+[5.159539] (realsense2_description) StdoutLine: {'line': b'-- Detecting CXX compiler ABI info - done\n'}
+[5.164301] (realsense2_camera) StdoutLine: {'line': b'-- Check for working CXX compiler: /usr/bin/c++ - skipped\n'}
+[5.164636] (realsense2_camera) StdoutLine: {'line': b'-- Detecting CXX compile features\n'}
+[5.165097] (realsense2_camera) StdoutLine: {'line': b'-- Detecting CXX compile features - done\n'}
+[5.166037] (realsense2_camera) StdoutLine: {'line': b'-- Create Release Build.\n'}
+[5.168146] (realsense2_description) StdoutLine: {'line': b'-- Check for working CXX compiler: /usr/bin/c++ - skipped\n'}
+[5.168439] (realsense2_description) StdoutLine: {'line': b'-- Detecting CXX compile features\n'}
+[5.168865] (realsense2_description) StdoutLine: {'line': b'-- Detecting CXX compile features - done\n'}
+[5.169620] (realsense2_camera) StdoutLine: {'line': b'-- Found ament_cmake: 1.3.9 (/opt/ros/humble/share/ament_cmake/cmake)\n'}
+[5.171827] (realsense2_description) StdoutLine: {'line': b'-- Found ament_cmake: 1.3.9 (/opt/ros/humble/share/ament_cmake/cmake)\n'}
+[5.209068] (-) TimerEvent: {}
+[5.307704] (realsense2_camera) StdoutLine: {'line': b'-- Found Python3: /usr/bin/python3 (found version "3.10.12") found components: Interpreter \n'}
+[5.307997] (realsense2_description) StdoutLine: {'line': b'-- Found Python3: /usr/bin/python3 (found version "3.10.12") found components: Interpreter \n'}
+[5.309159] (-) TimerEvent: {}
+[5.366279] (realsense2_camera) StdoutLine: {'line': b'-- Override CMake install command with custom implementation using symlinks instead of copying resources\n'}
+[5.366552] (realsense2_description) StdoutLine: {'line': b'-- Override CMake install command with custom implementation using symlinks instead of copying resources\n'}
+[5.407562] (realsense2_camera) StdoutLine: {'line': b'-- Found builtin_interfaces: 1.2.1 (/opt/ros/humble/share/builtin_interfaces/cmake)\n'}
+[5.409246] (-) TimerEvent: {}
+[5.463803] (realsense2_description) StdoutLine: {'line': b'-- Configuring done\n'}
+[5.466055] (realsense2_description) StdoutLine: {'line': b'-- Generating done\n'}
+[5.466832] (realsense2_description) StdoutLine: {'line': b'-- Build files have been written to: /home/hosodalab9/Sensor-Glove/build/realsense2_description\n'}
+[5.467031] (realsense2_camera) StdoutLine: {'line': b'-- Found rosidl_generator_c: 3.1.5 (/opt/ros/humble/share/rosidl_generator_c/cmake)\n'}
+[5.470825] (realsense2_description) CommandEnded: {'returncode': 0}
+[5.471512] (realsense2_description) JobProgress: {'identifier': 'realsense2_description', 'progress': 'build'}
+[5.472368] (realsense2_description) Command: {'cmd': ['/usr/bin/cmake', '--build', '/home/hosodalab9/Sensor-Glove/build/realsense2_description', '--', '-j16', '-l16'], 'cwd': '/home/hosodalab9/Sensor-Glove/build/realsense2_description', 'env': OrderedDict([('LESSOPEN', '| /usr/bin/lesspipe %s'), ('USER', 'hosodalab9'), ('XDG_SESSION_TYPE', 'x11'), ('SHLVL', '1'), ('LD_LIBRARY_PATH', '/home/hosodalab9/Sensor-Glove/install/realsense2_camera_msgs/lib:/usr/lib/x86_64-linux-gnu/gazebo-11/plugins:/opt/ros/humble/opt/rviz_ogre_vendor/lib:/opt/ros/humble/lib/x86_64-linux-gnu:/opt/ros/humble/lib:/usr/local/cuda/lib64:/usr/local/cuda/extras/CUPTI/lib64'), ('HOME', '/home/hosodalab9'), ('CONDA_SHLVL', '0'), ('OLDPWD', '/home/hosodalab9/Sensor-Glove'), ('CMAKE_CUDA_COMPILER', '/usr/local/cuda-10.2/bin/nvcc'), ('DESKTOP_SESSION', 'ubuntu-xorg'), ('ros2_ws', '/home/hosodalab9/Sensor-Glove'), ('ROS_PYTHON_VERSION', '3'), ('GNOME_SHELL_SESSION_MODE', 'ubuntu'), ('GTK_MODULES', 'gail:atk-bridge'), ('SYSTEMD_EXEC_PID', '1444'), ('DBUS_SESSION_BUS_ADDRESS', 'unix:path=/run/user/1000/bus'), ('COLORTERM', 'truecolor'), ('_CE_M', ''), ('ROS_DISTRO', 'humble'), ('GTK_IM_MODULE', 'ibus'), ('LOGNAME', 'hosodalab9'), ('_', '/usr/bin/colcon'), ('ROS_VERSION', '2'), ('XDG_SESSION_CLASS', 'user'), ('USERNAME', 'hosodalab9'), ('TERM', 'xterm-256color'), ('GNOME_DESKTOP_SESSION_ID', 'this-is-deprecated'), ('_CE_CONDA', ''), ('ROS_LOCALHOST_ONLY', '1'), ('WINDOWPATH', '2'), ('PATH', '/home/hosodalab9/anaconda3/condabin:/opt/ros/humble/bin:/home/hosodalab9/.local/bin:/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin:/usr/games:/usr/local/games:/snap/bin:/snap/bin:CUDA_HOME/bin'), ('SESSION_MANAGER', 'local/hosodalab9-Venus-series:@/tmp/.ICE-unix/1423,unix/hosodalab9-Venus-series:/tmp/.ICE-unix/1423'), ('XDG_MENU_PREFIX', 'gnome-'), ('GNOME_TERMINAL_SCREEN', '/org/gnome/Terminal/screen/e46c7774_dfd7_4ba5_9462_d93fe0fccc36'), ('XDG_RUNTIME_DIR', '/run/user/1000'), ('DISPLAY', ':0'), ('LANG', 'en_US.UTF-8'), ('XDG_CURRENT_DESKTOP', 'ubuntu:GNOME'), ('XMODIFIERS', '@im=ibus'), ('XDG_SESSION_DESKTOP', 'ubuntu-xorg'), ('XAUTHORITY', '/run/user/1000/gdm/Xauthority'), ('LS_COLORS', 'rs=0:di=01;34:ln=01;36:mh=00:pi=40;33:so=01;35:do=01;35:bd=40;33;01:cd=40;33;01:or=40;31;01:mi=00:su=37;41:sg=30;43:ca=30;41:tw=30;42:ow=34;42:st=37;44:ex=01;32:*.tar=01;31:*.tgz=01;31:*.arc=01;31:*.arj=01;31:*.taz=01;31:*.lha=01;31:*.lz4=01;31:*.lzh=01;31:*.lzma=01;31:*.tlz=01;31:*.txz=01;31:*.tzo=01;31:*.t7z=01;31:*.zip=01;31:*.z=01;31:*.dz=01;31:*.gz=01;31:*.lrz=01;31:*.lz=01;31:*.lzo=01;31:*.xz=01;31:*.zst=01;31:*.tzst=01;31:*.bz2=01;31:*.bz=01;31:*.tbz=01;31:*.tbz2=01;31:*.tz=01;31:*.deb=01;31:*.rpm=01;31:*.jar=01;31:*.war=01;31:*.ear=01;31:*.sar=01;31:*.rar=01;31:*.alz=01;31:*.ace=01;31:*.zoo=01;31:*.cpio=01;31:*.7z=01;31:*.rz=01;31:*.cab=01;31:*.wim=01;31:*.swm=01;31:*.dwm=01;31:*.esd=01;31:*.jpg=01;35:*.jpeg=01;35:*.mjpg=01;35:*.mjpeg=01;35:*.gif=01;35:*.bmp=01;35:*.pbm=01;35:*.pgm=01;35:*.ppm=01;35:*.tga=01;35:*.xbm=01;35:*.xpm=01;35:*.tif=01;35:*.tiff=01;35:*.png=01;35:*.svg=01;35:*.svgz=01;35:*.mng=01;35:*.pcx=01;35:*.mov=01;35:*.mpg=01;35:*.mpeg=01;35:*.m2v=01;35:*.mkv=01;35:*.webm=01;35:*.webp=01;35:*.ogm=01;35:*.mp4=01;35:*.m4v=01;35:*.mp4v=01;35:*.vob=01;35:*.qt=01;35:*.nuv=01;35:*.wmv=01;35:*.asf=01;35:*.rm=01;35:*.rmvb=01;35:*.flc=01;35:*.avi=01;35:*.fli=01;35:*.flv=01;35:*.gl=01;35:*.dl=01;35:*.xcf=01;35:*.xwd=01;35:*.yuv=01;35:*.cgm=01;35:*.emf=01;35:*.ogv=01;35:*.ogx=01;35:*.aac=00;36:*.au=00;36:*.flac=00;36:*.m4a=00;36:*.mid=00;36:*.midi=00;36:*.mka=00;36:*.mp3=00;36:*.mpc=00;36:*.ogg=00;36:*.ra=00;36:*.wav=00;36:*.oga=00;36:*.opus=00;36:*.spx=00;36:*.xspf=00;36:'), ('GNOME_TERMINAL_SERVICE', ':1.735'), ('SSH_AGENT_LAUNCHER', 'gnome-keyring'), ('SSH_AUTH_SOCK', '/run/user/1000/keyring/ssh'), ('ROS_DOMAIN_ID', '1'), ('AMENT_PREFIX_PATH', '/home/hosodalab9/Sensor-Glove/install/realsense2_camera_msgs:/opt/ros/humble'), ('CONDA_PYTHON_EXE', '/home/hosodalab9/anaconda3/bin/python'), ('SHELL', '/bin/bash'), ('QT_ACCESSIBILITY', '1'), ('GDMSESSION', 'ubuntu-xorg'), ('LESSCLOSE', '/usr/bin/lesspipe %s %s'), ('GPG_AGENT_INFO', '/run/user/1000/gnupg/S.gpg-agent:0:1'), ('QT_IM_MODULE', 'ibus'), ('PWD', '/home/hosodalab9/Sensor-Glove/build/realsense2_description'), ('LC_ALL', 'en_US.UTF-8'), ('CUDA_HOME', '/usr/local/cuda'), ('XDG_CONFIG_DIRS', '/etc/xdg/xdg-ubuntu-xorg:/etc/xdg'), ('CONDA_EXE', '/home/hosodalab9/anaconda3/bin/conda'), ('XDG_DATA_DIRS', '/usr/share/ubuntu-xorg:/usr/share/gnome:/usr/local/share/:/usr/share/:/var/lib/snapd/desktop'), ('PYTHONPATH', '/home/hosodalab9/Sensor-Glove/install/realsense2_camera_msgs/local/lib/python3.10/dist-packages:/opt/ros/humble/lib/python3.10/site-packages:/opt/ros/humble/local/lib/python3.10/dist-packages:/usr/local/lib'), ('COLCON', '1'), ('VTE_VERSION', '6800'), ('CMAKE_PREFIX_PATH', '/home/hosodalab9/Sensor-Glove/install/realsense2_camera_msgs:/opt/ros/humble')]), 'shell': False}
+[5.475812] (realsense2_camera) StdoutLine: {'line': b'-- Found rosidl_adapter: 3.1.5 (/opt/ros/humble/share/rosidl_adapter/cmake)\n'}
+[5.490805] (realsense2_camera) StdoutLine: {'line': b'-- Found rosidl_generator_cpp: 3.1.5 (/opt/ros/humble/share/rosidl_generator_cpp/cmake)\n'}
+[5.509390] (-) TimerEvent: {}
+[5.511672] (realsense2_description) CommandEnded: {'returncode': 0}
+[5.513021] (realsense2_camera) StdoutLine: {'line': b'-- Using all available rosidl_typesupport_c: rosidl_typesupport_fastrtps_c;rosidl_typesupport_introspection_c\n'}
+[5.532087] (realsense2_camera) StdoutLine: {'line': b'-- Using all available rosidl_typesupport_cpp: rosidl_typesupport_fastrtps_cpp;rosidl_typesupport_introspection_cpp\n'}
+[5.537414] (realsense2_description) JobProgress: {'identifier': 'realsense2_description', 'progress': 'install'}
+[5.537824] (realsense2_description) Command: {'cmd': ['/usr/bin/cmake', '--install', '/home/hosodalab9/Sensor-Glove/build/realsense2_description'], 'cwd': '/home/hosodalab9/Sensor-Glove/build/realsense2_description', 'env': OrderedDict([('LESSOPEN', '| /usr/bin/lesspipe %s'), ('USER', 'hosodalab9'), ('XDG_SESSION_TYPE', 'x11'), ('SHLVL', '1'), ('LD_LIBRARY_PATH', '/home/hosodalab9/Sensor-Glove/install/realsense2_camera_msgs/lib:/usr/lib/x86_64-linux-gnu/gazebo-11/plugins:/opt/ros/humble/opt/rviz_ogre_vendor/lib:/opt/ros/humble/lib/x86_64-linux-gnu:/opt/ros/humble/lib:/usr/local/cuda/lib64:/usr/local/cuda/extras/CUPTI/lib64'), ('HOME', '/home/hosodalab9'), ('CONDA_SHLVL', '0'), ('OLDPWD', '/home/hosodalab9/Sensor-Glove'), ('CMAKE_CUDA_COMPILER', '/usr/local/cuda-10.2/bin/nvcc'), ('DESKTOP_SESSION', 'ubuntu-xorg'), ('ros2_ws', '/home/hosodalab9/Sensor-Glove'), ('ROS_PYTHON_VERSION', '3'), ('GNOME_SHELL_SESSION_MODE', 'ubuntu'), ('GTK_MODULES', 'gail:atk-bridge'), ('SYSTEMD_EXEC_PID', '1444'), ('DBUS_SESSION_BUS_ADDRESS', 'unix:path=/run/user/1000/bus'), ('COLORTERM', 'truecolor'), ('_CE_M', ''), ('ROS_DISTRO', 'humble'), ('GTK_IM_MODULE', 'ibus'), ('LOGNAME', 'hosodalab9'), ('_', '/usr/bin/colcon'), ('ROS_VERSION', '2'), ('XDG_SESSION_CLASS', 'user'), ('USERNAME', 'hosodalab9'), ('TERM', 'xterm-256color'), ('GNOME_DESKTOP_SESSION_ID', 'this-is-deprecated'), ('_CE_CONDA', ''), ('ROS_LOCALHOST_ONLY', '1'), ('WINDOWPATH', '2'), ('PATH', '/home/hosodalab9/anaconda3/condabin:/opt/ros/humble/bin:/home/hosodalab9/.local/bin:/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin:/usr/games:/usr/local/games:/snap/bin:/snap/bin:CUDA_HOME/bin'), ('SESSION_MANAGER', 'local/hosodalab9-Venus-series:@/tmp/.ICE-unix/1423,unix/hosodalab9-Venus-series:/tmp/.ICE-unix/1423'), ('XDG_MENU_PREFIX', 'gnome-'), ('GNOME_TERMINAL_SCREEN', '/org/gnome/Terminal/screen/e46c7774_dfd7_4ba5_9462_d93fe0fccc36'), ('XDG_RUNTIME_DIR', '/run/user/1000'), ('DISPLAY', ':0'), ('LANG', 'en_US.UTF-8'), ('XDG_CURRENT_DESKTOP', 'ubuntu:GNOME'), ('XMODIFIERS', '@im=ibus'), ('XDG_SESSION_DESKTOP', 'ubuntu-xorg'), ('XAUTHORITY', '/run/user/1000/gdm/Xauthority'), ('LS_COLORS', 'rs=0:di=01;34:ln=01;36:mh=00:pi=40;33:so=01;35:do=01;35:bd=40;33;01:cd=40;33;01:or=40;31;01:mi=00:su=37;41:sg=30;43:ca=30;41:tw=30;42:ow=34;42:st=37;44:ex=01;32:*.tar=01;31:*.tgz=01;31:*.arc=01;31:*.arj=01;31:*.taz=01;31:*.lha=01;31:*.lz4=01;31:*.lzh=01;31:*.lzma=01;31:*.tlz=01;31:*.txz=01;31:*.tzo=01;31:*.t7z=01;31:*.zip=01;31:*.z=01;31:*.dz=01;31:*.gz=01;31:*.lrz=01;31:*.lz=01;31:*.lzo=01;31:*.xz=01;31:*.zst=01;31:*.tzst=01;31:*.bz2=01;31:*.bz=01;31:*.tbz=01;31:*.tbz2=01;31:*.tz=01;31:*.deb=01;31:*.rpm=01;31:*.jar=01;31:*.war=01;31:*.ear=01;31:*.sar=01;31:*.rar=01;31:*.alz=01;31:*.ace=01;31:*.zoo=01;31:*.cpio=01;31:*.7z=01;31:*.rz=01;31:*.cab=01;31:*.wim=01;31:*.swm=01;31:*.dwm=01;31:*.esd=01;31:*.jpg=01;35:*.jpeg=01;35:*.mjpg=01;35:*.mjpeg=01;35:*.gif=01;35:*.bmp=01;35:*.pbm=01;35:*.pgm=01;35:*.ppm=01;35:*.tga=01;35:*.xbm=01;35:*.xpm=01;35:*.tif=01;35:*.tiff=01;35:*.png=01;35:*.svg=01;35:*.svgz=01;35:*.mng=01;35:*.pcx=01;35:*.mov=01;35:*.mpg=01;35:*.mpeg=01;35:*.m2v=01;35:*.mkv=01;35:*.webm=01;35:*.webp=01;35:*.ogm=01;35:*.mp4=01;35:*.m4v=01;35:*.mp4v=01;35:*.vob=01;35:*.qt=01;35:*.nuv=01;35:*.wmv=01;35:*.asf=01;35:*.rm=01;35:*.rmvb=01;35:*.flc=01;35:*.avi=01;35:*.fli=01;35:*.flv=01;35:*.gl=01;35:*.dl=01;35:*.xcf=01;35:*.xwd=01;35:*.yuv=01;35:*.cgm=01;35:*.emf=01;35:*.ogv=01;35:*.ogx=01;35:*.aac=00;36:*.au=00;36:*.flac=00;36:*.m4a=00;36:*.mid=00;36:*.midi=00;36:*.mka=00;36:*.mp3=00;36:*.mpc=00;36:*.ogg=00;36:*.ra=00;36:*.wav=00;36:*.oga=00;36:*.opus=00;36:*.spx=00;36:*.xspf=00;36:'), ('GNOME_TERMINAL_SERVICE', ':1.735'), ('SSH_AGENT_LAUNCHER', 'gnome-keyring'), ('SSH_AUTH_SOCK', '/run/user/1000/keyring/ssh'), ('ROS_DOMAIN_ID', '1'), ('AMENT_PREFIX_PATH', '/home/hosodalab9/Sensor-Glove/install/realsense2_camera_msgs:/opt/ros/humble'), ('CONDA_PYTHON_EXE', '/home/hosodalab9/anaconda3/bin/python'), ('SHELL', '/bin/bash'), ('QT_ACCESSIBILITY', '1'), ('GDMSESSION', 'ubuntu-xorg'), ('LESSCLOSE', '/usr/bin/lesspipe %s %s'), ('GPG_AGENT_INFO', '/run/user/1000/gnupg/S.gpg-agent:0:1'), ('QT_IM_MODULE', 'ibus'), ('PWD', '/home/hosodalab9/Sensor-Glove/build/realsense2_description'), ('LC_ALL', 'en_US.UTF-8'), ('CUDA_HOME', '/usr/local/cuda'), ('XDG_CONFIG_DIRS', '/etc/xdg/xdg-ubuntu-xorg:/etc/xdg'), ('CONDA_EXE', '/home/hosodalab9/anaconda3/bin/conda'), ('XDG_DATA_DIRS', '/usr/share/ubuntu-xorg:/usr/share/gnome:/usr/local/share/:/usr/share/:/var/lib/snapd/desktop'), ('PYTHONPATH', '/home/hosodalab9/Sensor-Glove/install/realsense2_camera_msgs/local/lib/python3.10/dist-packages:/opt/ros/humble/lib/python3.10/site-packages:/opt/ros/humble/local/lib/python3.10/dist-packages:/usr/local/lib'), ('COLCON', '1'), ('VTE_VERSION', '6800'), ('CMAKE_PREFIX_PATH', '/home/hosodalab9/Sensor-Glove/install/realsense2_camera_msgs:/opt/ros/humble')]), 'shell': False}
+[5.545045] (realsense2_description) StdoutLine: {'line': b'-- Install configuration: ""\n'}
+[5.545413] (realsense2_description) StdoutLine: {'line': b'-- Execute custom install script\n'}
+[5.545727] (realsense2_description) StdoutLine: {'line': b'-- Symlinking: /home/hosodalab9/Sensor-Glove/install/realsense2_description/share/realsense2_description/launch/launch_utils.py\n'}
+[5.552106] (realsense2_camera) StdoutLine: {'line': b'-- Found cv_bridge: 3.2.1 (/opt/ros/humble/share/cv_bridge/cmake)\n'}
+[5.555616] (realsense2_description) StdoutLine: {'line': b'-- Symlinking: /home/hosodalab9/Sensor-Glove/install/realsense2_description/share/realsense2_description/launch/view_model.launch.py\n'}
+[5.565474] (realsense2_description) StdoutLine: {'line': b'-- Symlinking: /home/hosodalab9/Sensor-Glove/install/realsense2_description/share/realsense2_description/meshes/d405.stl\n'}
+[5.574641] (realsense2_description) StdoutLine: {'line': b'-- Symlinking: /home/hosodalab9/Sensor-Glove/install/realsense2_description/share/realsense2_description/meshes/d415.stl\n'}
+[5.586455] (realsense2_description) StdoutLine: {'line': b'-- Symlinking: /home/hosodalab9/Sensor-Glove/install/realsense2_description/share/realsense2_description/meshes/d435.dae\n'}
+[5.595269] (realsense2_description) StdoutLine: {'line': b'-- Symlinking: /home/hosodalab9/Sensor-Glove/install/realsense2_description/share/realsense2_description/meshes/d455.stl\n'}
+[5.605250] (realsense2_description) StdoutLine: {'line': b'-- Symlinking: /home/hosodalab9/Sensor-Glove/install/realsense2_description/share/realsense2_description/meshes/l515.dae\n'}
+[5.609502] (-) TimerEvent: {}
+[5.614051] (realsense2_description) StdoutLine: {'line': b'-- Symlinking: /home/hosodalab9/Sensor-Glove/install/realsense2_description/share/realsense2_description/meshes/plug.stl\n'}
+[5.622606] (realsense2_description) StdoutLine: {'line': b'-- Symlinking: /home/hosodalab9/Sensor-Glove/install/realsense2_description/share/realsense2_description/meshes/plug_collision.stl\n'}
+[5.631351] (realsense2_description) StdoutLine: {'line': b'-- Symlinking: /home/hosodalab9/Sensor-Glove/install/realsense2_description/share/realsense2_description/rviz/urdf.rviz\n'}
+[5.641203] (realsense2_description) StdoutLine: {'line': b'-- Symlinking: /home/hosodalab9/Sensor-Glove/install/realsense2_description/share/realsense2_description/urdf/_d405.urdf.xacro\n'}
+[5.651880] (realsense2_description) StdoutLine: {'line': b'-- Symlinking: /home/hosodalab9/Sensor-Glove/install/realsense2_description/share/realsense2_description/urdf/_d415.urdf.xacro\n'}
+[5.660820] (realsense2_description) StdoutLine: {'line': b'-- Symlinking: /home/hosodalab9/Sensor-Glove/install/realsense2_description/share/realsense2_description/urdf/_d435.urdf.xacro\n'}
+[5.669598] (realsense2_description) StdoutLine: {'line': b'-- Symlinking: /home/hosodalab9/Sensor-Glove/install/realsense2_description/share/realsense2_description/urdf/_d435i.urdf.xacro\n'}
+[5.680081] (realsense2_description) StdoutLine: {'line': b'-- Symlinking: /home/hosodalab9/Sensor-Glove/install/realsense2_description/share/realsense2_description/urdf/_d435i_imu_modules.urdf.xacro\n'}
+[5.689614] (realsense2_description) StdoutLine: {'line': b'-- Symlinking: /home/hosodalab9/Sensor-Glove/install/realsense2_description/share/realsense2_description/urdf/_d455.urdf.xacro\n'}
+[5.698260] (realsense2_description) StdoutLine: {'line': b'-- Symlinking: /home/hosodalab9/Sensor-Glove/install/realsense2_description/share/realsense2_description/urdf/_materials.urdf.xacro\n'}
+[5.707899] (realsense2_description) StdoutLine: {'line': b'-- Symlinking: /home/hosodalab9/Sensor-Glove/install/realsense2_description/share/realsense2_description/urdf/_r410.urdf.xacro\n'}
+[5.709575] (-) TimerEvent: {}
+[5.717820] (realsense2_description) StdoutLine: {'line': b'-- Symlinking: /home/hosodalab9/Sensor-Glove/install/realsense2_description/share/realsense2_description/urdf/_r430.urdf.xacro\n'}
+[5.726716] (realsense2_description) StdoutLine: {'line': b'-- Symlinking: /home/hosodalab9/Sensor-Glove/install/realsense2_description/share/realsense2_description/urdf/_usb_plug.urdf.xacro\n'}
+[5.735441] (realsense2_description) StdoutLine: {'line': b'-- Symlinking: /home/hosodalab9/Sensor-Glove/install/realsense2_description/share/realsense2_description/urdf/test_d405_camera.urdf.xacro\n'}
+[5.739650] (realsense2_camera) StdoutLine: {'line': b'-- Found image_transport: 3.1.9 (/opt/ros/humble/share/image_transport/cmake)\n'}
+[5.744704] (realsense2_description) StdoutLine: {'line': b'-- Symlinking: /home/hosodalab9/Sensor-Glove/install/realsense2_description/share/realsense2_description/urdf/test_d415_camera.urdf.xacro\n'}
+[5.753925] (realsense2_description) StdoutLine: {'line': b'-- Symlinking: /home/hosodalab9/Sensor-Glove/install/realsense2_description/share/realsense2_description/urdf/test_d435_camera.urdf.xacro\n'}
+[5.762601] (realsense2_description) StdoutLine: {'line': b'-- Symlinking: /home/hosodalab9/Sensor-Glove/install/realsense2_description/share/realsense2_description/urdf/test_d435_multiple_cameras.urdf.xacro\n'}
+[5.772049] (realsense2_description) StdoutLine: {'line': b'-- Symlinking: /home/hosodalab9/Sensor-Glove/install/realsense2_description/share/realsense2_description/urdf/test_d435i_camera.urdf.xacro\n'}
+[5.782549] (realsense2_description) StdoutLine: {'line': b'-- Symlinking: /home/hosodalab9/Sensor-Glove/install/realsense2_description/share/realsense2_description/urdf/test_d455_camera.urdf.xacro\n'}
+[5.791307] (realsense2_description) StdoutLine: {'line': b'-- Symlinking: /home/hosodalab9/Sensor-Glove/install/realsense2_description/share/realsense2_description/urdf/test_r410_camera.urdf.xacro\n'}
+[5.797217] (realsense2_camera) StdoutLine: {'line': b'-- Found rmw_implementation_cmake: 6.1.2 (/opt/ros/humble/share/rmw_implementation_cmake/cmake)\n'}
+[5.799207] (realsense2_camera) StdoutLine: {'line': b'-- Found rmw_fastrtps_cpp: 6.2.6 (/opt/ros/humble/share/rmw_fastrtps_cpp/cmake)\n'}
+[5.800604] (realsense2_description) StdoutLine: {'line': b'-- Symlinking: /home/hosodalab9/Sensor-Glove/install/realsense2_description/share/realsense2_description/urdf/test_r430_camera.urdf.xacro\n'}
+[5.809700] (-) TimerEvent: {}
+[5.810678] (realsense2_description) StdoutLine: {'line': b'-- Symlinking: /home/hosodalab9/Sensor-Glove/install/realsense2_description/share/ament_index/resource_index/package_run_dependencies/realsense2_description\n'}
+[5.819867] (realsense2_description) StdoutLine: {'line': b'-- Symlinking: /home/hosodalab9/Sensor-Glove/install/realsense2_description/share/ament_index/resource_index/parent_prefix_path/realsense2_description\n'}
+[5.828963] (realsense2_description) StdoutLine: {'line': b'-- Symlinking: /home/hosodalab9/Sensor-Glove/install/realsense2_description/share/realsense2_description/environment/ament_prefix_path.sh\n'}
+[5.838208] (realsense2_description) StdoutLine: {'line': b'-- Symlinking: /home/hosodalab9/Sensor-Glove/install/realsense2_description/share/realsense2_description/environment/ament_prefix_path.dsv\n'}
+[5.847486] (realsense2_description) StdoutLine: {'line': b'-- Symlinking: /home/hosodalab9/Sensor-Glove/install/realsense2_description/share/realsense2_description/environment/path.sh\n'}
+[5.856558] (realsense2_description) StdoutLine: {'line': b'-- Symlinking: /home/hosodalab9/Sensor-Glove/install/realsense2_description/share/realsense2_description/environment/path.dsv\n'}
+[5.866236] (realsense2_description) StdoutLine: {'line': b'-- Symlinking: /home/hosodalab9/Sensor-Glove/install/realsense2_description/share/realsense2_description/local_setup.bash\n'}
+[5.878027] (realsense2_description) StdoutLine: {'line': b'-- Symlinking: /home/hosodalab9/Sensor-Glove/install/realsense2_description/share/realsense2_description/local_setup.sh\n'}
+[5.889170] (realsense2_description) StdoutLine: {'line': b'-- Symlinking: /home/hosodalab9/Sensor-Glove/install/realsense2_description/share/realsense2_description/local_setup.zsh\n'}
+[5.898185] (realsense2_description) StdoutLine: {'line': b'-- Symlinking: /home/hosodalab9/Sensor-Glove/install/realsense2_description/share/realsense2_description/local_setup.dsv\n'}
+[5.907346] (realsense2_description) StdoutLine: {'line': b'-- Symlinking: /home/hosodalab9/Sensor-Glove/install/realsense2_description/share/realsense2_description/package.dsv\n'}
+[5.909800] (-) TimerEvent: {}
+[5.911097] (realsense2_camera) StdoutLine: {'line': b'-- Found OpenSSL: /usr/lib/x86_64-linux-gnu/libcrypto.so (found version "3.0.2")  \n'}
+[5.916127] (realsense2_description) StdoutLine: {'line': b'-- Symlinking: /home/hosodalab9/Sensor-Glove/install/realsense2_description/share/ament_index/resource_index/packages/realsense2_description\n'}
+[5.925426] (realsense2_description) StdoutLine: {'line': b'-- Symlinking: /home/hosodalab9/Sensor-Glove/install/realsense2_description/share/realsense2_description/cmake/realsense2_descriptionConfig.cmake\n'}
+[5.934363] (realsense2_description) StdoutLine: {'line': b'-- Symlinking: /home/hosodalab9/Sensor-Glove/install/realsense2_description/share/realsense2_description/cmake/realsense2_descriptionConfig-version.cmake\n'}
+[5.939090] (realsense2_camera) StdoutLine: {'line': b'-- Found FastRTPS: /opt/ros/humble/include  \n'}
+[5.944012] (realsense2_description) StdoutLine: {'line': b'-- Symlinking: /home/hosodalab9/Sensor-Glove/install/realsense2_description/share/realsense2_description/package.xml\n'}
+[5.954996] (realsense2_description) CommandEnded: {'returncode': 0}
+[5.984145] (realsense2_camera) StdoutLine: {'line': b"-- Using RMW implementation 'rmw_fastrtps_cpp' as default\n"}
+[5.989099] (realsense2_description) JobEnded: {'identifier': 'realsense2_description', 'rc': 0}
+[5.995181] (realsense2_camera) StdoutLine: {'line': b'-- Looking for pthread.h\n'}
+[6.009914] (-) TimerEvent: {}
+[6.069684] (realsense2_camera) StdoutLine: {'line': b'-- Looking for pthread.h - found\n'}
+[6.069904] (realsense2_camera) StdoutLine: {'line': b'-- Performing Test CMAKE_HAVE_LIBC_PTHREAD\n'}
+[6.110046] (-) TimerEvent: {}
+[6.139902] (realsense2_camera) StdoutLine: {'line': b'-- Performing Test CMAKE_HAVE_LIBC_PTHREAD - Success\n'}
+[6.140979] (realsense2_camera) StdoutLine: {'line': b'-- Found Threads: TRUE  \n'}
+[6.210186] (-) TimerEvent: {}
+[6.302179] (realsense2_camera) StdoutLine: {'line': b'-- Found rclcpp_components: 16.0.9 (/opt/ros/humble/share/rclcpp_components/cmake)\n'}
+[6.310261] (-) TimerEvent: {}
+[6.364518] (realsense2_camera) StdoutLine: {'line': b'-- Found realsense2_camera_msgs: 4.54.1 (/home/hosodalab9/Sensor-Glove/install/realsense2_camera_msgs/share/realsense2_camera_msgs/cmake)\n'}
+[6.410375] (-) TimerEvent: {}
+[6.437126] (realsense2_camera) StdoutLine: {'line': b'-- Found nav_msgs: 4.2.4 (/opt/ros/humble/share/nav_msgs/cmake)\n'}
+[6.508450] (realsense2_camera) StdoutLine: {'line': b'-- Found tf2_ros: 0.25.7 (/opt/ros/humble/share/tf2_ros/cmake)\n'}
+[6.510445] (-) TimerEvent: {}
+[6.610698] (-) TimerEvent: {}
+[6.711100] (-) TimerEvent: {}
+[6.776459] (realsense2_camera) StdoutLine: {'line': b'-- Found diagnostic_updater: 4.0.0 (/opt/ros/humble/share/diagnostic_updater/cmake)\n'}
+[6.811205] (-) TimerEvent: {}
+[6.843762] (realsense2_camera) StdoutLine: {'line': b'-- Found OpenCV: /usr/local (found version "4.10.0") found components: core \n'}
+[6.847767] (realsense2_camera) StdoutLine: {'line': b'-- Build for ROS2 Humble\n'}
+[6.854460] (realsense2_camera) StdoutLine: {'line': b'-- Found ament_cmake_gtest: 1.3.9 (/opt/ros/humble/share/ament_cmake_gtest/cmake)\n'}
+[6.859956] (realsense2_camera) StdoutLine: {'line': b"-- Found gtest sources under '/opt/ros/humble/src/gtest_vendor': C++ tests using 'Google Test' will be built\n"}
+[6.869275] (realsense2_camera) StdoutLine: {'line': b'-- Found ament_cmake_pytest: 1.3.9 (/opt/ros/humble/share/ament_cmake_pytest/cmake)\n'}
+[6.911326] (-) TimerEvent: {}
+[7.011652] (-) TimerEvent: {}
+[7.111920] (-) TimerEvent: {}
+[7.212281] (-) TimerEvent: {}
+[7.312635] (-) TimerEvent: {}
+[7.412992] (-) TimerEvent: {}
+[7.513339] (-) TimerEvent: {}
+[7.542794] (ros2serial_arduino) StdoutLine: {'line': b'[100%] \x1b[32m\x1b[1mLinking CXX executable serial_send_node\x1b[0m\n'}
+[7.613462] (-) TimerEvent: {}
+[7.713796] (-) TimerEvent: {}
+[7.814128] (-) TimerEvent: {}
+[7.847005] (ros2serial_arduino) StdoutLine: {'line': b'[100%] Built target serial_send_node\n'}
+[7.860491] (ros2serial_arduino) CommandEnded: {'returncode': 0}
+[7.896599] (ros2serial_arduino) JobProgress: {'identifier': 'ros2serial_arduino', 'progress': 'install'}
+[7.897528] (ros2serial_arduino) Command: {'cmd': ['/usr/bin/cmake', '--install', '/home/hosodalab9/Sensor-Glove/build/ros2serial_arduino'], 'cwd': '/home/hosodalab9/Sensor-Glove/build/ros2serial_arduino', 'env': OrderedDict([('LESSOPEN', '| /usr/bin/lesspipe %s'), ('USER', 'hosodalab9'), ('XDG_SESSION_TYPE', 'x11'), ('SHLVL', '1'), ('LD_LIBRARY_PATH', '/usr/lib/x86_64-linux-gnu/gazebo-11/plugins:/opt/ros/humble/opt/rviz_ogre_vendor/lib:/opt/ros/humble/lib/x86_64-linux-gnu:/opt/ros/humble/lib:/usr/local/cuda/lib64:/usr/local/cuda/extras/CUPTI/lib64'), ('HOME', '/home/hosodalab9'), ('CONDA_SHLVL', '0'), ('OLDPWD', '/home/hosodalab9/Sensor-Glove'), ('CMAKE_CUDA_COMPILER', '/usr/local/cuda-10.2/bin/nvcc'), ('DESKTOP_SESSION', 'ubuntu-xorg'), ('ros2_ws', '/home/hosodalab9/Sensor-Glove'), ('ROS_PYTHON_VERSION', '3'), ('GNOME_SHELL_SESSION_MODE', 'ubuntu'), ('GTK_MODULES', 'gail:atk-bridge'), ('SYSTEMD_EXEC_PID', '1444'), ('DBUS_SESSION_BUS_ADDRESS', 'unix:path=/run/user/1000/bus'), ('COLORTERM', 'truecolor'), ('_CE_M', ''), ('ROS_DISTRO', 'humble'), ('GTK_IM_MODULE', 'ibus'), ('LOGNAME', 'hosodalab9'), ('_', '/usr/bin/colcon'), ('ROS_VERSION', '2'), ('XDG_SESSION_CLASS', 'user'), ('USERNAME', 'hosodalab9'), ('TERM', 'xterm-256color'), ('GNOME_DESKTOP_SESSION_ID', 'this-is-deprecated'), ('_CE_CONDA', ''), ('ROS_LOCALHOST_ONLY', '1'), ('WINDOWPATH', '2'), ('PATH', '/home/hosodalab9/anaconda3/condabin:/opt/ros/humble/bin:/home/hosodalab9/.local/bin:/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin:/usr/games:/usr/local/games:/snap/bin:/snap/bin:CUDA_HOME/bin'), ('SESSION_MANAGER', 'local/hosodalab9-Venus-series:@/tmp/.ICE-unix/1423,unix/hosodalab9-Venus-series:/tmp/.ICE-unix/1423'), ('XDG_MENU_PREFIX', 'gnome-'), ('GNOME_TERMINAL_SCREEN', '/org/gnome/Terminal/screen/e46c7774_dfd7_4ba5_9462_d93fe0fccc36'), ('XDG_RUNTIME_DIR', '/run/user/1000'), ('DISPLAY', ':0'), ('LANG', 'en_US.UTF-8'), ('XDG_CURRENT_DESKTOP', 'ubuntu:GNOME'), ('XMODIFIERS', '@im=ibus'), ('XDG_SESSION_DESKTOP', 'ubuntu-xorg'), ('XAUTHORITY', '/run/user/1000/gdm/Xauthority'), ('LS_COLORS', 'rs=0:di=01;34:ln=01;36:mh=00:pi=40;33:so=01;35:do=01;35:bd=40;33;01:cd=40;33;01:or=40;31;01:mi=00:su=37;41:sg=30;43:ca=30;41:tw=30;42:ow=34;42:st=37;44:ex=01;32:*.tar=01;31:*.tgz=01;31:*.arc=01;31:*.arj=01;31:*.taz=01;31:*.lha=01;31:*.lz4=01;31:*.lzh=01;31:*.lzma=01;31:*.tlz=01;31:*.txz=01;31:*.tzo=01;31:*.t7z=01;31:*.zip=01;31:*.z=01;31:*.dz=01;31:*.gz=01;31:*.lrz=01;31:*.lz=01;31:*.lzo=01;31:*.xz=01;31:*.zst=01;31:*.tzst=01;31:*.bz2=01;31:*.bz=01;31:*.tbz=01;31:*.tbz2=01;31:*.tz=01;31:*.deb=01;31:*.rpm=01;31:*.jar=01;31:*.war=01;31:*.ear=01;31:*.sar=01;31:*.rar=01;31:*.alz=01;31:*.ace=01;31:*.zoo=01;31:*.cpio=01;31:*.7z=01;31:*.rz=01;31:*.cab=01;31:*.wim=01;31:*.swm=01;31:*.dwm=01;31:*.esd=01;31:*.jpg=01;35:*.jpeg=01;35:*.mjpg=01;35:*.mjpeg=01;35:*.gif=01;35:*.bmp=01;35:*.pbm=01;35:*.pgm=01;35:*.ppm=01;35:*.tga=01;35:*.xbm=01;35:*.xpm=01;35:*.tif=01;35:*.tiff=01;35:*.png=01;35:*.svg=01;35:*.svgz=01;35:*.mng=01;35:*.pcx=01;35:*.mov=01;35:*.mpg=01;35:*.mpeg=01;35:*.m2v=01;35:*.mkv=01;35:*.webm=01;35:*.webp=01;35:*.ogm=01;35:*.mp4=01;35:*.m4v=01;35:*.mp4v=01;35:*.vob=01;35:*.qt=01;35:*.nuv=01;35:*.wmv=01;35:*.asf=01;35:*.rm=01;35:*.rmvb=01;35:*.flc=01;35:*.avi=01;35:*.fli=01;35:*.flv=01;35:*.gl=01;35:*.dl=01;35:*.xcf=01;35:*.xwd=01;35:*.yuv=01;35:*.cgm=01;35:*.emf=01;35:*.ogv=01;35:*.ogx=01;35:*.aac=00;36:*.au=00;36:*.flac=00;36:*.m4a=00;36:*.mid=00;36:*.midi=00;36:*.mka=00;36:*.mp3=00;36:*.mpc=00;36:*.ogg=00;36:*.ra=00;36:*.wav=00;36:*.oga=00;36:*.opus=00;36:*.spx=00;36:*.xspf=00;36:'), ('GNOME_TERMINAL_SERVICE', ':1.735'), ('SSH_AGENT_LAUNCHER', 'gnome-keyring'), ('SSH_AUTH_SOCK', '/run/user/1000/keyring/ssh'), ('ROS_DOMAIN_ID', '1'), ('AMENT_PREFIX_PATH', '/opt/ros/humble'), ('CONDA_PYTHON_EXE', '/home/hosodalab9/anaconda3/bin/python'), ('SHELL', '/bin/bash'), ('QT_ACCESSIBILITY', '1'), ('GDMSESSION', 'ubuntu-xorg'), ('LESSCLOSE', '/usr/bin/lesspipe %s %s'), ('GPG_AGENT_INFO', '/run/user/1000/gnupg/S.gpg-agent:0:1'), ('QT_IM_MODULE', 'ibus'), ('PWD', '/home/hosodalab9/Sensor-Glove/build/ros2serial_arduino'), ('LC_ALL', 'en_US.UTF-8'), ('CUDA_HOME', '/usr/local/cuda'), ('XDG_CONFIG_DIRS', '/etc/xdg/xdg-ubuntu-xorg:/etc/xdg'), ('CONDA_EXE', '/home/hosodalab9/anaconda3/bin/conda'), ('XDG_DATA_DIRS', '/usr/share/ubuntu-xorg:/usr/share/gnome:/usr/local/share/:/usr/share/:/var/lib/snapd/desktop'), ('PYTHONPATH', '/opt/ros/humble/lib/python3.10/site-packages:/opt/ros/humble/local/lib/python3.10/dist-packages:/usr/local/lib'), ('COLCON', '1'), ('VTE_VERSION', '6800'), ('CMAKE_PREFIX_PATH', '/opt/ros/humble')]), 'shell': False}
+[7.904258] (ros2serial_arduino) StdoutLine: {'line': b'-- Install configuration: ""\n'}
+[7.904588] (ros2serial_arduino) StdoutLine: {'line': b'-- Execute custom install script\n'}
+[7.904901] (ros2serial_arduino) StdoutLine: {'line': b'-- Symlinking: /home/hosodalab9/Sensor-Glove/install/ros2serial_arduino/lib/ros2serial_arduino/serial_receive_node\n'}
+[7.913789] (ros2serial_arduino) StdoutLine: {'line': b'-- Symlinking: /home/hosodalab9/Sensor-Glove/install/ros2serial_arduino/lib/ros2serial_arduino/serial_send_node\n'}
+[7.914200] (-) TimerEvent: {}
+[7.924142] (ros2serial_arduino) StdoutLine: {'line': b'-- Symlinking: /home/hosodalab9/Sensor-Glove/install/ros2serial_arduino/share/ament_index/resource_index/package_run_dependencies/ros2serial_arduino\n'}
+[7.933545] (ros2serial_arduino) StdoutLine: {'line': b'-- Symlinking: /home/hosodalab9/Sensor-Glove/install/ros2serial_arduino/share/ament_index/resource_index/parent_prefix_path/ros2serial_arduino\n'}
+[7.942762] (ros2serial_arduino) StdoutLine: {'line': b'-- Symlinking: /home/hosodalab9/Sensor-Glove/install/ros2serial_arduino/share/ros2serial_arduino/environment/ament_prefix_path.sh\n'}
+[7.953955] (ros2serial_arduino) StdoutLine: {'line': b'-- Symlinking: /home/hosodalab9/Sensor-Glove/install/ros2serial_arduino/share/ros2serial_arduino/environment/ament_prefix_path.dsv\n'}
+[7.963150] (ros2serial_arduino) StdoutLine: {'line': b'-- Symlinking: /home/hosodalab9/Sensor-Glove/install/ros2serial_arduino/share/ros2serial_arduino/environment/path.sh\n'}
+[7.972489] (ros2serial_arduino) StdoutLine: {'line': b'-- Symlinking: /home/hosodalab9/Sensor-Glove/install/ros2serial_arduino/share/ros2serial_arduino/environment/path.dsv\n'}
+[7.981351] (ros2serial_arduino) StdoutLine: {'line': b'-- Symlinking: /home/hosodalab9/Sensor-Glove/install/ros2serial_arduino/share/ros2serial_arduino/local_setup.bash\n'}
+[7.990503] (ros2serial_arduino) StdoutLine: {'line': b'-- Symlinking: /home/hosodalab9/Sensor-Glove/install/ros2serial_arduino/share/ros2serial_arduino/local_setup.sh\n'}
+[7.998950] (ros2serial_arduino) StdoutLine: {'line': b'-- Symlinking: /home/hosodalab9/Sensor-Glove/install/ros2serial_arduino/share/ros2serial_arduino/local_setup.zsh\n'}
+[8.008457] (ros2serial_arduino) StdoutLine: {'line': b'-- Symlinking: /home/hosodalab9/Sensor-Glove/install/ros2serial_arduino/share/ros2serial_arduino/local_setup.dsv\n'}
+[8.014337] (-) TimerEvent: {}
+[8.017631] (ros2serial_arduino) StdoutLine: {'line': b'-- Symlinking: /home/hosodalab9/Sensor-Glove/install/ros2serial_arduino/share/ros2serial_arduino/package.dsv\n'}
+[8.026681] (ros2serial_arduino) StdoutLine: {'line': b'-- Symlinking: /home/hosodalab9/Sensor-Glove/install/ros2serial_arduino/share/ament_index/resource_index/packages/ros2serial_arduino\n'}
+[8.035771] (ros2serial_arduino) StdoutLine: {'line': b'-- Symlinking: /home/hosodalab9/Sensor-Glove/install/ros2serial_arduino/share/ros2serial_arduino/cmake/ros2serial_arduinoConfig.cmake\n'}
+[8.045267] (ros2serial_arduino) StdoutLine: {'line': b'-- Symlinking: /home/hosodalab9/Sensor-Glove/install/ros2serial_arduino/share/ros2serial_arduino/cmake/ros2serial_arduinoConfig-version.cmake\n'}
+[8.055327] (ros2serial_arduino) StdoutLine: {'line': b'-- Symlinking: /home/hosodalab9/Sensor-Glove/install/ros2serial_arduino/share/ros2serial_arduino/package.xml\n'}
+[8.066944] (ros2serial_arduino) CommandEnded: {'returncode': 0}
+[8.104844] (ros2serial_arduino) JobEnded: {'identifier': 'ros2serial_arduino', 'rc': 0}
+[8.114453] (-) TimerEvent: {}
+[8.214795] (-) TimerEvent: {}
+[8.315151] (-) TimerEvent: {}
+[8.415473] (-) TimerEvent: {}
+[8.515802] (-) TimerEvent: {}
+[8.616128] (-) TimerEvent: {}
+[8.716485] (-) TimerEvent: {}
+[8.816851] (-) TimerEvent: {}
+[8.917205] (-) TimerEvent: {}
+[9.017526] (-) TimerEvent: {}
+[9.117861] (-) TimerEvent: {}
+[9.218149] (-) TimerEvent: {}
+[9.318412] (-) TimerEvent: {}
+[9.418706] (-) TimerEvent: {}
+[9.441279] (data_handler) StdoutLine: {'line': b'[ 75%] \x1b[32m\x1b[1mLinking CXX executable topics_combined_sub\x1b[0m\n'}
+[9.518880] (-) TimerEvent: {}
+[9.619311] (-) TimerEvent: {}
+[9.707957] (data_handler) StdoutLine: {'line': b'[100%] \x1b[32m\x1b[1mLinking CXX executable topics_subscriber\x1b[0m\n'}
+[9.719432] (-) TimerEvent: {}
+[9.819745] (-) TimerEvent: {}
+[9.830136] (data_handler) StdoutLine: {'line': b'[100%] Built target topics_combined_sub\n'}
+[9.919873] (-) TimerEvent: {}
+[10.020266] (-) TimerEvent: {}
+[10.074779] (data_handler) StdoutLine: {'line': b'[100%] Built target topics_subscriber\n'}
+[10.086789] (data_handler) CommandEnded: {'returncode': 0}
+[10.120342] (-) TimerEvent: {}
+[10.123111] (data_handler) JobProgress: {'identifier': 'data_handler', 'progress': 'install'}
+[10.123546] (data_handler) Command: {'cmd': ['/usr/bin/cmake', '--install', '/home/hosodalab9/Sensor-Glove/build/data_handler'], 'cwd': '/home/hosodalab9/Sensor-Glove/build/data_handler', 'env': OrderedDict([('LESSOPEN', '| /usr/bin/lesspipe %s'), ('USER', 'hosodalab9'), ('XDG_SESSION_TYPE', 'x11'), ('SHLVL', '1'), ('LD_LIBRARY_PATH', '/usr/lib/x86_64-linux-gnu/gazebo-11/plugins:/opt/ros/humble/opt/rviz_ogre_vendor/lib:/opt/ros/humble/lib/x86_64-linux-gnu:/opt/ros/humble/lib:/usr/local/cuda/lib64:/usr/local/cuda/extras/CUPTI/lib64'), ('HOME', '/home/hosodalab9'), ('CONDA_SHLVL', '0'), ('OLDPWD', '/home/hosodalab9/Sensor-Glove'), ('CMAKE_CUDA_COMPILER', '/usr/local/cuda-10.2/bin/nvcc'), ('DESKTOP_SESSION', 'ubuntu-xorg'), ('ros2_ws', '/home/hosodalab9/Sensor-Glove'), ('ROS_PYTHON_VERSION', '3'), ('GNOME_SHELL_SESSION_MODE', 'ubuntu'), ('GTK_MODULES', 'gail:atk-bridge'), ('SYSTEMD_EXEC_PID', '1444'), ('DBUS_SESSION_BUS_ADDRESS', 'unix:path=/run/user/1000/bus'), ('COLORTERM', 'truecolor'), ('_CE_M', ''), ('ROS_DISTRO', 'humble'), ('GTK_IM_MODULE', 'ibus'), ('LOGNAME', 'hosodalab9'), ('_', '/usr/bin/colcon'), ('ROS_VERSION', '2'), ('XDG_SESSION_CLASS', 'user'), ('USERNAME', 'hosodalab9'), ('TERM', 'xterm-256color'), ('GNOME_DESKTOP_SESSION_ID', 'this-is-deprecated'), ('_CE_CONDA', ''), ('ROS_LOCALHOST_ONLY', '1'), ('WINDOWPATH', '2'), ('PATH', '/home/hosodalab9/anaconda3/condabin:/opt/ros/humble/bin:/home/hosodalab9/.local/bin:/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin:/usr/games:/usr/local/games:/snap/bin:/snap/bin:CUDA_HOME/bin'), ('SESSION_MANAGER', 'local/hosodalab9-Venus-series:@/tmp/.ICE-unix/1423,unix/hosodalab9-Venus-series:/tmp/.ICE-unix/1423'), ('XDG_MENU_PREFIX', 'gnome-'), ('GNOME_TERMINAL_SCREEN', '/org/gnome/Terminal/screen/e46c7774_dfd7_4ba5_9462_d93fe0fccc36'), ('XDG_RUNTIME_DIR', '/run/user/1000'), ('DISPLAY', ':0'), ('LANG', 'en_US.UTF-8'), ('XDG_CURRENT_DESKTOP', 'ubuntu:GNOME'), ('XMODIFIERS', '@im=ibus'), ('XDG_SESSION_DESKTOP', 'ubuntu-xorg'), ('XAUTHORITY', '/run/user/1000/gdm/Xauthority'), ('LS_COLORS', 'rs=0:di=01;34:ln=01;36:mh=00:pi=40;33:so=01;35:do=01;35:bd=40;33;01:cd=40;33;01:or=40;31;01:mi=00:su=37;41:sg=30;43:ca=30;41:tw=30;42:ow=34;42:st=37;44:ex=01;32:*.tar=01;31:*.tgz=01;31:*.arc=01;31:*.arj=01;31:*.taz=01;31:*.lha=01;31:*.lz4=01;31:*.lzh=01;31:*.lzma=01;31:*.tlz=01;31:*.txz=01;31:*.tzo=01;31:*.t7z=01;31:*.zip=01;31:*.z=01;31:*.dz=01;31:*.gz=01;31:*.lrz=01;31:*.lz=01;31:*.lzo=01;31:*.xz=01;31:*.zst=01;31:*.tzst=01;31:*.bz2=01;31:*.bz=01;31:*.tbz=01;31:*.tbz2=01;31:*.tz=01;31:*.deb=01;31:*.rpm=01;31:*.jar=01;31:*.war=01;31:*.ear=01;31:*.sar=01;31:*.rar=01;31:*.alz=01;31:*.ace=01;31:*.zoo=01;31:*.cpio=01;31:*.7z=01;31:*.rz=01;31:*.cab=01;31:*.wim=01;31:*.swm=01;31:*.dwm=01;31:*.esd=01;31:*.jpg=01;35:*.jpeg=01;35:*.mjpg=01;35:*.mjpeg=01;35:*.gif=01;35:*.bmp=01;35:*.pbm=01;35:*.pgm=01;35:*.ppm=01;35:*.tga=01;35:*.xbm=01;35:*.xpm=01;35:*.tif=01;35:*.tiff=01;35:*.png=01;35:*.svg=01;35:*.svgz=01;35:*.mng=01;35:*.pcx=01;35:*.mov=01;35:*.mpg=01;35:*.mpeg=01;35:*.m2v=01;35:*.mkv=01;35:*.webm=01;35:*.webp=01;35:*.ogm=01;35:*.mp4=01;35:*.m4v=01;35:*.mp4v=01;35:*.vob=01;35:*.qt=01;35:*.nuv=01;35:*.wmv=01;35:*.asf=01;35:*.rm=01;35:*.rmvb=01;35:*.flc=01;35:*.avi=01;35:*.fli=01;35:*.flv=01;35:*.gl=01;35:*.dl=01;35:*.xcf=01;35:*.xwd=01;35:*.yuv=01;35:*.cgm=01;35:*.emf=01;35:*.ogv=01;35:*.ogx=01;35:*.aac=00;36:*.au=00;36:*.flac=00;36:*.m4a=00;36:*.mid=00;36:*.midi=00;36:*.mka=00;36:*.mp3=00;36:*.mpc=00;36:*.ogg=00;36:*.ra=00;36:*.wav=00;36:*.oga=00;36:*.opus=00;36:*.spx=00;36:*.xspf=00;36:'), ('GNOME_TERMINAL_SERVICE', ':1.735'), ('SSH_AGENT_LAUNCHER', 'gnome-keyring'), ('SSH_AUTH_SOCK', '/run/user/1000/keyring/ssh'), ('ROS_DOMAIN_ID', '1'), ('AMENT_PREFIX_PATH', '/opt/ros/humble'), ('CONDA_PYTHON_EXE', '/home/hosodalab9/anaconda3/bin/python'), ('SHELL', '/bin/bash'), ('QT_ACCESSIBILITY', '1'), ('GDMSESSION', 'ubuntu-xorg'), ('LESSCLOSE', '/usr/bin/lesspipe %s %s'), ('GPG_AGENT_INFO', '/run/user/1000/gnupg/S.gpg-agent:0:1'), ('QT_IM_MODULE', 'ibus'), ('PWD', '/home/hosodalab9/Sensor-Glove/build/data_handler'), ('LC_ALL', 'en_US.UTF-8'), ('CUDA_HOME', '/usr/local/cuda'), ('XDG_CONFIG_DIRS', '/etc/xdg/xdg-ubuntu-xorg:/etc/xdg'), ('CONDA_EXE', '/home/hosodalab9/anaconda3/bin/conda'), ('XDG_DATA_DIRS', '/usr/share/ubuntu-xorg:/usr/share/gnome:/usr/local/share/:/usr/share/:/var/lib/snapd/desktop'), ('PYTHONPATH', '/opt/ros/humble/lib/python3.10/site-packages:/opt/ros/humble/local/lib/python3.10/dist-packages:/usr/local/lib'), ('COLCON', '1'), ('VTE_VERSION', '6800'), ('CMAKE_PREFIX_PATH', '/opt/ros/humble')]), 'shell': False}
+[10.131047] (data_handler) StdoutLine: {'line': b'-- Install configuration: ""\n'}
+[10.131373] (data_handler) StdoutLine: {'line': b'-- Execute custom install script\n'}
+[10.131630] (data_handler) StdoutLine: {'line': b'-- Symlinking: /home/hosodalab9/Sensor-Glove/install/data_handler/lib/data_handler/topics_subscriber\n'}
+[10.141364] (data_handler) StdoutLine: {'line': b'-- Symlinking: /home/hosodalab9/Sensor-Glove/install/data_handler/lib/data_handler/topics_combined_sub\n'}
+[10.150734] (data_handler) StdoutLine: {'line': b'-- Up-to-date symlink: /home/hosodalab9/Sensor-Glove/install/data_handler/lib/data_handler/topics_subscriber\n'}
+[10.150994] (data_handler) StdoutLine: {'line': b'-- Up-to-date symlink: /home/hosodalab9/Sensor-Glove/install/data_handler/lib/data_handler/topics_combined_sub\n'}
+[10.151156] (data_handler) StdoutLine: {'line': b'-- Symlinking: /home/hosodalab9/Sensor-Glove/install/data_handler/share/ament_index/resource_index/package_run_dependencies/data_handler\n'}
+[10.160296] (data_handler) StdoutLine: {'line': b'-- Symlinking: /home/hosodalab9/Sensor-Glove/install/data_handler/share/ament_index/resource_index/parent_prefix_path/data_handler\n'}
+[10.170333] (data_handler) StdoutLine: {'line': b'-- Symlinking: /home/hosodalab9/Sensor-Glove/install/data_handler/share/data_handler/environment/ament_prefix_path.sh\n'}
+[10.179104] (data_handler) StdoutLine: {'line': b'-- Symlinking: /home/hosodalab9/Sensor-Glove/install/data_handler/share/data_handler/environment/ament_prefix_path.dsv\n'}
+[10.187648] (data_handler) StdoutLine: {'line': b'-- Symlinking: /home/hosodalab9/Sensor-Glove/install/data_handler/share/data_handler/environment/path.sh\n'}
+[10.196997] (data_handler) StdoutLine: {'line': b'-- Symlinking: /home/hosodalab9/Sensor-Glove/install/data_handler/share/data_handler/environment/path.dsv\n'}
+[10.204520] (data_handler) StdoutLine: {'line': b'-- Symlinking: /home/hosodalab9/Sensor-Glove/install/data_handler/share/data_handler/local_setup.bash\n'}
+[10.212016] (data_handler) StdoutLine: {'line': b'-- Symlinking: /home/hosodalab9/Sensor-Glove/install/data_handler/share/data_handler/local_setup.sh\n'}
+[10.220428] (-) TimerEvent: {}
+[10.220744] (data_handler) StdoutLine: {'line': b'-- Symlinking: /home/hosodalab9/Sensor-Glove/install/data_handler/share/data_handler/local_setup.zsh\n'}
+[10.230297] (data_handler) StdoutLine: {'line': b'-- Symlinking: /home/hosodalab9/Sensor-Glove/install/data_handler/share/data_handler/local_setup.dsv\n'}
+[10.238900] (data_handler) StdoutLine: {'line': b'-- Symlinking: /home/hosodalab9/Sensor-Glove/install/data_handler/share/data_handler/package.dsv\n'}
+[10.247439] (data_handler) StdoutLine: {'line': b'-- Symlinking: /home/hosodalab9/Sensor-Glove/install/data_handler/share/ament_index/resource_index/packages/data_handler\n'}
+[10.256851] (data_handler) StdoutLine: {'line': b'-- Symlinking: /home/hosodalab9/Sensor-Glove/install/data_handler/share/data_handler/cmake/data_handlerConfig.cmake\n'}
+[10.267725] (data_handler) StdoutLine: {'line': b'-- Symlinking: /home/hosodalab9/Sensor-Glove/install/data_handler/share/data_handler/cmake/data_handlerConfig-version.cmake\n'}
+[10.277114] (data_handler) StdoutLine: {'line': b'-- Symlinking: /home/hosodalab9/Sensor-Glove/install/data_handler/share/data_handler/package.xml\n'}
+[10.289055] (data_handler) CommandEnded: {'returncode': 0}
+[10.320533] (-) TimerEvent: {}
+[10.335795] (data_handler) JobEnded: {'identifier': 'data_handler', 'rc': 0}
+[10.420766] (-) TimerEvent: {}
+[10.521096] (-) TimerEvent: {}
+[10.621428] (-) TimerEvent: {}
+[10.721759] (-) TimerEvent: {}
+[10.822085] (-) TimerEvent: {}
+[10.922428] (-) TimerEvent: {}
+[11.022760] (-) TimerEvent: {}
+[11.123074] (-) TimerEvent: {}
+[11.223414] (-) TimerEvent: {}
+[11.323776] (-) TimerEvent: {}
+[11.424088] (-) TimerEvent: {}
+[11.524414] (-) TimerEvent: {}
+[11.624731] (-) TimerEvent: {}
+[11.725072] (-) TimerEvent: {}
+[11.825381] (-) TimerEvent: {}
+[11.925711] (-) TimerEvent: {}
+[12.026075] (-) TimerEvent: {}
+[12.126487] (-) TimerEvent: {}
+[12.226832] (-) TimerEvent: {}
+[12.327191] (-) TimerEvent: {}
+[12.427498] (-) TimerEvent: {}
+[12.527808] (-) TimerEvent: {}
+[12.628101] (-) TimerEvent: {}
+[12.728624] (-) TimerEvent: {}
+[12.828951] (-) TimerEvent: {}
+[12.929284] (-) TimerEvent: {}
+[13.029618] (-) TimerEvent: {}
+[13.129945] (-) TimerEvent: {}
+[13.230236] (-) TimerEvent: {}
+[13.330494] (-) TimerEvent: {}
+[13.430802] (-) TimerEvent: {}
+[13.531119] (-) TimerEvent: {}
+[13.631717] (-) TimerEvent: {}
+[13.723328] (realsense2_camera) StdoutLine: {'line': b'-- rs_device_info:\n'}
+[13.723567] (realsense2_camera) StdoutLine: {'line': b'-- No device detected. Is it plugged in?\n'}
+[13.723673] (realsense2_camera) StdoutLine: {'line': b'\n'}
+[13.731816] (-) TimerEvent: {}
+[13.780471] (realsense2_camera) StdoutLine: {'line': b'-- Configuring done\n'}
+[13.806836] (realsense2_camera) StdoutLine: {'line': b'-- Generating done\n'}
+[13.809585] (realsense2_camera) StdoutLine: {'line': b'-- Build files have been written to: /home/hosodalab9/Sensor-Glove/build/realsense2_camera\n'}
+[13.819695] (realsense2_camera) CommandEnded: {'returncode': 0}
+[13.820488] (realsense2_camera) JobProgress: {'identifier': 'realsense2_camera', 'progress': 'build'}
+[13.821404] (realsense2_camera) Command: {'cmd': ['/usr/bin/cmake', '--build', '/home/hosodalab9/Sensor-Glove/build/realsense2_camera', '--', '-j16', '-l16'], 'cwd': '/home/hosodalab9/Sensor-Glove/build/realsense2_camera', 'env': OrderedDict([('LESSOPEN', '| /usr/bin/lesspipe %s'), ('USER', 'hosodalab9'), ('XDG_SESSION_TYPE', 'x11'), ('SHLVL', '1'), ('LD_LIBRARY_PATH', '/home/hosodalab9/Sensor-Glove/install/realsense2_camera_msgs/lib:/usr/lib/x86_64-linux-gnu/gazebo-11/plugins:/opt/ros/humble/opt/rviz_ogre_vendor/lib:/opt/ros/humble/lib/x86_64-linux-gnu:/opt/ros/humble/lib:/usr/local/cuda/lib64:/usr/local/cuda/extras/CUPTI/lib64'), ('HOME', '/home/hosodalab9'), ('CONDA_SHLVL', '0'), ('OLDPWD', '/home/hosodalab9/Sensor-Glove'), ('CMAKE_CUDA_COMPILER', '/usr/local/cuda-10.2/bin/nvcc'), ('DESKTOP_SESSION', 'ubuntu-xorg'), ('ros2_ws', '/home/hosodalab9/Sensor-Glove'), ('ROS_PYTHON_VERSION', '3'), ('GNOME_SHELL_SESSION_MODE', 'ubuntu'), ('GTK_MODULES', 'gail:atk-bridge'), ('SYSTEMD_EXEC_PID', '1444'), ('DBUS_SESSION_BUS_ADDRESS', 'unix:path=/run/user/1000/bus'), ('COLORTERM', 'truecolor'), ('_CE_M', ''), ('ROS_DISTRO', 'humble'), ('GTK_IM_MODULE', 'ibus'), ('LOGNAME', 'hosodalab9'), ('_', '/usr/bin/colcon'), ('ROS_VERSION', '2'), ('XDG_SESSION_CLASS', 'user'), ('USERNAME', 'hosodalab9'), ('TERM', 'xterm-256color'), ('GNOME_DESKTOP_SESSION_ID', 'this-is-deprecated'), ('_CE_CONDA', ''), ('ROS_LOCALHOST_ONLY', '1'), ('WINDOWPATH', '2'), ('PATH', '/home/hosodalab9/anaconda3/condabin:/opt/ros/humble/bin:/home/hosodalab9/.local/bin:/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin:/usr/games:/usr/local/games:/snap/bin:/snap/bin:CUDA_HOME/bin'), ('SESSION_MANAGER', 'local/hosodalab9-Venus-series:@/tmp/.ICE-unix/1423,unix/hosodalab9-Venus-series:/tmp/.ICE-unix/1423'), ('XDG_MENU_PREFIX', 'gnome-'), ('GNOME_TERMINAL_SCREEN', '/org/gnome/Terminal/screen/e46c7774_dfd7_4ba5_9462_d93fe0fccc36'), ('XDG_RUNTIME_DIR', '/run/user/1000'), ('DISPLAY', ':0'), ('LANG', 'en_US.UTF-8'), ('XDG_CURRENT_DESKTOP', 'ubuntu:GNOME'), ('XMODIFIERS', '@im=ibus'), ('XDG_SESSION_DESKTOP', 'ubuntu-xorg'), ('XAUTHORITY', '/run/user/1000/gdm/Xauthority'), ('LS_COLORS', 'rs=0:di=01;34:ln=01;36:mh=00:pi=40;33:so=01;35:do=01;35:bd=40;33;01:cd=40;33;01:or=40;31;01:mi=00:su=37;41:sg=30;43:ca=30;41:tw=30;42:ow=34;42:st=37;44:ex=01;32:*.tar=01;31:*.tgz=01;31:*.arc=01;31:*.arj=01;31:*.taz=01;31:*.lha=01;31:*.lz4=01;31:*.lzh=01;31:*.lzma=01;31:*.tlz=01;31:*.txz=01;31:*.tzo=01;31:*.t7z=01;31:*.zip=01;31:*.z=01;31:*.dz=01;31:*.gz=01;31:*.lrz=01;31:*.lz=01;31:*.lzo=01;31:*.xz=01;31:*.zst=01;31:*.tzst=01;31:*.bz2=01;31:*.bz=01;31:*.tbz=01;31:*.tbz2=01;31:*.tz=01;31:*.deb=01;31:*.rpm=01;31:*.jar=01;31:*.war=01;31:*.ear=01;31:*.sar=01;31:*.rar=01;31:*.alz=01;31:*.ace=01;31:*.zoo=01;31:*.cpio=01;31:*.7z=01;31:*.rz=01;31:*.cab=01;31:*.wim=01;31:*.swm=01;31:*.dwm=01;31:*.esd=01;31:*.jpg=01;35:*.jpeg=01;35:*.mjpg=01;35:*.mjpeg=01;35:*.gif=01;35:*.bmp=01;35:*.pbm=01;35:*.pgm=01;35:*.ppm=01;35:*.tga=01;35:*.xbm=01;35:*.xpm=01;35:*.tif=01;35:*.tiff=01;35:*.png=01;35:*.svg=01;35:*.svgz=01;35:*.mng=01;35:*.pcx=01;35:*.mov=01;35:*.mpg=01;35:*.mpeg=01;35:*.m2v=01;35:*.mkv=01;35:*.webm=01;35:*.webp=01;35:*.ogm=01;35:*.mp4=01;35:*.m4v=01;35:*.mp4v=01;35:*.vob=01;35:*.qt=01;35:*.nuv=01;35:*.wmv=01;35:*.asf=01;35:*.rm=01;35:*.rmvb=01;35:*.flc=01;35:*.avi=01;35:*.fli=01;35:*.flv=01;35:*.gl=01;35:*.dl=01;35:*.xcf=01;35:*.xwd=01;35:*.yuv=01;35:*.cgm=01;35:*.emf=01;35:*.ogv=01;35:*.ogx=01;35:*.aac=00;36:*.au=00;36:*.flac=00;36:*.m4a=00;36:*.mid=00;36:*.midi=00;36:*.mka=00;36:*.mp3=00;36:*.mpc=00;36:*.ogg=00;36:*.ra=00;36:*.wav=00;36:*.oga=00;36:*.opus=00;36:*.spx=00;36:*.xspf=00;36:'), ('GNOME_TERMINAL_SERVICE', ':1.735'), ('SSH_AGENT_LAUNCHER', 'gnome-keyring'), ('SSH_AUTH_SOCK', '/run/user/1000/keyring/ssh'), ('ROS_DOMAIN_ID', '1'), ('AMENT_PREFIX_PATH', '/home/hosodalab9/Sensor-Glove/install/realsense2_camera_msgs:/opt/ros/humble'), ('CONDA_PYTHON_EXE', '/home/hosodalab9/anaconda3/bin/python'), ('SHELL', '/bin/bash'), ('QT_ACCESSIBILITY', '1'), ('GDMSESSION', 'ubuntu-xorg'), ('LESSCLOSE', '/usr/bin/lesspipe %s %s'), ('GPG_AGENT_INFO', '/run/user/1000/gnupg/S.gpg-agent:0:1'), ('QT_IM_MODULE', 'ibus'), ('PWD', '/home/hosodalab9/Sensor-Glove/build/realsense2_camera'), ('LC_ALL', 'en_US.UTF-8'), ('CUDA_HOME', '/usr/local/cuda'), ('XDG_CONFIG_DIRS', '/etc/xdg/xdg-ubuntu-xorg:/etc/xdg'), ('CONDA_EXE', '/home/hosodalab9/anaconda3/bin/conda'), ('XDG_DATA_DIRS', '/usr/share/ubuntu-xorg:/usr/share/gnome:/usr/local/share/:/usr/share/:/var/lib/snapd/desktop'), ('PYTHONPATH', '/home/hosodalab9/Sensor-Glove/install/realsense2_camera_msgs/local/lib/python3.10/dist-packages:/opt/ros/humble/lib/python3.10/site-packages:/opt/ros/humble/local/lib/python3.10/dist-packages:/usr/local/lib'), ('COLCON', '1'), ('VTE_VERSION', '6800'), ('CMAKE_PREFIX_PATH', '/home/hosodalab9/Sensor-Glove/install/realsense2_camera_msgs:/opt/ros/humble')]), 'shell': False}
+[13.831905] (-) TimerEvent: {}
+[13.873130] (realsense2_camera) StdoutLine: {'line': b'[ 27%] \x1b[32mBuilding CXX object CMakeFiles/realsense2_camera.dir/src/base_realsense_node.cpp.o\x1b[0m\n'}
+[13.873374] (realsense2_camera) StdoutLine: {'line': b'[ 27%] \x1b[32mBuilding CXX object CMakeFiles/realsense2_camera_node.dir/rclcpp_components/node_main_realsense2_camera_node.cpp.o\x1b[0m\n'}
+[13.873460] (realsense2_camera) StdoutLine: {'line': b'[ 27%] \x1b[32mBuilding CXX object CMakeFiles/realsense2_camera.dir/src/realsense_node_factory.cpp.o\x1b[0m\n'}
+[13.873549] (realsense2_camera) StdoutLine: {'line': b'[ 27%] \x1b[32mBuilding CXX object gtest/CMakeFiles/gtest.dir/src/gtest-all.cc.o\x1b[0m\n'}
+[13.873685] (realsense2_camera) StdoutLine: {'line': b'[ 31%] \x1b[32mBuilding CXX object CMakeFiles/realsense2_camera.dir/src/rs_node_setup.cpp.o\x1b[0m\n'}
+[13.873782] (realsense2_camera) StdoutLine: {'line': b'[ 36%] \x1b[32mBuilding CXX object CMakeFiles/realsense2_camera.dir/src/ros_sensor.cpp.o\x1b[0m\n'}
+[13.873983] (realsense2_camera) StdoutLine: {'line': b'[ 40%] \x1b[32mBuilding CXX object CMakeFiles/realsense2_camera.dir/src/dynamic_params.cpp.o\x1b[0m\n'}
+[13.874071] (realsense2_camera) StdoutLine: {'line': b'[ 45%] \x1b[32mBuilding CXX object CMakeFiles/realsense2_camera.dir/src/ros_utils.cpp.o\x1b[0m\n'}
+[13.876134] (realsense2_camera) StdoutLine: {'line': b'[ 54%] \x1b[32mBuilding CXX object CMakeFiles/realsense2_camera.dir/src/parameters.cpp.o\x1b[0m\n'}
+[13.876337] (realsense2_camera) StdoutLine: {'line': b'[ 54%] \x1b[32mBuilding CXX object gtest/CMakeFiles/gtest_main.dir/src/gtest_main.cc.o\x1b[0m\n'}
+[13.876447] (realsense2_camera) StdoutLine: {'line': b'[ 59%] \x1b[32mBuilding CXX object CMakeFiles/realsense2_camera.dir/src/sensor_params.cpp.o\x1b[0m\n'}
+[13.876576] (realsense2_camera) StdoutLine: {'line': b'[ 59%] \x1b[32mBuilding CXX object CMakeFiles/realsense2_camera.dir/src/profile_manager.cpp.o\x1b[0m\n'}
+[13.876679] (realsense2_camera) StdoutLine: {'line': b'[ 63%] \x1b[32mBuilding CXX object CMakeFiles/realsense2_camera.dir/src/image_publisher.cpp.o\x1b[0m\n'}
+[13.877611] (realsense2_camera) StdoutLine: {'line': b'[ 63%] \x1b[32mBuilding CXX object CMakeFiles/realsense2_camera.dir/src/named_filter.cpp.o\x1b[0m\n'}
+[13.881481] (realsense2_camera) StdoutLine: {'line': b'[ 68%] \x1b[32mBuilding CXX object CMakeFiles/realsense2_camera.dir/src/tfs.cpp.o\x1b[0m\n'}
+[13.883247] (realsense2_camera) StdoutLine: {'line': b'[ 72%] \x1b[32mBuilding CXX object CMakeFiles/realsense2_camera.dir/src/ros_param_backend.cpp.o\x1b[0m\n'}
+[13.932022] (-) TimerEvent: {}
+[14.032363] (-) TimerEvent: {}
+[14.132739] (-) TimerEvent: {}
+[14.233072] (-) TimerEvent: {}
+[14.333435] (-) TimerEvent: {}
+[14.433860] (-) TimerEvent: {}
+[14.534271] (-) TimerEvent: {}
+[14.634696] (-) TimerEvent: {}
+[14.697064] (realsense2_camera) StdoutLine: {'line': b'[ 77%] \x1b[32m\x1b[1mLinking CXX static library libgtest_main.a\x1b[0m\n'}
+[14.734818] (-) TimerEvent: {}
+[14.744119] (realsense2_camera) StdoutLine: {'line': b'[ 77%] Built target gtest_main\n'}
+[14.834940] (-) TimerEvent: {}
+[14.935361] (-) TimerEvent: {}
+[15.035839] (-) TimerEvent: {}
+[15.136422] (-) TimerEvent: {}
+[15.236976] (-) TimerEvent: {}
+[15.337543] (-) TimerEvent: {}
+[15.438110] (-) TimerEvent: {}
+[15.538558] (-) TimerEvent: {}
+[15.638958] (-) TimerEvent: {}
+[15.739376] (-) TimerEvent: {}
+[15.839873] (-) TimerEvent: {}
+[15.940551] (-) TimerEvent: {}
+[16.041006] (-) TimerEvent: {}
+[16.141633] (-) TimerEvent: {}
+[16.242238] (-) TimerEvent: {}
+[16.342821] (-) TimerEvent: {}
+[16.443472] (-) TimerEvent: {}
+[16.544083] (-) TimerEvent: {}
+[16.644577] (-) TimerEvent: {}
+[16.745122] (-) TimerEvent: {}
+[16.845541] (-) TimerEvent: {}
+[16.945952] (-) TimerEvent: {}
+[17.046323] (-) TimerEvent: {}
+[17.146835] (-) TimerEvent: {}
+[17.247219] (-) TimerEvent: {}
+[17.347609] (-) TimerEvent: {}
+[17.448041] (-) TimerEvent: {}
+[17.548540] (-) TimerEvent: {}
+[17.648958] (-) TimerEvent: {}
+[17.749465] (-) TimerEvent: {}
+[17.849893] (-) TimerEvent: {}
+[17.950352] (-) TimerEvent: {}
+[18.050753] (-) TimerEvent: {}
+[18.151134] (-) TimerEvent: {}
+[18.251535] (-) TimerEvent: {}
+[18.351932] (-) TimerEvent: {}
+[18.452340] (-) TimerEvent: {}
+[18.470346] (realsense2_camera) StdoutLine: {'line': b'[ 81%] \x1b[32m\x1b[1mLinking CXX executable realsense2_camera_node\x1b[0m\n'}
+[18.552469] (-) TimerEvent: {}
+[18.652881] (-) TimerEvent: {}
+[18.753288] (-) TimerEvent: {}
+[18.773379] (realsense2_camera) StdoutLine: {'line': b'[ 81%] Built target realsense2_camera_node\n'}
+[18.853405] (-) TimerEvent: {}
+[18.953978] (-) TimerEvent: {}
+[19.054712] (-) TimerEvent: {}
+[19.155229] (-) TimerEvent: {}
+[19.255610] (-) TimerEvent: {}
+[19.356005] (-) TimerEvent: {}
+[19.456403] (-) TimerEvent: {}
+[19.556789] (-) TimerEvent: {}
+[19.657282] (-) TimerEvent: {}
+[19.757664] (-) TimerEvent: {}
+[19.858080] (-) TimerEvent: {}
+[19.958738] (-) TimerEvent: {}
+[20.059234] (-) TimerEvent: {}
+[20.159633] (-) TimerEvent: {}
+[20.260607] (-) TimerEvent: {}
+[20.360993] (-) TimerEvent: {}
+[20.461469] (-) TimerEvent: {}
+[20.562009] (-) TimerEvent: {}
+[20.662414] (-) TimerEvent: {}
+[20.762767] (-) TimerEvent: {}
+[20.863121] (-) TimerEvent: {}
+[20.963539] (-) TimerEvent: {}
+[21.063914] (-) TimerEvent: {}
+[21.164275] (-) TimerEvent: {}
+[21.264667] (-) TimerEvent: {}
+[21.365035] (-) TimerEvent: {}
+[21.465372] (-) TimerEvent: {}
+[21.565733] (-) TimerEvent: {}
+[21.574142] (realsense2_camera) StdoutLine: {'line': b'[ 86%] \x1b[32m\x1b[1mLinking CXX static library libgtest.a\x1b[0m\n'}
+[21.631087] (realsense2_camera) StdoutLine: {'line': b'[ 86%] Built target gtest\n'}
+[21.660259] (realsense2_camera) StdoutLine: {'line': b'[ 90%] \x1b[32mBuilding CXX object CMakeFiles/gtest_template.dir/test/gtest_template.cpp.o\x1b[0m\n'}
+[21.665854] (-) TimerEvent: {}
+[21.766167] (-) TimerEvent: {}
+[21.866520] (-) TimerEvent: {}
+[21.966873] (-) TimerEvent: {}
+[22.067226] (-) TimerEvent: {}
+[22.167596] (-) TimerEvent: {}
+[22.267960] (-) TimerEvent: {}
+[22.368374] (-) TimerEvent: {}
+[22.468715] (-) TimerEvent: {}
+[22.569041] (-) TimerEvent: {}
+[22.599275] (realsense2_camera) StdoutLine: {'line': b'[ 95%] \x1b[32m\x1b[1mLinking CXX executable gtest_template\x1b[0m\n'}
+[22.669160] (-) TimerEvent: {}
+[22.704168] (realsense2_camera) StdoutLine: {'line': b'[ 95%] Built target gtest_template\n'}
+[22.769267] (-) TimerEvent: {}
+[22.869621] (-) TimerEvent: {}
+[22.970075] (-) TimerEvent: {}
+[23.070433] (-) TimerEvent: {}
+[23.170808] (-) TimerEvent: {}
+[23.271155] (-) TimerEvent: {}
+[23.371500] (-) TimerEvent: {}
+[23.471853] (-) TimerEvent: {}
+[23.572211] (-) TimerEvent: {}
+[23.672531] (-) TimerEvent: {}
+[23.772854] (-) TimerEvent: {}
+[23.873185] (-) TimerEvent: {}
+[23.973493] (-) TimerEvent: {}
+[24.073804] (-) TimerEvent: {}
+[24.174119] (-) TimerEvent: {}
+[24.274428] (-) TimerEvent: {}
+[24.374738] (-) TimerEvent: {}
+[24.475056] (-) TimerEvent: {}
+[24.575362] (-) TimerEvent: {}
+[24.675673] (-) TimerEvent: {}
+[24.775995] (-) TimerEvent: {}
+[24.876264] (-) TimerEvent: {}
+[24.976571] (-) TimerEvent: {}
+[25.076860] (-) TimerEvent: {}
+[25.177166] (-) TimerEvent: {}
+[25.277477] (-) TimerEvent: {}
+[25.377801] (-) TimerEvent: {}
+[25.478093] (-) TimerEvent: {}
+[25.578394] (-) TimerEvent: {}
+[25.678701] (-) TimerEvent: {}
+[25.779117] (-) TimerEvent: {}
+[25.879467] (-) TimerEvent: {}
+[25.979871] (-) TimerEvent: {}
+[26.080171] (-) TimerEvent: {}
+[26.180471] (-) TimerEvent: {}
+[26.280774] (-) TimerEvent: {}
+[26.381074] (-) TimerEvent: {}
+[26.481370] (-) TimerEvent: {}
+[26.581693] (-) TimerEvent: {}
+[26.682080] (-) TimerEvent: {}
+[26.782433] (-) TimerEvent: {}
+[26.882788] (-) TimerEvent: {}
+[26.983126] (-) TimerEvent: {}
+[27.083469] (-) TimerEvent: {}
+[27.183808] (-) TimerEvent: {}
+[27.284139] (-) TimerEvent: {}
+[27.384484] (-) TimerEvent: {}
+[27.484814] (-) TimerEvent: {}
+[27.585148] (-) TimerEvent: {}
+[27.685506] (-) TimerEvent: {}
+[27.785867] (-) TimerEvent: {}
+[27.886210] (-) TimerEvent: {}
+[27.986542] (-) TimerEvent: {}
+[28.034575] (realsense2_camera) StdoutLine: {'line': b'[100%] \x1b[32m\x1b[1mLinking CXX shared library librealsense2_camera.so\x1b[0m\n'}
+[28.086670] (-) TimerEvent: {}
+[28.187013] (-) TimerEvent: {}
+[28.287374] (-) TimerEvent: {}
+[28.387854] (-) TimerEvent: {}
+[28.488273] (-) TimerEvent: {}
+[28.507204] (realsense2_camera) StdoutLine: {'line': b'[100%] Built target realsense2_camera\n'}
+[28.516291] (realsense2_camera) CommandEnded: {'returncode': 0}
+[28.588381] (-) TimerEvent: {}
+[28.592516] (realsense2_camera) JobProgress: {'identifier': 'realsense2_camera', 'progress': 'install'}
+[28.593791] (realsense2_camera) Command: {'cmd': ['/usr/bin/cmake', '--install', '/home/hosodalab9/Sensor-Glove/build/realsense2_camera'], 'cwd': '/home/hosodalab9/Sensor-Glove/build/realsense2_camera', 'env': OrderedDict([('LESSOPEN', '| /usr/bin/lesspipe %s'), ('USER', 'hosodalab9'), ('XDG_SESSION_TYPE', 'x11'), ('SHLVL', '1'), ('LD_LIBRARY_PATH', '/home/hosodalab9/Sensor-Glove/install/realsense2_camera_msgs/lib:/usr/lib/x86_64-linux-gnu/gazebo-11/plugins:/opt/ros/humble/opt/rviz_ogre_vendor/lib:/opt/ros/humble/lib/x86_64-linux-gnu:/opt/ros/humble/lib:/usr/local/cuda/lib64:/usr/local/cuda/extras/CUPTI/lib64'), ('HOME', '/home/hosodalab9'), ('CONDA_SHLVL', '0'), ('OLDPWD', '/home/hosodalab9/Sensor-Glove'), ('CMAKE_CUDA_COMPILER', '/usr/local/cuda-10.2/bin/nvcc'), ('DESKTOP_SESSION', 'ubuntu-xorg'), ('ros2_ws', '/home/hosodalab9/Sensor-Glove'), ('ROS_PYTHON_VERSION', '3'), ('GNOME_SHELL_SESSION_MODE', 'ubuntu'), ('GTK_MODULES', 'gail:atk-bridge'), ('SYSTEMD_EXEC_PID', '1444'), ('DBUS_SESSION_BUS_ADDRESS', 'unix:path=/run/user/1000/bus'), ('COLORTERM', 'truecolor'), ('_CE_M', ''), ('ROS_DISTRO', 'humble'), ('GTK_IM_MODULE', 'ibus'), ('LOGNAME', 'hosodalab9'), ('_', '/usr/bin/colcon'), ('ROS_VERSION', '2'), ('XDG_SESSION_CLASS', 'user'), ('USERNAME', 'hosodalab9'), ('TERM', 'xterm-256color'), ('GNOME_DESKTOP_SESSION_ID', 'this-is-deprecated'), ('_CE_CONDA', ''), ('ROS_LOCALHOST_ONLY', '1'), ('WINDOWPATH', '2'), ('PATH', '/home/hosodalab9/anaconda3/condabin:/opt/ros/humble/bin:/home/hosodalab9/.local/bin:/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin:/usr/games:/usr/local/games:/snap/bin:/snap/bin:CUDA_HOME/bin'), ('SESSION_MANAGER', 'local/hosodalab9-Venus-series:@/tmp/.ICE-unix/1423,unix/hosodalab9-Venus-series:/tmp/.ICE-unix/1423'), ('XDG_MENU_PREFIX', 'gnome-'), ('GNOME_TERMINAL_SCREEN', '/org/gnome/Terminal/screen/e46c7774_dfd7_4ba5_9462_d93fe0fccc36'), ('XDG_RUNTIME_DIR', '/run/user/1000'), ('DISPLAY', ':0'), ('LANG', 'en_US.UTF-8'), ('XDG_CURRENT_DESKTOP', 'ubuntu:GNOME'), ('XMODIFIERS', '@im=ibus'), ('XDG_SESSION_DESKTOP', 'ubuntu-xorg'), ('XAUTHORITY', '/run/user/1000/gdm/Xauthority'), ('LS_COLORS', 'rs=0:di=01;34:ln=01;36:mh=00:pi=40;33:so=01;35:do=01;35:bd=40;33;01:cd=40;33;01:or=40;31;01:mi=00:su=37;41:sg=30;43:ca=30;41:tw=30;42:ow=34;42:st=37;44:ex=01;32:*.tar=01;31:*.tgz=01;31:*.arc=01;31:*.arj=01;31:*.taz=01;31:*.lha=01;31:*.lz4=01;31:*.lzh=01;31:*.lzma=01;31:*.tlz=01;31:*.txz=01;31:*.tzo=01;31:*.t7z=01;31:*.zip=01;31:*.z=01;31:*.dz=01;31:*.gz=01;31:*.lrz=01;31:*.lz=01;31:*.lzo=01;31:*.xz=01;31:*.zst=01;31:*.tzst=01;31:*.bz2=01;31:*.bz=01;31:*.tbz=01;31:*.tbz2=01;31:*.tz=01;31:*.deb=01;31:*.rpm=01;31:*.jar=01;31:*.war=01;31:*.ear=01;31:*.sar=01;31:*.rar=01;31:*.alz=01;31:*.ace=01;31:*.zoo=01;31:*.cpio=01;31:*.7z=01;31:*.rz=01;31:*.cab=01;31:*.wim=01;31:*.swm=01;31:*.dwm=01;31:*.esd=01;31:*.jpg=01;35:*.jpeg=01;35:*.mjpg=01;35:*.mjpeg=01;35:*.gif=01;35:*.bmp=01;35:*.pbm=01;35:*.pgm=01;35:*.ppm=01;35:*.tga=01;35:*.xbm=01;35:*.xpm=01;35:*.tif=01;35:*.tiff=01;35:*.png=01;35:*.svg=01;35:*.svgz=01;35:*.mng=01;35:*.pcx=01;35:*.mov=01;35:*.mpg=01;35:*.mpeg=01;35:*.m2v=01;35:*.mkv=01;35:*.webm=01;35:*.webp=01;35:*.ogm=01;35:*.mp4=01;35:*.m4v=01;35:*.mp4v=01;35:*.vob=01;35:*.qt=01;35:*.nuv=01;35:*.wmv=01;35:*.asf=01;35:*.rm=01;35:*.rmvb=01;35:*.flc=01;35:*.avi=01;35:*.fli=01;35:*.flv=01;35:*.gl=01;35:*.dl=01;35:*.xcf=01;35:*.xwd=01;35:*.yuv=01;35:*.cgm=01;35:*.emf=01;35:*.ogv=01;35:*.ogx=01;35:*.aac=00;36:*.au=00;36:*.flac=00;36:*.m4a=00;36:*.mid=00;36:*.midi=00;36:*.mka=00;36:*.mp3=00;36:*.mpc=00;36:*.ogg=00;36:*.ra=00;36:*.wav=00;36:*.oga=00;36:*.opus=00;36:*.spx=00;36:*.xspf=00;36:'), ('GNOME_TERMINAL_SERVICE', ':1.735'), ('SSH_AGENT_LAUNCHER', 'gnome-keyring'), ('SSH_AUTH_SOCK', '/run/user/1000/keyring/ssh'), ('ROS_DOMAIN_ID', '1'), ('AMENT_PREFIX_PATH', '/home/hosodalab9/Sensor-Glove/install/realsense2_camera_msgs:/opt/ros/humble'), ('CONDA_PYTHON_EXE', '/home/hosodalab9/anaconda3/bin/python'), ('SHELL', '/bin/bash'), ('QT_ACCESSIBILITY', '1'), ('GDMSESSION', 'ubuntu-xorg'), ('LESSCLOSE', '/usr/bin/lesspipe %s %s'), ('GPG_AGENT_INFO', '/run/user/1000/gnupg/S.gpg-agent:0:1'), ('QT_IM_MODULE', 'ibus'), ('PWD', '/home/hosodalab9/Sensor-Glove/build/realsense2_camera'), ('LC_ALL', 'en_US.UTF-8'), ('CUDA_HOME', '/usr/local/cuda'), ('XDG_CONFIG_DIRS', '/etc/xdg/xdg-ubuntu-xorg:/etc/xdg'), ('CONDA_EXE', '/home/hosodalab9/anaconda3/bin/conda'), ('XDG_DATA_DIRS', '/usr/share/ubuntu-xorg:/usr/share/gnome:/usr/local/share/:/usr/share/:/var/lib/snapd/desktop'), ('PYTHONPATH', '/home/hosodalab9/Sensor-Glove/install/realsense2_camera_msgs/local/lib/python3.10/dist-packages:/opt/ros/humble/lib/python3.10/site-packages:/opt/ros/humble/local/lib/python3.10/dist-packages:/usr/local/lib'), ('COLCON', '1'), ('VTE_VERSION', '6800'), ('CMAKE_PREFIX_PATH', '/home/hosodalab9/Sensor-Glove/install/realsense2_camera_msgs:/opt/ros/humble')]), 'shell': False}
+[28.602357] (realsense2_camera) StdoutLine: {'line': b'-- Install configuration: "Release"\n'}
+[28.603794] (realsense2_camera) StdoutLine: {'line': b'-- Execute custom install script\n'}
+[28.604410] (realsense2_camera) StdoutLine: {'line': b'-- Symlinking: /home/hosodalab9/Sensor-Glove/install/realsense2_camera/lib/realsense2_camera/realsense2_camera_node\n'}
+[28.612820] (realsense2_camera) StdoutLine: {'line': b'-- Symlinking: /home/hosodalab9/Sensor-Glove/install/realsense2_camera/lib/librealsense2_camera.so\n'}
+[28.622885] (realsense2_camera) StdoutLine: {'line': b'-- Symlinking: /home/hosodalab9/Sensor-Glove/install/realsense2_camera/include/base_realsense_node.h\n'}
+[28.631053] (realsense2_camera) StdoutLine: {'line': b'-- Symlinking: /home/hosodalab9/Sensor-Glove/install/realsense2_camera/include/constants.h\n'}
+[28.641863] (realsense2_camera) StdoutLine: {'line': b'-- Symlinking: /home/hosodalab9/Sensor-Glove/install/realsense2_camera/include/dynamic_params.h\n'}
+[28.651193] (realsense2_camera) StdoutLine: {'line': b'-- Symlinking: /home/hosodalab9/Sensor-Glove/install/realsense2_camera/include/gl_window.h\n'}
+[28.659673] (realsense2_camera) StdoutLine: {'line': b'-- Symlinking: /home/hosodalab9/Sensor-Glove/install/realsense2_camera/include/image_publisher.h\n'}
+[28.668791] (realsense2_camera) StdoutLine: {'line': b'-- Symlinking: /home/hosodalab9/Sensor-Glove/install/realsense2_camera/include/named_filter.h\n'}
+[28.676817] (realsense2_camera) StdoutLine: {'line': b'-- Symlinking: /home/hosodalab9/Sensor-Glove/install/realsense2_camera/include/profile_manager.h\n'}
+[28.684634] (realsense2_camera) StdoutLine: {'line': b'-- Symlinking: /home/hosodalab9/Sensor-Glove/install/realsense2_camera/include/realsense_node_factory.h\n'}
+[28.688463] (-) TimerEvent: {}
+[28.692848] (realsense2_camera) StdoutLine: {'line': b'-- Symlinking: /home/hosodalab9/Sensor-Glove/install/realsense2_camera/include/ros_param_backend.h\n'}
+[28.701299] (realsense2_camera) StdoutLine: {'line': b'-- Symlinking: /home/hosodalab9/Sensor-Glove/install/realsense2_camera/include/ros_sensor.h\n'}
+[28.709485] (realsense2_camera) StdoutLine: {'line': b'-- Symlinking: /home/hosodalab9/Sensor-Glove/install/realsense2_camera/include/ros_utils.h\n'}
+[28.718206] (realsense2_camera) StdoutLine: {'line': b'-- Symlinking: /home/hosodalab9/Sensor-Glove/install/realsense2_camera/include/sensor_params.h\n'}
+[28.728880] (realsense2_camera) StdoutLine: {'line': b'-- Symlinking: /home/hosodalab9/Sensor-Glove/install/realsense2_camera/share/realsense2_camera/launch/default.rviz\n'}
+[28.739927] (realsense2_camera) StdoutLine: {'line': b'-- Symlinking: /home/hosodalab9/Sensor-Glove/install/realsense2_camera/share/realsense2_camera/launch/rs_intra_process_demo_launch.py\n'}
+[28.749252] (realsense2_camera) StdoutLine: {'line': b'-- Symlinking: /home/hosodalab9/Sensor-Glove/install/realsense2_camera/share/realsense2_camera/launch/rs_launch.py\n'}
+[28.757418] (realsense2_camera) StdoutLine: {'line': b'-- Symlinking: /home/hosodalab9/Sensor-Glove/install/realsense2_camera/share/realsense2_camera/launch/rs_multi_camera_launch.py\n'}
+[28.769930] (realsense2_camera) StdoutLine: {'line': b'-- Symlinking: /home/hosodalab9/Sensor-Glove/install/realsense2_camera/share/realsense2_camera/examples/align_depth/README.md\n'}
+[28.778519] (realsense2_camera) StdoutLine: {'line': b'-- Symlinking: /home/hosodalab9/Sensor-Glove/install/realsense2_camera/share/realsense2_camera/examples/align_depth/rs_align_depth_launch.py\n'}
+[28.786859] (realsense2_camera) StdoutLine: {'line': b'-- Symlinking: /home/hosodalab9/Sensor-Glove/install/realsense2_camera/share/realsense2_camera/examples/dual_camera/README.md\n'}
+[28.788543] (-) TimerEvent: {}
+[28.794531] (realsense2_camera) StdoutLine: {'line': b'-- Symlinking: /home/hosodalab9/Sensor-Glove/install/realsense2_camera/share/realsense2_camera/examples/dual_camera/rs_dual_camera_launch.py\n'}
+[28.802251] (realsense2_camera) StdoutLine: {'line': b'-- Symlinking: /home/hosodalab9/Sensor-Glove/install/realsense2_camera/share/realsense2_camera/examples/dual_camera/rviz/dual_camera_pointcloud.rviz\n'}
+[28.810887] (realsense2_camera) StdoutLine: {'line': b'-- Symlinking: /home/hosodalab9/Sensor-Glove/install/realsense2_camera/share/realsense2_camera/examples/launch_from_rosbag/README.md\n'}
+[28.819043] (realsense2_camera) StdoutLine: {'line': b'-- Symlinking: /home/hosodalab9/Sensor-Glove/install/realsense2_camera/share/realsense2_camera/examples/launch_from_rosbag/rs_launch_from_rosbag.py\n'}
+[28.829208] (realsense2_camera) StdoutLine: {'line': b'-- Symlinking: /home/hosodalab9/Sensor-Glove/install/realsense2_camera/share/realsense2_camera/examples/launch_params_from_file/README.md\n'}
+[28.838656] (realsense2_camera) StdoutLine: {'line': b'-- Symlinking: /home/hosodalab9/Sensor-Glove/install/realsense2_camera/share/realsense2_camera/examples/launch_params_from_file/config/config.yaml\n'}
+[28.847424] (realsense2_camera) StdoutLine: {'line': b'-- Symlinking: /home/hosodalab9/Sensor-Glove/install/realsense2_camera/share/realsense2_camera/examples/launch_params_from_file/rs_launch_get_params_from_yaml.py\n'}
+[28.856011] (realsense2_camera) StdoutLine: {'line': b'-- Symlinking: /home/hosodalab9/Sensor-Glove/install/realsense2_camera/share/realsense2_camera/examples/pointcloud/README.md\n'}
+[28.866046] (realsense2_camera) StdoutLine: {'line': b'-- Symlinking: /home/hosodalab9/Sensor-Glove/install/realsense2_camera/share/realsense2_camera/examples/pointcloud/rs_d405_pointcloud_launch.py\n'}
+[28.875575] (realsense2_camera) StdoutLine: {'line': b'-- Symlinking: /home/hosodalab9/Sensor-Glove/install/realsense2_camera/share/realsense2_camera/examples/pointcloud/rs_d455_pointcloud_launch.py\n'}
+[28.884324] (realsense2_camera) StdoutLine: {'line': b'-- Symlinking: /home/hosodalab9/Sensor-Glove/install/realsense2_camera/share/realsense2_camera/examples/pointcloud/rs_pointcloud_launch.py\n'}
+[28.888725] (-) TimerEvent: {}
+[28.892475] (realsense2_camera) StdoutLine: {'line': b'-- Symlinking: /home/hosodalab9/Sensor-Glove/install/realsense2_camera/share/realsense2_camera/examples/pointcloud/rviz/pointcloud.rviz\n'}
+[28.900931] (realsense2_camera) StdoutLine: {'line': b'-- Symlinking: /home/hosodalab9/Sensor-Glove/install/realsense2_camera/share/realsense2_camera/examples/pointcloud/rviz/urdf_pointcloud.rviz\n'}
+[28.909921] (realsense2_camera) StdoutLine: {'line': b'-- Symlinking: /home/hosodalab9/Sensor-Glove/install/realsense2_camera/share/realsense2_camera/environment/library_path.sh\n'}
+[28.918383] (realsense2_camera) StdoutLine: {'line': b'-- Symlinking: /home/hosodalab9/Sensor-Glove/install/realsense2_camera/share/realsense2_camera/environment/library_path.dsv\n'}
+[28.929064] (realsense2_camera) StdoutLine: {'line': b'-- Symlinking: /home/hosodalab9/Sensor-Glove/install/realsense2_camera/share/ament_index/resource_index/package_run_dependencies/realsense2_camera\n'}
+[28.938053] (realsense2_camera) StdoutLine: {'line': b'-- Symlinking: /home/hosodalab9/Sensor-Glove/install/realsense2_camera/share/ament_index/resource_index/parent_prefix_path/realsense2_camera\n'}
+[28.946491] (realsense2_camera) StdoutLine: {'line': b'-- Symlinking: /home/hosodalab9/Sensor-Glove/install/realsense2_camera/share/realsense2_camera/environment/ament_prefix_path.sh\n'}
+[28.953847] (realsense2_camera) StdoutLine: {'line': b'-- Symlinking: /home/hosodalab9/Sensor-Glove/install/realsense2_camera/share/realsense2_camera/environment/ament_prefix_path.dsv\n'}
+[28.963262] (realsense2_camera) StdoutLine: {'line': b'-- Symlinking: /home/hosodalab9/Sensor-Glove/install/realsense2_camera/share/realsense2_camera/environment/path.sh\n'}
+[28.970941] (realsense2_camera) StdoutLine: {'line': b'-- Symlinking: /home/hosodalab9/Sensor-Glove/install/realsense2_camera/share/realsense2_camera/environment/path.dsv\n'}
+[28.979356] (realsense2_camera) StdoutLine: {'line': b'-- Symlinking: /home/hosodalab9/Sensor-Glove/install/realsense2_camera/share/realsense2_camera/local_setup.bash\n'}
+[28.987126] (realsense2_camera) StdoutLine: {'line': b'-- Symlinking: /home/hosodalab9/Sensor-Glove/install/realsense2_camera/share/realsense2_camera/local_setup.sh\n'}
+[28.988806] (-) TimerEvent: {}
+[28.995637] (realsense2_camera) StdoutLine: {'line': b'-- Symlinking: /home/hosodalab9/Sensor-Glove/install/realsense2_camera/share/realsense2_camera/local_setup.zsh\n'}
+[29.003928] (realsense2_camera) StdoutLine: {'line': b'-- Symlinking: /home/hosodalab9/Sensor-Glove/install/realsense2_camera/share/realsense2_camera/local_setup.dsv\n'}
+[29.012070] (realsense2_camera) StdoutLine: {'line': b'-- Symlinking: /home/hosodalab9/Sensor-Glove/install/realsense2_camera/share/realsense2_camera/package.dsv\n'}
+[29.019907] (realsense2_camera) StdoutLine: {'line': b'-- Symlinking: /home/hosodalab9/Sensor-Glove/install/realsense2_camera/share/ament_index/resource_index/packages/realsense2_camera\n'}
+[29.029762] (realsense2_camera) StdoutLine: {'line': b'-- Symlinking: /home/hosodalab9/Sensor-Glove/install/realsense2_camera/share/ament_index/resource_index/rclcpp_components/realsense2_camera\n'}
+[29.038973] (realsense2_camera) StdoutLine: {'line': b'-- Symlinking: /home/hosodalab9/Sensor-Glove/install/realsense2_camera/share/realsense2_camera/cmake/ament_cmake_export_include_directories-extras.cmake\n'}
+[29.046650] (realsense2_camera) StdoutLine: {'line': b'-- Symlinking: /home/hosodalab9/Sensor-Glove/install/realsense2_camera/share/realsense2_camera/cmake/ament_cmake_export_libraries-extras.cmake\n'}
+[29.055273] (realsense2_camera) StdoutLine: {'line': b'-- Symlinking: /home/hosodalab9/Sensor-Glove/install/realsense2_camera/share/realsense2_camera/cmake/ament_cmake_export_dependencies-extras.cmake\n'}
+[29.062912] (realsense2_camera) StdoutLine: {'line': b'-- Symlinking: /home/hosodalab9/Sensor-Glove/install/realsense2_camera/share/realsense2_camera/cmake/realsense2_cameraConfig.cmake\n'}
+[29.070619] (realsense2_camera) StdoutLine: {'line': b'-- Symlinking: /home/hosodalab9/Sensor-Glove/install/realsense2_camera/share/realsense2_camera/cmake/realsense2_cameraConfig-version.cmake\n'}
+[29.078461] (realsense2_camera) StdoutLine: {'line': b'-- Symlinking: /home/hosodalab9/Sensor-Glove/install/realsense2_camera/share/realsense2_camera/package.xml\n'}
+[29.089184] (realsense2_camera) CommandEnded: {'returncode': 0}
+[29.089649] (-) TimerEvent: {}
+[29.185691] (realsense2_camera) JobEnded: {'identifier': 'realsense2_camera', 'rc': 0}
+[29.186323] (-) EventReactorShutdown: {}

@@ -1,0 +1,10 @@
+package.xml
+setup.cfg
+setup.py
+../../../build/hand_show/hand_show.egg-info/PKG-INFO
+../../../build/hand_show/hand_show.egg-info/SOURCES.txt
+../../../build/hand_show/hand_show.egg-info/dependency_links.txt
+../../../build/hand_show/hand_show.egg-info/entry_points.txt
+../../../build/hand_show/hand_show.egg-info/requires.txt
+../../../build/hand_show/hand_show.egg-info/top_level.txt
+../../../build/hand_show/hand_show.egg-info/zip-safe

@@ -1,0 +1,23 @@
+running develop
+running egg_info
+creating subscriber.egg-info
+writing subscriber.egg-info/PKG-INFO
+writing dependency_links to subscriber.egg-info/dependency_links.txt
+writing entry points to subscriber.egg-info/entry_points.txt
+writing requirements to subscriber.egg-info/requires.txt
+writing top-level names to subscriber.egg-info/top_level.txt
+writing manifest file 'subscriber.egg-info/SOURCES.txt'
+reading manifest file 'subscriber.egg-info/SOURCES.txt'
+writing manifest file 'subscriber.egg-info/SOURCES.txt'
+running build_ext
+Creating /home/hosodalab9/Sensor-Glove/install/subscriber/lib/python3.10/site-packages/subscriber.egg-link (link to .)
+Installing angle_finger script to /home/hosodalab9/Sensor-Glove/install/subscriber/lib/subscriber
+Installing subscriber script to /home/hosodalab9/Sensor-Glove/install/subscriber/lib/subscriber
+
+Installed /home/hosodalab9/Sensor-Glove/build/subscriber
+running symlink_data
+creating /home/hosodalab9/Sensor-Glove/install/subscriber/share/ament_index
+creating /home/hosodalab9/Sensor-Glove/install/subscriber/share/ament_index/resource_index
+creating /home/hosodalab9/Sensor-Glove/install/subscriber/share/ament_index/resource_index/packages
+symbolically linking /home/hosodalab9/Sensor-Glove/build/subscriber/resource/subscriber -> /home/hosodalab9/Sensor-Glove/install/subscriber/share/ament_index/resource_index/packages
+symbolically linking /home/hosodalab9/Sensor-Glove/build/subscriber/package.xml -> /home/hosodalab9/Sensor-Glove/install/subscriber/share/subscriber

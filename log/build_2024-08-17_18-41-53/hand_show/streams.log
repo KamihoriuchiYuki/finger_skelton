@@ -1,0 +1,22 @@
+[1.090s] Invoking command in '/home/hosodalab9/Sensor-Glove/build/hand_show': PYTHONPATH=/home/hosodalab9/Sensor-Glove/build/hand_show/prefix_override:/usr/lib/python3/dist-packages/colcon_core/task/python/colcon_distutils_commands:/home/hosodalab9/Sensor-Glove/install/hand_show/lib/python3.10/site-packages:${PYTHONPATH} /usr/bin/python3 -W ignore:setup.py install is deprecated setup.py develop --editable --build-directory /home/hosodalab9/Sensor-Glove/build/hand_show/build --no-deps symlink_data --force
+[1.302s] running develop
+[1.302s] /usr/lib/python3/dist-packages/setuptools/command/easy_install.py:158: EasyInstallDeprecationWarning: easy_install command is deprecated. Use build and pip and other standards-based tools.
+[1.302s]   warnings.warn(
+[1.488s] running egg_info
+[1.488s] writing hand_show.egg-info/PKG-INFO
+[1.489s] writing dependency_links to hand_show.egg-info/dependency_links.txt
+[1.489s] writing entry points to hand_show.egg-info/entry_points.txt
+[1.489s] writing requirements to hand_show.egg-info/requires.txt
+[1.489s] writing top-level names to hand_show.egg-info/top_level.txt
+[1.492s] reading manifest file 'hand_show.egg-info/SOURCES.txt'
+[1.493s] writing manifest file 'hand_show.egg-info/SOURCES.txt'
+[1.494s] running build_ext
+[1.494s] Creating /home/hosodalab9/Sensor-Glove/install/hand_show/lib/python3.10/site-packages/hand-show.egg-link (link to .)
+[1.495s] Installing listener_index script to /home/hosodalab9/Sensor-Glove/install/hand_show/lib/hand_show
+[1.495s] Installing talker_index script to /home/hosodalab9/Sensor-Glove/install/hand_show/lib/hand_show
+[1.495s] 
+[1.495s] Installed /home/hosodalab9/Sensor-Glove/build/hand_show
+[1.495s] running symlink_data
+[1.495s] symbolically linking /home/hosodalab9/Sensor-Glove/build/hand_show/resource/hand_show -> /home/hosodalab9/Sensor-Glove/install/hand_show/share/ament_index/resource_index/packages
+[1.495s] symbolically linking /home/hosodalab9/Sensor-Glove/build/hand_show/package.xml -> /home/hosodalab9/Sensor-Glove/install/hand_show/share/hand_show
+[1.541s] Invoked command in '/home/hosodalab9/Sensor-Glove/build/hand_show' returned '0': PYTHONPATH=/home/hosodalab9/Sensor-Glove/build/hand_show/prefix_override:/usr/lib/python3/dist-packages/colcon_core/task/python/colcon_distutils_commands:/home/hosodalab9/Sensor-Glove/install/hand_show/lib/python3.10/site-packages:${PYTHONPATH} /usr/bin/python3 -W ignore:setup.py install is deprecated setup.py develop --editable --build-directory /home/hosodalab9/Sensor-Glove/build/hand_show/build --no-deps symlink_data --force

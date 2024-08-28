@@ -1,0 +1,4 @@
+[console_scripts]
+listener_index = hand_show.listener_index:main
+talker_index = hand_show.talker_index:main
+

@@ -1,0 +1,20 @@
+[0.492s] Invoking command in '/home/hosodalab9/Sensor-Glove/src/hand_sense_ws/src/hand_show': PYTHONPATH=/home/hosodalab9/Sensor-Glove/src/hand_sense_ws/src/build/hand_show/prefix_override:/usr/lib/python3/dist-packages/colcon_core/task/python/colcon_distutils_commands:/home/hosodalab9/Sensor-Glove/src/hand_sense_ws/src/install/hand_show/lib/python3.10/site-packages:${PYTHONPATH} /usr/bin/python3 -W ignore:setup.py install is deprecated setup.py egg_info --egg-base ../build/hand_show build --build-base /home/hosodalab9/Sensor-Glove/src/hand_sense_ws/src/build/hand_show/build install --record /home/hosodalab9/Sensor-Glove/src/hand_sense_ws/src/build/hand_show/install.log --single-version-externally-managed install_data
+[0.679s] running egg_info
+[0.679s] writing ../build/hand_show/hand_show.egg-info/PKG-INFO
+[0.679s] writing dependency_links to ../build/hand_show/hand_show.egg-info/dependency_links.txt
+[0.679s] writing entry points to ../build/hand_show/hand_show.egg-info/entry_points.txt
+[0.679s] writing requirements to ../build/hand_show/hand_show.egg-info/requires.txt
+[0.680s] writing top-level names to ../build/hand_show/hand_show.egg-info/top_level.txt
+[0.680s] reading manifest file '../build/hand_show/hand_show.egg-info/SOURCES.txt'
+[0.681s] writing manifest file '../build/hand_show/hand_show.egg-info/SOURCES.txt'
+[0.681s] running build
+[0.681s] running install
+[0.681s] running install_data
+[0.681s] running install_egg_info
+[0.683s] removing '/home/hosodalab9/Sensor-Glove/src/hand_sense_ws/src/install/hand_show/lib/python3.10/site-packages/hand_show-0.0.0-py3.10.egg-info' (and everything under it)
+[0.683s] Copying ../build/hand_show/hand_show.egg-info to /home/hosodalab9/Sensor-Glove/src/hand_sense_ws/src/install/hand_show/lib/python3.10/site-packages/hand_show-0.0.0-py3.10.egg-info
+[0.684s] running install_scripts
+[0.698s] Installing listener_index script to /home/hosodalab9/Sensor-Glove/src/hand_sense_ws/src/install/hand_show/lib/hand_show
+[0.698s] Installing talker_index script to /home/hosodalab9/Sensor-Glove/src/hand_sense_ws/src/install/hand_show/lib/hand_show
+[0.698s] writing list of installed files to '/home/hosodalab9/Sensor-Glove/src/hand_sense_ws/src/build/hand_show/install.log'
+[0.718s] Invoked command in '/home/hosodalab9/Sensor-Glove/src/hand_sense_ws/src/hand_show' returned '0': PYTHONPATH=/home/hosodalab9/Sensor-Glove/src/hand_sense_ws/src/build/hand_show/prefix_override:/usr/lib/python3/dist-packages/colcon_core/task/python/colcon_distutils_commands:/home/hosodalab9/Sensor-Glove/src/hand_sense_ws/src/install/hand_show/lib/python3.10/site-packages:${PYTHONPATH} /usr/bin/python3 -W ignore:setup.py install is deprecated setup.py egg_info --egg-base ../build/hand_show build --build-base /home/hosodalab9/Sensor-Glove/src/hand_sense_ws/src/build/hand_show/build install --record /home/hosodalab9/Sensor-Glove/src/hand_sense_ws/src/build/hand_show/install.log --single-version-externally-managed install_data

@@ -1,0 +1,18 @@
+running develop
+running egg_info
+writing hand_show.egg-info/PKG-INFO
+writing dependency_links to hand_show.egg-info/dependency_links.txt
+writing entry points to hand_show.egg-info/entry_points.txt
+writing requirements to hand_show.egg-info/requires.txt
+writing top-level names to hand_show.egg-info/top_level.txt
+reading manifest file 'hand_show.egg-info/SOURCES.txt'
+writing manifest file 'hand_show.egg-info/SOURCES.txt'
+running build_ext
+Creating /home/hosodalab9/Sensor-Glove/install/hand_show/lib/python3.10/site-packages/hand-show.egg-link (link to .)
+Installing listener_index script to /home/hosodalab9/Sensor-Glove/install/hand_show/lib/hand_show
+Installing talker_index script to /home/hosodalab9/Sensor-Glove/install/hand_show/lib/hand_show
+
+Installed /home/hosodalab9/Sensor-Glove/build/hand_show
+running symlink_data
+symbolically linking /home/hosodalab9/Sensor-Glove/build/hand_show/resource/hand_show -> /home/hosodalab9/Sensor-Glove/install/hand_show/share/ament_index/resource_index/packages
+symbolically linking /home/hosodalab9/Sensor-Glove/build/hand_show/package.xml -> /home/hosodalab9/Sensor-Glove/install/hand_show/share/hand_show

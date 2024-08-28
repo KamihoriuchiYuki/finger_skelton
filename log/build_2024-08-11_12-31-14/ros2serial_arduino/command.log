@@ -1,0 +1,1 @@
+Invoking command in '/home/hosodalab9/Sensor-Glove/build/ros2serial_arduino': CMAKE_PREFIX_PATH=/opt/ros/humble /usr/bin/cmake /home/hosodalab9/Sensor-Glove/src/gel_sensor/ros2serial_arduino -DAMENT_CMAKE_SYMLINK_INSTALL=1 -DCMAKE_INSTALL_PREFIX=/home/hosodalab9/Sensor-Glove/install/ros2serial_arduino

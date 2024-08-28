@@ -1,0 +1,1 @@
+/home/hosodalab9/Sensor-Glove/build/ros2serial_arduino/ament_cmake_environment_hooks/local_setup.sh

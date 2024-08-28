@@ -1,0 +1,18 @@
+[31mCMake Error at CMakeLists.txt:5 (project):
+  project PROJECT called with incorrect number of arguments
+
+[0m
+[31mCMake Error at CMakeLists.txt:7 (ocv_include_directories):
+  Unknown CMake command "ocv_include_directories".
+
+[0m
+[33mCMake Warning (dev) in CMakeLists.txt:
+  No cmake_minimum_required command is present.  A line of code such as
+
+    cmake_minimum_required(VERSION 3.22)
+
+  should be added at the top of the file.  The version specified may be lower
+  if you wish to support older CMake versions for this project.  For more
+  information run "cmake --help-policy CMP0000".
+This warning is for project developers.  Use -Wno-dev to suppress it.
+[0m

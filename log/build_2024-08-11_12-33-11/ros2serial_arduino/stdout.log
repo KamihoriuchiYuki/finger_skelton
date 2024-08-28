@@ -1,0 +1,25 @@
+[ 50%] [32mBuilding CXX object CMakeFiles/serial_send_node.dir/src/serial_send_node.cpp.o[0m
+[ 50%] [32mBuilding CXX object CMakeFiles/serial_receive_node.dir/src/serial_receive_node.cpp.o[0m
+[ 75%] [32m[1mLinking CXX executable serial_receive_node[0m
+[ 75%] Built target serial_receive_node
+[100%] [32m[1mLinking CXX executable serial_send_node[0m
+[100%] Built target serial_send_node
+-- Install configuration: ""
+-- Execute custom install script
+-- Symlinking: /home/hosodalab9/Sensor-Glove/install/ros2serial_arduino/lib/ros2serial_arduino/serial_receive_node
+-- Symlinking: /home/hosodalab9/Sensor-Glove/install/ros2serial_arduino/lib/ros2serial_arduino/serial_send_node
+-- Symlinking: /home/hosodalab9/Sensor-Glove/install/ros2serial_arduino/share/ament_index/resource_index/package_run_dependencies/ros2serial_arduino
+-- Symlinking: /home/hosodalab9/Sensor-Glove/install/ros2serial_arduino/share/ament_index/resource_index/parent_prefix_path/ros2serial_arduino
+-- Symlinking: /home/hosodalab9/Sensor-Glove/install/ros2serial_arduino/share/ros2serial_arduino/environment/ament_prefix_path.sh
+-- Symlinking: /home/hosodalab9/Sensor-Glove/install/ros2serial_arduino/share/ros2serial_arduino/environment/ament_prefix_path.dsv
+-- Symlinking: /home/hosodalab9/Sensor-Glove/install/ros2serial_arduino/share/ros2serial_arduino/environment/path.sh
+-- Symlinking: /home/hosodalab9/Sensor-Glove/install/ros2serial_arduino/share/ros2serial_arduino/environment/path.dsv
+-- Symlinking: /home/hosodalab9/Sensor-Glove/install/ros2serial_arduino/share/ros2serial_arduino/local_setup.bash
+-- Symlinking: /home/hosodalab9/Sensor-Glove/install/ros2serial_arduino/share/ros2serial_arduino/local_setup.sh
+-- Symlinking: /home/hosodalab9/Sensor-Glove/install/ros2serial_arduino/share/ros2serial_arduino/local_setup.zsh
+-- Symlinking: /home/hosodalab9/Sensor-Glove/install/ros2serial_arduino/share/ros2serial_arduino/local_setup.dsv
+-- Symlinking: /home/hosodalab9/Sensor-Glove/install/ros2serial_arduino/share/ros2serial_arduino/package.dsv
+-- Symlinking: /home/hosodalab9/Sensor-Glove/install/ros2serial_arduino/share/ament_index/resource_index/packages/ros2serial_arduino
+-- Symlinking: /home/hosodalab9/Sensor-Glove/install/ros2serial_arduino/share/ros2serial_arduino/cmake/ros2serial_arduinoConfig.cmake
+-- Symlinking: /home/hosodalab9/Sensor-Glove/install/ros2serial_arduino/share/ros2serial_arduino/cmake/ros2serial_arduinoConfig-version.cmake
+-- Symlinking: /home/hosodalab9/Sensor-Glove/install/ros2serial_arduino/share/ros2serial_arduino/package.xml

@@ -1,0 +1,29 @@
+[0.022s] Invoking command in '/home/hosodalab9/Sensor-Glove/build/ros2serial_arduino': CMAKE_PREFIX_PATH=/opt/ros/humble /usr/bin/cmake --build /home/hosodalab9/Sensor-Glove/build/ros2serial_arduino -- -j16 -l16
+[0.092s] [ 50%] [32mBuilding CXX object CMakeFiles/serial_send_node.dir/src/serial_send_node.cpp.o[0m
+[0.093s] [ 50%] [32mBuilding CXX object CMakeFiles/serial_receive_node.dir/src/serial_receive_node.cpp.o[0m
+[4.490s] [ 75%] [32m[1mLinking CXX executable serial_receive_node[0m
+[4.691s] [ 75%] Built target serial_receive_node
+[7.531s] [100%] [32m[1mLinking CXX executable serial_send_node[0m
+[7.835s] [100%] Built target serial_send_node
+[7.849s] Invoked command in '/home/hosodalab9/Sensor-Glove/build/ros2serial_arduino' returned '0': CMAKE_PREFIX_PATH=/opt/ros/humble /usr/bin/cmake --build /home/hosodalab9/Sensor-Glove/build/ros2serial_arduino -- -j16 -l16
+[7.886s] Invoking command in '/home/hosodalab9/Sensor-Glove/build/ros2serial_arduino': CMAKE_PREFIX_PATH=/opt/ros/humble /usr/bin/cmake --install /home/hosodalab9/Sensor-Glove/build/ros2serial_arduino
+[7.893s] -- Install configuration: ""
+[7.893s] -- Execute custom install script
+[7.893s] -- Symlinking: /home/hosodalab9/Sensor-Glove/install/ros2serial_arduino/lib/ros2serial_arduino/serial_receive_node
+[7.902s] -- Symlinking: /home/hosodalab9/Sensor-Glove/install/ros2serial_arduino/lib/ros2serial_arduino/serial_send_node
+[7.912s] -- Symlinking: /home/hosodalab9/Sensor-Glove/install/ros2serial_arduino/share/ament_index/resource_index/package_run_dependencies/ros2serial_arduino
+[7.922s] -- Symlinking: /home/hosodalab9/Sensor-Glove/install/ros2serial_arduino/share/ament_index/resource_index/parent_prefix_path/ros2serial_arduino
+[7.931s] -- Symlinking: /home/hosodalab9/Sensor-Glove/install/ros2serial_arduino/share/ros2serial_arduino/environment/ament_prefix_path.sh
+[7.942s] -- Symlinking: /home/hosodalab9/Sensor-Glove/install/ros2serial_arduino/share/ros2serial_arduino/environment/ament_prefix_path.dsv
+[7.951s] -- Symlinking: /home/hosodalab9/Sensor-Glove/install/ros2serial_arduino/share/ros2serial_arduino/environment/path.sh
+[7.961s] -- Symlinking: /home/hosodalab9/Sensor-Glove/install/ros2serial_arduino/share/ros2serial_arduino/environment/path.dsv
+[7.970s] -- Symlinking: /home/hosodalab9/Sensor-Glove/install/ros2serial_arduino/share/ros2serial_arduino/local_setup.bash
+[7.979s] -- Symlinking: /home/hosodalab9/Sensor-Glove/install/ros2serial_arduino/share/ros2serial_arduino/local_setup.sh
+[7.987s] -- Symlinking: /home/hosodalab9/Sensor-Glove/install/ros2serial_arduino/share/ros2serial_arduino/local_setup.zsh
+[7.997s] -- Symlinking: /home/hosodalab9/Sensor-Glove/install/ros2serial_arduino/share/ros2serial_arduino/local_setup.dsv
+[8.006s] -- Symlinking: /home/hosodalab9/Sensor-Glove/install/ros2serial_arduino/share/ros2serial_arduino/package.dsv
+[8.015s] -- Symlinking: /home/hosodalab9/Sensor-Glove/install/ros2serial_arduino/share/ament_index/resource_index/packages/ros2serial_arduino
+[8.024s] -- Symlinking: /home/hosodalab9/Sensor-Glove/install/ros2serial_arduino/share/ros2serial_arduino/cmake/ros2serial_arduinoConfig.cmake
+[8.034s] -- Symlinking: /home/hosodalab9/Sensor-Glove/install/ros2serial_arduino/share/ros2serial_arduino/cmake/ros2serial_arduinoConfig-version.cmake
+[8.044s] -- Symlinking: /home/hosodalab9/Sensor-Glove/install/ros2serial_arduino/share/ros2serial_arduino/package.xml
+[8.055s] Invoked command in '/home/hosodalab9/Sensor-Glove/build/ros2serial_arduino' returned '0': CMAKE_PREFIX_PATH=/opt/ros/humble /usr/bin/cmake --install /home/hosodalab9/Sensor-Glove/build/ros2serial_arduino

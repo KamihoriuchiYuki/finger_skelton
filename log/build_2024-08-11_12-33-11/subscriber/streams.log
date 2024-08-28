@@ -1,0 +1,27 @@
+[0.746s] Invoking command in '/home/hosodalab9/Sensor-Glove/build/subscriber': PYTHONPATH=/home/hosodalab9/Sensor-Glove/build/subscriber/prefix_override:/usr/lib/python3/dist-packages/colcon_core/task/python/colcon_distutils_commands:/home/hosodalab9/Sensor-Glove/install/subscriber/lib/python3.10/site-packages:${PYTHONPATH} /usr/bin/python3 -W ignore:setup.py install is deprecated setup.py develop --editable --build-directory /home/hosodalab9/Sensor-Glove/build/subscriber/build --no-deps symlink_data
+[1.153s] running develop
+[1.164s] /usr/lib/python3/dist-packages/setuptools/command/easy_install.py:158: EasyInstallDeprecationWarning: easy_install command is deprecated. Use build and pip and other standards-based tools.
+[1.164s]   warnings.warn(
+[1.708s] running egg_info
+[1.708s] creating subscriber.egg-info
+[1.709s] writing subscriber.egg-info/PKG-INFO
+[1.710s] writing dependency_links to subscriber.egg-info/dependency_links.txt
+[1.711s] writing entry points to subscriber.egg-info/entry_points.txt
+[1.712s] writing requirements to subscriber.egg-info/requires.txt
+[1.712s] writing top-level names to subscriber.egg-info/top_level.txt
+[1.713s] writing manifest file 'subscriber.egg-info/SOURCES.txt'
+[1.718s] reading manifest file 'subscriber.egg-info/SOURCES.txt'
+[1.719s] writing manifest file 'subscriber.egg-info/SOURCES.txt'
+[1.722s] running build_ext
+[1.723s] Creating /home/hosodalab9/Sensor-Glove/install/subscriber/lib/python3.10/site-packages/subscriber.egg-link (link to .)
+[1.725s] Installing angle_finger script to /home/hosodalab9/Sensor-Glove/install/subscriber/lib/subscriber
+[1.726s] Installing subscriber script to /home/hosodalab9/Sensor-Glove/install/subscriber/lib/subscriber
+[1.727s] 
+[1.727s] Installed /home/hosodalab9/Sensor-Glove/build/subscriber
+[1.727s] running symlink_data
+[1.728s] creating /home/hosodalab9/Sensor-Glove/install/subscriber/share/ament_index
+[1.728s] creating /home/hosodalab9/Sensor-Glove/install/subscriber/share/ament_index/resource_index
+[1.729s] creating /home/hosodalab9/Sensor-Glove/install/subscriber/share/ament_index/resource_index/packages
+[1.729s] symbolically linking /home/hosodalab9/Sensor-Glove/build/subscriber/resource/subscriber -> /home/hosodalab9/Sensor-Glove/install/subscriber/share/ament_index/resource_index/packages
+[1.730s] symbolically linking /home/hosodalab9/Sensor-Glove/build/subscriber/package.xml -> /home/hosodalab9/Sensor-Glove/install/subscriber/share/subscriber
+[1.818s] Invoked command in '/home/hosodalab9/Sensor-Glove/build/subscriber' returned '0': PYTHONPATH=/home/hosodalab9/Sensor-Glove/build/subscriber/prefix_override:/usr/lib/python3/dist-packages/colcon_core/task/python/colcon_distutils_commands:/home/hosodalab9/Sensor-Glove/install/subscriber/lib/python3.10/site-packages:${PYTHONPATH} /usr/bin/python3 -W ignore:setup.py install is deprecated setup.py develop --editable --build-directory /home/hosodalab9/Sensor-Glove/build/subscriber/build --no-deps symlink_data

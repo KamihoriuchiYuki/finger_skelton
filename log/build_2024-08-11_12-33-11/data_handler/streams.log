@@ -1,0 +1,31 @@
+[0.022s] Invoking command in '/home/hosodalab9/Sensor-Glove/build/data_handler': CMAKE_PREFIX_PATH=/opt/ros/humble /usr/bin/cmake --build /home/hosodalab9/Sensor-Glove/build/data_handler -- -j16 -l16
+[0.096s] [ 25%] [32mBuilding CXX object CMakeFiles/topics_subscriber.dir/src/topics_subscriber.cpp.o[0m
+[0.097s] [ 50%] [32mBuilding CXX object CMakeFiles/topics_combined_sub.dir/src/topics_combined_sub.cpp.o[0m
+[9.433s] [ 75%] [32m[1mLinking CXX executable topics_combined_sub[0m
+[9.700s] [100%] [32m[1mLinking CXX executable topics_subscriber[0m
+[9.822s] [100%] Built target topics_combined_sub
+[10.067s] [100%] Built target topics_subscriber
+[10.080s] Invoked command in '/home/hosodalab9/Sensor-Glove/build/data_handler' returned '0': CMAKE_PREFIX_PATH=/opt/ros/humble /usr/bin/cmake --build /home/hosodalab9/Sensor-Glove/build/data_handler -- -j16 -l16
+[10.116s] Invoking command in '/home/hosodalab9/Sensor-Glove/build/data_handler': CMAKE_PREFIX_PATH=/opt/ros/humble /usr/bin/cmake --install /home/hosodalab9/Sensor-Glove/build/data_handler
+[10.123s] -- Install configuration: ""
+[10.123s] -- Execute custom install script
+[10.123s] -- Symlinking: /home/hosodalab9/Sensor-Glove/install/data_handler/lib/data_handler/topics_subscriber
+[10.133s] -- Symlinking: /home/hosodalab9/Sensor-Glove/install/data_handler/lib/data_handler/topics_combined_sub
+[10.143s] -- Up-to-date symlink: /home/hosodalab9/Sensor-Glove/install/data_handler/lib/data_handler/topics_subscriber
+[10.143s] -- Up-to-date symlink: /home/hosodalab9/Sensor-Glove/install/data_handler/lib/data_handler/topics_combined_sub
+[10.143s] -- Symlinking: /home/hosodalab9/Sensor-Glove/install/data_handler/share/ament_index/resource_index/package_run_dependencies/data_handler
+[10.152s] -- Symlinking: /home/hosodalab9/Sensor-Glove/install/data_handler/share/ament_index/resource_index/parent_prefix_path/data_handler
+[10.162s] -- Symlinking: /home/hosodalab9/Sensor-Glove/install/data_handler/share/data_handler/environment/ament_prefix_path.sh
+[10.171s] -- Symlinking: /home/hosodalab9/Sensor-Glove/install/data_handler/share/data_handler/environment/ament_prefix_path.dsv
+[10.180s] -- Symlinking: /home/hosodalab9/Sensor-Glove/install/data_handler/share/data_handler/environment/path.sh
+[10.189s] -- Symlinking: /home/hosodalab9/Sensor-Glove/install/data_handler/share/data_handler/environment/path.dsv
+[10.196s] -- Symlinking: /home/hosodalab9/Sensor-Glove/install/data_handler/share/data_handler/local_setup.bash
+[10.204s] -- Symlinking: /home/hosodalab9/Sensor-Glove/install/data_handler/share/data_handler/local_setup.sh
+[10.213s] -- Symlinking: /home/hosodalab9/Sensor-Glove/install/data_handler/share/data_handler/local_setup.zsh
+[10.222s] -- Symlinking: /home/hosodalab9/Sensor-Glove/install/data_handler/share/data_handler/local_setup.dsv
+[10.231s] -- Symlinking: /home/hosodalab9/Sensor-Glove/install/data_handler/share/data_handler/package.dsv
+[10.239s] -- Symlinking: /home/hosodalab9/Sensor-Glove/install/data_handler/share/ament_index/resource_index/packages/data_handler
+[10.249s] -- Symlinking: /home/hosodalab9/Sensor-Glove/install/data_handler/share/data_handler/cmake/data_handlerConfig.cmake
+[10.260s] -- Symlinking: /home/hosodalab9/Sensor-Glove/install/data_handler/share/data_handler/cmake/data_handlerConfig-version.cmake
+[10.269s] -- Symlinking: /home/hosodalab9/Sensor-Glove/install/data_handler/share/data_handler/package.xml
+[10.281s] Invoked command in '/home/hosodalab9/Sensor-Glove/build/data_handler' returned '0': CMAKE_PREFIX_PATH=/opt/ros/humble /usr/bin/cmake --install /home/hosodalab9/Sensor-Glove/build/data_handler

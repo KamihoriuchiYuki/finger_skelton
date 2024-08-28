@@ -1,0 +1,1 @@
+/home/hosodalab9/Sensor-Glove/build/data_handler/ament_cmake_environment_hooks/local_setup.zsh

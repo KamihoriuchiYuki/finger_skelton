@@ -1,0 +1,10 @@
+{
+  "package_name": "realsense2_camera_msgs",
+  "non_idl_tuples": [
+    "/home/hosodalab9/Sensor-Glove/src/hand_sense_ws/src/realsense-ros/realsense2_camera_msgs:msg/IMUInfo.msg",
+    "/home/hosodalab9/Sensor-Glove/src/hand_sense_ws/src/realsense-ros/realsense2_camera_msgs:msg/Extrinsics.msg",
+    "/home/hosodalab9/Sensor-Glove/src/hand_sense_ws/src/realsense-ros/realsense2_camera_msgs:msg/Metadata.msg",
+    "/home/hosodalab9/Sensor-Glove/src/hand_sense_ws/src/realsense-ros/realsense2_camera_msgs:msg/RGBD.msg",
+    "/home/hosodalab9/Sensor-Glove/src/hand_sense_ws/src/realsense-ros/realsense2_camera_msgs:srv/DeviceInfo.srv"
+  ]
+}

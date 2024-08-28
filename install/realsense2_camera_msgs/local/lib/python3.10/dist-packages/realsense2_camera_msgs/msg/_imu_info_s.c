@@ -1,0 +1,1 @@
+/home/hosodalab9/Sensor-Glove/build/realsense2_camera_msgs/rosidl_generator_py/realsense2_camera_msgs/msg/_imu_info_s.c

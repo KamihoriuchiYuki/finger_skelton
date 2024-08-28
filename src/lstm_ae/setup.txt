@@ -1,0 +1,5 @@
+pip3 install keras tensorflow
+
+
+# Install CUDA
+https://qiita.com/porizou1/items/74d8264d6381ee2941bd

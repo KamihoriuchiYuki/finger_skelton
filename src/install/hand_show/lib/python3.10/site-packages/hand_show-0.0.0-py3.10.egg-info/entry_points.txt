@@ -1,0 +1,4 @@
+[console_scripts]
+listener_index = src.listener_index:main
+talker_index = src.talker_index:main
+

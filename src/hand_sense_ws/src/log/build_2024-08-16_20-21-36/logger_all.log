@@ -1,0 +1,185 @@
+[0.117s] DEBUG:colcon:Command line arguments: ['/usr/bin/colcon', 'build', '--packages-select', 'hand_show']
+[0.117s] DEBUG:colcon:Parsed command line arguments: Namespace(log_base=None, log_level=None, verb_name='build', build_base='build', install_base='install', merge_install=False, symlink_install=False, test_result_base=None, continue_on_error=False, executor='parallel', parallel_workers=16, event_handlers=None, ignore_user_meta=False, metas=['./colcon.meta'], base_paths=['.'], packages_ignore=None, packages_ignore_regex=None, paths=None, packages_up_to=None, packages_up_to_regex=None, packages_above=None, packages_above_and_dependencies=None, packages_above_depth=None, packages_select_by_dep=None, packages_skip_by_dep=None, packages_skip_up_to=None, packages_select_build_failed=False, packages_skip_build_finished=False, packages_select_test_failures=False, packages_skip_test_passed=False, packages_select=['hand_show'], packages_skip=None, packages_select_regex=None, packages_skip_regex=None, packages_start=None, packages_end=None, allow_overriding=[], cmake_args=None, cmake_target=None, cmake_target_skip_unavailable=False, cmake_clean_cache=False, cmake_clean_first=False, cmake_force_configure=False, ament_cmake_args=None, catkin_cmake_args=None, catkin_skip_building_tests=False, mixin_files=None, mixin=None, verb_parser=<colcon_mixin.mixin.mixin_argument.MixinArgumentDecorator object at 0x75e653a4c3a0>, verb_extension=<colcon_core.verb.build.BuildVerb object at 0x75e653ba4a90>, main=<bound method BuildVerb.main of <colcon_core.verb.build.BuildVerb object at 0x75e653ba4a90>>, mixin_verb=('build',))
+[0.326s] Level 1:colcon.colcon_core.package_discovery:discover_packages(colcon_meta) check parameters
+[0.326s] Level 1:colcon.colcon_core.package_discovery:discover_packages(recursive) check parameters
+[0.326s] Level 1:colcon.colcon_core.package_discovery:discover_packages(ignore) check parameters
+[0.326s] Level 1:colcon.colcon_core.package_discovery:discover_packages(path) check parameters
+[0.326s] Level 1:colcon.colcon_core.package_discovery:discover_packages(colcon_meta) discover
+[0.326s] Level 1:colcon.colcon_core.package_discovery:discover_packages(recursive) discover
+[0.326s] INFO:colcon.colcon_core.package_discovery:Crawling recursively for packages in '/home/hosodalab9/Sensor-Glove/src/hand_sense_ws/src'
+[0.326s] Level 1:colcon.colcon_core.package_identification:_identify(.) by extensions ['ignore', 'ignore_ament_install']
+[0.327s] Level 1:colcon.colcon_core.package_identification:_identify(.) by extension 'ignore'
+[0.327s] Level 1:colcon.colcon_core.package_identification:_identify(.) by extension 'ignore_ament_install'
+[0.327s] Level 1:colcon.colcon_core.package_identification:_identify(.) by extensions ['colcon_pkg']
+[0.327s] Level 1:colcon.colcon_core.package_identification:_identify(.) by extension 'colcon_pkg'
+[0.327s] Level 1:colcon.colcon_core.package_identification:_identify(.) by extensions ['colcon_meta']
+[0.327s] Level 1:colcon.colcon_core.package_identification:_identify(.) by extension 'colcon_meta'
+[0.327s] Level 1:colcon.colcon_core.package_identification:_identify(.) by extensions ['ros']
+[0.327s] Level 1:colcon.colcon_core.package_identification:_identify(.) by extension 'ros'
+[0.347s] Level 1:colcon.colcon_core.package_identification:_identify(.) by extensions ['cmake', 'python']
+[0.347s] Level 1:colcon.colcon_core.package_identification:_identify(.) by extension 'cmake'
+[0.347s] Level 1:colcon.colcon_core.package_identification:_identify(.) by extension 'python'
+[0.347s] Level 1:colcon.colcon_core.package_identification:_identify(.) by extensions ['python_setup_py']
+[0.347s] Level 1:colcon.colcon_core.package_identification:_identify(.) by extension 'python_setup_py'
+[0.348s] Level 1:colcon.colcon_core.package_identification:_identify(build) by extensions ['ignore', 'ignore_ament_install']
+[0.348s] Level 1:colcon.colcon_core.package_identification:_identify(build) by extension 'ignore'
+[0.348s] Level 1:colcon.colcon_core.package_identification:_identify(build) ignored
+[0.348s] Level 1:colcon.colcon_core.package_identification:_identify(hand_show) by extensions ['ignore', 'ignore_ament_install']
+[0.348s] Level 1:colcon.colcon_core.package_identification:_identify(hand_show) by extension 'ignore'
+[0.348s] Level 1:colcon.colcon_core.package_identification:_identify(hand_show) by extension 'ignore_ament_install'
+[0.348s] Level 1:colcon.colcon_core.package_identification:_identify(hand_show) by extensions ['colcon_pkg']
+[0.348s] Level 1:colcon.colcon_core.package_identification:_identify(hand_show) by extension 'colcon_pkg'
+[0.348s] Level 1:colcon.colcon_core.package_identification:_identify(hand_show) by extensions ['colcon_meta']
+[0.348s] Level 1:colcon.colcon_core.package_identification:_identify(hand_show) by extension 'colcon_meta'
+[0.348s] Level 1:colcon.colcon_core.package_identification:_identify(hand_show) by extensions ['ros']
+[0.348s] Level 1:colcon.colcon_core.package_identification:_identify(hand_show) by extension 'ros'
+[0.350s] WARNING:colcon.colcon_core.package_identification:ROS package 'hand_show' in 'hand_show' has more than one build type
+[0.350s] Level 1:colcon.colcon_core.package_identification:_identify(hand_show) by extensions ['cmake', 'python']
+[0.351s] Level 1:colcon.colcon_core.package_identification:_identify(hand_show) by extension 'cmake'
+[0.351s] Level 1:colcon.colcon_core.package_identification:_identify(hand_show) by extension 'python'
+[0.351s] DEBUG:colcon.colcon_core.package_identification:Python package in 'hand_show' passes arguments to the setup() function which requires a different identification extension than 'python'
+[0.351s] Level 1:colcon.colcon_core.package_identification:_identify(hand_show) by extensions ['python_setup_py']
+[0.351s] Level 1:colcon.colcon_core.package_identification:_identify(hand_show) by extension 'python_setup_py'
+[0.652s] DEBUG:colcon.colcon_core.package_identification:Package 'hand_show' with type 'python' and name 'hand_show'
+[0.653s] Level 1:colcon.colcon_core.package_identification:_identify(install) by extensions ['ignore', 'ignore_ament_install']
+[0.653s] Level 1:colcon.colcon_core.package_identification:_identify(install) by extension 'ignore'
+[0.653s] Level 1:colcon.colcon_core.package_identification:_identify(install) ignored
+[0.653s] Level 1:colcon.colcon_core.package_identification:_identify(log) by extensions ['ignore', 'ignore_ament_install']
+[0.653s] Level 1:colcon.colcon_core.package_identification:_identify(log) by extension 'ignore'
+[0.653s] Level 1:colcon.colcon_core.package_identification:_identify(log) ignored
+[0.653s] Level 1:colcon.colcon_core.package_identification:_identify(realsense-ros) by extensions ['ignore', 'ignore_ament_install']
+[0.653s] Level 1:colcon.colcon_core.package_identification:_identify(realsense-ros) by extension 'ignore'
+[0.653s] Level 1:colcon.colcon_core.package_identification:_identify(realsense-ros) by extension 'ignore_ament_install'
+[0.653s] Level 1:colcon.colcon_core.package_identification:_identify(realsense-ros) by extensions ['colcon_pkg']
+[0.653s] Level 1:colcon.colcon_core.package_identification:_identify(realsense-ros) by extension 'colcon_pkg'
+[0.653s] Level 1:colcon.colcon_core.package_identification:_identify(realsense-ros) by extensions ['colcon_meta']
+[0.653s] Level 1:colcon.colcon_core.package_identification:_identify(realsense-ros) by extension 'colcon_meta'
+[0.653s] Level 1:colcon.colcon_core.package_identification:_identify(realsense-ros) by extensions ['ros']
+[0.653s] Level 1:colcon.colcon_core.package_identification:_identify(realsense-ros) by extension 'ros'
+[0.654s] Level 1:colcon.colcon_core.package_identification:_identify(realsense-ros) by extensions ['cmake', 'python']
+[0.654s] Level 1:colcon.colcon_core.package_identification:_identify(realsense-ros) by extension 'cmake'
+[0.654s] Level 1:colcon.colcon_core.package_identification:_identify(realsense-ros) by extension 'python'
+[0.654s] Level 1:colcon.colcon_core.package_identification:_identify(realsense-ros) by extensions ['python_setup_py']
+[0.654s] Level 1:colcon.colcon_core.package_identification:_identify(realsense-ros) by extension 'python_setup_py'
+[0.654s] Level 1:colcon.colcon_core.package_identification:_identify(realsense-ros/realsense2_camera) by extensions ['ignore', 'ignore_ament_install']
+[0.654s] Level 1:colcon.colcon_core.package_identification:_identify(realsense-ros/realsense2_camera) by extension 'ignore'
+[0.654s] Level 1:colcon.colcon_core.package_identification:_identify(realsense-ros/realsense2_camera) by extension 'ignore_ament_install'
+[0.654s] Level 1:colcon.colcon_core.package_identification:_identify(realsense-ros/realsense2_camera) by extensions ['colcon_pkg']
+[0.654s] Level 1:colcon.colcon_core.package_identification:_identify(realsense-ros/realsense2_camera) by extension 'colcon_pkg'
+[0.654s] Level 1:colcon.colcon_core.package_identification:_identify(realsense-ros/realsense2_camera) by extensions ['colcon_meta']
+[0.654s] Level 1:colcon.colcon_core.package_identification:_identify(realsense-ros/realsense2_camera) by extension 'colcon_meta'
+[0.654s] Level 1:colcon.colcon_core.package_identification:_identify(realsense-ros/realsense2_camera) by extensions ['ros']
+[0.654s] Level 1:colcon.colcon_core.package_identification:_identify(realsense-ros/realsense2_camera) by extension 'ros'
+[0.656s] DEBUG:colcon.colcon_core.package_identification:Package 'realsense-ros/realsense2_camera' with type 'ros.ament_cmake' and name 'realsense2_camera'
+[0.656s] Level 1:colcon.colcon_core.package_identification:_identify(realsense-ros/realsense2_camera_msgs) by extensions ['ignore', 'ignore_ament_install']
+[0.656s] Level 1:colcon.colcon_core.package_identification:_identify(realsense-ros/realsense2_camera_msgs) by extension 'ignore'
+[0.656s] Level 1:colcon.colcon_core.package_identification:_identify(realsense-ros/realsense2_camera_msgs) by extension 'ignore_ament_install'
+[0.656s] Level 1:colcon.colcon_core.package_identification:_identify(realsense-ros/realsense2_camera_msgs) by extensions ['colcon_pkg']
+[0.656s] Level 1:colcon.colcon_core.package_identification:_identify(realsense-ros/realsense2_camera_msgs) by extension 'colcon_pkg'
+[0.656s] Level 1:colcon.colcon_core.package_identification:_identify(realsense-ros/realsense2_camera_msgs) by extensions ['colcon_meta']
+[0.656s] Level 1:colcon.colcon_core.package_identification:_identify(realsense-ros/realsense2_camera_msgs) by extension 'colcon_meta'
+[0.656s] Level 1:colcon.colcon_core.package_identification:_identify(realsense-ros/realsense2_camera_msgs) by extensions ['ros']
+[0.656s] Level 1:colcon.colcon_core.package_identification:_identify(realsense-ros/realsense2_camera_msgs) by extension 'ros'
+[0.657s] DEBUG:colcon.colcon_core.package_identification:Package 'realsense-ros/realsense2_camera_msgs' with type 'ros.ament_cmake' and name 'realsense2_camera_msgs'
+[0.657s] Level 1:colcon.colcon_core.package_identification:_identify(realsense-ros/realsense2_description) by extensions ['ignore', 'ignore_ament_install']
+[0.657s] Level 1:colcon.colcon_core.package_identification:_identify(realsense-ros/realsense2_description) by extension 'ignore'
+[0.657s] Level 1:colcon.colcon_core.package_identification:_identify(realsense-ros/realsense2_description) by extension 'ignore_ament_install'
+[0.657s] Level 1:colcon.colcon_core.package_identification:_identify(realsense-ros/realsense2_description) by extensions ['colcon_pkg']
+[0.657s] Level 1:colcon.colcon_core.package_identification:_identify(realsense-ros/realsense2_description) by extension 'colcon_pkg'
+[0.657s] Level 1:colcon.colcon_core.package_identification:_identify(realsense-ros/realsense2_description) by extensions ['colcon_meta']
+[0.657s] Level 1:colcon.colcon_core.package_identification:_identify(realsense-ros/realsense2_description) by extension 'colcon_meta'
+[0.658s] Level 1:colcon.colcon_core.package_identification:_identify(realsense-ros/realsense2_description) by extensions ['ros']
+[0.658s] Level 1:colcon.colcon_core.package_identification:_identify(realsense-ros/realsense2_description) by extension 'ros'
+[0.658s] DEBUG:colcon.colcon_core.package_identification:Package 'realsense-ros/realsense2_description' with type 'ros.ament_cmake' and name 'realsense2_description'
+[0.658s] Level 1:colcon.colcon_core.package_identification:_identify(realsense-ros/scripts) by extensions ['ignore', 'ignore_ament_install']
+[0.658s] Level 1:colcon.colcon_core.package_identification:_identify(realsense-ros/scripts) by extension 'ignore'
+[0.658s] Level 1:colcon.colcon_core.package_identification:_identify(realsense-ros/scripts) by extension 'ignore_ament_install'
+[0.659s] Level 1:colcon.colcon_core.package_identification:_identify(realsense-ros/scripts) by extensions ['colcon_pkg']
+[0.659s] Level 1:colcon.colcon_core.package_identification:_identify(realsense-ros/scripts) by extension 'colcon_pkg'
+[0.659s] Level 1:colcon.colcon_core.package_identification:_identify(realsense-ros/scripts) by extensions ['colcon_meta']
+[0.659s] Level 1:colcon.colcon_core.package_identification:_identify(realsense-ros/scripts) by extension 'colcon_meta'
+[0.659s] Level 1:colcon.colcon_core.package_identification:_identify(realsense-ros/scripts) by extensions ['ros']
+[0.659s] Level 1:colcon.colcon_core.package_identification:_identify(realsense-ros/scripts) by extension 'ros'
+[0.659s] Level 1:colcon.colcon_core.package_identification:_identify(realsense-ros/scripts) by extensions ['cmake', 'python']
+[0.659s] Level 1:colcon.colcon_core.package_identification:_identify(realsense-ros/scripts) by extension 'cmake'
+[0.659s] Level 1:colcon.colcon_core.package_identification:_identify(realsense-ros/scripts) by extension 'python'
+[0.659s] Level 1:colcon.colcon_core.package_identification:_identify(realsense-ros/scripts) by extensions ['python_setup_py']
+[0.659s] Level 1:colcon.colcon_core.package_identification:_identify(realsense-ros/scripts) by extension 'python_setup_py'
+[0.659s] Level 1:colcon.colcon_core.package_identification:_identify(subscriber) by extensions ['ignore', 'ignore_ament_install']
+[0.659s] Level 1:colcon.colcon_core.package_identification:_identify(subscriber) by extension 'ignore'
+[0.659s] Level 1:colcon.colcon_core.package_identification:_identify(subscriber) by extension 'ignore_ament_install'
+[0.659s] Level 1:colcon.colcon_core.package_identification:_identify(subscriber) by extensions ['colcon_pkg']
+[0.659s] Level 1:colcon.colcon_core.package_identification:_identify(subscriber) by extension 'colcon_pkg'
+[0.659s] Level 1:colcon.colcon_core.package_identification:_identify(subscriber) by extensions ['colcon_meta']
+[0.659s] Level 1:colcon.colcon_core.package_identification:_identify(subscriber) by extension 'colcon_meta'
+[0.659s] Level 1:colcon.colcon_core.package_identification:_identify(subscriber) by extensions ['ros']
+[0.659s] Level 1:colcon.colcon_core.package_identification:_identify(subscriber) by extension 'ros'
+[0.660s] DEBUG:colcon.colcon_core.package_identification:Package 'subscriber' with type 'ros.ament_python' and name 'subscriber'
+[0.660s] Level 1:colcon.colcon_core.package_discovery:discover_packages(recursive) using defaults
+[0.660s] Level 1:colcon.colcon_core.package_discovery:discover_packages(ignore) discover
+[0.660s] Level 1:colcon.colcon_core.package_discovery:discover_packages(ignore) using defaults
+[0.660s] Level 1:colcon.colcon_core.package_discovery:discover_packages(path) discover
+[0.660s] Level 1:colcon.colcon_core.package_discovery:discover_packages(path) using defaults
+[0.680s] INFO:colcon.colcon_core.package_selection:Skipping not selected package 'realsense2_camera_msgs' in 'realsense-ros/realsense2_camera_msgs'
+[0.680s] INFO:colcon.colcon_core.package_selection:Skipping not selected package 'subscriber' in 'subscriber'
+[0.680s] INFO:colcon.colcon_core.package_selection:Skipping not selected package 'realsense2_camera' in 'realsense-ros/realsense2_camera'
+[0.680s] INFO:colcon.colcon_core.package_selection:Skipping not selected package 'realsense2_description' in 'realsense-ros/realsense2_description'
+[0.680s] Level 1:colcon.colcon_core.package_discovery:discover_packages(prefix_path) check parameters
+[0.680s] Level 1:colcon.colcon_core.package_discovery:discover_packages(prefix_path) discover
+[0.682s] DEBUG:colcon.colcon_installed_package_information.package_discovery:Found 6 installed packages in /home/hosodalab9/Sensor-Glove/install
+[0.684s] DEBUG:colcon.colcon_installed_package_information.package_discovery:Found 346 installed packages in /opt/ros/humble
+[0.686s] Level 1:colcon.colcon_core.package_discovery:discover_packages(prefix_path) using defaults
+[0.733s] Level 5:colcon.colcon_core.verb:set package 'hand_show' build argument 'cmake_args' from command line to 'None'
+[0.733s] Level 5:colcon.colcon_core.verb:set package 'hand_show' build argument 'cmake_target' from command line to 'None'
+[0.733s] Level 5:colcon.colcon_core.verb:set package 'hand_show' build argument 'cmake_target_skip_unavailable' from command line to 'False'
+[0.733s] Level 5:colcon.colcon_core.verb:set package 'hand_show' build argument 'cmake_clean_cache' from command line to 'False'
+[0.733s] Level 5:colcon.colcon_core.verb:set package 'hand_show' build argument 'cmake_clean_first' from command line to 'False'
+[0.733s] Level 5:colcon.colcon_core.verb:set package 'hand_show' build argument 'cmake_force_configure' from command line to 'False'
+[0.733s] Level 5:colcon.colcon_core.verb:set package 'hand_show' build argument 'ament_cmake_args' from command line to 'None'
+[0.734s] Level 5:colcon.colcon_core.verb:set package 'hand_show' build argument 'catkin_cmake_args' from command line to 'None'
+[0.734s] Level 5:colcon.colcon_core.verb:set package 'hand_show' build argument 'catkin_skip_building_tests' from command line to 'False'
+[0.734s] DEBUG:colcon.colcon_core.verb:Building package 'hand_show' with the following arguments: {'ament_cmake_args': None, 'build_base': '/home/hosodalab9/Sensor-Glove/src/hand_sense_ws/src/build/hand_show', 'catkin_cmake_args': None, 'catkin_skip_building_tests': False, 'cmake_args': None, 'cmake_clean_cache': False, 'cmake_clean_first': False, 'cmake_force_configure': False, 'cmake_target': None, 'cmake_target_skip_unavailable': False, 'install_base': '/home/hosodalab9/Sensor-Glove/src/hand_sense_ws/src/install/hand_show', 'merge_install': False, 'path': '/home/hosodalab9/Sensor-Glove/src/hand_sense_ws/src/hand_show', 'symlink_install': False, 'test_result_base': None}
+[0.734s] INFO:colcon.colcon_core.executor:Executing jobs using 'parallel' executor
+[0.735s] DEBUG:colcon.colcon_parallel_executor.executor.parallel:run_until_complete
+[0.735s] INFO:colcon.colcon_core.task.python.build:Building Python package in '/home/hosodalab9/Sensor-Glove/src/hand_sense_ws/src/hand_show'
+[0.738s] INFO:colcon.colcon_core.plugin_system:Skipping extension 'colcon_core.shell.bat': Not used on non-Windows systems
+[0.738s] INFO:colcon.colcon_core.shell:Skip shell extension 'powershell' for command environment: Not usable outside of PowerShell
+[0.738s] DEBUG:colcon.colcon_core.shell:Skip shell extension 'dsv' for command environment
+[1.291s] DEBUG:colcon.colcon_core.event_handler.log_command:Invoking command in '/home/hosodalab9/Sensor-Glove/src/hand_sense_ws/src/hand_show': PYTHONPATH=/home/hosodalab9/Sensor-Glove/src/hand_sense_ws/src/build/hand_show/prefix_override:/usr/lib/python3/dist-packages/colcon_core/task/python/colcon_distutils_commands:/home/hosodalab9/Sensor-Glove/src/hand_sense_ws/src/install/hand_show/lib/python3.10/site-packages:${PYTHONPATH} /usr/bin/python3 -W ignore:setup.py install is deprecated setup.py egg_info --egg-base ../build/hand_show build --build-base /home/hosodalab9/Sensor-Glove/src/hand_sense_ws/src/build/hand_show/build install --record /home/hosodalab9/Sensor-Glove/src/hand_sense_ws/src/build/hand_show/install.log --single-version-externally-managed install_data
+[1.540s] DEBUG:colcon.colcon_core.event_handler.log_command:Invoked command in '/home/hosodalab9/Sensor-Glove/src/hand_sense_ws/src/hand_show' returned '0': PYTHONPATH=/home/hosodalab9/Sensor-Glove/src/hand_sense_ws/src/build/hand_show/prefix_override:/usr/lib/python3/dist-packages/colcon_core/task/python/colcon_distutils_commands:/home/hosodalab9/Sensor-Glove/src/hand_sense_ws/src/install/hand_show/lib/python3.10/site-packages:${PYTHONPATH} /usr/bin/python3 -W ignore:setup.py install is deprecated setup.py egg_info --egg-base ../build/hand_show build --build-base /home/hosodalab9/Sensor-Glove/src/hand_sense_ws/src/build/hand_show/build install --record /home/hosodalab9/Sensor-Glove/src/hand_sense_ws/src/build/hand_show/install.log --single-version-externally-managed install_data
+[1.542s] Level 1:colcon.colcon_core.environment:checking '/home/hosodalab9/Sensor-Glove/src/hand_sense_ws/src/install/hand_show' for CMake module files
+[1.542s] Level 1:colcon.colcon_core.environment:checking '/home/hosodalab9/Sensor-Glove/src/hand_sense_ws/src/install/hand_show' for CMake config files
+[1.543s] Level 1:colcon.colcon_core.environment:checking '/home/hosodalab9/Sensor-Glove/src/hand_sense_ws/src/install/hand_show/lib'
+[1.543s] Level 1:colcon.colcon_core.environment:checking '/home/hosodalab9/Sensor-Glove/src/hand_sense_ws/src/install/hand_show/bin'
+[1.543s] Level 1:colcon.colcon_core.environment:checking '/home/hosodalab9/Sensor-Glove/src/hand_sense_ws/src/install/hand_show/lib/pkgconfig/hand_show.pc'
+[1.543s] Level 1:colcon.colcon_core.environment:checking '/home/hosodalab9/Sensor-Glove/src/hand_sense_ws/src/install/hand_show/lib/python3.10/site-packages'
+[1.543s] Level 1:colcon.colcon_core.shell:create_environment_hook('hand_show', 'pythonpath')
+[1.543s] INFO:colcon.colcon_core.shell:Creating environment hook '/home/hosodalab9/Sensor-Glove/src/hand_sense_ws/src/install/hand_show/share/hand_show/hook/pythonpath.ps1'
+[1.544s] INFO:colcon.colcon_core.shell:Creating environment descriptor '/home/hosodalab9/Sensor-Glove/src/hand_sense_ws/src/install/hand_show/share/hand_show/hook/pythonpath.dsv'
+[1.544s] INFO:colcon.colcon_core.shell:Creating environment hook '/home/hosodalab9/Sensor-Glove/src/hand_sense_ws/src/install/hand_show/share/hand_show/hook/pythonpath.sh'
+[1.545s] Level 1:colcon.colcon_core.environment:checking '/home/hosodalab9/Sensor-Glove/src/hand_sense_ws/src/install/hand_show/bin'
+[1.545s] Level 1:colcon.colcon_core.environment:create_environment_scripts_only(hand_show)
+[1.545s] INFO:colcon.colcon_core.shell:Creating package script '/home/hosodalab9/Sensor-Glove/src/hand_sense_ws/src/install/hand_show/share/hand_show/package.ps1'
+[1.545s] INFO:colcon.colcon_core.shell:Creating package descriptor '/home/hosodalab9/Sensor-Glove/src/hand_sense_ws/src/install/hand_show/share/hand_show/package.dsv'
+[1.546s] INFO:colcon.colcon_core.shell:Creating package script '/home/hosodalab9/Sensor-Glove/src/hand_sense_ws/src/install/hand_show/share/hand_show/package.sh'
+[1.546s] INFO:colcon.colcon_core.shell:Creating package script '/home/hosodalab9/Sensor-Glove/src/hand_sense_ws/src/install/hand_show/share/hand_show/package.bash'
+[1.546s] INFO:colcon.colcon_core.shell:Creating package script '/home/hosodalab9/Sensor-Glove/src/hand_sense_ws/src/install/hand_show/share/hand_show/package.zsh'
+[1.547s] Level 1:colcon.colcon_core.environment:create_file_with_runtime_dependencies(/home/hosodalab9/Sensor-Glove/src/hand_sense_ws/src/install/hand_show/share/colcon-core/packages/hand_show)
+[1.547s] DEBUG:colcon.colcon_parallel_executor.executor.parallel:closing loop
+[1.547s] DEBUG:colcon.colcon_parallel_executor.executor.parallel:loop closed
+[1.547s] DEBUG:colcon.colcon_parallel_executor.executor.parallel:run_until_complete finished with '0'
+[1.547s] DEBUG:colcon.colcon_core.event_reactor:joining thread
+[1.551s] INFO:colcon.colcon_core.plugin_system:Skipping extension 'colcon_notification.desktop_notification.terminal_notifier': Not used on non-Darwin systems
+[1.551s] INFO:colcon.colcon_core.plugin_system:Skipping extension 'colcon_notification.desktop_notification.win32': Not used on non-Windows systems
+[1.551s] INFO:colcon.colcon_notification.desktop_notification:Sending desktop notification using 'notify2'
+[1.561s] DEBUG:colcon.colcon_core.event_reactor:joined thread
+[1.561s] INFO:colcon.colcon_core.shell:Creating prefix script '/home/hosodalab9/Sensor-Glove/src/hand_sense_ws/src/install/local_setup.ps1'
+[1.562s] INFO:colcon.colcon_core.shell:Creating prefix util module '/home/hosodalab9/Sensor-Glove/src/hand_sense_ws/src/install/_local_setup_util_ps1.py'
+[1.563s] INFO:colcon.colcon_core.shell:Creating prefix chain script '/home/hosodalab9/Sensor-Glove/src/hand_sense_ws/src/install/setup.ps1'
+[1.564s] INFO:colcon.colcon_core.shell:Creating prefix script '/home/hosodalab9/Sensor-Glove/src/hand_sense_ws/src/install/local_setup.sh'
+[1.564s] INFO:colcon.colcon_core.shell:Creating prefix util module '/home/hosodalab9/Sensor-Glove/src/hand_sense_ws/src/install/_local_setup_util_sh.py'
+[1.565s] INFO:colcon.colcon_core.shell:Creating prefix chain script '/home/hosodalab9/Sensor-Glove/src/hand_sense_ws/src/install/setup.sh'
+[1.565s] INFO:colcon.colcon_core.shell:Creating prefix script '/home/hosodalab9/Sensor-Glove/src/hand_sense_ws/src/install/local_setup.bash'
+[1.566s] INFO:colcon.colcon_core.shell:Creating prefix chain script '/home/hosodalab9/Sensor-Glove/src/hand_sense_ws/src/install/setup.bash'
+[1.566s] INFO:colcon.colcon_core.shell:Creating prefix script '/home/hosodalab9/Sensor-Glove/src/hand_sense_ws/src/install/local_setup.zsh'
+[1.567s] INFO:colcon.colcon_core.shell:Creating prefix chain script '/home/hosodalab9/Sensor-Glove/src/hand_sense_ws/src/install/setup.zsh'

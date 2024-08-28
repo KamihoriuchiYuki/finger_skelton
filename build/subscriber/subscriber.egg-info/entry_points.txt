@@ -1,0 +1,4 @@
+[console_scripts]
+angle_finger = subscriber.angle_finger:main
+subscriber = subscriber.subscriber:main
+

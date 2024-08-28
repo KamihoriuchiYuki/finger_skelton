@@ -1,0 +1,3 @@
+[console_scripts]
+predcict = sensor_fusion.real_time_prediction:main
+

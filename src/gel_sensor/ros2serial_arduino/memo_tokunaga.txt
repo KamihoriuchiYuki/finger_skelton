@@ -1,0 +1,80 @@
+cbuild_pkg       //  colcon build＋指定されたパッケージとそのすべての依存関係をビルドすること　その後にパッケージ名でその依存関係がビルドされる
+cbuild // どこで実行しても一番上の階層でビルドされる
+
+bash  // 立ち上げるたびに毎回有効化される
+
+ls //リスト化の略称
+lsusb //刺さっているUSBをリスト化してくれる
+ls -la /刺さっているもの　//これでファイルの権限が確認できる
+sudo chmod 666/刺さっているもの　//権限を与える
+
+ros2 pkg list //ros2で実行できるパッケージを取得（ここに現れてないとビルドできていない）
+ros2 pkg executables パッケージ名// 実行できるパッケージ内のファイルを表示する
+
+ros2 run ros2serial_arduino serial_receive_node //Arduinoを動かす
+
+受け渡しを実行できるようにする
+cbuild_pkg       //  colcon build＋指定されたパッケージとそのすべての依存関係をビルドすること　その後にパッケージ名でその依存関係がビルドされる
+cbuild // どこで実行しても一番上の階層でビルドされる
+
+bash  // 立ち上げるたびに毎回有効化される
+
+ls //リスト化の略称
+lsusb //刺さっているUSBをリスト化してくれる
+ls -la /刺さっているもの　//これでファイルの権限が確認できる
+sudo chmod 666/刺さっているもの　//権限を与える
+
+ros2 pkg list //ros2で実行できるパッケージを取得（ここに現れてないとビルドできていない）
+ros2 pkg executables パッケージ名// 実行できるパッケージ内のファイルを表示する
+
+ros2 run ros2serial_arduino serial_receive_node //Arduinoを動かす
+
+受け渡しを実行できるようにする
+
+
+todo
+hlab6@HLAB-6:~/Sensor-Glove/src/gel_sensor$ ls -la /dev/ttyACM0
+crw-rw---- 1 root dialout 166, 0  8月  8 12:37 /dev/ttyACM0
+hlab6@HLAB-6:~/Sensor-Glove/src/gel_sensor$ sudo chmod 666 /dev/ttyACM0
+hlab6@HLAB-6:~/Sensor-Glove/src/gel_sensor$ ls -la /dev/ttyACM0
+crw-rw-rw- 1 root dialout 166, 0  8月  8 12:37 /dev/ttyACM0
+これで管理者権限を与える
+
+エンコーダ、デコーダーはそれぞれ圧縮解凍
+
+https://qiita.com/akinami/items/e9ce87c1859209a02776
+仕組みの理解
+
+gel_sensor/ros2serial_arduino/src/serial_receive_node.cpp 
+でbaudrateの変更（統一の必要がある)
+
+Arduino
+serial.writeの使い方。これはデフォルトで1byte=8bitの送信(256コまでしか無理)特にはじめの値の送信となる
+ので2byteを送りたいならば(Arduinoでの1024をかばーしたい)ずらして２回送信の必要がある
+それを受け取ったら論理和で表す
+
+# ros2でのtopic pubの作成 python
+https://qiita.com/nushitoritarou/items/5ea71160f5805aeae250
+https://ouxt-polaris.github.io/ros_handson/rclpy/
+メッセージの型の引用
+配列の宣言
+配列の初期化
+        msg_data = Int16MultiArray() #データ格納用の型を作成
+        msg_data.data = [] #データ格納配列の中身を毎回初期化
+配列に値を格納
+msg_data.data.append(np.Int16(angle_joint)) #上で求めた値を配列に格納する
+上記ではint16に変更したいから型宣言をしたけどそのままの型でいいなら何も宣言しない
+
+#2つのtopicをsubしてdataを同時にprint
+
+locate float64_multi_array.hpp　//型のヘッダーファイルを探す
+最初のincludeで省略できるのは
+CMakeListで
+find_package(rclcpp REQUIRED)
+find_package(std_msgs REQUIRED) //を入れる必要がある
+set(NODES topics_subscriber)
+foreach(target IN LISTS NODES)
+  add_executable(${target} src/${target}.cpp)
+  ament_target_dependencies(${target} rclcpp std_msgs)
+  install(TARGETS ${target} DESTINATION lib/${PROJECT_NAME})
+endforeach() //これも　依存関係の構築

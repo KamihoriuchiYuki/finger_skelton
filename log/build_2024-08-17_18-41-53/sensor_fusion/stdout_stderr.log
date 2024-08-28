@@ -1,0 +1,24 @@
+running develop
+/usr/lib/python3/dist-packages/setuptools/command/easy_install.py:158: EasyInstallDeprecationWarning: easy_install command is deprecated. Use build and pip and other standards-based tools.
+  warnings.warn(
+running egg_info
+creating sensor_fusion.egg-info
+writing sensor_fusion.egg-info/PKG-INFO
+writing dependency_links to sensor_fusion.egg-info/dependency_links.txt
+writing entry points to sensor_fusion.egg-info/entry_points.txt
+writing requirements to sensor_fusion.egg-info/requires.txt
+writing top-level names to sensor_fusion.egg-info/top_level.txt
+writing manifest file 'sensor_fusion.egg-info/SOURCES.txt'
+reading manifest file 'sensor_fusion.egg-info/SOURCES.txt'
+writing manifest file 'sensor_fusion.egg-info/SOURCES.txt'
+running build_ext
+Creating /home/hosodalab9/Sensor-Glove/install/sensor_fusion/lib/python3.10/site-packages/sensor-fusion.egg-link (link to .)
+Installing predcict script to /home/hosodalab9/Sensor-Glove/install/sensor_fusion/lib/sensor_fusion
+
+Installed /home/hosodalab9/Sensor-Glove/build/sensor_fusion
+running symlink_data
+creating /home/hosodalab9/Sensor-Glove/install/sensor_fusion/share/ament_index
+creating /home/hosodalab9/Sensor-Glove/install/sensor_fusion/share/ament_index/resource_index
+creating /home/hosodalab9/Sensor-Glove/install/sensor_fusion/share/ament_index/resource_index/packages
+symbolically linking /home/hosodalab9/Sensor-Glove/build/sensor_fusion/resource/sensor_fusion -> /home/hosodalab9/Sensor-Glove/install/sensor_fusion/share/ament_index/resource_index/packages
+symbolically linking /home/hosodalab9/Sensor-Glove/build/sensor_fusion/package.xml -> /home/hosodalab9/Sensor-Glove/install/sensor_fusion/share/sensor_fusion

@@ -1,0 +1,21 @@
+running egg_info
+writing ../../build/hand_show/hand_show.egg-info/PKG-INFO
+writing dependency_links to ../../build/hand_show/hand_show.egg-info/dependency_links.txt
+writing entry points to ../../build/hand_show/hand_show.egg-info/entry_points.txt
+writing requirements to ../../build/hand_show/hand_show.egg-info/requires.txt
+writing top-level names to ../../build/hand_show/hand_show.egg-info/top_level.txt
+reading manifest file '../../build/hand_show/hand_show.egg-info/SOURCES.txt'
+writing manifest file '../../build/hand_show/hand_show.egg-info/SOURCES.txt'
+running build
+running build_py
+running install
+running install_lib
+running install_data
+copying package.xml -> /home/hosodalab9/Sensor-Glove/install/hand_show/share/hand_show
+running install_egg_info
+removing '/home/hosodalab9/Sensor-Glove/install/hand_show/lib/python3.10/site-packages/hand_show-0.0.0-py3.10.egg-info' (and everything under it)
+Copying ../../build/hand_show/hand_show.egg-info to /home/hosodalab9/Sensor-Glove/install/hand_show/lib/python3.10/site-packages/hand_show-0.0.0-py3.10.egg-info
+running install_scripts
+Installing listener_index script to /home/hosodalab9/Sensor-Glove/install/hand_show/lib/hand_show
+Installing talker_index script to /home/hosodalab9/Sensor-Glove/install/hand_show/lib/hand_show
+writing list of installed files to '/home/hosodalab9/Sensor-Glove/build/hand_show/install.log'

@@ -1,0 +1,21 @@
+[0.015s] Invoking command in '/home/hosodalab9/Sensor-Glove/build/iw': /usr/bin/cmake /home/hosodalab9/Sensor-Glove/hand_sense_ws/src/openCV/build/3rdparty/ippicv/ippicv_lnx/iw -DCMAKE_INSTALL_PREFIX=/home/hosodalab9/Sensor-Glove/install/iw
+[0.019s] [31mCMake Error at CMakeLists.txt:5 (project):
+[0.019s]   project PROJECT called with incorrect number of arguments
+[0.019s] 
+[0.019s] [0m
+[0.019s] [31mCMake Error at CMakeLists.txt:7 (ocv_include_directories):
+[0.019s]   Unknown CMake command "ocv_include_directories".
+[0.019s] 
+[0.019s] [0m
+[0.019s] [33mCMake Warning (dev) in CMakeLists.txt:
+[0.019s]   No cmake_minimum_required command is present.  A line of code such as
+[0.019s] 
+[0.019s]     cmake_minimum_required(VERSION 3.22)
+[0.019s] 
+[0.019s]   should be added at the top of the file.  The version specified may be lower
+[0.019s]   if you wish to support older CMake versions for this project.  For more
+[0.020s]   information run "cmake --help-policy CMP0000".
+[0.020s] This warning is for project developers.  Use -Wno-dev to suppress it.
+[0.020s] [0m
+[0.020s] -- Configuring incomplete, errors occurred!
+[0.237s] Invoked command in '/home/hosodalab9/Sensor-Glove/build/iw' returned '1': /usr/bin/cmake /home/hosodalab9/Sensor-Glove/hand_sense_ws/src/openCV/build/3rdparty/ippicv/ippicv_lnx/iw -DCMAKE_INSTALL_PREFIX=/home/hosodalab9/Sensor-Glove/install/iw

@@ -1,0 +1,140 @@
+[0.009s] Invoking command in '/home/hosodalab9/Sensor-Glove/build/realsense2_camera': AMENT_PREFIX_PATH=/home/hosodalab9/Sensor-Glove/install/realsense2_camera_msgs:${AMENT_PREFIX_PATH} CMAKE_PREFIX_PATH=/home/hosodalab9/Sensor-Glove/install/realsense2_camera_msgs:/opt/ros/humble LD_LIBRARY_PATH=/home/hosodalab9/Sensor-Glove/install/realsense2_camera_msgs/lib:${LD_LIBRARY_PATH} PYTHONPATH=/home/hosodalab9/Sensor-Glove/install/realsense2_camera_msgs/local/lib/python3.10/dist-packages:${PYTHONPATH} /usr/bin/cmake /home/hosodalab9/Sensor-Glove/src/hand_sense_ws/src/realsense-ros/realsense2_camera -DAMENT_CMAKE_SYMLINK_INSTALL=1 -DCMAKE_INSTALL_PREFIX=/home/hosodalab9/Sensor-Glove/install/realsense2_camera
+[0.067s] -- The C compiler identification is GNU 11.4.0
+[0.120s] -- The CXX compiler identification is GNU 11.4.0
+[0.129s] -- Detecting C compiler ABI info
+[0.197s] -- Detecting C compiler ABI info - done
+[0.202s] -- Check for working C compiler: /usr/bin/cc - skipped
+[0.202s] -- Detecting C compile features
+[0.202s] -- Detecting C compile features - done
+[0.207s] -- Detecting CXX compiler ABI info
+[0.276s] -- Detecting CXX compiler ABI info - done
+[0.282s] -- Check for working CXX compiler: /usr/bin/c++ - skipped
+[0.282s] -- Detecting CXX compile features
+[0.283s] -- Detecting CXX compile features - done
+[0.284s] -- Create Release Build.
+[0.287s] -- Found ament_cmake: 1.3.9 (/opt/ros/humble/share/ament_cmake/cmake)
+[0.425s] -- Found Python3: /usr/bin/python3 (found version "3.10.12") found components: Interpreter 
+[0.484s] -- Override CMake install command with custom implementation using symlinks instead of copying resources
+[0.525s] -- Found builtin_interfaces: 1.2.1 (/opt/ros/humble/share/builtin_interfaces/cmake)
+[0.585s] -- Found rosidl_generator_c: 3.1.5 (/opt/ros/humble/share/rosidl_generator_c/cmake)
+[0.593s] -- Found rosidl_adapter: 3.1.5 (/opt/ros/humble/share/rosidl_adapter/cmake)
+[0.608s] -- Found rosidl_generator_cpp: 3.1.5 (/opt/ros/humble/share/rosidl_generator_cpp/cmake)
+[0.631s] -- Using all available rosidl_typesupport_c: rosidl_typesupport_fastrtps_c;rosidl_typesupport_introspection_c
+[0.650s] -- Using all available rosidl_typesupport_cpp: rosidl_typesupport_fastrtps_cpp;rosidl_typesupport_introspection_cpp
+[0.670s] -- Found cv_bridge: 3.2.1 (/opt/ros/humble/share/cv_bridge/cmake)
+[0.857s] -- Found image_transport: 3.1.9 (/opt/ros/humble/share/image_transport/cmake)
+[0.915s] -- Found rmw_implementation_cmake: 6.1.2 (/opt/ros/humble/share/rmw_implementation_cmake/cmake)
+[0.917s] -- Found rmw_fastrtps_cpp: 6.2.6 (/opt/ros/humble/share/rmw_fastrtps_cpp/cmake)
+[1.029s] -- Found OpenSSL: /usr/lib/x86_64-linux-gnu/libcrypto.so (found version "3.0.2")  
+[1.057s] -- Found FastRTPS: /opt/ros/humble/include  
+[1.102s] -- Using RMW implementation 'rmw_fastrtps_cpp' as default
+[1.113s] -- Looking for pthread.h
+[1.187s] -- Looking for pthread.h - found
+[1.187s] -- Performing Test CMAKE_HAVE_LIBC_PTHREAD
+[1.257s] -- Performing Test CMAKE_HAVE_LIBC_PTHREAD - Success
+[1.259s] -- Found Threads: TRUE  
+[1.420s] -- Found rclcpp_components: 16.0.9 (/opt/ros/humble/share/rclcpp_components/cmake)
+[1.482s] -- Found realsense2_camera_msgs: 4.54.1 (/home/hosodalab9/Sensor-Glove/install/realsense2_camera_msgs/share/realsense2_camera_msgs/cmake)
+[1.555s] -- Found nav_msgs: 4.2.4 (/opt/ros/humble/share/nav_msgs/cmake)
+[1.626s] -- Found tf2_ros: 0.25.7 (/opt/ros/humble/share/tf2_ros/cmake)
+[1.894s] -- Found diagnostic_updater: 4.0.0 (/opt/ros/humble/share/diagnostic_updater/cmake)
+[1.961s] -- Found OpenCV: /usr/local (found version "4.10.0") found components: core 
+[1.965s] -- Build for ROS2 Humble
+[1.972s] -- Found ament_cmake_gtest: 1.3.9 (/opt/ros/humble/share/ament_cmake_gtest/cmake)
+[1.978s] -- Found gtest sources under '/opt/ros/humble/src/gtest_vendor': C++ tests using 'Google Test' will be built
+[1.987s] -- Found ament_cmake_pytest: 1.3.9 (/opt/ros/humble/share/ament_cmake_pytest/cmake)
+[8.841s] -- rs_device_info:
+[8.841s] -- No device detected. Is it plugged in?
+[8.841s] 
+[8.898s] -- Configuring done
+[8.924s] -- Generating done
+[8.927s] -- Build files have been written to: /home/hosodalab9/Sensor-Glove/build/realsense2_camera
+[8.937s] Invoked command in '/home/hosodalab9/Sensor-Glove/build/realsense2_camera' returned '0': AMENT_PREFIX_PATH=/home/hosodalab9/Sensor-Glove/install/realsense2_camera_msgs:${AMENT_PREFIX_PATH} CMAKE_PREFIX_PATH=/home/hosodalab9/Sensor-Glove/install/realsense2_camera_msgs:/opt/ros/humble LD_LIBRARY_PATH=/home/hosodalab9/Sensor-Glove/install/realsense2_camera_msgs/lib:${LD_LIBRARY_PATH} PYTHONPATH=/home/hosodalab9/Sensor-Glove/install/realsense2_camera_msgs/local/lib/python3.10/dist-packages:${PYTHONPATH} /usr/bin/cmake /home/hosodalab9/Sensor-Glove/src/hand_sense_ws/src/realsense-ros/realsense2_camera -DAMENT_CMAKE_SYMLINK_INSTALL=1 -DCMAKE_INSTALL_PREFIX=/home/hosodalab9/Sensor-Glove/install/realsense2_camera
+[8.939s] Invoking command in '/home/hosodalab9/Sensor-Glove/build/realsense2_camera': AMENT_PREFIX_PATH=/home/hosodalab9/Sensor-Glove/install/realsense2_camera_msgs:${AMENT_PREFIX_PATH} CMAKE_PREFIX_PATH=/home/hosodalab9/Sensor-Glove/install/realsense2_camera_msgs:/opt/ros/humble LD_LIBRARY_PATH=/home/hosodalab9/Sensor-Glove/install/realsense2_camera_msgs/lib:${LD_LIBRARY_PATH} PYTHONPATH=/home/hosodalab9/Sensor-Glove/install/realsense2_camera_msgs/local/lib/python3.10/dist-packages:${PYTHONPATH} /usr/bin/cmake --build /home/hosodalab9/Sensor-Glove/build/realsense2_camera -- -j16 -l16
+[8.991s] [ 27%] [32mBuilding CXX object CMakeFiles/realsense2_camera.dir/src/base_realsense_node.cpp.o[0m
+[8.991s] [ 27%] [32mBuilding CXX object CMakeFiles/realsense2_camera_node.dir/rclcpp_components/node_main_realsense2_camera_node.cpp.o[0m
+[8.991s] [ 27%] [32mBuilding CXX object CMakeFiles/realsense2_camera.dir/src/realsense_node_factory.cpp.o[0m
+[8.991s] [ 27%] [32mBuilding CXX object gtest/CMakeFiles/gtest.dir/src/gtest-all.cc.o[0m
+[8.991s] [ 31%] [32mBuilding CXX object CMakeFiles/realsense2_camera.dir/src/rs_node_setup.cpp.o[0m
+[8.991s] [ 36%] [32mBuilding CXX object CMakeFiles/realsense2_camera.dir/src/ros_sensor.cpp.o[0m
+[8.991s] [ 40%] [32mBuilding CXX object CMakeFiles/realsense2_camera.dir/src/dynamic_params.cpp.o[0m
+[8.992s] [ 45%] [32mBuilding CXX object CMakeFiles/realsense2_camera.dir/src/ros_utils.cpp.o[0m
+[8.994s] [ 54%] [32mBuilding CXX object CMakeFiles/realsense2_camera.dir/src/parameters.cpp.o[0m
+[8.994s] [ 54%] [32mBuilding CXX object gtest/CMakeFiles/gtest_main.dir/src/gtest_main.cc.o[0m
+[8.994s] [ 59%] [32mBuilding CXX object CMakeFiles/realsense2_camera.dir/src/sensor_params.cpp.o[0m
+[8.994s] [ 59%] [32mBuilding CXX object CMakeFiles/realsense2_camera.dir/src/profile_manager.cpp.o[0m
+[8.994s] [ 63%] [32mBuilding CXX object CMakeFiles/realsense2_camera.dir/src/image_publisher.cpp.o[0m
+[8.995s] [ 63%] [32mBuilding CXX object CMakeFiles/realsense2_camera.dir/src/named_filter.cpp.o[0m
+[8.999s] [ 68%] [32mBuilding CXX object CMakeFiles/realsense2_camera.dir/src/tfs.cpp.o[0m
+[9.001s] [ 72%] [32mBuilding CXX object CMakeFiles/realsense2_camera.dir/src/ros_param_backend.cpp.o[0m
+[9.815s] [ 77%] [32m[1mLinking CXX static library libgtest_main.a[0m
+[9.862s] [ 77%] Built target gtest_main
+[13.588s] [ 81%] [32m[1mLinking CXX executable realsense2_camera_node[0m
+[13.891s] [ 81%] Built target realsense2_camera_node
+[16.692s] [ 86%] [32m[1mLinking CXX static library libgtest.a[0m
+[16.749s] [ 86%] Built target gtest
+[16.778s] [ 90%] [32mBuilding CXX object CMakeFiles/gtest_template.dir/test/gtest_template.cpp.o[0m
+[17.717s] [ 95%] [32m[1mLinking CXX executable gtest_template[0m
+[17.822s] [ 95%] Built target gtest_template
+[23.152s] [100%] [32m[1mLinking CXX shared library librealsense2_camera.so[0m
+[23.625s] [100%] Built target realsense2_camera
+[23.634s] Invoked command in '/home/hosodalab9/Sensor-Glove/build/realsense2_camera' returned '0': AMENT_PREFIX_PATH=/home/hosodalab9/Sensor-Glove/install/realsense2_camera_msgs:${AMENT_PREFIX_PATH} CMAKE_PREFIX_PATH=/home/hosodalab9/Sensor-Glove/install/realsense2_camera_msgs:/opt/ros/humble LD_LIBRARY_PATH=/home/hosodalab9/Sensor-Glove/install/realsense2_camera_msgs/lib:${LD_LIBRARY_PATH} PYTHONPATH=/home/hosodalab9/Sensor-Glove/install/realsense2_camera_msgs/local/lib/python3.10/dist-packages:${PYTHONPATH} /usr/bin/cmake --build /home/hosodalab9/Sensor-Glove/build/realsense2_camera -- -j16 -l16
+[23.712s] Invoking command in '/home/hosodalab9/Sensor-Glove/build/realsense2_camera': AMENT_PREFIX_PATH=/home/hosodalab9/Sensor-Glove/install/realsense2_camera_msgs:${AMENT_PREFIX_PATH} CMAKE_PREFIX_PATH=/home/hosodalab9/Sensor-Glove/install/realsense2_camera_msgs:/opt/ros/humble LD_LIBRARY_PATH=/home/hosodalab9/Sensor-Glove/install/realsense2_camera_msgs/lib:${LD_LIBRARY_PATH} PYTHONPATH=/home/hosodalab9/Sensor-Glove/install/realsense2_camera_msgs/local/lib/python3.10/dist-packages:${PYTHONPATH} /usr/bin/cmake --install /home/hosodalab9/Sensor-Glove/build/realsense2_camera
+[23.720s] -- Install configuration: "Release"
+[23.721s] -- Execute custom install script
+[23.722s] -- Symlinking: /home/hosodalab9/Sensor-Glove/install/realsense2_camera/lib/realsense2_camera/realsense2_camera_node
+[23.730s] -- Symlinking: /home/hosodalab9/Sensor-Glove/install/realsense2_camera/lib/librealsense2_camera.so
+[23.740s] -- Symlinking: /home/hosodalab9/Sensor-Glove/install/realsense2_camera/include/base_realsense_node.h
+[23.749s] -- Symlinking: /home/hosodalab9/Sensor-Glove/install/realsense2_camera/include/constants.h
+[23.759s] -- Symlinking: /home/hosodalab9/Sensor-Glove/install/realsense2_camera/include/dynamic_params.h
+[23.769s] -- Symlinking: /home/hosodalab9/Sensor-Glove/install/realsense2_camera/include/gl_window.h
+[23.777s] -- Symlinking: /home/hosodalab9/Sensor-Glove/install/realsense2_camera/include/image_publisher.h
+[23.786s] -- Symlinking: /home/hosodalab9/Sensor-Glove/install/realsense2_camera/include/named_filter.h
+[23.794s] -- Symlinking: /home/hosodalab9/Sensor-Glove/install/realsense2_camera/include/profile_manager.h
+[23.802s] -- Symlinking: /home/hosodalab9/Sensor-Glove/install/realsense2_camera/include/realsense_node_factory.h
+[23.810s] -- Symlinking: /home/hosodalab9/Sensor-Glove/install/realsense2_camera/include/ros_param_backend.h
+[23.819s] -- Symlinking: /home/hosodalab9/Sensor-Glove/install/realsense2_camera/include/ros_sensor.h
+[23.827s] -- Symlinking: /home/hosodalab9/Sensor-Glove/install/realsense2_camera/include/ros_utils.h
+[23.836s] -- Symlinking: /home/hosodalab9/Sensor-Glove/install/realsense2_camera/include/sensor_params.h
+[23.846s] -- Symlinking: /home/hosodalab9/Sensor-Glove/install/realsense2_camera/share/realsense2_camera/launch/default.rviz
+[23.857s] -- Symlinking: /home/hosodalab9/Sensor-Glove/install/realsense2_camera/share/realsense2_camera/launch/rs_intra_process_demo_launch.py
+[23.867s] -- Symlinking: /home/hosodalab9/Sensor-Glove/install/realsense2_camera/share/realsense2_camera/launch/rs_launch.py
+[23.875s] -- Symlinking: /home/hosodalab9/Sensor-Glove/install/realsense2_camera/share/realsense2_camera/launch/rs_multi_camera_launch.py
+[23.888s] -- Symlinking: /home/hosodalab9/Sensor-Glove/install/realsense2_camera/share/realsense2_camera/examples/align_depth/README.md
+[23.896s] -- Symlinking: /home/hosodalab9/Sensor-Glove/install/realsense2_camera/share/realsense2_camera/examples/align_depth/rs_align_depth_launch.py
+[23.904s] -- Symlinking: /home/hosodalab9/Sensor-Glove/install/realsense2_camera/share/realsense2_camera/examples/dual_camera/README.md
+[23.912s] -- Symlinking: /home/hosodalab9/Sensor-Glove/install/realsense2_camera/share/realsense2_camera/examples/dual_camera/rs_dual_camera_launch.py
+[23.920s] -- Symlinking: /home/hosodalab9/Sensor-Glove/install/realsense2_camera/share/realsense2_camera/examples/dual_camera/rviz/dual_camera_pointcloud.rviz
+[23.928s] -- Symlinking: /home/hosodalab9/Sensor-Glove/install/realsense2_camera/share/realsense2_camera/examples/launch_from_rosbag/README.md
+[23.937s] -- Symlinking: /home/hosodalab9/Sensor-Glove/install/realsense2_camera/share/realsense2_camera/examples/launch_from_rosbag/rs_launch_from_rosbag.py
+[23.947s] -- Symlinking: /home/hosodalab9/Sensor-Glove/install/realsense2_camera/share/realsense2_camera/examples/launch_params_from_file/README.md
+[23.956s] -- Symlinking: /home/hosodalab9/Sensor-Glove/install/realsense2_camera/share/realsense2_camera/examples/launch_params_from_file/config/config.yaml
+[23.965s] -- Symlinking: /home/hosodalab9/Sensor-Glove/install/realsense2_camera/share/realsense2_camera/examples/launch_params_from_file/rs_launch_get_params_from_yaml.py
+[23.974s] -- Symlinking: /home/hosodalab9/Sensor-Glove/install/realsense2_camera/share/realsense2_camera/examples/pointcloud/README.md
+[23.984s] -- Symlinking: /home/hosodalab9/Sensor-Glove/install/realsense2_camera/share/realsense2_camera/examples/pointcloud/rs_d405_pointcloud_launch.py
+[23.993s] -- Symlinking: /home/hosodalab9/Sensor-Glove/install/realsense2_camera/share/realsense2_camera/examples/pointcloud/rs_d455_pointcloud_launch.py
+[24.002s] -- Symlinking: /home/hosodalab9/Sensor-Glove/install/realsense2_camera/share/realsense2_camera/examples/pointcloud/rs_pointcloud_launch.py
+[24.010s] -- Symlinking: /home/hosodalab9/Sensor-Glove/install/realsense2_camera/share/realsense2_camera/examples/pointcloud/rviz/pointcloud.rviz
+[24.019s] -- Symlinking: /home/hosodalab9/Sensor-Glove/install/realsense2_camera/share/realsense2_camera/examples/pointcloud/rviz/urdf_pointcloud.rviz
+[24.027s] -- Symlinking: /home/hosodalab9/Sensor-Glove/install/realsense2_camera/share/realsense2_camera/environment/library_path.sh
+[24.036s] -- Symlinking: /home/hosodalab9/Sensor-Glove/install/realsense2_camera/share/realsense2_camera/environment/library_path.dsv
+[24.047s] -- Symlinking: /home/hosodalab9/Sensor-Glove/install/realsense2_camera/share/ament_index/resource_index/package_run_dependencies/realsense2_camera
+[24.056s] -- Symlinking: /home/hosodalab9/Sensor-Glove/install/realsense2_camera/share/ament_index/resource_index/parent_prefix_path/realsense2_camera
+[24.064s] -- Symlinking: /home/hosodalab9/Sensor-Glove/install/realsense2_camera/share/realsense2_camera/environment/ament_prefix_path.sh
+[24.071s] -- Symlinking: /home/hosodalab9/Sensor-Glove/install/realsense2_camera/share/realsense2_camera/environment/ament_prefix_path.dsv
+[24.081s] -- Symlinking: /home/hosodalab9/Sensor-Glove/install/realsense2_camera/share/realsense2_camera/environment/path.sh
+[24.088s] -- Symlinking: /home/hosodalab9/Sensor-Glove/install/realsense2_camera/share/realsense2_camera/environment/path.dsv
+[24.097s] -- Symlinking: /home/hosodalab9/Sensor-Glove/install/realsense2_camera/share/realsense2_camera/local_setup.bash
+[24.105s] -- Symlinking: /home/hosodalab9/Sensor-Glove/install/realsense2_camera/share/realsense2_camera/local_setup.sh
+[24.113s] -- Symlinking: /home/hosodalab9/Sensor-Glove/install/realsense2_camera/share/realsense2_camera/local_setup.zsh
+[24.121s] -- Symlinking: /home/hosodalab9/Sensor-Glove/install/realsense2_camera/share/realsense2_camera/local_setup.dsv
+[24.130s] -- Symlinking: /home/hosodalab9/Sensor-Glove/install/realsense2_camera/share/realsense2_camera/package.dsv
+[24.138s] -- Symlinking: /home/hosodalab9/Sensor-Glove/install/realsense2_camera/share/ament_index/resource_index/packages/realsense2_camera
+[24.147s] -- Symlinking: /home/hosodalab9/Sensor-Glove/install/realsense2_camera/share/ament_index/resource_index/rclcpp_components/realsense2_camera
+[24.157s] -- Symlinking: /home/hosodalab9/Sensor-Glove/install/realsense2_camera/share/realsense2_camera/cmake/ament_cmake_export_include_directories-extras.cmake
+[24.164s] -- Symlinking: /home/hosodalab9/Sensor-Glove/install/realsense2_camera/share/realsense2_camera/cmake/ament_cmake_export_libraries-extras.cmake
+[24.173s] -- Symlinking: /home/hosodalab9/Sensor-Glove/install/realsense2_camera/share/realsense2_camera/cmake/ament_cmake_export_dependencies-extras.cmake
+[24.180s] -- Symlinking: /home/hosodalab9/Sensor-Glove/install/realsense2_camera/share/realsense2_camera/cmake/realsense2_cameraConfig.cmake
+[24.188s] -- Symlinking: /home/hosodalab9/Sensor-Glove/install/realsense2_camera/share/realsense2_camera/cmake/realsense2_cameraConfig-version.cmake
+[24.196s] -- Symlinking: /home/hosodalab9/Sensor-Glove/install/realsense2_camera/share/realsense2_camera/package.xml
+[24.207s] Invoked command in '/home/hosodalab9/Sensor-Glove/build/realsense2_camera' returned '0': AMENT_PREFIX_PATH=/home/hosodalab9/Sensor-Glove/install/realsense2_camera_msgs:${AMENT_PREFIX_PATH} CMAKE_PREFIX_PATH=/home/hosodalab9/Sensor-Glove/install/realsense2_camera_msgs:/opt/ros/humble LD_LIBRARY_PATH=/home/hosodalab9/Sensor-Glove/install/realsense2_camera_msgs/lib:${LD_LIBRARY_PATH} PYTHONPATH=/home/hosodalab9/Sensor-Glove/install/realsense2_camera_msgs/local/lib/python3.10/dist-packages:${PYTHONPATH} /usr/bin/cmake --install /home/hosodalab9/Sensor-Glove/build/realsense2_camera
