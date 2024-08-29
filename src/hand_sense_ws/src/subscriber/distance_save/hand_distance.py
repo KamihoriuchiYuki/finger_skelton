@@ -17,41 +17,32 @@ matplotlib.use('Agg')  # これを追加して、非GUIバックエンドに切�
 import matplotlib.pyplot as plt
 from std_msgs.msg import Float64MultiArray
 
-# ファイルオープンとタイトル行の書き込み
-f = open("hand_distances_data.csv", "w", newline="")
-writer = csv.writer(f)
-title_list = ['time_count']
-finger_joints = ['WRIST', 'THUMB_CMC', 'THUMB_MCP', 'THUMB_IP', 'THUMB_TIP',
-                 'INDEX_FINGER_MCP', 'INDEX_FINGER_PIP', 'INDEX_FINGER_DIP', 'INDEX_FINGER_TIP',
-                 'MIDDLE_FINGER_MCP', 'MIDDLE_FINGER_PIP', 'MIDDLE_FINGER_DIP', 'MIDDLE_FINGER_TIP',
-                 'RING_FINGER_MCP', 'RING_FINGER_PIP', 'RING_FINGER_DIP', 'RING_FINGER_TIP',
-                 'PINKY_MCP', 'PINKY_PIP', 'PINKY_DIP', 'PINKY_TIP']
-
-# 各関節のカメラからの距離を保存するためのタイトルを作成
-for joint in finger_joints:
-    title_list.append(f"{joint}_distance")
-writer.writerow(title_list)
-start_time = time.perf_counter()
-
 class RsSub(Node):
     mp_drawing = mp.solutions.drawing_utils
     mp_drawing_styles = mp.solutions.drawing_styles
     mp_hands = mp.solutions.hands
     StartFlg = False
-    rsp = ""
-    FinishFlg = False
+    recording = False  # Toggle for recording data
+    start_time = None
+    f = None
+    writer = None
+    joint_names = ["Wrist", "Thumb_CMC", "Thumb_MCP", "Thumb_IP", "Thumb_TIP",
+                   "Index_MCP", "Index_PIP", "Index_DIP", "Index_TIP",
+                   "Middle_MCP", "Middle_PIP", "Middle_DIP", "Middle_TIP",
+                   "Ring_MCP", "Ring_PIP", "Ring_DIP", "Ring_TIP",
+                   "Pinky_MCP", "Pinky_PIP", "Pinky_DIP", "Pinky_TIP"]
+
     def __init__(self):
-        super().__init__('hand_landmarks_recorder')
+        super().__init__('angle_finger')
         self.bridge = CvBridge()
         self.subscription = self.create_subscription(RGBD, '/camera/camera/rgbd', self.listener_callback, 10)
-        self.pub = self.create_publisher(Float64MultiArray, 'hand_landmarks_topic', 10)
+        self.pub = self.create_publisher(Float64MultiArray, 'finger_angle_topic', 10)
 
     def listener_callback(self, msg):
-        num_node = 21
+        num_node = 21  # Number of landmarks in the hand model
         array_rgb = self.bridge.imgmsg_to_cv2(msg.rgb, "bgr8")
         array_depth = self.bridge.imgmsg_to_cv2(msg.depth, "passthrough")
-        image, index_finger = self.hand_skelton(array_rgb, num_node)
-
+        image, landmarks = self.hand_skelton(array_rgb, num_node)
         cameraInfo = msg.depth_camera_info
         intrinsics = rs.intrinsics()
         intrinsics.width = cameraInfo.width
@@ -62,38 +53,33 @@ class RsSub(Node):
         intrinsics.fy = cameraInfo.k[4]
         intrinsics.model  = rs.distortion.none     
         intrinsics.coeffs = [i for i in cameraInfo.d]
-
-        node_point = np.zeros((num_node, 3))
-        landmark_data = [time.perf_counter() - start_time]  # 時間データを格納
-
+        distances = []
         for i in range(num_node):
-            # 3D空間の各関節の座標を取得
-            node_point[i, :] = rs.rs2_deproject_pixel_to_point(intrinsics, index_finger[i, :], array_depth[index_finger[i, 1], index_finger[i, 0]])
-            # カメラからの距離を計算（x, y, z の 3次元ベクトルの大きさ）
-            distance = np.linalg.norm(node_point[i, :])
-            # 各関節の距離を記録
-            landmark_data.append(distance)
+            point = rs.rs2_deproject_pixel_to_point(intrinsics, landmarks[i, :], array_depth[landmarks[i, 1], landmarks[i, 0]])
+            distance = np.linalg.norm(point)
+            distances.append(distance)
+        
+        if self.recording:
+            current_time = time.perf_counter() - self.start_time
+            data_row = [current_time] + distances
+            self.writer.writerow(data_row)
 
-        writer.writerow(landmark_data)
+        msg_data = Float64MultiArray()
+        msg_data.data = distances
+        self.pub.publish(msg_data)
+
         cv2.imshow("Image window", image)
         cv2.waitKey(5)
 
     def hand_skelton(self, image, num_node):
         image_width, image_height = image.shape[1], image.shape[0]
         finger = np.zeros((num_node, 2), dtype=np.int64)
-        with self.mp_hands.Hands(
-            min_detection_confidence=0.5,
-            min_tracking_confidence=0.5) as hands:
+        with self.mp_hands.Hands(min_detection_confidence=0.5, min_tracking_confidence=0.5) as hands:
             image = cv2.cvtColor(image, cv2.COLOR_BGR2RGB)
             results = hands.process(image)
             if results.multi_hand_landmarks:
                 for hand_landmarks in results.multi_hand_landmarks:
-                    self.mp_drawing.draw_landmarks(
-                        image,
-                        hand_landmarks,
-                        self.mp_hands.HAND_CONNECTIONS,
-                        self.mp_drawing_styles.get_default_hand_landmarks_style(),
-                        self.mp_drawing_styles.get_default_hand_connections_style())
+                    self.mp_drawing.draw_landmarks(image, hand_landmarks, self.mp_hands.HAND_CONNECTIONS)
                     for i in range(num_node):
                         finger[i, 0] = int(hand_landmarks.landmark[i].x * image_width)
                         finger[i, 1] = int(hand_landmarks.landmark[i].y * image_height)
@@ -101,40 +87,42 @@ class RsSub(Node):
                     finger[:, 1] = self.cut_pixel(finger[:, 1], image_height)
             image = cv2.cvtColor(image, cv2.COLOR_RGB2BGR)
         return image, finger
-    
+
     def cut_pixel(self, pixel, max_pixel):
         pixel = np.where(pixel < 0, 0, pixel)
         pixel = np.where(pixel >= max_pixel, max_pixel - 1, pixel)
         return pixel
 
-def plot_and_save_graph():
-    # CSVファイルを開いてデータを読み込む
-    with open("hand_distances_data.csv", "r") as f:
-        reader = csv.reader(f)
-        data = list(reader)
+    def toggle_recording(self):
+        self.recording = not self.recording
+        if self.recording:
+            self.start_time = time.perf_counter()
+            self.f = open("finger_data.csv", "w", newline="")
+            self.writer = csv.writer(self.f)
+            header = ["time[s]"] + self.joint_names
+            self.writer.writerow(header)
+        else:
+            self.f.close()
+            self.plot_data()
 
-    # タイトル行とデータ行を分離
-    headers = data[0]
-    data = np.array(data[1:], dtype=np.float32).T
-
-    # 時間データ
-    time_data = data[0]
-
-    # グラフを作成
-    plt.figure(figsize=(20, 10))
-    for i in range(1, len(headers)):
-        plt.plot(time_data, data[i], label=headers[i])
-
-    plt.xlabel("Time [s]")
-    plt.ylabel("Distance from Camera [m]")
-    plt.ylim([100, 1000])
-    plt.title("Distance of Finger Joints from Camera Over Time")
-    plt.legend(loc="upper right")
-    plt.grid(True)
-    
-    # グラフを画像ファイルとして保存
-    plt.savefig("hand_distances_over_time.png")
-    plt.close()
+    def plot_data(self):
+        fig, axs = plt.subplots(len(self.joint_names) // 4, 4, figsize=[20, 40])
+        axs = axs.flatten()
+        with open("finger_data.csv") as f_0:
+            reader = csv.reader(f_0)
+            data = [row for row in reader]
+            data = np.array(data)
+            time_data = [float(v) for v in data[1:, 0]]  # Time data
+            for i, joint_name in enumerate(self.joint_names):
+                joint_data = [float(v) for v in data[1:, i + 1]]
+                axs[i].plot(time_data, joint_data, linewidth=1)
+                axs[i].set_title(joint_name)
+                axs[i].set_xlabel("time[s]")
+                axs[i].set_ylabel("distance[m]")
+        
+        plt.tight_layout()
+        fig.savefig("finger_distance_all_joints.png")
+        plt.close()
 
 def main(args = None):
     rclpy.init(args = args)
@@ -144,9 +132,8 @@ def main(args = None):
         key = getkey()
         if key == 10:
             break
-
-    f.close()
-    plot_and_save_graph()  # グラフを作成して保存
+        elif key == ord('s'):
+            intel_subscriber.toggle_recording()
     intel_subscriber.destroy_node()
     rclpy.shutdown()
 

@@ -13,7 +13,7 @@ import termios
 import sys
 import os
 import matplotlib
-matplotlib.use('Agg')  # これを追加して、非GUIバックエンドに切り替える
+matplotlib.use('Agg')  # Non-GUI backend for matplotlib
 import matplotlib.pyplot as plt
 from std_msgs.msg import Float64MultiArray
 
@@ -26,6 +26,8 @@ class RsSub(Node):
     start_time = None
     f = None
     writer = None
+    pos_f = None
+    pos_writer = None
 
     def __init__(self):
         super().__init__('angle_finger')
@@ -38,7 +40,7 @@ class RsSub(Node):
         num_joint = 4  # Only index finger joints (MCP, PIP, DIP, TIP)
         array_rgb = self.bridge.imgmsg_to_cv2(msg.rgb, "bgr8")
         array_depth = self.bridge.imgmsg_to_cv2(msg.depth, "passthrough")
-        image, index_finger = self.hand_skelton(array_rgb, num_node)
+        image, index_finger, wrist = self.hand_skelton(array_rgb, num_node)
         cameraInfo = msg.depth_camera_info
         intrinsics = rs.intrinsics()
         intrinsics.width = cameraInfo.width
@@ -49,16 +51,22 @@ class RsSub(Node):
         intrinsics.fy = cameraInfo.k[4]
         intrinsics.model  = rs.distortion.none     
         intrinsics.coeffs = [i for i in cameraInfo.d]
+        
         distances = []
+        joint_positions = [wrist]
         for i in range(5, 9):  # Only index finger joints
             point = rs.rs2_deproject_pixel_to_point(intrinsics, index_finger[i, :], array_depth[index_finger[i, 1], index_finger[i, 0]])
             distance = np.linalg.norm(point)
             distances.append(distance)
+            joint_positions.append(point)
         
         if self.recording:
             current_time = time.perf_counter() - self.start_time
             data_row = [current_time] + distances
             self.writer.writerow(data_row)
+            
+            pos_row = [current_time] + [coord for pos in joint_positions for coord in pos]
+            self.pos_writer.writerow(pos_row)
 
         msg_data = Float64MultiArray()
         msg_data.data = distances
@@ -70,19 +78,22 @@ class RsSub(Node):
     def hand_skelton(self, image, num_node):
         image_width, image_height = image.shape[1], image.shape[0]
         finger = np.zeros((num_node, 2), dtype=np.int64)
+        wrist = np.zeros(2, dtype=np.int64)
         with self.mp_hands.Hands(min_detection_confidence=0.5, min_tracking_confidence=0.5) as hands:
             image = cv2.cvtColor(image, cv2.COLOR_BGR2RGB)
             results = hands.process(image)
             if results.multi_hand_landmarks:
                 for hand_landmarks in results.multi_hand_landmarks:
                     self.mp_drawing.draw_landmarks(image, hand_landmarks, self.mp_hands.HAND_CONNECTIONS)
+                    wrist[0] = int(hand_landmarks.landmark[0].x * image_width)
+                    wrist[1] = int(hand_landmarks.landmark[0].y * image_height)
                     for i in range(num_node):
                         finger[i, 0] = int(hand_landmarks.landmark[i].x * image_width)
                         finger[i, 1] = int(hand_landmarks.landmark[i].y * image_height)
                     finger[:, 0] = self.cut_pixel(finger[:, 0], image_width)
                     finger[:, 1] = self.cut_pixel(finger[:, 1], image_height)
             image = cv2.cvtColor(image, cv2.COLOR_RGB2BGR)
-        return image, finger
+        return image, finger, wrist
 
     def cut_pixel(self, pixel, max_pixel):
         pixel = np.where(pixel < 0, 0, pixel)
@@ -97,27 +108,37 @@ class RsSub(Node):
             self.writer = csv.writer(self.f)
             header = ["time[s]", "MCP", "PIP", "DIP", "TIP"]
             self.writer.writerow(header)
+
+            self.pos_f = open("finger_joint_positions.csv", "w", newline="")
+            self.pos_writer = csv.writer(self.pos_f)
+            pos_header = ["time[s]", "Wrist_X", "Wrist_Y", "Wrist_Z",
+                          "MCP_X", "MCP_Y", "MCP_Z",
+                          "PIP_X", "PIP_Y", "PIP_Z",
+                          "DIP_X", "DIP_Y", "DIP_Z",
+                          "TIP_X", "TIP_Y", "TIP_Z"]
+            self.pos_writer.writerow(pos_header)
         else:
             self.f.close()
+            self.pos_f.close()
             self.plot_data()
 
     def plot_data(self):
-        fig = plt.figure(figsize=[20, 5])
+        fig, axs = plt.subplots(1, 1, figsize=[20, 5])
         with open("index_finger_data.csv") as f_0:
             reader = csv.reader(f_0)
             data = [row for row in reader]
             data = np.array(data)
             data = data.T
             length = data.shape[1]
-            plt.plot([float(v) for v in data[0, 1:length]], [float(v_0) for v_0 in data[1, 1:length]], color="red", label="MCP", linewidth=1)
-            plt.plot([float(v) for v in data[0, 1:length]], [float(v_0) for v_0 in data[2, 1:length]], color="green", label="PIP", linewidth=1)
-            plt.plot([float(v) for v in data[0, 1:length]], [float(v_0) for v_0 in data[3, 1:length]], color="blue", label="DIP", linewidth=1)
-            plt.plot([float(v) for v in data[0, 1:length]], [float(v_0) for v_0 in data[4, 1:length]], color="purple", label="TIP", linewidth=1)
-            plt.legend(bbox_to_anchor=(1.05, 1), loc='upper left', borderaxespad=0)
-            plt.xlabel("time[s]")
-            plt.ylabel("distance[m]")
-            plt.ylim([100, 1000])
-            plt.title("Distance of Index Finger Joints from Camera")
+            axs.plot([float(v) for v in data[0, 1:length]], [float(v_0) for v_0 in data[1, 1:length]], color="red", label="MCP", linewidth=1)
+            axs.plot([float(v) for v in data[0, 1:length]], [float(v_0) for v_0 in data[2, 1:length]], color="green", label="PIP", linewidth=1)
+            axs.plot([float(v) for v in data[0, 1:length]], [float(v_0) for v_0 in data[3, 1:length]], color="blue", label="DIP", linewidth=1)
+            axs.plot([float(v) for v in data[0, 1:length]], [float(v_0) for v_0 in data[4, 1:length]], color="purple", label="TIP", linewidth=1)
+            axs.legend(bbox_to_anchor=(1.05, 1), loc='upper left', borderaxespad=0)
+            axs.set_xlabel("time[s]")
+            axs.set_ylabel("distance[m]")
+            axs.set_ylim([0, 1])
+            axs.set_title("Distance of Index Finger Joints from Camera")
             fig.savefig("index_finger_distance.png")
             plt.close()
 
