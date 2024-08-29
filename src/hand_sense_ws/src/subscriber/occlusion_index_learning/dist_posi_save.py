@@ -28,7 +28,7 @@ class RsSub(Node):
     writer = None
     pos_f = None
     pos_writer = None
-    timestamp = None
+    video_out = None
 
     def __init__(self):
         super().__init__('angle_finger')
@@ -63,14 +63,14 @@ class RsSub(Node):
         
         if self.recording:
             current_time = time.perf_counter() - self.start_time
-            
-            # Save distances to CSV
             data_row = [current_time] + distances
             self.writer.writerow(data_row)
             
-            # Save joint positions to CSV
             pos_row = [current_time] + [coord for pos in joint_positions for coord in pos]
             self.pos_writer.writerow(pos_row)
+            
+            # 映像を保存
+            self.video_out.write(image)
 
         msg_data = Float64MultiArray()
         msg_data.data = distances
@@ -106,19 +106,15 @@ class RsSub(Node):
 
     def toggle_recording(self):
         self.recording = not self.recording
-        data_index_folder = "data_index"
-        if not os.path.exists(data_index_folder):
-            os.makedirs(data_index_folder)
-        
         if self.recording:
+            timestamp = time.strftime("%Y%m%d_%H%M%S")
             self.start_time = time.perf_counter()
-            self.timestamp = time.strftime("%Y%m%d_%H%M%S", time.localtime())
-            self.f = open(f"{data_index_folder}/index_finger_data_{self.timestamp}.csv", "w", newline="")
+            self.f = open(f"data_index/index_finger_data_{timestamp}.csv", "w", newline="")
             self.writer = csv.writer(self.f)
             header = ["time[s]", "MCP", "PIP", "DIP", "TIP"]
             self.writer.writerow(header)
 
-            self.pos_f = open(f"{data_index_folder}/finger_joint_positions_{self.timestamp}.csv", "w", newline="")
+            self.pos_f = open(f"data_index/finger_joint_positions_{timestamp}.csv", "w", newline="")
             self.pos_writer = csv.writer(self.pos_f)
             pos_header = ["time[s]", "Wrist_X", "Wrist_Y", "Wrist_Z",
                           "MCP_X", "MCP_Y", "MCP_Z",
@@ -126,34 +122,35 @@ class RsSub(Node):
                           "DIP_X", "DIP_Y", "DIP_Z",
                           "TIP_X", "TIP_Y", "TIP_Z"]
             self.pos_writer.writerow(pos_header)
+            
+            # 映像の保存設定
+            fourcc = cv2.VideoWriter_fourcc(*'XVID')
+            self.video_out = cv2.VideoWriter(f"data_index/index_finger_video_{timestamp}.avi", fourcc, 20.0, (640, 480))
+
         else:
             self.f.close()
             self.pos_f.close()
+            self.video_out.release()  # 映像の保存を終了
+            self.plot_data()
 
-    def save_and_exit(self):
-        if self.timestamp:
-            self.plot_data(self.timestamp)
-        self.destroy_node()
-        rclpy.shutdown()
-
-    def plot_data(self, timestamp):
+    def plot_data(self):
         fig, axs = plt.subplots(1, 1, figsize=[20, 5])
-        with open(f"data_index/index_finger_data_{timestamp}.csv") as f_0:
+        with open(self.f.name) as f_0:
             reader = csv.reader(f_0)
             data = [row for row in reader]
             data = np.array(data)
             data = data.T
             length = data.shape[1]
             axs.plot([float(v) for v in data[0, 1:length]], [float(v_0) for v_0 in data[1, 1:length]], color="red", label="MCP", linewidth=1)
-            axs.plot([float(v) for v in data[0, 1:length]], [float(v_0) for v_0 in data[2, 1:length]], color="green", label="PIP", linewidth=1)
-            axs.plot([float(v) for v in data[0, 1:length]], [float(v_0) for v_0 in data[3, 1:length]], color="blue", label="DIP", linewidth=1)
-            axs.plot([float(v) for v in data[0, 1:length]], [float(v_0) for v_0 in data[4, 1:length]], color="purple", label="TIP", linewidth=1)
+            axs.plot([float(v) for v in data[0, 1:length]], [float(v) for v in data[2, 1:length]], color="green", label="PIP", linewidth=1)
+            axs.plot([float(v) for v in data[0, 1:length]], [float(v) for v in data[3, 1:length]], color="blue", label="DIP", linewidth=1)
+            axs.plot([float(v) for v in data[0, 1:length]], [float(v) for v in data[4, 1:length]], color="purple", label="TIP", linewidth=1)
             axs.legend(bbox_to_anchor=(1.05, 1), loc='upper left', borderaxespad=0)
             axs.set_xlabel("time[s]")
             axs.set_ylabel("distance[mm]")
             axs.set_ylim([200, 500])
             axs.set_title("Distance of Index Finger Joints from Camera")
-            fig.savefig(f"data_index/index_finger_distance_{timestamp}.png")
+            fig.savefig(f"data_index/index_finger_distance_{time.strftime('%Y%m%d_%H%M%S')}.png")
             plt.close()
 
 def main(args = None):
@@ -162,11 +159,12 @@ def main(args = None):
     while True:
         rclpy.spin_once(intel_subscriber)
         key = getkey()
-        if key == 10:  # Enter key pressed
-            intel_subscriber.save_and_exit()
+        if key == 10:
             break
         elif key == ord('s'):
             intel_subscriber.toggle_recording()
+    intel_subscriber.destroy_node()
+    rclpy.shutdown()
 
 def getkey():
     fno = sys.stdin.fileno()
