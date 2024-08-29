@@ -8,12 +8,13 @@ from realsense2_camera_msgs.msg import RGBD
 import mediapipe as mp
 import csv
 import time
-import matplotlib.pyplot as plt
-from matplotlib import animation
 import fcntl
 import termios
 import sys
 import os
+import matplotlib
+matplotlib.use('Agg')  # これを追加して、非GUIバックエンドに切り替える
+import matplotlib.pyplot as plt
 from std_msgs.msg import Float64MultiArray
 
 class RsSub(Node):
@@ -115,6 +116,7 @@ class RsSub(Node):
             plt.legend(bbox_to_anchor=(1.05, 1), loc='upper left', borderaxespad=0)
             plt.xlabel("time[s]")
             plt.ylabel("distance[m]")
+            plt.ylim([100, 1000])
             plt.title("Distance of Index Finger Joints from Camera")
             fig.savefig("index_finger_distance.png")
             plt.close()
