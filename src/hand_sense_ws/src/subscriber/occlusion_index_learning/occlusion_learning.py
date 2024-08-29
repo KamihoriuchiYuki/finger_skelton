@@ -56,7 +56,7 @@ def train_and_save_model(X, y, model_path):
 
 # Main function
 def main():
-    file_path = "learning_data/combined_data_oooo.csv"
+    file_path = "learning_data/combined_data_20240829_163123.csv"
     model_path = "saved_model.joblib"
     
     data = load_data(file_path)
