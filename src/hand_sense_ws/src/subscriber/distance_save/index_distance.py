@@ -120,6 +120,7 @@ def main(args = None):
     plt.legend(bbox_to_anchor=(1.05, 1), loc='upper left', borderaxespad=0)
     plt.xlabel("time[s]")
     plt.ylabel("distance from camera[m]")
+    plt.ylim([100, 1000])
     plt.title("Distance of Index Finger Joints from Camera")
     fig.savefig("index_finger_distance.png")
     f_0.close()
