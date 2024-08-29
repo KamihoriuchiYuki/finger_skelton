@@ -127,6 +127,7 @@ def plot_and_save_graph():
 
     plt.xlabel("Time [s]")
     plt.ylabel("Distance from Camera [m]")
+    plt.ylim([100, 1000])
     plt.title("Distance of Finger Joints from Camera Over Time")
     plt.legend(loc="upper right")
     plt.grid(True)
