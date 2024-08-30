@@ -79,13 +79,13 @@ class RsSub(Node):
             array_bef_p = np.array(self.bef_p).flatten().reshape(1, -1)
             features = np.concatenate([array_pos_now, array_diff_row, array_bef_p], axis=1)
             print(features.shape)
-            predictions = self.model.predict(features)
+            #predictions = self.model.predict(features)
 
             # 信頼値に基づき色を決定
-            colors = [(0, 255, 0) if p == 0 else (0, 0, 255) for p in predictions[0]]
-            self.draw_joints(image, index_finger, colors)
+            #colors = [(0, 255, 0) if p == 0 else (0, 0, 255) for p in predictions[0]]
+            #self.draw_joints(image, index_finger, colors)
 
-            self.bef_p = predictions
+            #self.bef_p = predictions
             self.bef_pos = pos_now
 
             pos_row = [current_time] + pos_now
