@@ -45,7 +45,7 @@ class RsSub(Node):
         num_joint = 4  # Only index finger joints (MCP, PIP, DIP, TIP)
         array_rgb = self.bridge.imgmsg_to_cv2(msg.rgb, "bgr8")
         array_depth = self.bridge.imgmsg_to_cv2(msg.depth, "passthrough")
-        image, index_finger, wrist = self.hand_skelton(array_rgb, num_node)
+        image, index_finger = self.hand_skelton(array_rgb, num_node)
         cameraInfo = msg.depth_camera_info
         intrinsics = rs.intrinsics()
         intrinsics.width = cameraInfo.width
@@ -58,6 +58,7 @@ class RsSub(Node):
         intrinsics.coeffs = [i for i in cameraInfo.d]
         
         distances = []
+        wrist = rs.rs2_deproject_pixel_to_point(intrinsics, index_finger[0, :], array_depth[index_finger[0, 1], index_finger[0, 0]])
         joint_positions = [wrist]
         for i in range(5, 9):  # Only index finger joints
             point = rs.rs2_deproject_pixel_to_point(intrinsics, index_finger[i, :], array_depth[index_finger[i, 1], index_finger[i, 0]])
@@ -78,14 +79,14 @@ class RsSub(Node):
             array_diff_row = np.array(diff_row).flatten().reshape(1, -1)
             array_bef_p = np.array(self.bef_p).flatten().reshape(1, -1)
             features = np.concatenate([array_pos_now, array_diff_row, array_bef_p], axis=1)
-            print(features.shape)
-            #predictions = self.model.predict(features)
+            #print(features.shape)
+            predictions = self.model.predict(features)
 
             # 信頼値に基づき色を決定
-            #colors = [(0, 255, 0) if p == 0 else (0, 0, 255) for p in predictions[0]]
-            #self.draw_joints(image, index_finger, colors)
+            colors = [(0, 255, 0) if p == 0 else (0, 0, 255) for p in predictions[0]]
+            self.draw_joints(image, index_finger, colors)
 
-            #self.bef_p = predictions
+            self.bef_p = predictions
             self.bef_pos = pos_now
 
             pos_row = [current_time] + pos_now
@@ -104,22 +105,19 @@ class RsSub(Node):
     def hand_skelton(self, image, num_node):
         image_width, image_height = image.shape[1], image.shape[0]
         finger = np.zeros((num_node, 2), dtype=np.int64)
-        wrist = np.zeros(2, dtype=np.int64)
         with self.mp_hands.Hands(min_detection_confidence=0.5, min_tracking_confidence=0.5) as hands:
             image = cv2.cvtColor(image, cv2.COLOR_BGR2RGB)
             results = hands.process(image)
             if results.multi_hand_landmarks:
                 for hand_landmarks in results.multi_hand_landmarks:
                     self.mp_drawing.draw_landmarks(image, hand_landmarks, self.mp_hands.HAND_CONNECTIONS)
-                    wrist[0] = int(hand_landmarks.landmark[0].x * image_width)
-                    wrist[1] = int(hand_landmarks.landmark[0].y * image_height)
                     for i in range(num_node):
                         finger[i, 0] = int(hand_landmarks.landmark[i].x * image_width)
                         finger[i, 1] = int(hand_landmarks.landmark[i].y * image_height)
                     finger[:, 0] = self.cut_pixel(finger[:, 0], image_width)
                     finger[:, 1] = self.cut_pixel(finger[:, 1], image_height)
             image = cv2.cvtColor(image, cv2.COLOR_RGB2BGR)
-        return image, finger, wrist
+        return image, finger
 
     def cut_pixel(self, pixel, max_pixel):
         pixel = np.where(pixel < 0, 0, pixel)
