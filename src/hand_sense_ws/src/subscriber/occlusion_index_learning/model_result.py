@@ -73,9 +73,20 @@ class RsSub(Node):
             if not self.saveFlg:
                 self.bef_pos = pos_now
                 self.saveFlg = not self.saveFlg
-            self.diff_row = [x - y for x, y in zip(pos_now, self.bef_pos)]
-            pos_dif = np.concatenate([pos_row, self.diff_row], axis=1)
-            features = np.concatenate([pos_dif, self.bef_p], axis=1)       
+            diff_row = [x - y for x, y in zip(pos_now, self.bef_pos)]
+            array_pos_now = np.array(pos_now).flatten().reshape(1, -1)
+            array_diff_row = np.array(diff_row).flatten().reshape(1, -1)
+            array_bef_p = np.array(self.bef_p).flatten().reshape(1, -1)
+            features = np.concatenate([array_pos_now, array_diff_row, array_bef_p], axis=1)
+            predictions = self.model.predict(features)
+
+            # 信頼値に基づき色を決定
+            colors = [(0, 255, 0) if p == 0 else (0, 0, 255) for p in predictions[0]]
+            self.draw_joints(image, index_finger, colors)
+
+            self.bef_p = predictions
+            self.bef_pos = pos_now
+
             pos_row = [current_time] + pos_now
             self.pos_writer.writerow(pos_row)
             
@@ -113,6 +124,10 @@ class RsSub(Node):
         pixel = np.where(pixel < 0, 0, pixel)
         pixel = np.where(pixel >= max_pixel, max_pixel - 1, pixel)
         return pixel
+    
+    def draw_joints(self, image, index_finger, colors):
+        for i, color in enumerate(colors):
+            cv2.circle(image, tuple(index_finger[i+5]), 5, color, -1)
 
     def toggle_recording(self):
         self.recording = not self.recording
