@@ -13,11 +13,10 @@ import termios
 import sys
 import os
 import matplotlib
-import joblib
-from std_msgs.msg import Float64MultiArray
-
 matplotlib.use('Agg')  # Non-GUI backend for matplotlib
 import matplotlib.pyplot as plt
+from std_msgs.msg import Float64MultiArray
+import joblib
 
 class RsSub(Node):
     mp_drawing = mp.solutions.drawing_utils
@@ -31,20 +30,19 @@ class RsSub(Node):
     pos_f = None
     pos_writer = None
     video_out = None
-    model = None  # Placeholder for the trained model
+    bef_p = np.zeros(4, dtype=np.int16)
+    saveFlg = False
 
     def __init__(self):
         super().__init__('angle_finger')
         self.bridge = CvBridge()
         self.subscription = self.create_subscription(RGBD, '/camera/camera/rgbd', self.listener_callback, 10)
         self.pub = self.create_publisher(Float64MultiArray, 'finger_angle_topic', 10)
-
-        # Load the trained model
-        self.model = joblib.load("path/to/saved_model.joblib")
-        print("Trained model loaded.")
+        self.model = joblib.load('joint_reliability_model.pkl')
 
     def listener_callback(self, msg):
         num_node = 21
+        num_joint = 4  # Only index finger joints (MCP, PIP, DIP, TIP)
         array_rgb = self.bridge.imgmsg_to_cv2(msg.rgb, "bgr8")
         array_depth = self.bridge.imgmsg_to_cv2(msg.depth, "passthrough")
         image, index_finger, wrist = self.hand_skelton(array_rgb, num_node)
@@ -67,23 +65,18 @@ class RsSub(Node):
             distances.append(distance)
             joint_positions.append(point)
         
-        # Prepare the input for the model
-        model_input = np.array(distances + [coord for pos in joint_positions for coord in pos]).reshape(1, -1)
-        
-        # Use the model to predict the reliability
-        reliability = self.model.predict(model_input)
-
-        # Draw the joints with colors based on reliability
-        for i, joint in enumerate(index_finger[5:9]):
-            color = (0, 255, 0) if reliability[0, i] == 1 else (0, 0, 255)  # Green if reliable, red if not
-            cv2.circle(image, tuple(joint), 5, color, -1)
-        
         if self.recording:
             current_time = time.perf_counter() - self.start_time
             data_row = [current_time] + distances
             self.writer.writerow(data_row)
-            
-            pos_row = [current_time] + [coord for pos in joint_positions for coord in pos]
+            pos_now = [coord for pos in joint_positions for coord in pos]
+            if not self.saveFlg:
+                self.bef_pos = pos_now
+                self.saveFlg = not self.saveFlg
+            self.diff_row = [x - y for x, y in zip(pos_now, self.bef_pos)]
+            pos_dif = np.concatenate([pos_row, self.diff_row], axis=1)
+            features = np.concatenate([pos_dif, self.bef_p], axis=1)       
+            pos_row = [current_time] + pos_now
             self.pos_writer.writerow(pos_row)
             
             # 映像を保存
@@ -123,6 +116,8 @@ class RsSub(Node):
 
     def toggle_recording(self):
         self.recording = not self.recording
+        if self.saveFlg:
+            self.saveFlg = not self.saveFlg
         if self.recording:
             timestamp = time.strftime("%Y%m%d_%H%M%S")
             self.start_time = time.perf_counter()
