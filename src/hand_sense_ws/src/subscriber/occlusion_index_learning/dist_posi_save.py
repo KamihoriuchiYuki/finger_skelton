@@ -140,7 +140,7 @@ class RsSub(Node):
             
             # 映像の保存設定
             fourcc = cv2.VideoWriter_fourcc(*'XVID')
-            self.video_out = cv2.VideoWriter(f"data_index/index_finger_video_{timestamp}.avi", fourcc, 16.65, (640, 480))
+            self.video_out = cv2.VideoWriter(f"data_index/index_finger_video_{timestamp}.avi", fourcc, 16.06, (640, 480))
 
         else:
             self.f.close()
