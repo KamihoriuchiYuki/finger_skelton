@@ -38,7 +38,7 @@ class RsSub(Node):
         self.bridge = CvBridge()
         self.subscription = self.create_subscription(RGBD, '/camera/camera/rgbd', self.listener_callback, 10)
         self.pub = self.create_publisher(Float64MultiArray, 'finger_angle_topic', 10)
-        self.model = joblib.load('joint_reliability_model_0830_2.pkl')
+        self.model = joblib.load('joint_reliability_model.pkl')
 
     def listener_callback(self, msg):
         num_node = 21
@@ -46,29 +46,39 @@ class RsSub(Node):
         array_rgb = self.bridge.imgmsg_to_cv2(msg.rgb, "bgr8")
         array_depth = self.bridge.imgmsg_to_cv2(msg.depth, "passthrough")
         image, index_finger = self.hand_skelton(array_rgb, num_node)
-        cameraInfo = msg.depth_camera_info
-        intrinsics = rs.intrinsics()
-        intrinsics.width = cameraInfo.width
-        intrinsics.height = cameraInfo.height
-        intrinsics.ppx = cameraInfo.k[2]
-        intrinsics.ppy = cameraInfo.k[5]
-        intrinsics.fx = cameraInfo.k[0]
-        intrinsics.fy = cameraInfo.k[4]
-        intrinsics.model  = rs.distortion.none     
-        intrinsics.coeffs = [i for i in cameraInfo.d]
-        
-        distances = []
-        wrist = rs.rs2_deproject_pixel_to_point(intrinsics, index_finger[0, :], array_depth[index_finger[0, 1], index_finger[0, 0]])
-        joint_positions = [wrist]
+
+        # Collect 2D coordinates and corresponding depth values
+        pixel_depths = []
+        joint_positions = []
+
+        # Get wrist depth value
+        wrist_x, wrist_y = index_finger[0, 0], index_finger[0, 1]
+        if 0 <= wrist_x < array_depth.shape[1] and 0 <= wrist_y < array_depth.shape[0]:
+            wrist_depth = array_depth[wrist_y, wrist_x]
+
+        joint_positions.append((wrist_x, wrist_y, wrist_depth))  # Add wrist (x, y, depth)
+
+        # Get depth values for index finger joints (MCP, PIP, DIP, TIP)
         for i in range(5, 9):  # Only index finger joints
-            point = rs.rs2_deproject_pixel_to_point(intrinsics, index_finger[i, :], array_depth[index_finger[i, 1], index_finger[i, 0]])
-            distance = np.linalg.norm(point)
-            distances.append(distance)
-            joint_positions.append(point)
+            x, y = index_finger[i, 0], index_finger[i, 1]
+            
+            # Depth value check and handling
+            if 0 <= x < array_depth.shape[1] and 0 <= y < array_depth.shape[0]:
+                depth_value = array_depth[y, x]
+                if np.isfinite(depth_value):  # Check if the depth value is valid (finite number)
+                    pixel_depths.append(float(depth_value))  # Ensure the value is of type float
+                else:
+                    depth_value = 0.0
+                    pixel_depths.append(depth_value)
+            else:
+                depth_value = 0.0
+                pixel_depths.append(depth_value)
+            
+            joint_positions.append((x, y, depth_value))  # Save (x, y, depth)
         
         if self.recording:
             current_time = time.perf_counter() - self.start_time
-            data_row = [current_time] + distances
+            data_row = [current_time] + pixel_depths
             self.writer.writerow(data_row)
             pos_now = [coord for pos in joint_positions for coord in pos]
             if not self.saveFlg:
@@ -96,7 +106,7 @@ class RsSub(Node):
             self.video_out.write(image)
 
         msg_data = Float64MultiArray()
-        msg_data.data = distances
+        msg_data.data = pixel_depths
         self.pub.publish(msg_data)
 
         cv2.imshow("Image window", image)
@@ -130,8 +140,6 @@ class RsSub(Node):
 
     def toggle_recording(self):
         self.recording = not self.recording
-        if self.saveFlg:
-            self.saveFlg = not self.saveFlg
         if self.recording:
             timestamp = time.strftime("%Y%m%d_%H%M%S")
             self.start_time = time.perf_counter()
@@ -151,7 +159,7 @@ class RsSub(Node):
             
             # 映像の保存設定
             fourcc = cv2.VideoWriter_fourcc(*'XVID')
-            self.video_out = cv2.VideoWriter(f"data_index/index_finger_video_{timestamp}.avi", fourcc, 15.65, (640, 480))
+            self.video_out = cv2.VideoWriter(f"data_index/index_finger_video_{timestamp}.avi", fourcc, 16.06, (640, 480))
 
         else:
             self.f.close()
