@@ -56,10 +56,10 @@ class RsSub(Node):
         distances = []
         joint_positions = [wrist]
         for i in range(5, 9):  # Only index finger joints
-            #point = rs.rs2_deproject_pixel_to_point(intrinsics, index_finger[i, :], array_depth[index_finger[i, 1], index_finger[i, 0]])
-            #distance = np.linalg.norm(point)
-            distances.append(index_finger[i, 0])
-            joint_positions.append([index_finger[i, :], array_depth[index_finger[i, 1]]])
+            point = rs.rs2_deproject_pixel_to_point(intrinsics, index_finger[i, :], array_depth[index_finger[i, 1], index_finger[i, 0]])
+            distance = np.linalg.norm(point)
+            distances.append(distance)
+            joint_positions.append(point)
         
         if self.recording:
             current_time = time.perf_counter() - self.start_time
