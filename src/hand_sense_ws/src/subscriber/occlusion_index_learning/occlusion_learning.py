@@ -42,7 +42,7 @@ def load_model(model_path):
     return joblib.load(model_path)
 
 # 学習データの準備
-file_path = 'learning_data/combined_data_20240830_194832.csv'
+file_path = 'learning_data/combined_data_20240830_195149.csv'
 data = load_data(file_path)
 X, y = prepare_data(data)
 
