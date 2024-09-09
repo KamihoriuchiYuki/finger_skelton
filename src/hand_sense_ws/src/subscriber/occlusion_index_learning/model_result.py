@@ -38,7 +38,7 @@ class RsSub(Node):
         self.bridge = CvBridge()
         self.subscription = self.create_subscription(RGBD, '/camera/camera/rgbd', self.listener_callback, 10)
         self.pub = self.create_publisher(Float64MultiArray, 'finger_angle_topic', 10)
-        self.model = joblib.load('joint_reliability_model.pkl')
+        self.model = joblib.load('joint_reliability_model_0830_2.pkl')
 
     def listener_callback(self, msg):
         num_node = 21
@@ -151,7 +151,7 @@ class RsSub(Node):
             
             # 映像の保存設定
             fourcc = cv2.VideoWriter_fourcc(*'XVID')
-            self.video_out = cv2.VideoWriter(f"data_index/index_finger_video_{timestamp}.avi", fourcc, 20.0, (640, 480))
+            self.video_out = cv2.VideoWriter(f"data_index/index_finger_video_{timestamp}.avi", fourcc, 15.61, (640, 480))
 
         else:
             self.f.close()
