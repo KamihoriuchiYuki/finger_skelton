@@ -42,38 +42,53 @@ class RsSub(Node):
         array_rgb = self.bridge.imgmsg_to_cv2(msg.rgb, "bgr8")
         array_depth = self.bridge.imgmsg_to_cv2(msg.depth, "passthrough")
         image, index_finger, wrist = self.hand_skelton(array_rgb, num_node)
-        cameraInfo = msg.depth_camera_info
-        intrinsics = rs.intrinsics()
-        intrinsics.width = cameraInfo.width
-        intrinsics.height = cameraInfo.height
-        intrinsics.ppx = cameraInfo.k[2]
-        intrinsics.ppy = cameraInfo.k[5]
-        intrinsics.fx = cameraInfo.k[0]
-        intrinsics.fy = cameraInfo.k[4]
-        intrinsics.model  = rs.distortion.none     
-        intrinsics.coeffs = [i for i in cameraInfo.d]
-        
-        distances = []
-        joint_positions = [wrist]
+
+        # Collect 2D coordinates and corresponding depth values
+        pixel_depths = []
+        joint_positions = []
+
+        # Get wrist depth value
+        wrist_x, wrist_y = wrist[0], wrist[1]
+        if 0 <= wrist_x < array_depth.shape[1] and 0 <= wrist_y < array_depth.shape[0]:
+            wrist_depth = array_depth[wrist_y, wrist_x]
+
+        joint_positions.append((wrist_x, wrist_y, wrist_depth))  # Add wrist (x, y, depth)
+
+        # Get depth values for index finger joints (MCP, PIP, DIP, TIP)
         for i in range(5, 9):  # Only index finger joints
-            point = rs.rs2_deproject_pixel_to_point(intrinsics, index_finger[i, :], array_depth[index_finger[i, 1], index_finger[i, 0]])
-            distance = np.linalg.norm(point)
-            distances.append(distance)
-            joint_positions.append(point)
-        
+            x, y = index_finger[i, 0], index_finger[i, 1]
+            
+            # Depth value check and handling
+            if 0 <= x < array_depth.shape[1] and 0 <= y < array_depth.shape[0]:
+                depth_value = array_depth[y, x]
+                if np.isfinite(depth_value):  # Check if the depth value is valid (finite number)
+                    pixel_depths.append(float(depth_value))  # Ensure the value is of type float
+                else:
+                    depth_value = 0.0
+                    pixel_depths.append(depth_value)
+            else:
+                depth_value = 0.0
+                pixel_depths.append(depth_value)
+            
+            joint_positions.append((x, y, depth_value))  # Save (x, y, depth)
+
         if self.recording:
             current_time = time.perf_counter() - self.start_time
-            data_row = [current_time] + distances
-            self.writer.writerow(data_row)
-            
+
+            # Save pixel coordinates and depth values to CSV
             pos_row = [current_time] + [coord for pos in joint_positions for coord in pos]
             self.pos_writer.writerow(pos_row)
-            
-            # 映像を保存
+
+            # Save just the depth values for distance analysis
+            data_row = [current_time] + pixel_depths
+            self.writer.writerow(data_row)
+
+            # Save the video
             self.video_out.write(image)
 
+        # Publish the depth values of the joints as a Float64MultiArray message
         msg_data = Float64MultiArray()
-        msg_data.data = distances
+        msg_data.data = pixel_depths  # Ensure this is a list of floats
         self.pub.publish(msg_data)
 
         cv2.imshow("Image window", image)
