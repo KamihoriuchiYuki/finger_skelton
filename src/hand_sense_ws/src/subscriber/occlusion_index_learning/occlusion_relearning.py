@@ -44,7 +44,12 @@ def load_model(model_path):
 
 # 既存モデルを用いた予測
 def predict_with_existing_model(existing_model, X):
-    return existing_model.predict(X)
+    # 既存モデルが学習時に使用していた特徴量だけに絞る
+    columns_to_drop = ['existing_model_MCP', 'existing_model_PIP', 'existing_model_DIP', 'existing_model_TIP']
+    X_for_prediction = X.drop(columns=columns_to_drop, errors='ignore')
+    
+    # 予測を実行
+    return existing_model.predict(X_for_prediction)
 
 # 既存モデルのバックアップ
 def backup_existing_model(existing_model_path, backup_path):
@@ -52,7 +57,7 @@ def backup_existing_model(existing_model_path, backup_path):
         os.rename(existing_model_path, backup_path)
 
 # 学習データの準備
-file_path = 'learning_data/combined_data_20240910_103116.csv'
+file_path = 'learning_data/combined_data_20240909_172908.csv'
 data = load_data(file_path)
 X, y = prepare_data(data)
 
@@ -68,7 +73,12 @@ existing_model = load_model(backup_model_path)
 
 # 既存モデルの予測結果を特徴量に追加
 existing_model_predictions = predict_with_existing_model(existing_model, X)
-X['existing_model_predictions'] = existing_model_predictions
+
+# 予測結果の各列をXに追加
+X['existing_model_MCP'] = existing_model_predictions[:, 0]
+X['existing_model_PIP'] = existing_model_predictions[:, 1]
+X['existing_model_DIP'] = existing_model_predictions[:, 2]
+X['existing_model_TIP'] = existing_model_predictions[:, 3]
 
 # 新たなモデルのトレーニング（ファイル名は既存モデルと同じ）
 model = train_model(X, y, existing_model_path)
