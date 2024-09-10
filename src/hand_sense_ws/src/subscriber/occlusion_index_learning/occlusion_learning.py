@@ -47,5 +47,5 @@ data = load_data(file_path)
 X, y = prepare_data(data)
 
 # モデルのトレーニング
-model_path = 'joint_reliability_model.pkl'
+model_path = 'joint_reliability_model_0910.pkl'
 model = train_model(X, y, model_path)

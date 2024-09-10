@@ -38,7 +38,7 @@ class RsSub(Node):
         self.bridge = CvBridge()
         self.subscription = self.create_subscription(RGBD, '/camera/camera/rgbd', self.listener_callback, 10)
         self.pub = self.create_publisher(Float64MultiArray, 'finger_angle_topic', 10)
-        self.model = joblib.load('joint_reliability_model.pkl')
+        self.model = joblib.load('joint_reliability_model_0910.pkl')
 
     def listener_callback(self, msg):
         num_node = 21
