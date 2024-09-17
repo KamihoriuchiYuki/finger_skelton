@@ -86,7 +86,6 @@ class RsSub(Node):
             
             pixel_positions.append((x, y, depth_value))  # Save (x, y, depth)
 
-        for i in range(5, 9):  # Only index finger joints
             point = rs.rs2_deproject_pixel_to_point(intrinsics, index_finger[i, :], array_depth[index_finger[i, 1], index_finger[i, 0]])
             for j in range(3):
                 point[j] -= wrist[j]
