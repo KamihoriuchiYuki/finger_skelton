@@ -10,8 +10,8 @@ position_df = pd.read_csv(f'data_index/finger_joint_positions_{oooo}.csv')
 # 各列に対するtime[s]の範囲設定
 time_intervals = {
     'MCP': [(0.0, 0.0)],
-    'PIP': [(5.65, 67.05)],
-    'DIP': [(4.4, 67.25)],
+    'PIP': [(4.35, 60.9)],
+    'DIP': [(4.05, 11.45), (45.75, 61.25)],
     'TIP': [(0.0, 0.0)]
 }
 
