@@ -67,7 +67,6 @@ class RsSub(Node):
         pixel_positions.append((wrist_x, wrist_y, wrist_depth))  # Add wrist (x, y, depth)
 
         wrist = rs.rs2_deproject_pixel_to_point(intrinsics, index_finger[0, :], array_depth[index_finger[0, 1], index_finger[0, 0]])
-        joint_positions.append(wrist)
 
         # Get depth values for index finger joints (MCP, PIP, DIP, TIP)
         for i in range(5, 9):  # Only index finger joints
@@ -89,6 +88,8 @@ class RsSub(Node):
 
         for i in range(5, 9):  # Only index finger joints
             point = rs.rs2_deproject_pixel_to_point(intrinsics, index_finger[i, :], array_depth[index_finger[i, 1], index_finger[i, 0]])
+            for j in range(3):
+                point[j] -= wrist[j]
             joint_positions.append(point)
         
         if self.recording:
@@ -144,16 +145,15 @@ class RsSub(Node):
 
             self.pos_f = open(f"data_index_2/finger_joint_positions_{timestamp}.csv", "w", newline="")
             self.pos_writer = csv.writer(self.pos_f)
-            pos_header = ["time[s]", "Wrist_PX", "Wrist_PY", "Wrist_PD",
-                          "MCP_PX", "MCP_PY", "MCP_PD",
-                          "PIP_PX", "PIP_PY", "PIP_PD",
-                          "DIP_PX", "DIP_PY", "DIP_PD",
-                          "TIP_PX", "TIP_PY", "TIP_PD",
-                          "Wrist_X", "Wrist_Y", "Wrist_Z",
-                          "MCP_X", "MCP_Y", "MCP_Z",
-                          "PIP_X", "PIP_Y", "PIP_Z",
-                          "DIP_X", "DIP_Y", "DIP_Z",
-                          "TIP_X", "TIP_Y", "TIP_Z"]
+            pos_header = ["time[s]", "Wrist_X", "Wrist_Y", "Wrist_D",
+                          "MCP_X", "MCP_Y", "MCP_D",
+                          "PIP_X", "PIP_Y", "PIP_D",
+                          "DIP_X", "DIP_Y", "DIP_D",
+                          "TIP_X", "TIP_Y", "TIP_D",
+                          "MCP_RX", "MCP_RY", "MCP_RZ",
+                          "PIP_RX", "PIP_RY", "PIP_RZ",
+                          "DIP_RX", "DIP_RY", "DIP_RZ",
+                          "TIP_RX", "TIP_RY", "TIP_RZ"]
             self.pos_writer.writerow(pos_header)
             
             # 映像の保存設定
