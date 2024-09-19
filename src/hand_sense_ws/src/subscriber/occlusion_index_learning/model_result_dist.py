@@ -102,7 +102,7 @@ class RsSub(Node):
             current_time = time.perf_counter() - self.start_time
             data_row = [current_time] + pixel_depths
             self.writer.writerow(data_row)
-            pos_now = [coord for pos in pixel_positions for coord in pos] + [coord for pos in joint_positions for coord in pos] + [coord for pos in distance for coord in pos]
+            pos_now = [coord for pos in pixel_positions for coord in pos] + [coord for pos in joint_positions for coord in pos] + distance
             if not self.saveFlg:
                 self.bef_pos = pos_now
                 self.saveFlg = not self.saveFlg
