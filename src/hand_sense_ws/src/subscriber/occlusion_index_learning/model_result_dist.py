@@ -73,6 +73,7 @@ class RsSub(Node):
         wrist = rs.rs2_deproject_pixel_to_point(intrinsics, index_finger[0, :], array_depth[index_finger[0, 1], index_finger[0, 0]])
 
         # Get depth values for index finger joints (MCP, PIP, DIP, TIP)
+        distance = []
         for i in range(5, 9):  # Only index finger joints
             x, y = index_finger[i, 0], index_finger[i, 1]
             
@@ -94,12 +95,14 @@ class RsSub(Node):
             for j in range(3):
                 point[j] -= wrist[j]
             joint_positions.append(point)
+            joint_distance = np.sqrt(point[0]**2 + point[1]**2 + point[2]**2)
+            distance.append(joint_distance)
         
         if self.recording:
             current_time = time.perf_counter() - self.start_time
             data_row = [current_time] + pixel_depths
             self.writer.writerow(data_row)
-            pos_now = [coord for pos in pixel_positions for coord in pos] + [coord for pos in joint_positions for coord in pos]
+            pos_now = [coord for pos in pixel_positions for coord in pos] + [coord for pos in joint_positions for coord in pos] + [coord for pos in distance for coord in pos]
             if not self.saveFlg:
                 self.bef_pos = pos_now
                 self.saveFlg = not self.saveFlg
@@ -162,12 +165,12 @@ class RsSub(Node):
         if self.recording:
             timestamp = time.strftime("%Y%m%d_%H%M%S")
             self.start_time = time.perf_counter()
-            self.f = open(f"data_index_2/index_finger_data_{timestamp}.csv", "w", newline="")
+            self.f = open(f"data_index_dist/index_finger_data_{timestamp}.csv", "w", newline="")
             self.writer = csv.writer(self.f)
             header = ["time[s]", "MCP", "PIP", "DIP", "TIP"]
             self.writer.writerow(header)
 
-            self.pos_f = open(f"data_index_2/finger_joint_positions_{timestamp}.csv", "w", newline="")
+            self.pos_f = open(f"data_index_dist/finger_joint_positions_{timestamp}.csv", "w", newline="")
             self.pos_writer = csv.writer(self.pos_f)
             pos_header = ["time[s]", "Wrist_X", "Wrist_Y", "Wrist_D",
                           "MCP_X", "MCP_Y", "MCP_D",
@@ -183,7 +186,7 @@ class RsSub(Node):
             
             # 映像の保存設定
             fourcc = cv2.VideoWriter_fourcc(*'XVID')
-            self.video_out = cv2.VideoWriter(f"data_index_2/index_finger_video_{timestamp}.avi", fourcc, 20.0, (640, 480))
+            self.video_out = cv2.VideoWriter(f"data_index_dist/index_finger_video_{timestamp}.avi", fourcc, 20.0, (640, 480))
 
         else:
             self.f.close()
@@ -208,7 +211,7 @@ class RsSub(Node):
             axs.set_ylabel("distance[mm]")
             axs.set_ylim([200, 500])
             axs.set_title("Distance of Index Finger Joints from Camera")
-            fig.savefig(f"data_index_2/index_finger_distance_{time.strftime('%Y%m%d_%H%M%S')}.png")
+            fig.savefig(f"data_index_dist/index_finger_distance_{time.strftime('%Y%m%d_%H%M%S')}.png")
             plt.close()
 
 def main(args = None):
