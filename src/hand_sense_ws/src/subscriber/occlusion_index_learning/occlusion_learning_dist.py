@@ -32,7 +32,8 @@ def prepare_data(data):
         "MCP_RX", "MCP_RY", "MCP_RZ",
         "PIP_RX", "PIP_RY", "PIP_RZ",
         "DIP_RX", "DIP_RY", "DIP_RZ",
-        "TIP_RX", "TIP_RY", "TIP_RZ"
+        "TIP_RX", "TIP_RY", "TIP_RZ",
+        "MCP_Distance", "PIP_Distance", "DIP_Distance", "TIP_Distance"
     ]]
     
     # 座標の変化率を追加
@@ -62,9 +63,9 @@ def load_model(model_path):
     return joblib.load(model_path)
 
 # 学習データの準備
-folder_path = 'learning_data_2'
+folder_path = 'learning_dist'
 X, y = load_all_data(folder_path)
 
 # モデルのトレーニング
-model_path = 'joint_reliability_model_integ_2.pkl'
+model_path = 'joint_reliability_model_dist.pkl'
 model = train_model(X, y, model_path)
