@@ -62,7 +62,7 @@ def load_model(model_path):
     return joblib.load(model_path)
 
 # 学習データの準備
-folder_path = 'learning_data_2'
+folder_path = 'learning_dist'
 X, y = load_all_data(folder_path)
 
 # モデルのトレーニング
