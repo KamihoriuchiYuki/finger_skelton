@@ -73,7 +73,7 @@ class RsSub(Node):
         wrist = rs.rs2_deproject_pixel_to_point(intrinsics, index_finger[0, :], array_depth[index_finger[0, 1], index_finger[0, 0]])
 
         # Get depth values for index finger joints (MCP, PIP, DIP, TIP)
-        for i in range(5, 9):  # Only index finger joints
+        for i in range(9, 13):  # Only index finger joints
             x, y = index_finger[i, 0], index_finger[i, 1]
             
             # Depth value check and handling
@@ -155,19 +155,19 @@ class RsSub(Node):
     
     def draw_joints(self, image, index_finger, colors):
         for i, color in enumerate(colors):
-            cv2.circle(image, tuple(index_finger[i+5]), 5, color, -1)
+            cv2.circle(image, tuple(index_finger[i+9]), 5, color, -1)
 
     def toggle_recording(self):
         self.recording = not self.recording
         if self.recording:
             timestamp = time.strftime("%Y%m%d_%H%M%S")
             self.start_time = time.perf_counter()
-            self.f = open(f"data_index_2/index_finger_data_{timestamp}.csv", "w", newline="")
+            self.f = open(f"data_mid/index_finger_data_{timestamp}.csv", "w", newline="")
             self.writer = csv.writer(self.f)
             header = ["time[s]", "MCP", "PIP", "DIP", "TIP"]
             self.writer.writerow(header)
 
-            self.pos_f = open(f"data_index_2/finger_joint_positions_{timestamp}.csv", "w", newline="")
+            self.pos_f = open(f"data_mid/finger_joint_positions_{timestamp}.csv", "w", newline="")
             self.pos_writer = csv.writer(self.pos_f)
             pos_header = ["time[s]", "Wrist_X", "Wrist_Y", "Wrist_D",
                           "MCP_X", "MCP_Y", "MCP_D",
@@ -182,7 +182,7 @@ class RsSub(Node):
             
             # 映像の保存設定
             fourcc = cv2.VideoWriter_fourcc(*'XVID')
-            self.video_out = cv2.VideoWriter(f"data_index_2/index_finger_video_{timestamp}.avi", fourcc, 20.0, (640, 480))
+            self.video_out = cv2.VideoWriter(f"data_mid/index_finger_video_{timestamp}.avi", fourcc, 20.0, (640, 480))
 
         else:
             self.f.close()
@@ -206,8 +206,8 @@ class RsSub(Node):
             axs.set_xlabel("time[s]")
             axs.set_ylabel("distance[mm]")
             axs.set_ylim([200, 500])
-            axs.set_title("Distance of Index Finger Joints from Camera")
-            fig.savefig(f"data_index_2/index_finger_distance_{time.strftime('%Y%m%d_%H%M%S')}.png")
+            axs.set_title("Distance of Mid Finger Joints from Camera")
+            fig.savefig(f"data_mid/index_finger_distance_{time.strftime('%Y%m%d_%H%M%S')}.png")
             plt.close()
 
 def main(args = None):
