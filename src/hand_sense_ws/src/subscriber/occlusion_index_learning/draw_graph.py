@@ -8,11 +8,11 @@ def plot_finger_data(file_name, y_min=None, y_max=None):
     df = pd.read_csv(file_name)
     
     # グラフを作成
-    plt.figure(figsize=(10, 6))
-    plt.plot(df['time[s]'], df['MCP'], label='MCP', marker='o')
-    plt.plot(df['time[s]'], df['PIP'], label='PIP', marker='o')
-    plt.plot(df['time[s]'], df['DIP'], label='DIP', marker='o')
-    plt.plot(df['time[s]'], df['TIP'], label='TIP', marker='o')
+    plt.figure(figsize=(20, 5))
+    plt.plot(df['time[s]'], df['MCP'], color="red", label='MCP', linewidth=1)
+    plt.plot(df['time[s]'], df['PIP'], color="green", label='PIP', linewidth=1)
+    plt.plot(df['time[s]'], df['DIP'], color="blue", label='DIP', linewidth=1)
+    plt.plot(df['time[s]'], df['TIP'], color="purple", label='TIP', linewidth=1)
     
     # ラベルとタイトルの設定
     plt.xlabel('time [s]')
@@ -31,5 +31,5 @@ def plot_finger_data(file_name, y_min=None, y_max=None):
     print(f"グラフが{output_file_name}に保存されました。")
 
 # 使用例
-file_name = 'data_index_dist/index_finger_data_oooooooo_oooooo.csv'
+file_name = 'data_index_dist/index_finger_data_20240919_193849.csv'
 plot_finger_data(file_name, y_min=100, y_max=300)
