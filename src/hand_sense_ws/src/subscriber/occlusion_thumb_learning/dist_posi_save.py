@@ -70,7 +70,7 @@ class RsSub(Node):
 
         # Get depth values for index finger joints (MCP, PIP, DIP, TIP)
         distance = []
-        for i in range(1, 4):  # Only index finger joints
+        for i in range(1, 5):  # Only index finger joints
             x, y = finger[i, 0], finger[i, 1]
             
             # Depth value check and handling
