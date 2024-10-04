@@ -45,7 +45,7 @@ class RsSub(Node):
         num_joint = 4  # Only index finger joints (MCP, PIP, DIP, TIP)
         array_rgb = self.bridge.imgmsg_to_cv2(msg.rgb, "bgr8")
         array_depth = self.bridge.imgmsg_to_cv2(msg.depth, "passthrough")
-        image, index_finger = self.hand_skelton(array_rgb, num_node)
+        image, finger = self.hand_skelton(array_rgb, num_node)
 
         cameraInfo = msg.depth_camera_info
         intrinsics = rs.intrinsics()
@@ -64,18 +64,18 @@ class RsSub(Node):
         joint_positions = []
 
         # Get wrist depth value
-        wrist_x, wrist_y = index_finger[0, 0], index_finger[0, 1]
+        wrist_x, wrist_y = finger[0, 0], finger[0, 1]
         if 0 <= wrist_x < array_depth.shape[1] and 0 <= wrist_y < array_depth.shape[0]:
             wrist_depth = array_depth[wrist_y, wrist_x]
 
         pixel_positions.append((wrist_x, wrist_y, wrist_depth))  # Add wrist (x, y, depth)
 
-        wrist = rs.rs2_deproject_pixel_to_point(intrinsics, index_finger[0, :], array_depth[index_finger[0, 1], index_finger[0, 0]])
+        wrist = rs.rs2_deproject_pixel_to_point(intrinsics, finger[0, :], array_depth[finger[0, 1], finger[0, 0]])
 
         # Get depth values for index finger joints (MCP, PIP, DIP, TIP)
         distance = []
         for i in range(1, 5):  # Only index finger joints
-            x, y = index_finger[i, 0], index_finger[i, 1]
+            x, y = finger[i, 0], finger[i, 1]
             
             # Depth value check and handling
             if 0 <= x < array_depth.shape[1] and 0 <= y < array_depth.shape[0]:
@@ -91,7 +91,7 @@ class RsSub(Node):
             
             pixel_positions.append((x, y, depth_value))  # Save (x, y, depth)
 
-            point = rs.rs2_deproject_pixel_to_point(intrinsics, index_finger[i, :], array_depth[index_finger[i, 1], index_finger[i, 0]])
+            point = rs.rs2_deproject_pixel_to_point(intrinsics, finger[i, :], array_depth[finger[i, 1], finger[i, 0]])
             for j in range(3):
                 point[j] -= wrist[j]
             joint_positions.append(point)
@@ -116,7 +116,7 @@ class RsSub(Node):
 
             # 信頼値に基づき色を決定
             colors = [(0, 255, 0) if p == 0 else (0, 0, 255) for p in predictions[0]]
-            self.draw_joints(image, index_finger, colors)
+            self.draw_joints(image, finger, colors)
 
             self.bef_p = predictions
             self.bef_pos = pos_now
@@ -158,7 +158,7 @@ class RsSub(Node):
     
     def draw_joints(self, image, index_finger, colors):
         for i, color in enumerate(colors):
-            cv2.circle(image, tuple(index_finger[i+5]), 5, color, -1)
+            cv2.circle(image, tuple(index_finger[i+1]), 5, color, -1)
 
     def toggle_recording(self):
         self.recording = not self.recording
