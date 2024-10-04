@@ -11,7 +11,7 @@ position_df = pd.read_csv(f'data_dist/finger_joint_positions_{oooo}.csv')
 time_intervals = {
     'MCP': [(0.0, 0.0)],
     'PIP': [(0.0, 0.0)],
-    'DIP': [(0.0, 0.0)],
+    'DIP': [(1.4, 4.4), (6.95, 10.2), (12.15, 15.65)],
     'TIP': [(0.0, 0.0)]
 }
 
