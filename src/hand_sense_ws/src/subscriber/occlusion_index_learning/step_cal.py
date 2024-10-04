@@ -1,2 +1,2 @@
-step = 17.05 * 20 + 2
+step = 40.3 * 20 + 2
 print(step)
