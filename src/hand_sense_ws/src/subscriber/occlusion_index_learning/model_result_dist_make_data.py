@@ -121,7 +121,7 @@ class RsSub(Node):
             self.bef_p = predictions
             self.bef_pos = pos_now
 
-            pos_row = [current_time] + predictions + pos_now
+            pos_row = [current_time] + [coord for pos in predictions for coord in pos] + pos_now
             self.pos_writer.writerow(pos_row)
             
             # 映像を保存
