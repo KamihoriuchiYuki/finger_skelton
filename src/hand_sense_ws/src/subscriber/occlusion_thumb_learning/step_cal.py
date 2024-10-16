@@ -1,2 +1,3 @@
-step = 21.65 * 20 + 2
+time = float(input('input time: '))
+step = time * 20 + 2
 print(step)
