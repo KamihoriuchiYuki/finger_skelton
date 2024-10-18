@@ -11,8 +11,8 @@ position_df = pd.read_csv(f'data_dist/finger_joint_positions_{oooo}.csv')
 time_intervals = {
     'MCP': [(0.0, 0.0)],
     'PIP': [(0.0, 0.0)],
-    'DIP': [(9.0, 11.6), (19.2, 21.1), (25.5, 27.7)],
-    'TIP': [(8.8, 11.75), (19.0, 21.15), (25.3, 27.8)]
+    'DIP': [(0.0, 0.0)],
+    'TIP': [(8.25, 8.3)]
 }
 
 # time[s]の範囲と値に基づいて変換する関数
